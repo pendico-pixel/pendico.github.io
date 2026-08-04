@@ -126,10 +126,12 @@ container.innerHTML="";
 list.forEach(item=>{
 
 container.innerHTML+=`
+<a href="../sections/section${item.section}.html">
 <div class="card">
 <h3>Section ${item.section}</h3>
 <p>${item.title}</p>
 </div>
+</a>
 `;
 
 });
