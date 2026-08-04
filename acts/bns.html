@@ -1,26 +1,157 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Pendico - BNS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pendico - Bharatiya Nyaya Sanhita</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f4f7fb;
+}
+
+header{
+background:#0b3d91;
+color:white;
+padding:25px;
+text-align:center;
+}
+
+header h1{
+margin:0;
+}
+
+.search-box{
+text-align:center;
+padding:20px;
+}
+
+input{
+width:90%;
+max-width:600px;
+padding:12px;
+font-size:16px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:18px;
+margin-bottom:15px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-3px);
+}
+
+.card h3{
+margin:0;
+color:#0b3d91;
+}
+
+.card p{
+margin:8px 0 0;
+color:#555;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.back{
+display:inline-block;
+margin-top:20px;
+background:#0b3d91;
+color:white;
+padding:10px 18px;
+border-radius:8px;
+}
+
+footer{
+margin-top:40px;
+background:#062b63;
+color:white;
+text-align:center;
+padding:15px;
+}
+</style>
+
 </head>
+
 <body>
 
+<header>
 <h1>📘 Bharatiya Nyaya Sanhita, 2023</h1>
+<p>Pendico Legal Library</p>
+</header>
 
-<ul id="sections"></ul>
+<div class="search-box">
+<input type="text" id="search" placeholder="Search Sections...">
+</div>
+
+<div class="container" id="sections"></div>
+
+<div style="text-align:center;">
+<a class="back" href="../bareacts.html">⬅ Back to Bare Acts</a>
+</div>
+
+<footer>
+© 2026 Pendico | Legal Information Portal
+</footer>
 
 <script>
 fetch("../data/bns.json")
-.then(response => response.json())
-.then(data => {
-    let list = document.getElementById("sections");
+.then(response=>response.json())
+.then(data=>{
 
-    data.forEach(item => {
-        let li = document.createElement("li");
-        li.innerHTML = "<b>Section " + item.section + "</b> - " + item.title;
-        list.appendChild(li);
-    });
+const container=document.getElementById("sections");
+
+function display(list){
+
+container.innerHTML="";
+
+list.forEach(item=>{
+
+container.innerHTML+=`
+<div class="card">
+<h3>Section ${item.section}</h3>
+<p>${item.title}</p>
+</div>
+`;
+
+});
+
+}
+
+display(data);
+
+document.getElementById("search").addEventListener("keyup",function(){
+
+const value=this.value.toLowerCase();
+
+display(data.filter(item=>
+
+item.section.toLowerCase().includes(value) ||
+
+item.title.toLowerCase().includes(value)
+
+));
+
+});
+
 });
 </script>
 
