@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pendico - BNS</title>
+</head>
+<body>
+
+<h1>📘 Bharatiya Nyaya Sanhita, 2023</h1>
+
+<ul id="sections"></ul>
+
+<script>
+fetch("../data/bns.json")
+.then(response => response.json())
+.then(data => {
+    let list = document.getElementById("sections");
+
+    data.forEach(item => {
+        let li = document.createElement("li");
+        li.innerHTML = "<b>Section " + item.section + "</b> - " + item.title;
+        list.appendChild(li);
+    });
+});
+</script>
+
+</body>
+</html>
