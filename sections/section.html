@@ -89,6 +89,13 @@ Explanation will be added soon.
 <footer>
 © 2026 Pendico
 </footer>
+<script>
+const params = new URLSearchParams(window.location.search);
+const section = params.get("section");
 
+document.getElementById("sectionTitle").innerText = "Section " + section;
+document.getElementById("sectionText").innerText =
+"Full content for Section " + section + " will be added soon.";
+</script>
 </body>
 </html>
