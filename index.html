@@ -3,83 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pendico - Legal Information Portal</title>
+<title>Pendico | Indian Legal Information Portal</title>
 
 <style>
+
 body{
 margin:0;
-font-family:Arial,Helvetica,sans-serif;
-background:#f4f4f4;
+font-family:Arial,sans-serif;
+background:#f4f7fb;
+color:#333;
 }
 
 header{
-background:#0b3d91;
+background:linear-gradient(135deg,#0b3d91,#1565c0);
 color:white;
-padding:20px;
+padding:40px 20px;
 text-align:center;
+}
+
+header h1{
+margin:0;
+font-size:42px;
+}
+
+header p{
+font-size:18px;
+margin-top:10px;
+}
+
+.search{
+margin-top:25px;
+}
+
+.search input{
+width:90%;
+max-width:600px;
+padding:14px;
+font-size:16px;
+border:none;
+border-radius:10px;
 }
 
 nav{
 background:#062b63;
-padding:15px;
-text-align:center;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
 }
 
 nav a{
 color:white;
+padding:16px 20px;
 text-decoration:none;
-margin:15px;
 font-weight:bold;
 }
 
-.hero{
-padding:60px;
-text-align:center;
-background:white;
-}
-
-.hero h1{
-font-size:42px;
-color:#0b3d91;
-}
-
-.search{
-margin-top:20px;
-}
-
-.search input{
-width:60%;
-padding:12px;
-font-size:18px;
-}
-
-button{
-padding:12px 20px;
+nav a:hover{
 background:#0b3d91;
-color:white;
-border:none;
-cursor:pointer;
 }
 
-.section{
-padding:40px;
+.container{
+max-width:1200px;
+margin:auto;
+padding:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
 background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.12);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.card h2{
+color:#0b3d91;
+margin-top:0;
+}
+
+.button{
+display:inline-block;
+margin-top:15px;
+padding:10px 18px;
+background:#0b3d91;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+margin-top:35px;
+}
+
+.stat{
+background:white;
 padding:20px;
-margin:15px;
+text-align:center;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,.1);
+box-shadow:0 3px 10px rgba(0,0,0,.1);
 }
 
 footer{
+margin-top:40px;
 background:#062b63;
 color:white;
 text-align:center;
 padding:20px;
-margin-top:30px;
 }
+
 </style>
 
 </head>
@@ -87,55 +131,92 @@ margin-top:30px;
 <body>
 
 <header>
+
 <h1>⚖️ Pendico</h1>
-<p>Your Free Legal Information Portal</p>
+
+<p>Your Indian Legal Information Platform</p>
+
+<div class="search">
+<input type="text" placeholder="Search Bare Acts, Case Laws, Articles (Coming Soon)">
+</div>
+
 </header>
 
 <nav>
+
 <a href="index.html">Home</a>
 <a href="bareacts.html">Bare Acts</a>
 <a href="caselaws.html">Case Laws</a>
 <a href="articles.html">Articles</a>
-<a href="about.html">About</a> 
+<a href="about.html">About</a>
 <a href="contact.html">Contact</a>
+
 </nav>
 
-<div class="hero">
-<h1>Welcome to Pendico</h1>
-<p>Search laws, judgments and legal articles.</p>
+<div class="container">
 
-<div class="search">
-<input type="text" placeholder="Search laws...">
-<button>Search</button>
-</div>
-</div>
+<h2>Explore Pendico</h2>
 
-<div class="section">
+<div class="grid">
 
 <div class="card">
 <h2>📚 Bare Acts</h2>
-<p>BNS, BNSS, Bharatiya Sakshya Adhiniyam, Constitution and more.</p>
+<p>Browse important Indian legislation including BNS, BNSS, BSA and more.</p>
+<a class="button" href="bareacts.html">Explore</a>
 </div>
 
 <div class="card">
 <h2>⚖️ Case Laws</h2>
-<p>Important Supreme Court and High Court judgments.</p>
+<p>Read landmark Supreme Court and High Court judgments.</p>
+<a class="button" href="caselaws.html">Explore</a>
+</div>
+
+<div class="card">
+<h2>📝 Articles</h2>
+<p>Simple legal articles and educational content.</p>
+<a class="button" href="articles.html">Explore</a>
 </div>
 
 <div class="card">
 <h2>📰 Legal News</h2>
-<p>Latest legal developments and updates.</p>
+<p>Latest legal developments and important updates.</p>
+<a class="button" href="#">Coming Soon</a>
 </div>
 
-<div class="card">
-<h2>📝 Legal Articles</h2>
-<p>Easy-to-understand legal guides in English and Tamil.</p>
+</div>
+
+<h2 style="margin-top:40px;">Pendico Statistics</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h3>📚 Acts</h3>
+<p>1+</p>
+</div>
+
+<div class="stat">
+<h3>📜 Sections</h3>
+<p>4+</p>
+</div>
+
+<div class="stat">
+<h3>⚖️ Cases</h3>
+<p>Coming Soon</p>
+</div>
+
+<div class="stat">
+<h3>👥 Visitors</h3>
+<p>Growing</p>
+</div>
+
 </div>
 
 </div>
 
 <footer>
-© 2026 Pendico | Legal Information Portal
+
+© 2026 Pendico | Indian Legal Information Portal
+
 </footer>
 
 </body>
