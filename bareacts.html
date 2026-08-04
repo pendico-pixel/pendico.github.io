@@ -1,26 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pendico - Bare Acts</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f4f7fb;
+}
+
+header{
+background:#0b3d91;
+color:white;
+padding:25px;
+text-align:center;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+padding:20px;
+box-shadow:0 4px 12px rgba(0,0,0,.12);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h2{
+color:#0b3d91;
+margin-top:0;
+}
+
+.button{
+display:inline-block;
+margin-top:15px;
+background:#0b3d91;
+color:white;
+padding:10px 18px;
+text-decoration:none;
+border-radius:8px;
+}
+
+footer{
+background:#062b63;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:30px;
+}
+</style>
 </head>
 
 <body>
 
-<h1>⚖️ Pendico - Bare Acts</h1>
+<header>
+<h1>📚 Pendico Bare Acts Library</h1>
+<p>Browse India's important laws</p>
+</header>
 
-<ul>
-<li><a href="acts/bns.html">Bharatiya Nyaya Sanhita, 2023 (BNS)</a></li>
-<li>Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS)</li>
-<li>Bharatiya Sakshya Adhiniyam, 2023 (BSA)</li>
-<li>Constitution of India</li>
-<li>Indian Contract Act, 1872</li>
-<li>Companies Act, 2013</li>
-<li>Consumer Protection Act, 2019</li>
-</ul>
+<div class="container">
 
-<p>More Acts will be added soon.</p>
+<div class="card">
+<h2>📘 Bharatiya Nyaya Sanhita, 2023</h2>
+<p>358 Sections</p>
+<a class="button" href="acts/bns.html">Open Act</a>
+</div>
 
-<a href="index.html">⬅ Back to Home</a>
+<div class="card">
+<h2>📗 Bharatiya Nagarik Suraksha Sanhita, 2023</h2>
+<p>Coming Soon</p>
+</div>
+
+<div class="card">
+<h2>📙 Bharatiya Sakshya Adhiniyam, 2023</h2>
+<p>Coming Soon</p>
+</div>
+
+<div class="card">
+<h2>📕 Constitution of India</h2>
+<p>Coming Soon</p>
+</div>
+
+<div class="card">
+<h2>📔 Companies Act, 2013</h2>
+<p>Coming Soon</p>
+</div>
+
+<div class="card">
+<h2>📒 Indian Contract Act, 1872</h2>
+<p>Coming Soon</p>
+</div>
+
+</div>
+
+<footer>
+© 2026 Pendico | Legal Information Portal
+</footer>
 
 </body>
 </html>
