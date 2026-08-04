@@ -91,11 +91,36 @@ Explanation will be added soon.
 </footer>
 <script>
 const params = new URLSearchParams(window.location.search);
-const section = params.get("section");
+const sectionNo = params.get("section");
 
-document.getElementById("sectionTitle").innerText = "Section " + section;
+fetch("../data/bns.json")
+.then(response => response.json())
+.then(data => {
+
+const item = data.find(sec => sec.section === sectionNo);
+
+if(item){
+
+document.getElementById("sectionTitle").innerText =
+"Section " + item.section + " - " + item.title;
+
 document.getElementById("sectionText").innerText =
-"Full content for Section " + section + " will be added soon.";
+item.text || "Section text will be added soon.";
+
+document.getElementById("sectionExplanation").innerText =
+item.explanation || "Explanation will be added soon.";
+
+}else{
+
+document.getElementById("sectionTitle").innerText = "Section Not Found";
+
+}
+
+})
+.catch(error => {
+document.getElementById("sectionTitle").innerText = "Error loading data";
+console.error(error);
+});
 </script>
 </body>
 </html>
