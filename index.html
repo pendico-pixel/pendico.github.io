@@ -123,7 +123,30 @@ color:white;
 text-align:center;
 padding:20px;
 }
+.brand{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
 
+.brand img{
+    width:100px;
+    height:100px;
+    border-radius:12px;
+}
+
+.brand h1{
+    margin:0;
+    font-size:42px;
+    letter-spacing:2px;
+}
+
+.brand p{
+    margin:5px 0 0;
+    font-size:18px;
+}
 </style>
 
 </head>
@@ -132,10 +155,13 @@ padding:20px;
 
 <header>
 
-<img src="logo.png.jpeg" alt="Pendico Logo" width="100">
-<h1>Pendico</h1>
-
-<p>Your Indian Legal Information Platform</p>
+<div class="brand">
+    <img src="logo.png.jpeg" alt="Pendico Logo">
+    <div>
+        <h1>PENDICO</h1>
+        <p>Indian Legal Information Portal</p>
+    </div>
+</div>
 
 <div class="search">
 <input type="text" placeholder="Search Bare Acts, Case Laws, Articles (Coming Soon)">
