@@ -3,24 +3,41 @@
     "chapter": "Chapter I",
     "section": "1",
     "title": "Short title, commencement and application",
-    "text": "This section contains the short title, commencement and application of the Bharatiya Nyaya Sanhita, 2023."
+    "text": "",
+    "explanation": "",
+    "keywords": [
+      "commencement",
+      "application"
+    ]
   },
   {
     "chapter": "Chapter I",
     "section": "2",
     "title": "Definitions",
-    "text": "This section defines important legal terms used throughout the Bharatiya Nyaya Sanhita."
+    "text": "",
+    "explanation": "",
+    "keywords": [
+      "definitions"
+    ]
   },
   {
     "chapter": "Chapter I",
     "section": "3",
     "title": "General explanations",
-    "text": "This section provides general explanations for interpreting the provisions of the Act."
+    "text": "",
+    "explanation": "",
+    "keywords": [
+      "general"
+    ]
   },
   {
     "chapter": "Chapter I",
     "section": "4",
     "title": "Classification of offences",
-    "text": "This section classifies offences under the Bharatiya Nyaya Sanhita."
+    "text": "",
+    "explanation": "",
+    "keywords": [
+      "offences"
+    ]
   }
 ]
