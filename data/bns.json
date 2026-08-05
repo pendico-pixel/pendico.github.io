@@ -35,7 +35,7 @@
   },
   {
     "chapter": "Chapter I",
-    "chapterTitle": "Preliminary",
+    "chapterTitle": "of punishments",
     "section": "4",
     "title": "Classification of offences",
     "text": "",
@@ -46,14 +46,133 @@
   },
   {
   "chapter": "Chapter I",
-  "chapterTitle": "Preliminary",
+  "chapterTitle": "of punishments",
   "section": "5",
-  "title": "Act to override other laws",
+  "title": "commutation pf sentence",
   "text": "",
   "explanation": "",
   "keywords": [
     "override",
     "law"
   ]
-}
+},
+ {
+  "chapter": "Chapter II",
+  "chapterTitle": "Of Punishments",
+  "section": "6",
+  "title": "Fractions of terms of punishments",
+  "text": "",
+  "explanation": "",
+  "keywords": [
+    "commutation",
+    "sentence"
+  ]
+},
+{
+  "chapter": "Chapter II",
+  "chapterTitle": "Of Punishments",
+  "section": "7",
+  "title": "sentence mat be(in certian cases of imprisonment) whollwq3y or partly rigorous or simple",
+  "text": "",
+  "explanation": "",
+  "keywords": [
+    "commutation",
+    "sentence"
+  ]
+},
+{
+  "chapter": "Chapter II",
+  "chapterTitle": "Of Punishments",
+  "section": "8",
+  "title": "Amount of fine liability in default of payment of fine, etc",
+  "text": "",
+  "explanation": "",
+  "keywords": [
+    "commutation",
+    "sentence"
+  ]
+},
+{
+  "chapter": "Chapter II",
+  "chapterTitle": "Of Punishments",
+  "section": "9",
+  "title": "Limit of punishment of offence made up of several offences",
+  "text": "",
+  "explanation": "",
+  "keywords": [
+    "punishment",
+    "offences"
+  ]
+},
+{
+  "chapter": "Chapter II",
+  "chapterTitle": "Of Punishments",
+  "section": "10",
+  "title": "Punishment of person guilty of one of several offences, judgment stating that it is doubtful of which",
+  "text": "",
+  "explanation": "",
+  "keywords": [
+    "judgment",
+    "offence"
+  ]
+},
+{
+  "chapter": "Chapter II",
+  "chapterTitle": "Of Punishments",
+  "section": "11",
+  "title": "Solitary confinement",
+  "text": "",
+  "explanation": "",
+  "keywords": [
+    "solitary confinement"
+  ]
+},
+{
+  "chapter": "Chapter II",
+  "chapterTitle": "Of Punishments",
+  "section": "12",
+  "title": "Limit of solitary confinement",
+  "text": "",
+  "explanation": "",
+  "keywords": [
+    "solitary confinement",
+    "limit"
+  ]
+},
+{
+  "chapter": "Chapter II",
+  "chapterTitle": "Of Punishments",
+  "section": "13",
+  "title": "Enhanced punishment for certain offences after previous conviction",
+  "text": "",
+  "explanation": "",
+  "keywords": [
+    "enhanced punishment",
+    "previous conviction"
+  ]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "General Exceptions",
+  "section": "14",
+  "title": "Act done by a person bound, or by mistake of fact believing himself bound, by law",
+  "text": "",
+  "explanation": "",
+  "keywords": [
+    "bound by law",
+    "mistake of fact"
+  ]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "General Exceptions",
+  "section": "15",
+  "title": "Act of Judge when acting judicially",
+  "text": "",
+  "explanation": "",
+  "keywords": [
+    "judge",
+    "judicial act"
+  ]
+},  
 ]
