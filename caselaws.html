@@ -5,62 +5,159 @@
 <title>Pendico - Case Laws</title>
 
 <style>
-
 body{
-    font-family:Arial,sans-serif;
-    margin:0;
-    background:#f4f6fb;
+margin:0;
+font-family:Arial,sans-serif;
+background:#f4f7fc;
 }
 
 .hero{
-    background:linear-gradient(135deg,#0b3d91,#1d65d6);
-    color:white;
-    text-align:center;
-    padding:60px 20px;
+background:linear-gradient(135deg,#002b80,#005eff);
+padding:70px 20px;
+text-align:center;
+color:white;
 }
 
 .hero h1{
-    font-size:42px;
+font-size:50px;
+margin:0;
 }
 
 .hero p{
-    font-size:18px;
+font-size:20px;
+margin:15px 0;
 }
 
-.search-box{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    flex-wrap:wrap;
+.search{
+margin-top:30px;
 }
 
-.search-box input{
-    width:420px;
-    padding:14px;
-    border:none;
-    border-radius:10px;
+.search input{
+width:60%;
+padding:15px;
+border-radius:12px;
+border:none;
+font-size:16px;
 }
 
-.search-box button{
-    padding:14px 22px;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
+.search button{
+padding:15px 25px;
+border:none;
+border-radius:12px;
+background:#ffd54f;
+font-weight:bold;
+cursor:pointer;
+margin-left:10px;
 }
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+padding:40px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.title{
+padding-left:40px;
+}
+
+.cases{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+padding:40px;
+}
+
+.case{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.case:hover{
+transform:translateY(-8px);
+}
+
+.case button{
+background:#005eff;
+color:white;
+border:none;
+padding:12px 18px;
+border-radius:10px;
+cursor:pointer;
+}
+
+
 
 </style>
 
 </head>
 <body>
 
-<section class="hero">
-    <h1>⚖️ Case Laws</h1>
-    <p>Search Supreme Court, High Court and Landmark Judgments</p>
+<header class="hero">
+    <h1>⚖️ Pendico Case Laws</h1>
+    <p>India's Modern Legal Research Platform</p>
 
-    <div class="search-box">
-        <input type="text" placeholder="Search by Case Name, Citation or Keyword...">
+    <div class="search">
+        <input type="text" placeholder="Search Case Name, Citation, Judge...">
         <button>🔍 Search</button>
     </div>
+</header>
+
+<section class="stats">
+    <div class="card">
+        <h2>50,000+</h2>
+        <p>Cases</p>
+    </div>
+
+    <div class="card">
+        <h2>25+</h2>
+        <p>High Courts</p>
+    </div>
+
+    <div class="card">
+        <h2>1000+</h2>
+        <p>Landmark Cases</p>
+    </div>
+
+    <div class="card">
+        <h2>24×7</h2>
+        <p>Research</p>
+    </div>
+</section>
+
+<h2 class="title">🔥 Featured Landmark Judgments</h2>
+
+<section class="cases">
+
+<div class="case">
+<h3>Kesavananda Bharati v. State of Kerala</h3>
+<p>🏛 Supreme Court • 1973</p>
+<button>Read Judgment</button>
+</div>
+
+<div class="case">
+<h3>Maneka Gandhi v. Union of India</h3>
+<p>🏛 Supreme Court • 1978</p>
+<button>Read Judgment</button>
+</div>
+
+<div class="case">
+<h3>K.S. Puttaswamy v. Union of India</h3>
+<p>🏛 Supreme Court • 2017</p>
+<button>Read Judgment</button>
+</div>
+
 </section>
 
 <h2>Featured Cases</h2>
