@@ -174,5 +174,95 @@
     "judge",
     "judicial act"
   ]
- }  
+ },
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "General Exceptions",
+  "section": "16",
+  "title": "Act done pursuant to judgment or order of Court",
+  "text": "",
+  "explanation": "",
+  "keywords": ["judgment", "court order"]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "General Exceptions",
+  "section": "17",
+  "title": "Act done by a person justified, or by mistake of fact believing himself justified, by law",
+  "text": "",
+  "explanation": "",
+  "keywords": ["justified by law", "mistake of fact"]
+},
+ {
+  "chapter": "Chapter III",
+  "chapterTitle": "General Exceptions",
+  "section": "18",
+  "title": "Accident in doing a lawful act",
+  "text": "",
+  "explanation": "",
+  "keywords": ["accident", "lawful act"]
+},
+ {
+  "chapter": "Chapter III",
+  "chapterTitle": "General Exceptions",
+  "section": "19",
+  "title": "Act likely to cause harm, but done without criminal intent, and to prevent other harm",
+  "text": "",
+  "explanation": "",
+  "keywords": ["prevent harm", "criminal intent"]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "General Exceptions",
+  "section": "20",
+  "title": "Act of a child under seven years of age",
+  "text": "",
+  "explanation": "",
+  "keywords": ["child", "under seven"]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "General Exceptions",
+  "section": "21",
+  "title": "Act of a child above seven and under twelve years of age of immature understanding",
+  "text": "",
+  "explanation": "",
+  "keywords": ["child", "immature understanding"]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "General Exceptions",
+  "section": "22",
+  "title": "Act of a person of unsound mind",
+  "text": "",
+  "explanation": "",
+  "keywords": ["unsound mind"]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "General Exceptions",
+  "section": "23",
+  "title": "Act of a person incapable of judgment by reason of intoxication caused against his will",
+  "text": "",
+  "explanation": "",
+  "keywords": ["intoxication", "against will"]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "General Exceptions",
+  "section": "24",
+  "title": "Offence requiring a particular intent or knowledge committed by one who is intoxicated",
+  "text": "",
+  "explanation": "",
+  "keywords": ["intent", "intoxication"]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "General Exceptions",
+  "section": "25",
+  "title": "Act not intended and not known to be likely to cause death or grievous hurt, done by consent",
+  "text": "",
+  "explanation": "",
+  "keywords": ["consent", "grievous hurt"]
+}  
 ]
