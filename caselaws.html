@@ -98,7 +98,34 @@ cursor:pointer;
 }
 
 
+.modal{
+display:none;
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.6);
+z-index:999;
+}
 
+.modal-content{
+background:white;
+width:80%;
+max-width:800px;
+margin:5% auto;
+padding:30px;
+border-radius:15px;
+max-height:80vh;
+overflow:auto;
+}
+
+.close{
+float:right;
+font-size:32px;
+cursor:pointer;
+font-weight:bold;
+}
 </style>
 
 </head>
@@ -143,7 +170,13 @@ cursor:pointer;
 <div class="case">
 <h3>Kesavananda Bharati v. State of Kerala</h3>
 <p>🏛 Supreme Court • 1973</p>
-<button>Read Judgment</button>
+<button onclick="openCase(
+'Kesavananda Bharati v. State of Kerala',
+'Supreme Court • 1973',
+'The petitioner challenged the constitutional amendments.',
+'The Supreme Court held that Parliament cannot alter the Basic Structure of the Constitution.',
+'Basic Structure Doctrine.'
+)">Read Judgment</button>
 </div>
 
 <div class="case">
@@ -171,6 +204,54 @@ cursor:pointer;
 </ul>
 
 <a href="index.html">⬅ Back to Home</a>
+<div id="judgmentModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <h2 id="caseTitle">Case Title</h2>
+
+    <p id="caseCourt"></p>
+
+    <hr>
+
+    <h3>Facts</h3>
+    <p id="caseFacts"></p>
+
+    <h3>Judgment</h3>
+    <p id="caseJudgment"></p>
+
+    <h3>Legal Principle</h3>
+    <p id="casePrinciple"></p>
+
+  </div>
+</div>
+</body>
+<script>
+
+function openCase(title,court,facts,judgment,principle){
+
+document.getElementById("caseTitle").innerHTML = title;
+document.getElementById("caseCourt").innerHTML = court;
+document.getElementById("caseFacts").innerHTML = facts;
+document.getElementById("caseJudgment").innerHTML = judgment;
+document.getElementById("casePrinciple").innerHTML = principle;
+
+document.getElementById("judgmentModal").style.display = "block";
+
+}
+
+document.querySelector(".close").onclick = function(){
+document.getElementById("judgmentModal").style.display = "none";
+}
+
+window.onclick = function(event){
+if(event.target == document.getElementById("judgmentModal")){
+document.getElementById("judgmentModal").style.display = "none";
+}
+}
+
+</script>
 
 </body>
-</html>
+</html>    
+
