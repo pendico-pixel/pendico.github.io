@@ -82,28 +82,19 @@ margin-top:30px;
 <div class="container">
 
 <div class="card">
-<h2>About BNSS</h2>
+    <h2>🔎 Search BNSS Sections</h2>
 
-<p>
-The Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS) is India's criminal procedure law. It replaces the Code of Criminal Procedure, 1973 (CrPC). It governs arrest, investigation, bail, trial, criminal courts, appeals and other criminal procedures throughout India.
-</p>
-<h2>Contents</h2>
+    <input
+        type="text"
+        id="search"
+        placeholder="Search by section, title or keyword..."
+        onkeyup="searchSections()"
+        style="width:100%;padding:15px;border-radius:10px;border:1px solid #ccc;font-size:16px;"
+    >
 
-<ul>
-    <li>📗 Preliminary</li>
-    <li>👮 Arrest of Persons</li>
-    <li>🔍 Investigation</li>
-    <li>⚖️ Bail & Bonds</li>
-    <li>🏛 Criminal Courts</li>
-    <li>📄 Trial Procedure</li>
-    <li>📢 Appeals</li>
-    <li>📚 Miscellaneous Provisions</li>
-</ul>
+    <br><br>
 
-<p>Section-wise explanations will be added soon.</p>
-
-<p><a href="bareacts.html">⬅ Back to Bare Acts</a></p>
-
+    <div id="results"></div>
 </div>
 
 </div>
