@@ -133,5 +133,141 @@
     "text": "",
     "explanation": "",
     "keywords": ["special executive magistrates"]
-  }
+  },
+  ,
+{
+  "chapter": "Chapter II",
+  "chapterTitle": "Constitution of Criminal Courts and Offices",
+  "section": "16",
+  "title": "Local Jurisdiction of Executive Magistrates",
+  "text": "",
+  "explanation": "",
+  "keywords": ["local jurisdiction", "executive magistrates"]
+},
+{
+  "chapter": "Chapter II",
+  "chapterTitle": "Constitution of Criminal Courts and Offices",
+  "section": "17",
+  "title": "Subordination of Executive Magistrates",
+  "text": "",
+  "explanation": "",
+  "keywords": ["subordination", "executive magistrates"]
+},
+{
+  "chapter": "Chapter II",
+  "chapterTitle": "Constitution of Criminal Courts and Offices",
+  "section": "18",
+  "title": "Public Prosecutors",
+  "text": "",
+  "explanation": "",
+  "keywords": ["public prosecutors"]
+},
+{
+  "chapter": "Chapter II",
+  "chapterTitle": "Constitution of Criminal Courts and Offices",
+  "section": "19",
+  "title": "Assistant Public Prosecutors",
+  "text": "",
+  "explanation": "",
+  "keywords": ["assistant public prosecutors"]
+},
+{
+  "chapter": "Chapter II",
+  "chapterTitle": "Constitution of Criminal Courts and Offices",
+  "section": "20",
+  "title": "Directorate of Prosecution",
+  "text": "",
+  "explanation": "",
+  "keywords": ["directorate", "prosecution"]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "Power of Courts",
+  "section": "21",
+  "title": "Courts by which offences are triable",
+  "text": "",
+  "explanation": "",
+  "keywords": ["courts", "offences", "trial"]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "Power of Courts",
+  "section": "22",
+  "title": "Sentences which High Courts and Sessions Judges may pass",
+  "text": "",
+  "explanation": "",
+  "keywords": ["high court", "sessions judge", "sentences"]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "Power of Courts",
+  "section": "23",
+  "title": "Sentences which Magistrates may pass",
+  "text": "",
+  "explanation": "",
+  "keywords": ["magistrates", "sentences"]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "Power of Courts",
+  "section": "24",
+  "title": "Sentence of imprisonment in default of fine",
+  "text": "",
+  "explanation": "",
+  "keywords": ["imprisonment", "default", "fine"]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "Power of Courts",
+  "section": "25",
+  "title": "Sentence in cases of conviction of several offences at one trial",
+  "text": "",
+  "explanation": "",
+  "keywords": ["conviction", "several offences", "trial"]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "Power of Courts",
+  "section": "26",
+  "title": "Mode of conferring powers",
+  "text": "",
+  "explanation": "",
+  "keywords": ["conferring powers"]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "Power of Courts",
+  "section": "27",
+  "title": "Powers of officers appointed",
+  "text": "",
+  "explanation": "",
+  "keywords": ["powers", "officers"]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "Power of Courts",
+  "section": "28",
+  "title": "Withdrawal of powers",
+  "text": "",
+  "explanation": "",
+  "keywords": ["withdrawal", "powers"]
+},
+{
+  "chapter": "Chapter III",
+  "chapterTitle": "Power of Courts",
+  "section": "29",
+  "title": "Powers of Judges and Magistrates exercisable by their successors-in-office",
+  "text": "",
+  "explanation": "",
+  "keywords": ["judges", "magistrates", "successors"]
+},
+{
+  "chapter": "Chapter IV",
+  "chapterTitle": "Powers of Superior Officers of Police and Aid to the Magistrates and the Police",
+  "section": "30",
+  "title": "Powers of superior officers of police",
+  "text": "",
+  "explanation": "",
+  "keywords": ["superior officers", "police powers"]
+}
 ]
