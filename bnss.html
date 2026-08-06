@@ -119,9 +119,13 @@ function displaySections(data) {
     data.forEach(item => {
         results.innerHTML += `
         <div class="card" style="margin-top:20px;">
-            <h3>Section ${item.section} - ${item.title}</h3>
-            <p><strong>Chapter:</strong> ${item.chapter}</p>
-            <p>${item.explanation}</p>
+            <h3>📖 Section ${item.section} - ${item.title}</h3>
+
+<p><strong>📂 Chapter:</strong> ${item.chapter}</p>
+
+<p><strong>📝 Chapter Title:</strong> ${item.chapterTitle}</p>
+
+<p>${item.explanation}</p>
         </div>
         `;
     });
@@ -130,11 +134,13 @@ function displaySections(data) {
 function searchSections() {
     const keyword = document.getElementById("search").value.toLowerCase();
 
-    const filtered = sections.filter(item =>
-        item.section.toLowerCase().includes(keyword) ||
-        item.title.toLowerCase().includes(keyword) ||
-        item.explanation.toLowerCase().includes(keyword)
-    );
+   const filtered = sections.filter(item =>
+    item.section.toLowerCase().includes(keyword) ||
+    item.title.toLowerCase().includes(keyword) ||
+    item.chapter.toLowerCase().includes(keyword) ||
+    item.chapterTitle.toLowerCase().includes(keyword) ||
+    item.explanation.toLowerCase().includes(keyword)
+); 
 
     displaySections(filtered);
 }
