@@ -270,5 +270,50 @@
   "explanation": "",
   "keywords": ["superior officers", "police powers"]
 }
-  
+,
+{
+  "chapter": "Chapter IV",
+  "chapterTitle": "Powers of Superior Officers of Police and Aid to the Magistrates and the Police",
+  "section": "31",
+  "title": "Public when to assist Magistrates and police",
+  "text": "",
+  "explanation": "",
+  "keywords": ["public", "assist", "magistrates", "police"]
+},
+{
+  "chapter": "Chapter IV",
+  "chapterTitle": "Powers of Superior Officers of Police and Aid to the Magistrates and the Police",
+  "section": "32",
+  "title": "Aid to person, other than police officer, executing warrant",
+  "text": "",
+  "explanation": "",
+  "keywords": ["aid", "warrant", "execution"]
+},
+{
+  "chapter": "Chapter IV",
+  "chapterTitle": "Powers of Superior Officers of Police and Aid to the Magistrates and the Police",
+  "section": "33",
+  "title": "Public to give information of certain offences",
+  "text": "",
+  "explanation": "",
+  "keywords": ["public", "information", "offences"]
+},
+{
+  "chapter": "Chapter IV",
+  "chapterTitle": "Powers of Superior Officers of Police and Aid to the Magistrates and the Police",
+  "section": "34",
+  "title": "Duty of officers employed in connection with the affairs of a village to make certain report",
+  "text": "",
+  "explanation": "",
+  "keywords": ["village officers", "report", "duty"]
+},
+{
+  "chapter": "Chapter V",
+  "chapterTitle": "Arrest of Persons",
+  "section": "35",
+  "title": "When police may arrest without warrant",
+  "text": "",
+  "explanation": "",
+  "keywords": ["arrest", "without warrant", "police"]
+}  
 ]
