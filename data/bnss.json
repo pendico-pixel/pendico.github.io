@@ -2,7 +2,7 @@
   {
     "chapter": "Chapter I",
     "chapterTitle": "Preliminary",
-    "section": 1",
+    "section": "1",
     "title": "Short title, extent and commencement",
     "text": "",
     "explanation": "",
@@ -134,7 +134,7 @@
     "explanation": "",
     "keywords": ["special executive magistrates"]
   },
-  ,
+  
 {
   "chapter": "Chapter II",
   "chapterTitle": "Constitution of Criminal Courts and Offices",
