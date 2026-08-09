@@ -147,6 +147,49 @@ padding:20px;
     margin:5px 0 0;
     font-size:18px;
 }
+<style>
+
+    /* Your existing CSS */
+    
+    body {
+        ...
+    }
+
+    .card {
+        ...
+    }
+
+    .button {
+        ...
+    }
+
+
+    /* NEW CODE — paste here */
+
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .card .button {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 11px 22px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.25s ease;
+    }
+
+    .card .button:hover {
+        transform: translateY(-2px);
+    }
+
+</style>    
 </style>
 
 </head>
@@ -205,8 +248,9 @@ padding:20px;
 </div>
 
 <div class="card">
-<h2>📰 Legal News</h2>
-<a href="legalnews.html" class="explore-btn">Explore News</a>
+    <h2>📰 Legal News</h2>
+    <p>Stay updated with the latest legal developments, court decisions, government notifications and important legal news from across India.</p>
+    <a href="legalnews.html" class="button">Explore News</a>
 </div>
 
 </div>
