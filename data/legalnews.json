@@ -1,26 +1,26 @@
 [
   {
     "title": "Supreme Court issues important directions on access to justice",
-    "date": "2026-08-05",
+    "summary": "The Supreme Court considered important issues relating to access to justice and judicial administration.",
     "category": "Supreme Court",
-    "description": "The Supreme Court considered important issues relating to access to justice and judicial administration."
+    "date": "2026-08-05",
+    "source": "Supreme Court of India",
+    "url": "https://www.sci.gov.in/"
   },
   {
-    "title": "Supreme Court examines constitutional rights in major legal matter",
+    "title": "High Court examines important issues concerning legal rights",
+    "summary": "The High Court considered questions relating to constitutional rights and statutory interpretation.",
+    "category": "High Court",
     "date": "2026-08-04",
-    "category": "Constitutional Law",
-    "description": "The Court heard arguments concerning constitutional rights and statutory interpretation."
+    "source": "High Court",
+    "url": "https://www.sci.gov.in/"
   },
   {
-    "title": "High Courts issue important directions on protection of legal rights",
+    "title": "Important developments in the Indian legal profession",
+    "summary": "Recent developments concerning advocates, courts and the legal profession in India.",
+    "category": "Legal Profession",
     "date": "2026-08-03",
-    "category": "High Courts",
-    "description": "Various High Courts considered matters involving fundamental and statutory legal rights."
-  },
-  {
-    "title": "Recent judicial developments provide important guidance",
-    "date": "2026-08-02",
-    "category": "Legal Updates",
-    "description": "Recent judicial developments provide important guidance for lawyers, law students and litigants."
+    "source": "Pendico",
+    "url": "https://www.sci.gov.in/"
   }
 ]
