@@ -1,57 +1,1470 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pendico - Contact</title>
+
+<title>Pendico | Contact</title>
+
+<meta name="description"
+content="Contact Pendico for legal research enquiries, corrections, suggestions, collaborations and website feedback.">
+
+<meta name="keywords"
+content="Pendico contact, Indian legal information, legal research, case laws, bare acts">
+
+<meta name="author" content="Pendico">
+
+<link rel="icon" type="image/png" href="favicon.png">
 
 <style>
-body{font-family:Arial,sans-serif;background:#f4f4f4;margin:0;}
-header{background:#0b3d91;color:white;padding:20px;text-align:center;}
-.container{max-width:900px;margin:auto;padding:30px;}
-.card{background:white;padding:25px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,.1);}
-h2{color:#0b3d91;}
-a{color:#0b3d91;text-decoration:none;}
-footer{background:#062b63;color:white;text-align:center;padding:15px;margin-top:30px;}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:#f3f7fc;
+    color:#172033;
+
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:13px 6%;
+
+    background:rgba(3,15,34,.94);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.15);
+}
+
+.nav-brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    color:white;
+
+    font-size:21px;
+    font-weight:900;
+
+    letter-spacing:1.5px;
+}
+
+.nav-brand img{
+    width:42px;
+    height:42px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+}
+
+.nav-links{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+
+    gap:5px;
+}
+
+.nav-links a{
+    color:#d9e6f7;
+
+    padding:8px 12px;
+
+    border-radius:9px;
+
+    font-size:13px;
+    font-weight:600;
+
+    transition:.25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    background:#135cae;
+    color:white;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:
+    90px 20px
+    100px;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+
+    radial-gradient(
+        circle at 15% 25%,
+        rgba(24,126,255,.30),
+        transparent 28%
+    ),
+
+    radial-gradient(
+        circle at 85% 70%,
+        rgba(0,210,255,.20),
+        transparent 30%
+    ),
+
+    linear-gradient(
+        135deg,
+        #031025,
+        #092d5b,
+        #04152d
+    );
+}
+
+
+/* futuristic rings */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    border-radius:50%;
+
+    border:
+    1px solid
+    rgba(80,170,255,.12);
+
+    top:-370px;
+    right:-180px;
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    border-radius:50%;
+
+    border:
+    1px solid
+    rgba(80,170,255,.10);
+
+    bottom:-300px;
+    left:-200px;
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.hero-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    background:
+    rgba(255,255,255,.07);
+
+    border:
+    1px solid
+    rgba(255,255,255,.14);
+
+    color:#bcd8f5;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    margin-bottom:22px;
+}
+
+.hero h1{
+
+    font-size:
+    clamp(42px,7vw,74px);
+
+    line-height:1.05;
+
+    letter-spacing:3px;
+
+    margin-bottom:18px;
+
+    font-weight:900;
+}
+
+.hero h1 span{
+    color:#57a9ff;
+}
+
+.hero p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#a9bfd8;
+
+    font-size:
+    clamp(15px,2vw,18px);
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:
+    70px 22px
+    90px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro{
+
+    max-width:850px;
+
+    margin:
+    0 auto 50px;
+
+    text-align:center;
+}
+
+.intro h2{
+
+    color:#0c315d;
+
+    font-size:34px;
+
+    margin-bottom:12px;
+}
+
+.intro p{
+
+    color:#65778d;
+
+    font-size:15px;
+}
+
+
+/* =========================================================
+   CONTACT GRID
+========================================================= */
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:22px;
+
+    margin-bottom:55px;
+}
+
+.contact-card{
+
+    position:relative;
+
+    padding:28px;
+
+    border-radius:20px;
+
+    background:white;
+
+    border:
+    1px solid #e0e8f2;
+
+    box-shadow:
+    0 10px 30px
+    rgba(13,48,88,.07);
+
+    overflow:hidden;
+
+    transition:.3s;
+}
+
+.contact-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #1167d5,
+        #4bbcff
+    );
+}
+
+.contact-card:hover{
+
+    transform:
+    translateY(-7px);
+
+    box-shadow:
+    0 20px 45px
+    rgba(13,61,112,.14);
+
+    border-color:#c9dbee;
+}
+
+.contact-icon{
+
+    width:52px;
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:#edf5ff;
+
+    font-size:24px;
+
+    margin-bottom:18px;
+}
+
+.contact-card h3{
+
+    color:#11345e;
+
+    font-size:18px;
+
+    margin-bottom:7px;
+}
+
+.contact-card p{
+
+    color:#6a7c90;
+
+    font-size:13px;
+
+    margin-bottom:15px;
+}
+
+.contact-card a{
+
+    color:#0864c7;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    word-break:break-word;
+}
+
+
+/* =========================================================
+   EMAIL CENTER
+========================================================= */
+
+.email-panel{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:40px;
+
+    margin-bottom:60px;
+
+    border-radius:24px;
+
+    color:white;
+
+    background:
+
+    radial-gradient(
+        circle at 85% 20%,
+        rgba(48,154,255,.25),
+        transparent 30%
+    ),
+
+    linear-gradient(
+        135deg,
+        #061a38,
+        #0b4381
+    );
+
+    box-shadow:
+    0 20px 55px
+    rgba(4,30,65,.22);
+}
+
+.email-panel::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    border:
+    1px solid
+    rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    right:-130px;
+    bottom:-170px;
+}
+
+.email-content{
+
+    position:relative;
+
+    z-index:2;
+}
+
+.email-panel h2{
+
+    font-size:28px;
+
+    margin-bottom:8px;
+}
+
+.email-panel p{
+
+    color:#b8cde4;
+
+    font-size:14px;
+
+    max-width:650px;
+
+    margin-bottom:22px;
+}
+
+.email-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    padding:13px 20px;
+
+    border-radius:11px;
+
+    background:white;
+
+    color:#0b4d94;
+
+    font-size:14px;
+
+    font-weight:900;
+
+    transition:.25s;
+}
+
+.email-button:hover{
+
+    transform:
+    translateY(-3px);
+
+    box-shadow:
+    0 10px 25px
+    rgba(0,0,0,.20);
+}
+
+
+/* =========================================================
+   ENQUIRIES
+========================================================= */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:30px;
+}
+
+.section-title h2{
+
+    color:#0e3159;
+
+    font-size:31px;
+
+    margin-bottom:8px;
+}
+
+.section-title p{
+
+    color:#718196;
+
+    font-size:14px;
+}
+
+.enquiry-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:18px;
+
+    margin-bottom:65px;
+}
+
+.enquiry{
+
+    display:flex;
+
+    gap:16px;
+
+    padding:22px;
+
+    background:white;
+
+    border:
+    1px solid #e1e9f2;
+
+    border-radius:16px;
+
+    box-shadow:
+    0 7px 24px
+    rgba(14,48,85,.05);
+}
+
+.enquiry-icon{
+
+    min-width:45px;
+    height:45px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:#eef6ff;
+
+    font-size:20px;
+}
+
+.enquiry h3{
+
+    color:#193d66;
+
+    font-size:15px;
+
+    margin-bottom:3px;
+}
+
+.enquiry p{
+
+    color:#708096;
+
+    font-size:13px;
+}
+
+
+/* =========================================================
+   CREATOR
+========================================================= */
+
+.creator{
+
+    position:relative;
+
+    padding:42px;
+
+    border-radius:24px;
+
+    background:white;
+
+    border:
+    1px solid #e0e8f2;
+
+    box-shadow:
+    0 12px 35px
+    rgba(14,49,88,.07);
+
+    margin-bottom:65px;
+}
+
+.creator-layout{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+}
+
+.creator-avatar{
+
+    width:90px;
+    height:90px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:22px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #0b4382,
+        #1985df
+    );
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:900;
+
+    box-shadow:
+    0 12px 28px
+    rgba(12,86,166,.25);
+}
+
+.creator h2{
+
+    color:#0d315a;
+
+    font-size:25px;
+
+    margin-bottom:3px;
+}
+
+.creator-role{
+
+    color:#1169cb;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+}
+
+.creator p{
+
+    color:#697b90;
+
+    font-size:14px;
+
+    max-width:780px;
+}
+
+
+/* =========================================================
+   DISCLAIMER
+========================================================= */
+
+.disclaimer{
+
+    padding:27px;
+
+    border-radius:18px;
+
+    background:#f8fafc;
+
+    border:
+    1px solid #e1e8f0;
+
+    margin-bottom:20px;
+}
+
+.disclaimer h3{
+
+    color:#243f60;
+
+    font-size:16px;
+
+    margin-bottom:8px;
+}
+
+.disclaimer p{
+
+    color:#6b7c90;
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+    background:#031021;
+
+    color:#8fa3ba;
+
+    padding:
+    50px 20px;
+
+    text-align:center;
+}
+
+.footer-logo{
+
+    color:white;
+
+    font-size:26px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    margin-bottom:5px;
+}
+
+.footer-tagline{
+
+    font-size:13px;
+
+    color:#8196ae;
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin:
+    20px 0;
+}
+
+.footer-links a{
+
+    color:#9fb2c7;
+
+    font-size:13px;
+
+    transition:.2s;
+}
+
+.footer-links a:hover{
+    color:#57a9ff;
+}
+
+.footer-copy{
+
+    padding-top:18px;
+
+    border-top:
+    1px solid
+    rgba(255,255,255,.07);
+
+    max-width:900px;
+
+    margin:auto;
+
+    font-size:11px;
+
+    color:#71859d;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:900px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:10px;
+    }
+
+    .contact-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:650px){
+
+    .nav-links a{
+
+        font-size:11px;
+
+        padding:6px 8px;
+    }
+
+    .hero{
+
+        padding:
+        65px 17px
+        75px;
+    }
+
+    .hero h1{
+
+        font-size:44px;
+    }
+
+    .main{
+
+        padding:
+        50px 15px
+        65px;
+    }
+
+    .intro h2{
+
+        font-size:28px;
+    }
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .enquiry-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .email-panel{
+
+        padding:28px 22px;
+    }
+
+    .creator{
+
+        padding:27px 22px;
+    }
+
+    .creator-layout{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+}
+
 </style>
 
 </head>
 
+
 <body>
 
-<header>
-<h1>📞 Contact Pendico</h1>
-<p>We're here to help you learn the law.</p>
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav>
+
+<a href="index.html" class="nav-brand">
+
+<img
+src="logo.png.jpeg"
+alt="Pendico Logo">
+
+<span>PENDICO</span>
+
+</a>
+
+
+<div class="nav-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="bareacts.html">
+Bare Acts
+</a>
+
+<a href="caselaws.html">
+Case Laws
+</a>
+
+<a href="articles.html">
+Articles
+</a>
+
+<a href="legalnews.html">
+Legal News
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="contact.html" class="active">
+Contact
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<header class="hero">
+
+<div class="hero-content">
+
+<div class="hero-badge">
+⚖️ PENDICO • LEGAL TECHNOLOGY
+</div>
+
+<h1>
+CONTACT <span>PENDICO</span>
+</h1>
+
+<p>
+Have a correction, suggestion, research enquiry or idea
+that could make Pendico better? Connect with us.
+</p>
+
+</div>
+
 </header>
 
-<div class="container">
 
-<div class="card">
+<!-- =========================================================
+     MAIN
+========================================================= -->
 
-<h2>📧 Email</h2>
-<p>pendico777@gmail.com</p>
+<main class="main">
 
-<h2>📍 Location</h2>
-<p>Chennai, Tamil Nadu, India</p>
 
-<h2>💬 Contact Us</h2>
-<p>Have a question, found an error, or want to suggest a legal topic? We'd be glad to hear from you. Your feedback helps improve Pendico.</p>
+<!-- INTRO -->
 
-<h2>⚖️ About Pendico</h2>
-<p>Pendico is a legal information platform created to make Indian law easier to understand through articles, case summaries, legal updates, and educational resources.</p>
+<section class="intro">
 
-<h2>⚠️ Disclaimer</h2>
-<p>The information on Pendico is provided for educational and informational purposes only. It is not legal advice and should not be relied upon as a substitute for advice from a qualified advocate or other legal professional.</p>
+<h2>
+Connect With the Pendico Legal Research Platform
+</h2>
 
-<p><a href="index.html">⬅ Back to Home</a></p>
+<p>
+Pendico is being developed as a modern Indian legal
+information and research platform for students,
+researchers and members of the legal community.
+Your feedback helps improve the accuracy, usability
+and scope of the platform.
+</p>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT CARDS
+========================================================= -->
+
+<section class="contact-grid">
+
+
+<div class="contact-card">
+
+<div class="contact-icon">
+📧
+</div>
+
+<h3>
+Email
+</h3>
+
+<p>
+For general enquiries, suggestions, corrections,
+research-related communication and collaboration.
+</p>
+
+<a href="mailto:pendico777@gmail.com">
+pendico777@gmail.com
+</a>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="contact-icon">
+⚖️
+</div>
+
+<h3>
+Legal Research
+</h3>
+
+<p>
+Found an incorrect citation, case detail, section,
+legal principle or other research information?
+Let us know.
+</p>
+
+<a href="mailto:pendico777@gmail.com?subject=Legal%20Research%20Correction">
+Report a correction →
+</a>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="contact-icon">
+💡
+</div>
+
+<h3>
+Ideas & Suggestions
+</h3>
+
+<p>
+Have an idea for a new feature, legal database,
+research tool or improvement to Pendico?
+</p>
+
+<a href="mailto:pendico777@gmail.com?subject=Pendico%20Suggestion">
+Send a suggestion →
+</a>
+
+</div>
+
+
+</section>
+
+
+<!-- =========================================================
+     EMAIL PANEL
+========================================================= -->
+
+<section class="email-panel">
+
+<div class="email-content">
+
+<h2>
+📨 Get in Touch
+</h2>
+
+<p>
+The primary contact channel for Pendico is email.
+Please include a clear subject and briefly explain
+your enquiry so that it can be reviewed efficiently.
+</p>
+
+<a
+class="email-button"
+href="mailto:pendico777@gmail.com">
+
+✉️ Email Pendico
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     TYPES OF ENQUIRIES
+========================================================= -->
+
+<section>
+
+<div class="section-title">
+
+<h2>
+What Can You Contact Us About?
+</h2>
+
+<p>
+Pendico welcomes constructive communication relating
+to the development of the platform.
+</p>
+
+</div>
+
+
+<div class="enquiry-grid">
+
+
+<div class="enquiry">
+
+<div class="enquiry-icon">
+📚
+</div>
+
+<div>
+
+<h3>
+Case Law Corrections
+</h3>
+
+<p>
+Report incorrect case names, citations, dates,
+legal principles or other case-law information.
+</p>
 
 </div>
 
 </div>
+
+
+<div class="enquiry">
+
+<div class="enquiry-icon">
+📖
+</div>
+
+<div>
+
+<h3>
+Bare Act Corrections
+</h3>
+
+<p>
+Notify us about possible errors or missing information
+in the legislation database.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="enquiry">
+
+<div class="enquiry-icon">
+📝
+</div>
+
+<div>
+
+<h3>
+Article & Research Suggestions
+</h3>
+
+<p>
+Suggest subjects, legal topics and research areas
+for future Pendico content.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="enquiry">
+
+<div class="enquiry-icon">
+🚀
+</div>
+
+<div>
+
+<h3>
+Feature Requests
+</h3>
+
+<p>
+Suggest useful tools such as advanced search,
+case comparisons, legal timelines and research features.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="enquiry">
+
+<div class="enquiry-icon">
+🤝
+</div>
+
+<div>
+
+<h3>
+Collaboration
+</h3>
+
+<p>
+Students, researchers and legal-content contributors
+may contact Pendico regarding possible collaboration.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="enquiry">
+
+<div class="enquiry-icon">
+🐛
+</div>
+
+<div>
+
+<h3>
+Website Problems
+</h3>
+
+<p>
+If a page, link, button or feature is not working,
+please send the relevant page name and description.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CREATOR
+========================================================= -->
+
+<section class="creator">
+
+<div class="creator-layout">
+
+
+<div class="creator-avatar">
+SK
+</div>
+
+
+<div>
+
+<h2>
+SRIRAMADOSS K
+</h2>
+
+<div class="creator-role">
+Founder & Creator — Pendico
+</div>
+
+<p>
+Pendico is an independent legal information and
+research initiative focused on making Indian legal
+knowledge more accessible through a modern digital
+platform. The project is intended to combine legal
+education, structured case-law research, legislation
+and technology in one accessible environment.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     DISCLAIMER
+========================================================= -->
+
+<section class="disclaimer">
+
+<h3>
+⚠️ Important Legal Information
+</h3>
+
+<p>
+Pendico is an educational and legal-information platform.
+The material published on this website is intended for
+general educational, informational and research purposes.
+It should not be treated as legal advice, a substitute
+for professional legal consultation, or a representation
+of any court, government authority, Bar Council or other
+official institution.
+</p>
+
+<br>
+
+<p>
+Users should independently verify legislation, amendments,
+notifications, judgments and other legal materials against
+authoritative sources before relying upon them for legal
+practice, academic work or any legal proceeding.
+</p>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
-© 2026 Pendico | Legal Information Portal
+
+<div class="footer-logo">
+PENDICO
+</div>
+
+<div class="footer-tagline">
+Indian Legal Information & Research Platform
+</div>
+
+
+<div class="footer-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="bareacts.html">
+Bare Acts
+</a>
+
+<a href="caselaws.html">
+Case Laws
+</a>
+
+<a href="articles.html">
+Articles
+</a>
+
+<a href="legalnews.html">
+Legal News
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</div>
+
+
+<div class="footer-copy">
+
+© 2026 Pendico. All rights reserved.
+<br><br>
+Built as an independent legal-information and
+research platform for educational purposes.
+
+</div>
+
 </footer>
+
 
 </body>
 </html>
