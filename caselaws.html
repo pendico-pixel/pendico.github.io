@@ -1,269 +1,4428 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
-<title>Pendico - Case Laws</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pendico | Case Law Library | Indian Legal Research</title>
+
+<meta name="description"
+content="Explore landmark Indian Supreme Court judgments and important case laws through the Pendico Case Law Library.">
+
+<meta name="keywords"
+content="Indian case laws, Supreme Court judgments, landmark judgments, constitutional law, criminal law, Pendico">
+
+<meta name="author" content="Pendico">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://pendico.pages.dev/caselaws.html">
+
+<link rel="icon" type="image/png" href="favicon.png">
 
 <style>
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f4f7fc;
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:#f4f7fb;
+    color:#172033;
+
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav{
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:13px 6%;
+
+    background:rgba(4,15,32,.96);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 5px 25px rgba(0,0,0,.15);
+}
+
+.nav-brand{
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:21px;
+
+    font-weight:900;
+
+    letter-spacing:1.5px;
+}
+
+.nav-brand img{
+
+    width:42px;
+    height:42px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:5px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+}
+
+.nav-links a{
+
+    color:#cbd8ea;
+
+    text-decoration:none;
+
+    padding:8px 12px;
+
+    border-radius:8px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:.25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+
+    color:white;
+
+    background:#1559a7;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
 .hero{
-background:linear-gradient(135deg,#002b80,#005eff);
-padding:70px 20px;
-text-align:center;
-color:white;
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:
+    90px 20px
+    85px;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+
+    radial-gradient(
+        circle at 15% 20%,
+        rgba(43,128,255,.28),
+        transparent 30%
+    ),
+
+    radial-gradient(
+        circle at 85% 70%,
+        rgba(0,220,255,.16),
+        transparent 30%
+    ),
+
+    linear-gradient(
+        135deg,
+        #041126,
+        #092955,
+        #06172f
+    );
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    background:
+    rgba(29,115,255,.08);
+
+    filter:blur(35px);
+
+    top:-250px;
+    left:-180px;
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+    height:400px;
+
+    border-radius:50%;
+
+    background:
+    rgba(0,210,255,.06);
+
+    filter:blur(30px);
+
+    bottom:-220px;
+    right:-150px;
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1050px;
+
+    margin:auto;
+}
+
+.hero-logo{
+
+    width:92px;
+    height:92px;
+
+    object-fit:cover;
+
+    border-radius:22px;
+
+    margin-bottom:22px;
+
+    border:
+    1px solid rgba(255,255,255,.18);
+
+    box-shadow:
+    0 0 35px rgba(70,155,255,.35);
 }
 
 .hero h1{
-font-size:50px;
-margin:0;
+
+    font-size:
+    clamp(42px,7vw,76px);
+
+    letter-spacing:4px;
+
+    line-height:1.1;
+
+    font-weight:900;
 }
 
-.hero p{
-font-size:20px;
-margin:15px 0;
+.hero h1 span{
+
+    color:#5ba9ff;
 }
 
-.search{
-margin-top:30px;
+.hero-subtitle{
+
+    font-size:
+    clamp(17px,3vw,23px);
+
+    color:#d3e2f5;
+
+    margin-top:12px;
 }
 
-.search input{
-width:60%;
-padding:15px;
-border-radius:12px;
-border:none;
-font-size:16px;
+.hero-description{
+
+    max-width:700px;
+
+    margin:
+    15px auto
+    32px;
+
+    color:#9db1ca;
+
+    font-size:16px;
 }
 
-.search button{
-padding:15px 25px;
-border:none;
-border-radius:12px;
-background:#ffd54f;
-font-weight:bold;
-cursor:pointer;
-margin-left:10px;
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-container{
+
+    max-width:820px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:7px;
+
+    display:flex;
+
+    border-radius:16px;
+
+    box-shadow:
+    0 18px 55px rgba(0,0,0,.28);
 }
+
+.search-container input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:
+    16px 18px;
+
+    font-size:16px;
+
+    border-radius:11px;
+
+    color:#172033;
+}
+
+.search-container button{
+
+    border:none;
+
+    background:#1769d1;
+
+    color:white;
+
+    padding:
+    0 26px;
+
+    border-radius:11px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.search-container button:hover{
+
+    background:#0d54ad;
+
+    transform:translateY(-1px);
+}
+
+.search-hint{
+
+    margin-top:12px;
+
+    color:#90a7c2;
+
+    font-size:13px;
+}
+
+
+/* =====================================================
+   QUICK CATEGORY BAR
+===================================================== */
+
+.quick-categories{
+
+    max-width:1100px;
+
+    margin:
+    -25px auto
+    0;
+
+    position:relative;
+
+    z-index:10;
+
+    padding:0 20px;
+}
+
+.quick-inner{
+
+    background:white;
+
+    border:
+    1px solid #e4eaf2;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:9px;
+
+    flex-wrap:wrap;
+
+    box-shadow:
+    0 12px 35px rgba(20,50,90,.10);
+}
+
+.quick-inner button{
+
+    border:1px solid #dbe4ef;
+
+    background:#f8fafd;
+
+    color:#27476e;
+
+    padding:8px 14px;
+
+    border-radius:22px;
+
+    cursor:pointer;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.quick-inner button:hover,
+.quick-inner button.active{
+
+    color:white;
+
+    border-color:#1769d1;
+
+    background:#1769d1;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.container{
+
+    max-width:1250px;
+
+    margin:auto;
+
+    padding:
+    70px 22px;
+}
+
+
+/* =====================================================
+   SECTION HEADING
+===================================================== */
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:35px;
+}
+
+.section-heading h2{
+
+    color:#102e55;
+
+    font-size:
+    clamp(27px,4vw,38px);
+
+    margin-bottom:7px;
+}
+
+.section-heading p{
+
+    color:#6d7d91;
+
+    font-size:15px;
+}
+
+
+/* =====================================================
+   STATISTICS
+===================================================== */
 
 .stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-padding:40px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:17px;
+
+    margin-bottom:55px;
 }
 
-.card{
-background:white;
-padding:25px;
-border-radius:18px;
-text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,.12);
+.stat{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:25px 18px;
+
+    text-align:center;
+
+    border-radius:17px;
+
+    background:white;
+
+    border:
+    1px solid #e3e9f1;
+
+    box-shadow:
+    0 8px 25px rgba(18,45,80,.06);
 }
 
-.title{
-padding-left:40px;
+.stat::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:3px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #1769d1,
+        #38b6ff
+    );
 }
 
-.cases{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:25px;
-padding:40px;
+.stat-number{
+
+    font-size:30px;
+
+    font-weight:900;
+
+    color:#1769d1;
 }
 
-.case{
-background:white;
-padding:25px;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,.1);
-transition:.3s;
+.stat-label{
+
+    color:#718096;
+
+    font-size:13px;
+
+    margin-top:3px;
 }
 
-.case:hover{
-transform:translateY(-8px);
+
+/* =====================================================
+   FILTER PANEL
+===================================================== */
+
+.filter-panel{
+
+    background:white;
+
+    border:
+    1px solid #e1e8f1;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    margin-bottom:35px;
+
+    box-shadow:
+    0 8px 28px rgba(20,50,90,.06);
 }
 
-.case button{
-background:#005eff;
-color:white;
-border:none;
-padding:12px 18px;
-border-radius:10px;
-cursor:pointer;
+.filter-title{
+
+    font-size:15px;
+
+    font-weight:800;
+
+    color:#183b68;
+
+    margin-bottom:13px;
 }
 
+.filters{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:12px;
+}
+
+.filters select{
+
+    width:100%;
+
+    padding:12px;
+
+    border:
+    1px solid #dbe4ee;
+
+    border-radius:10px;
+
+    background:#f9fbfd;
+
+    color:#294765;
+
+    outline:none;
+
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+.filters select:focus{
+
+    border-color:#1769d1;
+}
+
+
+/* =====================================================
+   RESULTS BAR
+===================================================== */
+
+.results-bar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:18px;
+
+    flex-wrap:wrap;
+}
+
+.results-count{
+
+    color:#62748b;
+
+    font-size:14px;
+}
+
+.results-count strong{
+
+    color:#1769d1;
+}
+
+.clear-btn{
+
+    border:none;
+
+    background:#edf4fc;
+
+    color:#1769d1;
+
+    padding:8px 13px;
+
+    border-radius:8px;
+
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   CASE GRID
+===================================================== */
+
+.case-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:22px;
+}
+
+
+/* =====================================================
+   CASE CARD
+===================================================== */
+
+.case-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:white;
+
+    border:
+    1px solid #e2e8f0;
+
+    border-radius:19px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 8px 25px rgba(18,45,80,.07);
+
+    transition:
+    transform .3s,
+    box-shadow .3s,
+    border-color .3s;
+}
+
+.case-card:hover{
+
+    transform:translateY(-7px);
+
+    border-color:#c6dbf4;
+
+    box-shadow:
+    0 18px 45px rgba(18,45,80,.14);
+}
+
+.case-top{
+
+    height:5px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #1769d1,
+        #42b8ff
+    );
+}
+
+.case-content{
+
+    padding:24px;
+
+    flex:1;
+}
+
+.case-badges{
+
+    display:flex;
+
+    gap:7px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:15px;
+}
+
+.badge{
+
+    padding:5px 9px;
+
+    border-radius:7px;
+
+    background:#edf5ff;
+
+    color:#1760b7;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    letter-spacing:.3px;
+}
+
+.badge.landmark{
+
+    background:#fff6db;
+
+    color:#9a6800;
+}
+
+.case-card h3{
+
+    color:#132f53;
+
+    font-size:19px;
+
+    line-height:1.35;
+
+    margin-bottom:9px;
+}
+
+.case-meta{
+
+    color:#73849a;
+
+    font-size:13px;
+
+    margin-bottom:13px;
+}
+
+.case-summary{
+
+    color:#66778d;
+
+    font-size:14px;
+
+    line-height:1.65;
+
+    margin-bottom:17px;
+}
+
+.principle{
+
+    padding:11px 12px;
+
+    border-left:
+    3px solid #1769d1;
+
+    background:#f5f9fe;
+
+    color:#425b77;
+
+    font-size:13px;
+
+    border-radius:0 8px 8px 0;
+
+    margin-bottom:18px;
+}
+
+.principle strong{
+
+    color:#183b68;
+}
+
+.case-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+}
+
+.read-btn{
+
+    border:none;
+
+    background:#1769d1;
+
+    color:white;
+
+    padding:10px 15px;
+
+    border-radius:9px;
+
+    cursor:pointer;
+
+    font-weight:800;
+
+    transition:.25s;
+}
+
+.read-btn:hover{
+
+    background:#0c54ad;
+
+    transform:translateY(-2px);
+}
+
+.subject{
+
+    color:#8190a2;
+
+    font-size:11px;
+
+    font-weight:700;
+}
+
+
+/* =====================================================
+   NO RESULTS
+===================================================== */
+
+.no-results{
+
+    display:none;
+
+    text-align:center;
+
+    padding:70px 20px;
+
+    background:white;
+
+    border-radius:18px;
+
+    border:1px solid #e2e8f0;
+}
+
+.no-results .icon{
+
+    font-size:45px;
+
+    margin-bottom:12px;
+}
+
+.no-results h3{
+
+    color:#19385d;
+
+    margin-bottom:5px;
+}
+
+.no-results p{
+
+    color:#738197;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
 
 .modal{
-display:none;
-position:fixed;
-left:0;
-top:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.6);
-z-index:999;
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:3000;
+
+    padding:30px 15px;
+
+    background:
+    rgba(1,10,24,.78);
+
+    backdrop-filter:blur(9px);
+
+    overflow:auto;
 }
 
 .modal-content{
-background:white;
-width:80%;
-max-width:800px;
-margin:5% auto;
-padding:30px;
-border-radius:15px;
-max-height:80vh;
-overflow:auto;
+
+    position:relative;
+
+    max-width:900px;
+
+    margin:
+    30px auto;
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 30px 90px rgba(0,0,0,.35);
+
+    animation:
+    modalIn .25s ease;
 }
 
-.close{
-float:right;
-font-size:32px;
-cursor:pointer;
-font-weight:bold;
+@keyframes modalIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px) scale(.98);
+    }
+
+    to{
+        opacity:1;
+        transform:none;
+    }
 }
+
+.modal-header{
+
+    padding:32px;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #06172f,
+        #1055a0
+    );
+}
+
+.modal-header h2{
+
+    font-size:
+    clamp(23px,4vw,34px);
+
+    line-height:1.3;
+
+    margin-bottom:10px;
+}
+
+.modal-header p{
+
+    color:#bdd0e7;
+
+    font-size:14px;
+}
+
+.modal-body{
+
+    padding:30px;
+}
+
+.detail-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:15px;
+
+    margin-bottom:25px;
+}
+
+.detail{
+
+    padding:15px;
+
+    background:#f6f9fc;
+
+    border:1px solid #e4eaf1;
+
+    border-radius:11px;
+}
+
+.detail span{
+
+    display:block;
+
+    color:#7b8b9d;
+
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    font-weight:800;
+
+    margin-bottom:4px;
+}
+
+.detail strong{
+
+    color:#1d3d62;
+
+    font-size:14px;
+}
+
+.modal-section{
+
+    margin-top:23px;
+}
+
+.modal-section h3{
+
+    color:#153961;
+
+    font-size:18px;
+
+    margin-bottom:7px;
+}
+
+.modal-section p{
+
+    color:#5f7187;
+
+    font-size:14px;
+
+    line-height:1.8;
+}
+
+.modal-footer{
+
+    padding:
+    20px 30px;
+
+    background:#f7f9fc;
+
+    border-top:1px solid #e6ebf1;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+}
+
+.source-note{
+
+    color:#8996a6;
+
+    font-size:11px;
+}
+
+.close-btn{
+
+    border:none;
+
+    background:#e8eef6;
+
+    color:#23486f;
+
+    padding:10px 16px;
+
+    border-radius:9px;
+
+    cursor:pointer;
+
+    font-weight:800;
+}
+
+
+/* =====================================================
+   INFO SECTION
+===================================================== */
+
+.info-section{
+
+    background:#07172e;
+
+    color:white;
+
+    padding:
+    65px 22px;
+}
+
+.info-inner{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+.info-inner h2{
+
+    font-size:32px;
+
+    margin-bottom:10px;
+}
+
+.info-inner p{
+
+    color:#aabbd0;
+
+    max-width:760px;
+
+    margin:auto;
+
+    font-size:15px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:#030d1b;
+
+    color:#91a3ba;
+
+    text-align:center;
+
+    padding:40px 20px;
+}
+
+.footer-logo{
+
+    color:white;
+
+    font-size:25px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    margin-bottom:5px;
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-top:15px;
+}
+
+.footer-links a{
+
+    color:#9db0c6;
+
+    text-decoration:none;
+
+    font-size:13px;
+}
+
+.footer-links a:hover{
+
+    color:white;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:950px){
+
+    .case-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .stats{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:700px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:10px;
+
+        padding:11px 12px;
+    }
+
+    .nav-links{
+
+        gap:2px;
+    }
+
+    .nav-links a{
+
+        font-size:11px;
+
+        padding:7px 8px;
+    }
+
+    .hero{
+
+        padding:
+        65px 17px
+        70px;
+    }
+
+    .hero-logo{
+
+        width:78px;
+        height:78px;
+    }
+
+    .hero h1{
+
+        font-size:44px;
+
+        letter-spacing:2px;
+    }
+
+    .hero-description{
+
+        font-size:14px;
+    }
+
+    .search-container{
+
+        flex-direction:column;
+
+        gap:6px;
+    }
+
+    .search-container button{
+
+        padding:13px;
+    }
+
+    .container{
+
+        padding:
+        55px 15px;
+    }
+
+    .stats{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap:10px;
+
+        margin-bottom:40px;
+    }
+
+    .stat{
+
+        padding:20px 10px;
+    }
+
+    .stat-number{
+
+        font-size:25px;
+    }
+
+    .filters{
+
+        grid-template-columns:1fr;
+    }
+
+    .case-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .detail-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .modal-body{
+
+        padding:22px;
+    }
+
+    .modal-header{
+
+        padding:25px 22px;
+    }
+
+    .modal-footer{
+
+        padding:
+        17px 22px;
+
+        flex-direction:column;
+
+        align-items:stretch;
+    }
+
+    .close-btn{
+
+        width:100%;
+    }
+}
+
 </style>
 
 </head>
+
 <body>
 
-<header class="hero">
-    <h1>⚖️ Pendico Case Laws</h1>
-    <p>India's Modern Legal Research Platform</p>
 
-    <div class="search">
-        <input type="text" placeholder="Search Case Name, Citation, Judge...">
-        <button>🔍 Search</button>
-    </div>
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
+<a href="index.html" class="nav-brand">
+
+<img src="logo.png.jpeg" alt="Pendico">
+
+<span>PENDICO</span>
+
+</a>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+
+<a href="bareacts.html">Bare Acts</a>
+
+<a href="caselaws.html" class="active">Case Laws</a>
+
+<a href="articles.html">Articles</a>
+
+<a href="legalnews.html">Legal News</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="hero">
+
+<div class="hero-content">
+
+<img
+src="logo.png.jpeg"
+class="hero-logo"
+alt="Pendico Case Law Library">
+
+<h1>
+CASE <span>LAW</span> LIBRARY
+</h1>
+
+<p class="hero-subtitle">
+Indian Judicial Research • Landmark Decisions • Legal Principles
+</p>
+
+<p class="hero-description">
+
+Explore a curated library of important Indian judgments,
+constitutional decisions and landmark judicial principles
+through Pendico's modern legal research interface.
+
+</p>
+
+
+<div class="search-container">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search case name, court, subject, year or legal principle..."
+autocomplete="off">
+
+<button onclick="applyFilters()">
+🔍 Search
+</button>
+
+</div>
+
+<div class="search-hint">
+Try: "Article 21", "privacy", "criminal", "Supreme Court", "1973"
+</div>
+
+</div>
+
 </header>
 
-<section class="stats">
-    <div class="card">
-        <h2>50,000+</h2>
-        <p>Cases</p>
-    </div>
 
-    <div class="card">
-        <h2>25+</h2>
-        <p>High Courts</p>
-    </div>
+<!-- =====================================================
+     QUICK CATEGORIES
+===================================================== -->
 
-    <div class="card">
-        <h2>1000+</h2>
-        <p>Landmark Cases</p>
-    </div>
+<section class="quick-categories">
 
-    <div class="card">
-        <h2>24×7</h2>
-        <p>Research</p>
-    </div>
-</section>
+<div class="quick-inner">
 
-<h2 class="title">🔥 Featured Landmark Judgments</h2>
+<button class="quick-filter active"
+data-category="all">
+All Cases
+</button>
 
-<section class="cases">
+<button class="quick-filter"
+data-category="Constitutional Law">
+Constitutional
+</button>
 
-<div class="case">
-<h3>Kesavananda Bharati v. State of Kerala</h3>
-<p>🏛 Supreme Court • 1973</p>
-<button onclick="openCase(
-'Kesavananda Bharati v. State of Kerala',
-'Supreme Court • 1973',
-'The petitioner challenged the constitutional amendments.',
-'The Supreme Court held that Parliament cannot alter the Basic Structure of the Constitution.',
-'Basic Structure Doctrine.'
-)">Read Judgment</button>
-</div>
+<button class="quick-filter"
+data-category="Criminal Law">
+Criminal
+</button>
 
-<div class="case">
-<h3>Maneka Gandhi v. Union of India</h3>
-<p>🏛 Supreme Court • 1978</p>
-<button onclick="openCase(
-'Maneka Gandhi v. Union of India',
-'Supreme Court • 1978',
-'The Government impounded Maneka Gandhi's passport without giving her an opportunity to be heard.',
-'The Supreme Court held that any procedure affecting life or personal liberty under Article 21 must be fair, just and reasonable.',
-'Articles 14, 19 and 21 must be read together.'
-)">Read Judgment</button>
-</div>
+<button class="quick-filter"
+data-category="Civil Law">
+Civil
+</button>
 
-<div class="case">
-<h3>K.S. Puttaswamy v. Union of India</h3>
-<p>🏛 Supreme Court • 2017</p>
-<button onclick="openCase(
-'K.S. Puttaswamy v. Union of India',
-'Supreme Court • 2017',
-'The petition questioned whether privacy is a fundamental right under the Constitution.',
-'The Supreme Court unanimously held that the Right to Privacy is a fundamental right.',
-'Privacy is protected under Articles 14, 19 and 21.'
-)">Read Judgment</button>
+<button class="quick-filter"
+data-category="Fundamental Rights">
+Fundamental Rights
+</button>
+
+<button class="quick-filter"
+data-category="Family Law">
+Family Law
+</button>
+
+<button class="quick-filter"
+data-category="Corporate Law">
+Corporate
+</button>
+
+<button class="quick-filter"
+data-category="Human Rights">
+Human Rights
+</button>
+
 </div>
 
 </section>
 
-<h2>Featured Cases</h2>
 
-<ul>
-<li>Kesavananda Bharati v. State of Kerala</li>
-<li>Maneka Gandhi v. Union of India</li>
-<li>Vishaka v. State of Rajasthan</li>
-<li>Navtej Singh Johar v. Union of India</li>
-<li>Puttaswamy v. Union of India</li>
-</ul>
+<!-- =====================================================
+     MAIN
+===================================================== -->
 
-<a href="index.html">⬅ Back to Home</a>
-<div id="judgmentModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
+<main>
 
-    <h2 id="caseTitle">Case Title</h2>
+<section class="container">
 
-    <p id="caseCourt"></p>
 
-    <hr>
+<div class="section-heading">
 
-    <h3>Facts</h3>
-    <p id="caseFacts"></p>
+<h2>
+Judicial Knowledge Base
+</h2>
 
-    <h3>Judgment</h3>
-    <p id="caseJudgment"></p>
+<p>
+Search and explore important decisions in the Pendico case-law collection.
+</p>
 
-    <h3>Legal Principle</h3>
-    <p id="casePrinciple"></p>
-
-  </div>
 </div>
-</body>
+
+
+<!-- =====================================================
+     STATISTICS
+===================================================== -->
+
+<div class="stats">
+
+<div class="stat">
+
+<div class="stat-number"
+id="totalCases">
+30+
+</div>
+
+<div class="stat-label">
+Curated Cases
+</div>
+
+</div>
+
+<div class="stat">
+
+<div class="stat-number">
+Supreme Court
+</div>
+
+<div class="stat-label">
+Primary Court Collection
+</div>
+
+</div>
+
+<div class="stat">
+
+<div class="stat-number">
+10+
+</div>
+
+<div class="stat-label">
+Legal Subjects
+</div>
+
+</div>
+
+<div class="stat">
+
+<div class="stat-number">
+24/7
+</div>
+
+<div class="stat-label">
+Online Access
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     FILTERS
+===================================================== -->
+
+<div class="filter-panel">
+
+<div class="filter-title">
+⚙️ Refine Case Law Search
+</div>
+
+<div class="filters">
+
+<select id="courtFilter">
+
+<option value="all">
+All Courts
+</option>
+
+<option value="Supreme Court of India">
+Supreme Court of India
+</option>
+
+<option value="High Court">
+High Court
+</option>
+
+</select>
+
+
+<select id="categoryFilter">
+
+<option value="all">
+All Subjects
+</option>
+
+<option value="Constitutional Law">
+Constitutional Law
+</option>
+
+<option value="Criminal Law">
+Criminal Law
+</option>
+
+<option value="Civil Law">
+Civil Law
+</option>
+
+<option value="Fundamental Rights">
+Fundamental Rights
+</option>
+
+<option value="Human Rights">
+Human Rights
+</option>
+
+<option value="Family Law">
+Family Law
+</option>
+
+<option value="Corporate Law">
+Corporate Law
+</option>
+
+<option value="Labour Law">
+Labour Law
+</option>
+
+<option value="Administrative Law">
+Administrative Law
+</option>
+
+<option value="Environmental Law">
+Environmental Law
+</option>
+
+</select>
+
+
+<select id="yearFilter">
+
+<option value="all">
+All Years
+</option>
+
+<option value="1950-1970">
+1950–1970
+</option>
+
+<option value="1971-1990">
+1971–1990
+</option>
+
+<option value="1991-2010">
+1991–2010
+</option>
+
+<option value="2011-2020">
+2011–2020
+</option>
+
+<option value="2021-2026">
+2021–2026
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     RESULTS
+===================================================== -->
+
+<div class="results-bar">
+
+<div class="results-count">
+
+Showing
+<strong id="resultCount">30</strong>
+cases
+
+</div>
+
+<button class="clear-btn"
+onclick="clearFilters()">
+
+↻ Reset Filters
+
+</button>
+
+</div>
+
+
+<!-- =====================================================
+     CASE GRID
+===================================================== -->
+
+<section class="case-grid"
+id="caseGrid">
+
+
+<!-- CASE 1 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Constitutional Law"
+data-year="1973"
+data-subject="Fundamental Rights">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge landmark">
+Landmark
+</span>
+
+<span class="badge">
+1973
+</span>
+
+</div>
+
+<h3>
+Kesavananda Bharati v. State of Kerala
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+A foundational constitutional decision concerning the extent
+of Parliament's power to amend the Constitution.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Basic Structure Doctrine.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(0)">
+Read Case
+</button>
+
+<span class="subject">
+Constitution
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 2 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Fundamental Rights"
+data-year="1978">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge landmark">
+Landmark
+</span>
+
+<span class="badge">
+1978
+</span>
+
+</div>
+
+<h3>
+Maneka Gandhi v. Union of India
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+A landmark decision expanding the interpretation of personal
+liberty and procedural fairness under Article 21.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Articles 14, 19 and 21 are interconnected.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(1)">
+Read Case
+</button>
+
+<span class="subject">
+Article 21
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 3 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Fundamental Rights"
+data-year="2017">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge landmark">
+Landmark
+</span>
+
+<span class="badge">
+2017
+</span>
+
+</div>
+
+<h3>
+K.S. Puttaswamy v. Union of India
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Supreme Court recognised privacy as a constitutionally
+protected fundamental right.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Right to Privacy under Part III.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(2)">
+Read Case
+</button>
+
+<span class="subject">
+Privacy
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 4 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Constitutional Law"
+data-year="1980">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge landmark">
+Landmark
+</span>
+
+<span class="badge">
+1980
+</span>
+
+</div>
+
+<h3>
+Minerva Mills Ltd. v. Union of India
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Court examined constitutional amendments affecting the
+relationship between Fundamental Rights and Directive Principles.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Limited amending power and constitutional balance.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(3)">
+Read Case
+</button>
+
+<span class="subject">
+Basic Structure
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 5 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Constitutional Law"
+data-year="1967">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge">
+1967
+</span>
+
+</div>
+
+<h3>
+I.C. Golaknath v. State of Punjab
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Constitution Bench considered whether Parliament could
+amend Fundamental Rights.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Parliamentary amending power and Fundamental Rights.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(4)">
+Read Case
+</button>
+
+<span class="subject">
+Constitution
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 6 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Constitutional Law"
+data-year="1994">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge landmark">
+Landmark
+</span>
+
+<span class="badge">
+1994
+</span>
+
+</div>
+
+<h3>
+S.R. Bommai v. Union of India
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+A major constitutional decision concerning Article 356,
+federalism and judicial review.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Federalism and limits on President's Rule.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(5)">
+Read Case
+</button>
+
+<span class="subject">
+Federalism
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 7 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Human Rights"
+data-year="1997">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge landmark">
+Landmark
+</span>
+
+<span class="badge">
+1997
+</span>
+
+</div>
+
+<h3>
+Vishaka v. State of Rajasthan
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Court laid down guidelines addressing sexual harassment
+of women at the workplace.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Protection of workplace dignity and gender equality.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(6)">
+Read Case
+</button>
+
+<span class="subject">
+Human Rights
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 8 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Fundamental Rights"
+data-year="2018">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge landmark">
+Landmark
+</span>
+
+<span class="badge">
+2018
+</span>
+
+</div>
+
+<h3>
+Navtej Singh Johar v. Union of India
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Court considered the constitutional validity of Section 377
+IPC insofar as it criminalised consensual same-sex relations.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Constitutional morality, dignity and equality.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(7)">
+Read Case
+</button>
+
+<span class="subject">
+Equality
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 9 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Fundamental Rights"
+data-year="2017">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge landmark">
+Landmark
+</span>
+
+<span class="badge">
+2017
+</span>
+
+</div>
+
+<h3>
+Shayara Bano v. Union of India
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Constitution Bench examined the practice of instant
+triple talaq.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Constitutional scrutiny of personal-law practices.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(8)">
+Read Case
+</button>
+
+<span class="subject">
+Family Law
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 10 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Criminal Law"
+data-year="2014">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge landmark">
+Landmark
+</span>
+
+<span class="badge">
+2014
+</span>
+
+</div>
+
+<h3>
+Lalita Kumari v. Government of Uttar Pradesh
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Constitution Bench addressed registration of FIRs when
+information discloses a cognizable offence.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Mandatory FIR registration in cognizable cases, subject to recognised exceptions.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(9)">
+Read Case
+</button>
+
+<span class="subject">
+FIR
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 11 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Criminal Law"
+data-year="2014">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge">
+2014
+</span>
+
+</div>
+
+<h3>
+Arnesh Kumar v. State of Bihar
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Supreme Court issued safeguards concerning arrest and
+application of mind in offences carrying specified punishments.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Arrest should not be automatic merely because the police have power to arrest.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(10)">
+Read Case
+</button>
+
+<span class="subject">
+Arrest
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 12 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Criminal Law"
+data-year="1997">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge landmark">
+Landmark
+</span>
+
+<span class="badge">
+1997
+</span>
+
+</div>
+
+<h3>
+D.K. Basu v. State of West Bengal
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Court formulated important safeguards concerning arrest,
+detention and custodial violence.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Procedural safeguards protect dignity and personal liberty.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(11)">
+Read Case
+</button>
+
+<span class="subject">
+Custody
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 13 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Criminal Law"
+data-year="1980">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge landmark">
+Landmark
+</span>
+
+<span class="badge">
+1980
+</span>
+
+</div>
+
+<h3>
+Bachan Singh v. State of Punjab
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Constitution Bench considered the constitutional validity
+and sentencing principles relating to the death penalty.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Death penalty in the "rarest of rare" category.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(12)">
+Read Case
+</button>
+
+<span class="subject">
+Sentencing
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 14 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Criminal Law"
+data-year="2010">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge">
+2010
+</span>
+
+</div>
+
+<h3>
+Selvi v. State of Karnataka
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Court considered involuntary administration of narco-analysis,
+polygraph and brain-mapping techniques.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Protection against compelled testimonial responses.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(13)">
+Read Case
+</button>
+
+<span class="subject">
+Evidence
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 15 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Fundamental Rights"
+data-year="1985">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge">
+1985
+</span>
+
+</div>
+
+<h3>
+Olga Tellis v. Bombay Municipal Corporation
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Court examined the relationship between livelihood and
+the right to life under Article 21.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Right to livelihood forms part of the protection of life.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(14)">
+Read Case
+</button>
+
+<span class="subject">
+Article 21
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 16 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Constitutional Law"
+data-year="1992">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge landmark">
+Landmark
+</span>
+
+<span class="badge">
+1992
+</span>
+
+</div>
+
+<h3>
+Indra Sawhney v. Union of India
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+A major constitutional decision concerning reservations,
+backward classes and equality.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Reservation jurisprudence and substantive equality.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(15)">
+Read Case
+</button>
+
+<span class="subject">
+Equality
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 17 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Constitutional Law"
+data-year="1973">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge">
+1973
+</span>
+
+</div>
+
+<h3>
+R.C. Cooper v. Union of India
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The bank nationalisation decision contributed significantly
+to the development of Fundamental Rights jurisprudence.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Rights must be examined by their direct effect.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(16)">
+Read Case
+</button>
+
+<span class="subject">
+Property
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 18 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Fundamental Rights"
+data-year="1950">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge">
+1950
+</span>
+
+</div>
+
+<h3>
+A.K. Gopalan v. State of Madras
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+An early constitutional decision concerning preventive detention
+and the interpretation of Article 21.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Early judicial interpretation of personal liberty.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(17)">
+Read Case
+</button>
+
+<span class="subject">
+Article 21
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 19 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Fundamental Rights"
+data-year="2015">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge landmark">
+Landmark
+</span>
+
+<span class="badge">
+2015
+</span>
+
+</div>
+
+<h3>
+Shreya Singhal v. Union of India
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Court considered restrictions on online speech and struck
+down Section 66A of the Information Technology Act.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Freedom of speech and constitutional limits on restrictions.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(18)">
+Read Case
+</button>
+
+<span class="subject">
+Free Speech
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 20 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Environmental Law"
+data-year="1987">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge">
+1987
+</span>
+
+</div>
+
+<h3>
+M.C. Mehta v. Union of India
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+A series of environmental decisions contributed significantly
+to the development of Indian environmental jurisprudence.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Absolute liability for hazardous industries in the Oleum Gas Leak case.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(19)">
+Read Case
+</button>
+
+<span class="subject">
+Environment
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 21 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Corporate Law"
+data-year="2013">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge">
+2013
+</span>
+
+</div>
+
+<h3>
+Vodafone International Holdings B.V. v. Union of India
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Court examined the taxation consequences of an offshore
+share transaction involving an Indian business.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Interpretation of tax liability in cross-border transactions.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(20)">
+Read Case
+</button>
+
+<span class="subject">
+Tax Law
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 22 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Family Law"
+data-year="2007">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge">
+2007
+</span>
+
+</div>
+
+<h3>
+Aruna Ramachandra Shanbaug v. Union of India
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Court examined questions concerning euthanasia and
+withdrawal of life support.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Judicial consideration of passive euthanasia and dignity.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(21)">
+Read Case
+</button>
+
+<span class="subject">
+Medical Law
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 23 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Human Rights"
+data-year="2014">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge landmark">
+Landmark
+</span>
+
+<span class="badge">
+2014
+</span>
+
+</div>
+
+<h3>
+National Legal Services Authority v. Union of India
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Court recognised important constitutional rights of
+transgender persons.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Gender identity, dignity and equality.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(22)">
+Read Case
+</button>
+
+<span class="subject">
+Equality
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 24 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Fundamental Rights"
+data-year="1978">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge">
+1978
+</span>
+
+</div>
+
+<h3>
+Mohinder Singh Gill v. Chief Election Commissioner
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+A significant administrative and election-law decision concerning
+exercise of statutory powers.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Administrative power must operate within legal limits.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(23)">
+Read Case
+</button>
+
+<span class="subject">
+Election Law
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 25 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Administrative Law"
+data-year="1974">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge">
+1974
+</span>
+
+</div>
+
+<h3>
+E.P. Royappa v. State of Tamil Nadu
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The decision significantly developed the concept of arbitrariness
+in relation to Article 14.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Arbitrariness is antithetical to equality.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(24)">
+Read Case
+</button>
+
+<span class="subject">
+Article 14
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 26 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Fundamental Rights"
+data-year="1981">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge">
+1981
+</span>
+
+</div>
+
+<h3>
+Waman Rao v. Union of India
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Court considered the relationship between constitutional
+amendments and the Basic Structure doctrine.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Basic Structure scrutiny and constitutional amendments.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(25)">
+Read Case
+</button>
+
+<span class="subject">
+Constitution
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 27 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Civil Law"
+data-year="2003">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge">
+2003
+</span>
+
+</div>
+
+<h3>
+Salem Advocate Bar Association v. Union of India
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Supreme Court considered implementation and interpretation
+of amendments to the Code of Civil Procedure.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Procedural reform and efficient civil justice.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(26)">
+Read Case
+</button>
+
+<span class="subject">
+Civil Procedure
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 28 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Family Law"
+data-year="2001">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge">
+2001
+</span>
+
+</div>
+
+<h3>
+Githa Hariharan v. Reserve Bank of India
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Court examined the meaning of the term "after" in the
+context of guardianship under Hindu law.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Equal parental status and gender-sensitive interpretation.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(27)">
+Read Case
+</button>
+
+<span class="subject">
+Family Law
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 29 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Labour Law"
+data-year="1978">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge">
+1978
+</span>
+
+</div>
+
+<h3>
+Bangalore Water Supply v. A. Rajappa
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The Constitution Bench interpreted the scope of "industry"
+under Indian labour law.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Broad interpretation of the term "industry".
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(28)">
+Read Case
+</button>
+
+<span class="subject">
+Labour
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- CASE 30 -->
+
+<article class="case-card"
+data-court="Supreme Court of India"
+data-category="Human Rights"
+data-year="1980">
+
+<div class="case-top"></div>
+
+<div class="case-content">
+
+<div class="case-badges">
+
+<span class="badge landmark">
+Landmark
+</span>
+
+<span class="badge">
+1980
+</span>
+
+</div>
+
+<h3>
+Hussainara Khatoon v. State of Bihar
+</h3>
+
+<p class="case-meta">
+🏛 Supreme Court of India
+</p>
+
+<p class="case-summary">
+The case highlighted the constitutional importance of speedy
+trial and the plight of undertrial prisoners.
+</p>
+
+<div class="principle">
+<strong>Key principle:</strong>
+Speedy trial is an important component of Article 21.
+</div>
+
+<div class="case-footer">
+
+<button class="read-btn"
+onclick="openCase(29)">
+Read Case
+</button>
+
+<span class="subject">
+Criminal Justice
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+</section>
+
+
+<div class="no-results"
+id="noResults">
+
+<div class="icon">⚖️</div>
+
+<h3>
+No cases found
+</h3>
+
+<p>
+Try a different case name, subject, court, year or legal principle.
+</p>
+
+</div>
+
+
+</section>
+
+
+<!-- =====================================================
+     INFORMATION SECTION
+===================================================== -->
+
+<section class="info-section">
+
+<div class="info-inner">
+
+<h2>
+⚖️ Learn From Indian Jurisprudence
+</h2>
+
+<p>
+
+Pendico's Case Law Library is designed as an educational
+and research-oriented resource for students, researchers
+and anyone seeking to understand important developments
+in Indian law.
+
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     CASE MODAL
+===================================================== -->
+
+<div class="modal"
+id="caseModal">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h2 id="modalTitle">
+Case Title
+</h2>
+
+<p id="modalMeta">
+Court • Year
+</p>
+
+</div>
+
+
+<div class="modal-body">
+
+
+<div class="detail-grid">
+
+<div class="detail">
+
+<span>
+Court
+</span>
+
+<strong id="modalCourt">
+-
+</strong>
+
+</div>
+
+
+<div class="detail">
+
+<span>
+Year
+</span>
+
+<strong id="modalYear">
+-
+</strong>
+
+</div>
+
+
+<div class="detail">
+
+<span>
+Subject
+</span>
+
+<strong id="modalCategory">
+-
+</strong>
+
+</div>
+
+
+<div class="detail">
+
+<span>
+Legal Principle
+</span>
+
+<strong id="modalPrinciple">
+-
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="modal-section">
+
+<h3>
+📌 Case Overview
+</h3>
+
+<p id="modalOverview">
+-
+</p>
+
+</div>
+
+
+<div class="modal-section">
+
+<h3>
+⚖️ Judicial Principle
+</h3>
+
+<p id="modalDecision">
+-
+</p>
+
+</div>
+
+
+<div class="modal-section">
+
+<h3>
+📚 Significance
+</h3>
+
+<p id="modalSignificance">
+-
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="modal-footer">
+
+<span class="source-note">
+Pendico Case Law Library • Educational resource
+</span>
+
+<button class="close-btn"
+onclick="closeCase()">
+
+Close Case
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="footer-logo">
+PENDICO
+</div>
+
+<p>
+Indian Legal Information Portal
+</p>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+
+<a href="bareacts.html">Bare Acts</a>
+
+<a href="caselaws.html">Case Laws</a>
+
+<a href="articles.html">Articles</a>
+
+<a href="legalnews.html">Legal News</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<br>
+
+<p>
+© 2026 Pendico. All rights reserved.
+</p>
+
+</footer>
+
+
 <script>
 
-function openCase(title,court,facts,judgment,principle){
+/* =====================================================
+   CASE DATABASE
+===================================================== */
 
-document.getElementById("caseTitle").innerHTML = title;
-document.getElementById("caseCourt").innerHTML = court;
-document.getElementById("caseFacts").innerHTML = facts;
-document.getElementById("caseJudgment").innerHTML = judgment;
-document.getElementById("casePrinciple").innerHTML = principle;
+const cases = [
 
-document.getElementById("judgmentModal").style.display = "block";
+{
+title:"Kesavananda Bharati v. State of Kerala",
+court:"Supreme Court of India",
+year:1973,
+category:"Constitutional Law",
+principle:"Basic Structure Doctrine",
+overview:"A foundational constitutional case concerning the extent of Parliament's power to amend the Constitution.",
+decision:"The Supreme Court held that Parliament's power to amend the Constitution is subject to limitations arising from the Basic Structure doctrine.",
+significance:"The decision remains one of the central authorities on constitutional amendment and judicial review in India."
+},
 
+{
+title:"Maneka Gandhi v. Union of India",
+court:"Supreme Court of India",
+year:1978,
+category:"Fundamental Rights",
+principle:"Articles 14, 19 and 21",
+overview:"The case concerned the impounding of Maneka Gandhi's passport and the procedural safeguards surrounding personal liberty.",
+decision:"The Court developed a broader interpretation of Article 21 and emphasised that procedure affecting personal liberty must satisfy constitutional standards of fairness.",
+significance:"The judgment substantially transformed Indian Fundamental Rights jurisprudence."
+},
+
+{
+title:"K.S. Puttaswamy v. Union of India",
+court:"Supreme Court of India",
+year:2017,
+category:"Fundamental Rights",
+principle:"Right to Privacy",
+overview:"The Constitution Bench considered whether privacy is protected as a fundamental right under the Constitution.",
+decision:"The Court recognised privacy as a constitutionally protected fundamental right.",
+significance:"The decision became a major foundation for subsequent constitutional privacy jurisprudence."
+},
+
+{
+title:"Minerva Mills Ltd. v. Union of India",
+court:"Supreme Court of India",
+year:1980,
+category:"Constitutional Law",
+principle:"Limited Amending Power",
+overview:"The case concerned constitutional amendments affecting the balance between Fundamental Rights and Directive Principles.",
+decision:"The Court reaffirmed limits on the constituent power to amend the Constitution.",
+significance:"It reinforced the Basic Structure doctrine and constitutional balance."
+},
+
+{
+title:"I.C. Golaknath v. State of Punjab",
+court:"Supreme Court of India",
+year:1967,
+category:"Constitutional Law",
+principle:"Amendment of Fundamental Rights",
+overview:"The Court examined Parliament's authority to amend Fundamental Rights.",
+decision:"The majority held that Parliament could not amend Fundamental Rights under the constitutional framework then interpreted by the Court.",
+significance:"The decision played an important role in the later development of the Basic Structure doctrine."
+},
+
+{
+title:"S.R. Bommai v. Union of India",
+court:"Supreme Court of India",
+year:1994,
+category:"Constitutional Law",
+principle:"Federalism and Article 356",
+overview:"The case concerned the use of Article 356 and the dismissal of state governments.",
+decision:"The Court developed important principles governing President's Rule and judicial review.",
+significance:"It is a major authority on Indian federalism and constitutional governance."
+},
+
+{
+title:"Vishaka v. State of Rajasthan",
+court:"Supreme Court of India",
+year:1997,
+category:"Human Rights",
+principle:"Workplace Dignity",
+overview:"The case addressed sexual harassment of women at the workplace.",
+decision:"The Court laid down guidelines for preventing and addressing workplace sexual harassment.",
+significance:"The guidelines influenced the development of statutory workplace-harassment protections."
+},
+
+{
+title:"Navtej Singh Johar v. Union of India",
+court:"Supreme Court of India",
+year:2018,
+category:"Fundamental Rights",
+principle:"Dignity and Equality",
+overview:"The Court examined the criminalisation of consensual same-sex relations under Section 377 IPC.",
+decision:"The Court held Section 377 unconstitutional to the extent it criminalised consensual sexual relations between adults.",
+significance:"The judgment strengthened constitutional protections of dignity, equality and individual autonomy."
+},
+
+{
+title:"Shayara Bano v. Union of India",
+court:"Supreme Court of India",
+year:2017,
+category:"Family Law",
+principle:"Triple Talaq",
+overview:"The Constitution Bench considered the validity of the practice of instant triple talaq.",
+decision:"The Court set aside the practice of instant triple talaq.",
+significance:"The decision became an important development in constitutional and personal-law jurisprudence."
+},
+
+{
+title:"Lalita Kumari v. Government of Uttar Pradesh",
+court:"Supreme Court of India",
+year:2014,
+category:"Criminal Law",
+principle:"FIR Registration",
+overview:"The Constitution Bench considered when police are required to register an FIR.",
+decision:"The Court held that registration of an FIR is mandatory where information discloses a cognizable offence, subject to recognised legal exceptions.",
+significance:"The judgment is frequently relied upon in criminal procedure concerning registration of FIRs."
+},
+
+{
+title:"Arnesh Kumar v. State of Bihar",
+court:"Supreme Court of India",
+year:2014,
+category:"Criminal Law",
+principle:"Arrest Safeguards",
+overview:"The Court considered unnecessary arrests in offences punishable within the statutory framework discussed in the judgment.",
+decision:"The Court issued safeguards requiring police and Magistrates to apply the statutory requirements before arrest and remand.",
+significance:"It is an important authority concerning protection against unnecessary arrest."
+},
+
+{
+title:"D.K. Basu v. State of West Bengal",
+court:"Supreme Court of India",
+year:1997,
+category:"Criminal Law",
+principle:"Custodial Safeguards",
+overview:"The case addressed custodial violence and safeguards during arrest and detention.",
+decision:"The Court formulated procedural requirements intended to protect arrested and detained persons.",
+significance:"The decision remains an important authority on arrest and custodial rights."
+},
+
+{
+title:"Bachan Singh v. State of Punjab",
+court:"Supreme Court of India",
+year:1980,
+category:"Criminal Law",
+principle:"Rarest of Rare",
+overview:"The Constitution Bench examined the constitutional validity and sentencing principles relating to capital punishment.",
+decision:"The Court formulated the 'rarest of rare' principle for imposing the death penalty.",
+significance:"It remains a leading authority on Indian capital sentencing."
+},
+
+{
+title:"Selvi v. State of Karnataka",
+court:"Supreme Court of India",
+year:2010,
+category:"Criminal Law",
+principle:"Protection Against Compelled Testimonial Responses",
+overview:"The Court examined involuntary use of techniques such as narco-analysis, polygraph and brain-mapping.",
+decision:"The Court held that involuntary administration of such techniques raises serious constitutional concerns.",
+significance:"The judgment is important in constitutional criminal procedure and evidence."
+},
+
+{
+title:"Olga Tellis v. Bombay Municipal Corporation",
+court:"Supreme Court of India",
+year:1985,
+category:"Fundamental Rights",
+principle:"Right to Livelihood",
+overview:"The case concerned eviction of pavement dwellers and the relationship between livelihood and Article 21.",
+decision:"The Court recognised livelihood as closely connected with the right to life.",
+significance:"It contributed significantly to the expansion of Article 21 jurisprudence."
+},
+
+{
+title:"Indra Sawhney v. Union of India",
+court:"Supreme Court of India",
+year:1992,
+category:"Constitutional Law",
+principle:"Reservation and Equality",
+overview:"The Constitution Bench considered reservations for socially and educationally backward classes.",
+decision:"The Court developed major principles concerning reservation, equality and backward classes.",
+significance:"It remains a foundational decision in Indian reservation jurisprudence."
+},
+
+{
+title:"R.C. Cooper v. Union of India",
+court:"Supreme Court of India",
+year:1970,
+category:"Constitutional Law",
+principle:"Direct Effect of State Action",
+overview:"The bank nationalisation case concerned constitutional rights and state action.",
+decision:"The Court moved away from a purely compartmentalised approach to Fundamental Rights.",
+significance:"The decision contributed to the later development of integrated Fundamental Rights analysis."
+},
+
+{
+title:"A.K. Gopalan v. State of Madras",
+court:"Supreme Court of India",
+year:1950,
+category:"Fundamental Rights",
+principle:"Personal Liberty",
+overview:"An early constitutional case concerning preventive detention and Article 21.",
+decision:"The Court adopted an early, comparatively narrow interpretation of the relationship between different Fundamental Rights.",
+significance:"It is historically important for understanding the evolution of Article 21."
+},
+
+{
+title:"Shreya Singhal v. Union of India",
+court:"Supreme Court of India",
+year:2015,
+category:"Fundamental Rights",
+principle:"Freedom of Speech",
+overview:"The case concerned Section 66A of the Information Technology Act and online expression.",
+decision:"The Supreme Court struck down Section 66A as unconstitutional.",
+significance:"It is a leading Indian decision on freedom of speech in the digital environment."
+},
+
+{
+title:"M.C. Mehta v. Union of India",
+court:"Supreme Court of India",
+year:1987,
+category:"Environmental Law",
+principle:"Absolute Liability",
+overview:"The Oleum Gas Leak litigation concerned liability for hazardous and inherently dangerous activities.",
+decision:"The Court developed the principle of absolute liability for enterprises engaged in hazardous or inherently dangerous activities.",
+significance:"The decision became a major foundation of Indian environmental liability jurisprudence."
+},
+
+{
+title:"Vodafone International Holdings B.V. v. Union of India",
+court:"Supreme Court of India",
+year:2012,
+category:"Corporate Law",
+principle:"Cross-Border Taxation",
+overview:"The dispute concerned tax consequences arising from an offshore share transaction connected with an Indian business.",
+decision:"The Court examined the statutory framework governing the claimed tax liability.",
+significance:"The case is important in Indian international tax and corporate jurisprudence."
+},
+
+{
+title:"Aruna Ramachandra Shanbaug v. Union of India",
+court:"Supreme Court of India",
+year:2011,
+category:"Human Rights",
+principle:"Passive Euthanasia",
+overview:"The Court considered questions concerning euthanasia and withdrawal of life support.",
+decision:"The Court addressed the legal framework surrounding passive euthanasia and medical decision-making.",
+significance:"The decision became an important part of Indian medical-law jurisprudence."
+},
+
+{
+title:"NALSA v. Union of India",
+court:"Supreme Court of India",
+year:2014,
+category:"Human Rights",
+principle:"Gender Identity and Dignity",
+overview:"The Court considered constitutional rights of transgender persons.",
+decision:"The Court recognised important constitutional protections relating to gender identity.",
+significance:"The judgment strengthened equality, dignity and autonomy jurisprudence."
+},
+
+{
+title:"Mohinder Singh Gill v. Chief Election Commissioner",
+court:"Supreme Court of India",
+year:1978,
+category:"Administrative Law",
+principle:"Administrative Power",
+overview:"The decision concerned the exercise of constitutional and statutory powers in the electoral context.",
+decision:"The Court considered the limits and legal basis of administrative decision-making.",
+significance:"It is frequently discussed in administrative and election law."
+},
+
+{
+title:"E.P. Royappa v. State of Tamil Nadu",
+court:"Supreme Court of India",
+year:1974,
+category:"Constitutional Law",
+principle:"Arbitrariness and Equality",
+overview:"The case significantly developed the relationship between arbitrariness and Article 14.",
+decision:"The Court connected arbitrariness with the constitutional guarantee of equality.",
+significance:"It became a major foundation for modern Article 14 jurisprudence."
+},
+
+{
+title:"Waman Rao v. Union of India",
+court:"Supreme Court of India",
+year:1981,
+category:"Constitutional Law",
+principle:"Basic Structure",
+overview:"The Court considered constitutional amendments and the Basic Structure doctrine.",
+decision:"The Court developed principles concerning constitutional amendments and their judicial scrutiny.",
+significance:"It forms part of the constitutional history surrounding the Basic Structure doctrine."
+},
+
+{
+title:"Salem Advocate Bar Association v. Union of India",
+court:"Supreme Court of India",
+year:2003,
+category:"Civil Law",
+principle:"Civil Procedure Reform",
+overview:"The Supreme Court considered implementation of amendments to the Code of Civil Procedure.",
+decision:"The Court issued directions and examined procedural reforms intended to improve civil justice.",
+significance:"It is important for understanding modern civil procedural practice."
+},
+
+{
+title:"Githa Hariharan v. Reserve Bank of India",
+court:"Supreme Court of India",
+year:1999,
+category:"Family Law",
+principle:"Guardianship and Equality",
+overview:"The Court considered the meaning and application of guardianship provisions under Hindu law.",
+decision:"The Court adopted an interpretation protecting the legal position of mothers in guardianship matters.",
+significance:"The decision is important in gender equality and family law."
+},
+
+{
+title:"Bangalore Water Supply v. A. Rajappa",
+court:"Supreme Court of India",
+year:1978,
+category:"Labour Law",
+principle:"Meaning of Industry",
+overview:"The Constitution Bench interpreted the scope of the term 'industry' under labour legislation.",
+decision:"The Court adopted a broad interpretation of the statutory concept.",
+significance:"It became a leading authority in Indian labour law."
+},
+
+{
+title:"Hussainara Khatoon v. State of Bihar",
+court:"Supreme Court of India",
+year:1979,
+category:"Criminal Law",
+principle:"Speedy Trial",
+overview:"The litigation highlighted the condition of undertrial prisoners and delays in criminal trials.",
+decision:"The Court recognised speedy trial as an important component of the constitutional protection of life and personal liberty.",
+significance:"It remains an important authority concerning criminal justice and Article 21."
 }
 
-document.querySelector(".close").onclick = function(){
-document.getElementById("judgmentModal").style.display = "none";
+];
+
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const searchInput =
+document.getElementById("searchInput");
+
+const courtFilter =
+document.getElementById("courtFilter");
+
+const categoryFilter =
+document.getElementById("categoryFilter");
+
+const yearFilter =
+document.getElementById("yearFilter");
+
+const resultCount =
+document.getElementById("resultCount");
+
+const noResults =
+document.getElementById("noResults");
+
+const caseCards =
+document.querySelectorAll(".case-card");
+
+
+/* =====================================================
+   SEARCH + FILTER
+===================================================== */
+
+function applyFilters(){
+
+    const query =
+    searchInput.value
+    .toLowerCase()
+    .trim();
+
+    const court =
+    courtFilter.value;
+
+    const category =
+    categoryFilter.value;
+
+    const yearRange =
+    yearFilter.value;
+
+    let visible = 0;
+
+    caseCards.forEach((card,index)=>{
+
+        const caseData =
+        cases[index];
+
+        const searchable = (
+
+            caseData.title + " " +
+            caseData.court + " " +
+            caseData.category + " " +
+            caseData.principle + " " +
+            caseData.overview + " " +
+            caseData.year
+
+        ).toLowerCase();
+
+
+        const matchesSearch =
+        query === "" ||
+        searchable.includes(query);
+
+
+        const matchesCourt =
+        court === "all" ||
+        caseData.court === court;
+
+
+        const matchesCategory =
+        category === "all" ||
+        caseData.category === category ||
+        (
+            category === "Fundamental Rights" &&
+            caseData.category === "Fundamental Rights"
+        );
+
+
+        let matchesYear = true;
+
+        if(yearRange !== "all"){
+
+            const parts =
+            yearRange.split("-");
+
+            const start =
+            Number(parts[0]);
+
+            const end =
+            Number(parts[1]);
+
+            matchesYear =
+            caseData.year >= start &&
+            caseData.year <= end;
+
+        }
+
+
+        if(
+            matchesSearch &&
+            matchesCourt &&
+            matchesCategory &&
+            matchesYear
+        ){
+
+            card.style.display =
+            "block";
+
+            visible++;
+
+        }else{
+
+            card.style.display =
+            "none";
+
+        }
+
+    });
+
+
+    resultCount.textContent =
+    visible;
+
+    noResults.style.display =
+    visible === 0
+    ? "block"
+    : "none";
 }
 
-window.onclick = function(event){
-if(event.target == document.getElementById("judgmentModal")){
-document.getElementById("judgmentModal").style.display = "none";
+
+/* =====================================================
+   CLEAR FILTERS
+===================================================== */
+
+function clearFilters(){
+
+    searchInput.value = "";
+
+    courtFilter.value = "all";
+
+    categoryFilter.value = "all";
+
+    yearFilter.value = "all";
+
+    document
+    .querySelectorAll(".quick-filter")
+    .forEach(btn=>{
+        btn.classList.remove("active");
+    });
+
+    document
+    .querySelector(".quick-filter")
+    .classList.add("active");
+
+    applyFilters();
 }
+
+
+/* =====================================================
+   LIVE SEARCH
+===================================================== */
+
+searchInput.addEventListener(
+"input",
+function(){
+
+    applyFilters();
+
+});
+
+
+courtFilter.addEventListener(
+"change",
+function(){
+
+    applyFilters();
+
+});
+
+
+categoryFilter.addEventListener(
+"change",
+function(){
+
+    applyFilters();
+
+});
+
+
+yearFilter.addEventListener(
+"change",
+function(){
+
+    applyFilters();
+
+});
+
+
+/* =====================================================
+   QUICK CATEGORY BUTTONS
+===================================================== */
+
+document
+.querySelectorAll(".quick-filter")
+.forEach(button=>{
+
+    button.addEventListener(
+    "click",
+    function(){
+
+        document
+        .querySelectorAll(".quick-filter")
+        .forEach(btn=>{
+            btn.classList.remove("active");
+        });
+
+        this.classList.add("active");
+
+        const category =
+        this.dataset.category;
+
+        if(category === "all"){
+
+            categoryFilter.value =
+            "all";
+
+        }else{
+
+            categoryFilter.value =
+            category;
+
+        }
+
+        applyFilters();
+
+        document
+        .querySelector(".filter-panel")
+        .scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+
+    }
+
+    );
+
+});
+
+
+/* =====================================================
+   OPEN CASE
+===================================================== */
+
+function openCase(index){
+
+    const data =
+    cases[index];
+
+    document.getElementById(
+        "modalTitle"
+    ).textContent =
+    data.title;
+
+    document.getElementById(
+        "modalMeta"
+    ).textContent =
+    data.court +
+    " • " +
+    data.year;
+
+    document.getElementById(
+        "modalCourt"
+    ).textContent =
+    data.court;
+
+    document.getElementById(
+        "modalYear"
+    ).textContent =
+    data.year;
+
+    document.getElementById(
+        "modalCategory"
+    ).textContent =
+    data.category;
+
+    document.getElementById(
+        "modalPrinciple"
+    ).textContent =
+    data.principle;
+
+    document.getElementById(
+        "modalOverview"
+    ).textContent =
+    data.overview;
+
+    document.getElementById(
+        "modalDecision"
+    ).textContent =
+    data.decision;
+
+    document.getElementById(
+        "modalSignificance"
+    ).textContent =
+    data.significance;
+
+    document.getElementById(
+        "caseModal"
+    ).style.display =
+    "block";
+
+    document.body.style.overflow =
+    "hidden";
 }
+
+
+/* =====================================================
+   CLOSE CASE
+===================================================== */
+
+function closeCase(){
+
+    document.getElementById(
+        "caseModal"
+    ).style.display =
+    "none";
+
+    document.body.style.overflow =
+    "";
+}
+
+
+/* =====================================================
+   CLOSE WHEN CLICK OUTSIDE
+===================================================== */
+
+window.addEventListener(
+"click",
+function(event){
+
+    const modal =
+    document.getElementById(
+        "caseModal"
+    );
+
+    if(event.target === modal){
+
+        closeCase();
+
+    }
+
+});
+
+
+/* =====================================================
+   ESCAPE KEY
+===================================================== */
+
+document.addEventListener(
+"keydown",
+function(event){
+
+    if(event.key === "Escape"){
+
+        closeCase();
+
+    }
+
+});
+
+
+/* =====================================================
+   INITIALISE
+===================================================== */
+
+applyFilters();
 
 </script>
 
 </body>
-</html>    
-
+</html>
