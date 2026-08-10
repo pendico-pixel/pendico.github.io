@@ -1,16 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <url>
-        <loc>https://pendico.pages.dev/</loc>
-    </url>
+  <url>
+    <loc>https://pendico.pages.dev/</loc>
+  </url>
 
-    <url>
-        <loc>https://pendico.pages.dev/index.html</loc>
-    </url>
+  <url>
+    <loc>https://pendico.pages.dev/about.html</loc>
+  </url>
 
-    <url>
-        <loc>https://pendico.pages.dev/legalnews.html</loc>
-    </url>
+  <url>
+    <loc>https://pendico.pages.dev/articles.html</loc>
+  </url>
+
+  <url>
+    <loc>https://pendico.pages.dev/bareacts.html</loc>
+  </url>
+
+  <url>
+    <loc>https://pendico.pages.dev/bns.html</loc>
+  </url>
+
+  <url>
+    <loc>https://pendico.pages.dev/bnss.html</loc>
+  </url>
+
+  <url>
+    <loc>https://pendico.pages.dev/caselaws.html</loc>
+  </url>
+
+  <url>
+    <loc>https://pendico.pages.dev/contact.html</loc>
+  </url>
+
+  <url>
+    <loc>https://pendico.pages.dev/legalnews.html</loc>
+  </url>
 
 </urlset>
