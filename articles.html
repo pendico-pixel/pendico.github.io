@@ -1,87 +1,1880 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pendico - Legal Articles</title>
+
+<title>Pendico Legal Insights | Indian Legal Articles</title>
+
+<meta name="description"
+content="Pendico Legal Insights provides accessible articles on Indian criminal law, constitutional law, consumer law, legal rights and important legal concepts.">
+
+<meta name="keywords"
+content="Indian legal articles, law articles India, criminal law, constitutional law, consumer rights, FIR, arrest rights, legal education">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+href="https://pendico.pages.dev/articles.html">
+
+<link rel="icon"
+type="image/png"
+href="favicon.png">
+
 
 <style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-font-family:Arial, sans-serif;
-background:#f4f4f4;
-margin:0;
+
+    font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:#f5f7fb;
+
+    color:#172033;
+
+    line-height:1.65;
 }
 
-header{
-background:#0b3d91;
-color:white;
-text-align:center;
-padding:20px;
+a{
+    text-decoration:none;
 }
 
-.container{
-padding:30px;
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:14px 6%;
+
+    background:
+    rgba(5,17,36,0.96);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.08);
 }
 
-.article{
-background:white;
-padding:20px;
-margin-bottom:20px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+    color:white;
+
+    font-size:21px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
 }
 
-a.button{
-display:inline-block;
-background:#0b3d91;
-color:white;
-padding:10px 20px;
-text-decoration:none;
-border-radius:5px;
+.brand img{
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:9px;
+
+    object-fit:cover;
 }
+
+.nav-links{
+
+    display:flex;
+
+    gap:6px;
+
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+
+    color:#d6e2f2;
+
+    padding:8px 12px;
+
+    border-radius:8px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:.25s;
+}
+
+.nav-links a:hover{
+
+    background:#174b87;
+
+    color:white;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:
+    95px 20px 100px;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+
+    radial-gradient(
+        circle at 15% 30%,
+        rgba(43,120,255,.22),
+        transparent 30%
+    ),
+
+    radial-gradient(
+        circle at 85% 70%,
+        rgba(0,200,255,.16),
+        transparent 28%
+    ),
+
+    linear-gradient(
+        135deg,
+        #061326,
+        #0b2345,
+        #06142a
+    );
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    border:
+    1px solid rgba(80,160,255,.12);
+
+    top:-250px;
+
+    right:-150px;
+}
+
+.hero-content{
+
+    max-width:850px;
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.hero-label{
+
+    display:inline-block;
+
+    padding:7px 14px;
+
+    border:
+    1px solid rgba(255,255,255,.15);
+
+    border-radius:30px;
+
+    color:#9fc8ff;
+
+    font-size:12px;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+}
+
+.hero h1{
+
+    font-size:
+    clamp(42px,7vw,72px);
+
+    line-height:1.05;
+
+    letter-spacing:-2px;
+
+    margin-bottom:18px;
+
+    font-weight:900;
+}
+
+.hero h1 span{
+
+    color:#5da8ff;
+}
+
+.hero p{
+
+    max-width:680px;
+
+    margin:auto;
+
+    color:#aebed3;
+
+    font-size:17px;
+
+    margin-bottom:32px;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-wrapper{
+
+    max-width:720px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:7px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    box-shadow:
+    0 18px 50px rgba(0,0,0,.3);
+}
+
+.search-wrapper input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:15px 17px;
+
+    font-size:15px;
+
+    border-radius:10px;
+
+    color:#172033;
+}
+
+.search-wrapper button{
+
+    border:none;
+
+    background:#1769d1;
+
+    color:white;
+
+    padding:
+    0 25px;
+
+    border-radius:10px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.search-wrapper button:hover{
+
+    background:#0d55ae;
+}
+
+
+/* =====================================================
+   CATEGORY BAR
+===================================================== */
+
+.category-bar{
+
+    max-width:1150px;
+
+    margin:
+    -30px auto 0;
+
+    position:relative;
+
+    z-index:10;
+
+    padding:0 20px;
+}
+
+.category-inner{
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:16px;
+
+    display:flex;
+
+    gap:9px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    box-shadow:
+    0 12px 35px rgba(18,45,80,.12);
+
+    border:
+    1px solid #e5eaf1;
+}
+
+.category{
+
+    border:none;
+
+    background:#f0f4f9;
+
+    color:#31445c;
+
+    padding:9px 15px;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:.25s;
+}
+
+.category:hover,
+.category.active{
+
+    background:#1769d1;
+
+    color:white;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.main{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:
+    75px 22px;
+}
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+
+    gap:20px;
+
+    margin-bottom:28px;
+}
+
+.section-header h2{
+
+    font-size:30px;
+
+    color:#102d55;
+}
+
+.section-header p{
+
+    color:#718096;
+
+    font-size:14px;
+}
+
+
+/* =====================================================
+   FEATURED ARTICLE
+===================================================== */
+
+.featured{
+
+    display:grid;
+
+    grid-template-columns:
+    1.3fr 1fr;
+
+    min-height:320px;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    margin-bottom:65px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #092448,
+        #1769d1
+    );
+
+    color:white;
+
+    box-shadow:
+    0 18px 45px rgba(18,60,110,.18);
+}
+
+.featured-visual{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:100px;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,255,255,.15),
+        transparent 55%
+    );
+}
+
+.featured-content{
+
+    padding:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-direction:column;
+}
+
+.featured-label{
+
+    color:#a9d0ff;
+
+    text-transform:uppercase;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:1.5px;
+
+    margin-bottom:12px;
+}
+
+.featured-content h2{
+
+    font-size:34px;
+
+    line-height:1.2;
+
+    margin-bottom:15px;
+}
+
+.featured-content p{
+
+    color:#d0dff1;
+
+    font-size:15px;
+
+    margin-bottom:20px;
+}
+
+.read-featured{
+
+    align-self:flex-start;
+
+    background:white;
+
+    color:#0c4d9d;
+
+    padding:11px 20px;
+
+    border-radius:9px;
+
+    font-weight:800;
+
+    font-size:13px;
+}
+
+
+/* =====================================================
+   ARTICLE GRID
+===================================================== */
+
+.article-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:22px;
+}
+
+.article-card{
+
+    background:white;
+
+    border:
+    1px solid #e5eaf1;
+
+    border-radius:17px;
+
+    overflow:hidden;
+
+    transition:
+    transform .3s,
+    box-shadow .3s;
+
+    box-shadow:
+    0 6px 22px rgba(18,45,80,.05);
+}
+
+.article-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:
+    0 18px 38px rgba(18,45,80,.13);
+}
+
+.article-image{
+
+    height:155px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:55px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #eaf3ff,
+        #d9eaff
+    );
+}
+
+.article-content{
+
+    padding:23px;
+}
+
+.article-category{
+
+    color:#1769d1;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:.8px;
+
+    text-transform:uppercase;
+}
+
+.article-card h3{
+
+    font-size:21px;
+
+    color:#102d55;
+
+    margin:
+    8px 0 10px;
+
+    line-height:1.3;
+}
+
+.article-card p{
+
+    color:#6d7c90;
+
+    font-size:14px;
+
+    margin-bottom:17px;
+}
+
+.article-meta{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    border-top:
+    1px solid #edf0f4;
+
+    padding-top:14px;
+
+    color:#8793a3;
+
+    font-size:11px;
+}
+
+.read-link{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    color:#1769d1;
+
+    font-size:13px;
+
+    font-weight:800;
+}
+
+
+/* =====================================================
+   TRENDING
+===================================================== */
+
+.trending{
+
+    margin-top:75px;
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:25px;
+}
+
+.trending-panel{
+
+    background:white;
+
+    border:
+    1px solid #e5eaf1;
+
+    border-radius:18px;
+
+    padding:28px;
+}
+
+.trending-panel h3{
+
+    color:#102d55;
+
+    margin-bottom:20px;
+
+    font-size:20px;
+}
+
+.trending-item{
+
+    display:flex;
+
+    gap:14px;
+
+    padding:15px 0;
+
+    border-bottom:
+    1px solid #edf0f4;
+}
+
+.trending-item:last-child{
+
+    border-bottom:none;
+}
+
+.trending-number{
+
+    font-size:25px;
+
+    font-weight:900;
+
+    color:#d8e4f2;
+
+    min-width:28px;
+}
+
+.trending-item h4{
+
+    font-size:14px;
+
+    color:#243a55;
+
+    line-height:1.4;
+}
+
+
+/* =====================================================
+   STUDENT SECTION
+===================================================== */
+
+.student-section{
+
+    margin-top:70px;
+
+    border-radius:22px;
+
+    padding:50px 35px;
+
+    background:#07172e;
+
+    color:white;
+}
+
+.student-section h2{
+
+    font-size:30px;
+
+    margin-bottom:10px;
+}
+
+.student-section > p{
+
+    color:#a9bad0;
+
+    margin-bottom:30px;
+}
+
+.student-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:15px;
+}
+
+.student-card{
+
+    padding:20px;
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    background:
+    rgba(255,255,255,.04);
+
+    border-radius:13px;
+
+    color:#d8e5f5;
+
+    transition:.25s;
+}
+
+.student-card:hover{
+
+    background:
+    rgba(255,255,255,.08);
+
+    transform:translateY(-4px);
+}
+
+.student-card strong{
+
+    display:block;
+
+    color:white;
+
+    margin-bottom:5px;
+}
+
+
+/* =====================================================
+   NEWSLETTER / CTA
+===================================================== */
+
+.cta{
+
+    margin-top:70px;
+
+    padding:50px 25px;
+
+    text-align:center;
+
+    border-radius:22px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #edf5ff,
+        #f8fbff
+    );
+
+    border:
+    1px solid #dce8f7;
+}
+
+.cta h2{
+
+    color:#102d55;
+
+    font-size:29px;
+
+    margin-bottom:8px;
+}
+
+.cta p{
+
+    color:#718096;
+
+    margin-bottom:20px;
+}
+
+.cta a{
+
+    display:inline-block;
+
+    background:#1769d1;
+
+    color:white;
+
+    padding:12px 24px;
+
+    border-radius:9px;
+
+    font-size:13px;
+
+    font-weight:800;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
-background:#062b63;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:30px;
+
+    background:#041021;
+
+    color:#92a4bb;
+
+    text-align:center;
+
+    padding:45px 20px;
 }
+
+.footer-brand{
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    margin-bottom:7px;
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:15px;
+}
+
+.footer-links a{
+
+    color:#9caec3;
+
+    font-size:13px;
+}
+
+.footer-links a:hover{
+
+    color:white;
+}
+
+
+/* =====================================================
+   SEARCH EMPTY
+===================================================== */
+
+.empty{
+
+    display:none;
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#718096;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:800px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:10px;
+    }
+
+    .nav-links{
+
+        justify-content:center;
+    }
+
+    .hero{
+
+        padding:
+        70px 18px 85px;
+    }
+
+    .hero h1{
+
+        font-size:48px;
+    }
+
+    .search-wrapper{
+
+        flex-direction:column;
+
+        gap:6px;
+    }
+
+    .search-wrapper button{
+
+        padding:13px;
+    }
+
+    .featured{
+
+        grid-template-columns:1fr;
+    }
+
+    .featured-visual{
+
+        min-height:160px;
+    }
+
+    .featured-content{
+
+        padding:30px;
+    }
+
+    .featured-content h2{
+
+        font-size:27px;
+    }
+
+    .trending{
+
+        grid-template-columns:1fr;
+    }
+
+    .section-header{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+    }
+
+}
+
 </style>
 
 </head>
 
+
 <body>
 
-<header>
-<h1>📝 Pendico Legal Articles</h1>
-<p>Simple Legal Knowledge for Everyone</p>
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav class="navbar">
+
+<a href="index.html" class="brand">
+
+<img src="logo.png.jpeg" alt="Pendico">
+
+<span>PENDICO</span>
+
+</a>
+
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+
+<a href="bareacts.html">Bare Acts</a>
+
+<a href="caselaws.html">Case Laws</a>
+
+<a href="articles.html">Articles</a>
+
+<a href="legalnews.html">Legal News</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="hero">
+
+<div class="hero-content">
+
+<div class="hero-label">
+
+PENDICO LEGAL INSIGHTS
+
+</div>
+
+<h1>
+
+Understand Law.<br>
+
+<span>Think Legally.</span>
+
+</h1>
+
+<p>
+
+Explore accessible explanations of Indian law,
+landmark legal principles, rights, procedures
+and important legal developments.
+
+</p>
+
+
+<div class="search-wrapper">
+
+<input
+id="articleSearch"
+type="search"
+placeholder="Search legal articles, topics or concepts...">
+
+<button onclick="searchArticles()">
+
+Search
+
+</button>
+
+</div>
+
+</div>
+
 </header>
 
-<div class="container">
 
-<div class="article">
-<h2>What is an FIR?</h2>
-<p>Learn what an FIR is, when it can be filed, and why it is important in criminal law.</p>
+
+<!-- =====================================================
+     CATEGORY BAR
+===================================================== -->
+
+<div class="category-bar">
+
+<div class="category-inner">
+
+<button class="category active"
+onclick="filterArticles('all',this)">
+All
+</button>
+
+<button class="category"
+onclick="filterArticles('criminal',this)">
+Criminal Law
+</button>
+
+<button class="category"
+onclick="filterArticles('constitutional',this)">
+Constitutional Law
+</button>
+
+<button class="category"
+onclick="filterArticles('consumer',this)">
+Consumer Law
+</button>
+
+<button class="category"
+onclick="filterArticles('rights',this)">
+Legal Rights
+</button>
+
+<button class="category"
+onclick="filterArticles('students',this)">
+Law Students
+</button>
+
 </div>
 
-<div class="article">
-<h2>Rights During Arrest</h2>
-<p>Understand the legal rights available to every person during arrest under Indian law.</p>
 </div>
 
-<div class="article">
-<h2>Consumer Rights</h2>
-<p>Know your rights when purchasing goods and services in India.</p>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="main">
+
+
+<!-- FEATURED -->
+
+<div class="section-header">
+
+<div>
+
+<h2>Featured Insight</h2>
+
+<p>Start with an essential legal concept.</p>
+
 </div>
 
-<a class="button" href="index.html">⬅ Back to Home</a>
+</div>
+
+
+<section class="featured">
+
+<div class="featured-visual">
+
+⚖️
 
 </div>
+
+<div class="featured-content">
+
+<div class="featured-label">
+
+Criminal Law • Featured
+
+</div>
+
+<h2>
+
+Understanding the First Information Report
+
+</h2>
+
+<p>
+
+Learn what an FIR is, when it can be registered,
+its importance in criminal proceedings and the
+basic legal framework surrounding it.
+
+</p>
+
+<a
+href="#article-fir"
+class="read-featured">
+
+Read Article →
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- ARTICLE LIBRARY -->
+
+<div class="section-header">
+
+<div>
+
+<h2>Latest Legal Articles</h2>
+
+<p>
+Clear explanations of important legal concepts.
+</p>
+
+</div>
+
+</div>
+
+
+<section class="article-grid" id="articleGrid">
+
+
+<!-- FIR -->
+
+<article
+class="article-card"
+data-category="criminal"
+id="article-fir">
+
+<div class="article-image">
+
+🚨
+
+</div>
+
+<div class="article-content">
+
+<div class="article-category">
+
+Criminal Law
+
+</div>
+
+<h3>
+
+What is an FIR?
+
+</h3>
+
+<p>
+
+Learn what an FIR is, when it can be filed,
+and why it is important in criminal law.
+
+</p>
+
+<div class="article-meta">
+
+<span>📖 Pendico</span>
+
+<span>⏱ 5 min read</span>
+
+</div>
+
+<a href="#"
+class="read-link"
+onclick="comingSoon(event)">
+
+Read Article →
+
+</a>
+
+</div>
+
+</article>
+
+
+
+<!-- ARREST -->
+
+<article
+class="article-card"
+data-category="rights">
+
+<div class="article-image">
+
+🔐
+
+</div>
+
+<div class="article-content">
+
+<div class="article-category">
+
+Legal Rights
+
+</div>
+
+<h3>
+
+Rights During Arrest
+
+</h3>
+
+<p>
+
+Understand the fundamental legal protections
+available to a person during arrest.
+
+</p>
+
+<div class="article-meta">
+
+<span>📖 Pendico</span>
+
+<span>⏱ 6 min read</span>
+
+</div>
+
+<a href="#"
+class="read-link"
+onclick="comingSoon(event)">
+
+Read Article →
+
+</a>
+
+</div>
+
+</article>
+
+
+
+<!-- CONSUMER -->
+
+<article
+class="article-card"
+data-category="consumer">
+
+<div class="article-image">
+
+🛒
+
+</div>
+
+<div class="article-content">
+
+<div class="article-category">
+
+Consumer Law
+
+</div>
+
+<h3>
+
+Consumer Rights in India
+
+</h3>
+
+<p>
+
+Know the important rights available to consumers
+when purchasing goods and services.
+
+</p>
+
+<div class="article-meta">
+
+<span>📖 Pendico</span>
+
+<span>⏱ 5 min read</span>
+
+</div>
+
+<a href="#"
+class="read-link"
+onclick="comingSoon(event)">
+
+Read Article →
+
+</a>
+
+</div>
+
+</article>
+
+
+</section>
+
+
+<div class="empty" id="emptyMessage">
+
+No articles match your search.
+
+</div>
+
+
+
+<!-- =====================================================
+     TRENDING
+===================================================== -->
+
+<section class="trending">
+
+
+<div class="trending-panel">
+
+<h3>🔥 Popular Topics</h3>
+
+
+<div class="trending-item">
+
+<div class="trending-number">
+01
+</div>
+
+<h4>
+Fundamental Rights under the Constitution
+</h4>
+
+</div>
+
+
+<div class="trending-item">
+
+<div class="trending-number">
+02
+</div>
+
+<h4>
+FIR and Criminal Procedure
+</h4>
+
+</div>
+
+
+<div class="trending-item">
+
+<div class="trending-number">
+03
+</div>
+
+<h4>
+Rights of an Arrested Person
+</h4>
+
+</div>
+
+
+<div class="trending-item">
+
+<div class="trending-number">
+04
+</div>
+
+<h4>
+Consumer Protection in India
+</h4>
+
+</div>
+
+</div>
+
+
+
+<div class="trending-panel">
+
+<h3>⭐ Editor's Picks</h3>
+
+
+<div class="trending-item">
+
+<div class="trending-number">
+01
+</div>
+
+<h4>
+Understanding Indian Constitutional Law
+</h4>
+
+</div>
+
+
+<div class="trending-item">
+
+<div class="trending-number">
+02
+</div>
+
+<h4>
+How Criminal Proceedings Begin
+</h4>
+
+</div>
+
+
+<div class="trending-item">
+
+<div class="trending-number">
+03
+</div>
+
+<h4>
+Important Legal Rights Every Citizen Should Know
+</h4>
+
+</div>
+
+
+<div class="trending-item">
+
+<div class="trending-number">
+04
+</div>
+
+<h4>
+Guide to Reading a Court Judgment
+</h4>
+
+</div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     LAW STUDENTS
+===================================================== -->
+
+<section class="student-section">
+
+<h2>
+
+🎓 Pendico for Law Students
+
+</h2>
+
+<p>
+
+Build your legal foundation with practical,
+easy-to-understand resources.
+
+</p>
+
+
+<div class="student-grid">
+
+
+<div class="student-card">
+
+<strong>
+Case Law
+</strong>
+
+Understand landmark judgments
+and legal principles.
+
+</div>
+
+
+<div class="student-card">
+
+<strong>
+Bare Acts
+</strong>
+
+Learn how to read and navigate
+statutory provisions.
+
+</div>
+
+
+<div class="student-card">
+
+<strong>
+Legal Concepts
+</strong>
+
+Break down complex legal concepts
+into simple explanations.
+
+</div>
+
+
+<div class="student-card">
+
+<strong>
+Legal Research
+</strong>
+
+Develop better legal research
+and analytical skills.
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta">
+
+<h2>
+
+Stay Connected With Indian Law
+
+</h2>
+
+<p>
+
+Explore Pendico's growing collection of
+legal resources, articles and case laws.
+
+</p>
+
+<a href="bareacts.html">
+
+Explore Legal Resources
+
+</a>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
-© 2026 Pendico | Legal Information Portal
+
+<div class="footer-brand">
+
+PENDICO
+
+</div>
+
+<p>
+
+Indian Legal Information Portal
+
+</p>
+
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+
+<a href="bareacts.html">Bare Acts</a>
+
+<a href="caselaws.html">Case Laws</a>
+
+<a href="articles.html">Articles</a>
+
+<a href="legalnews.html">Legal News</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<br>
+
+<p>
+
+© 2026 Pendico. All rights reserved.
+
+</p>
+
 </footer>
 
+
+
+<script>
+
+/* =====================================================
+   ARTICLE SEARCH
+===================================================== */
+
+function searchArticles(){
+
+    const query =
+    document
+    .getElementById("articleSearch")
+    .value
+    .toLowerCase()
+    .trim();
+
+    const articles =
+    document
+    .querySelectorAll(".article-card");
+
+    let found = false;
+
+    articles.forEach(article => {
+
+        const text =
+        article.innerText.toLowerCase();
+
+        if(text.includes(query)){
+
+            article.style.display="block";
+
+            found=true;
+
+        }else{
+
+            article.style.display="none";
+
+        }
+
+    });
+
+    document
+    .getElementById("emptyMessage")
+    .style.display =
+    found ? "none" : "block";
+
+}
+
+
+/* ENTER KEY */
+
+document
+.getElementById("articleSearch")
+.addEventListener("keypress",function(e){
+
+    if(e.key==="Enter"){
+
+        searchArticles();
+
+    }
+
+});
+
+
+/* =====================================================
+   CATEGORY FILTER
+===================================================== */
+
+function filterArticles(category,button){
+
+    const articles =
+    document
+    .querySelectorAll(".article-card");
+
+    document
+    .querySelectorAll(".category")
+    .forEach(btn => {
+
+        btn.classList.remove("active");
+
+    });
+
+    button.classList.add("active");
+
+    let found=false;
+
+    articles.forEach(article => {
+
+        const articleCategory =
+        article.dataset.category;
+
+        if(
+            category==="all" ||
+            articleCategory===category
+        ){
+
+            article.style.display="block";
+
+            found=true;
+
+        }else{
+
+            article.style.display="none";
+
+        }
+
+    });
+
+    document
+    .getElementById("emptyMessage")
+    .style.display =
+    found ? "none" : "block";
+
+}
+
+
+/* =====================================================
+   COMING SOON
+===================================================== */
+
+function comingSoon(event){
+
+    event.preventDefault();
+
+    alert(
+        "This article is being prepared for publication on Pendico."
+    );
+
+}
+
+</script>
+
+
 </body>
+
 </html>
