@@ -5,13 +5,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pendico | Landmark Case Laws | Indian Legal Research</title>
+<title>Pendico | Indian Case Law Library</title>
 
 <meta name="description"
-content="Explore 50 important Indian Supreme Court landmark judgments covering Constitutional Law, Criminal Law, Civil Law, Administrative Law, Human Rights and more.">
+content="Pendico Case Law Library — important Supreme Court and High Court cases, landmark judgments, constitutional cases and legal principles for law students and legal professionals.">
 
 <meta name="keywords"
-content="Indian case laws, Supreme Court judgments, landmark cases, constitutional law cases, law student cases, Indian legal research">
+content="Indian case laws, Supreme Court judgments, landmark cases, constitutional law, criminal law, civil law, legal research, Pendico">
+
+<meta name="author" content="Pendico">
 
 <link rel="icon" type="image/png" href="favicon.png">
 
@@ -32,15 +34,20 @@ html{
 }
 
 body{
-    font-family:Inter,Arial,Helvetica,sans-serif;
-    background:#f4f7fc;
+    font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:#f4f7fb;
     color:#172033;
     line-height:1.6;
 }
 
 
 /* =========================================================
-   NAVBAR
+   NAVIGATION
 ========================================================= */
 
 nav{
@@ -52,28 +59,29 @@ nav{
     justify-content:space-between;
     align-items:center;
 
-    padding:14px 6%;
+    padding:13px 6%;
 
     background:rgba(4,16,35,.94);
+
     backdrop-filter:blur(18px);
 
     border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-.brand{
+.nav-brand{
     display:flex;
     align-items:center;
     gap:10px;
 
-    color:white;
     text-decoration:none;
+    color:white;
 
+    font-size:22px;
     font-weight:900;
-    font-size:21px;
-    letter-spacing:2px;
+    letter-spacing:1.5px;
 }
 
-.brand img{
+.nav-brand img{
     width:42px;
     height:42px;
     object-fit:cover;
@@ -83,21 +91,26 @@ nav{
 .nav-links{
     display:flex;
     flex-wrap:wrap;
+    justify-content:center;
     gap:5px;
 }
 
 .nav-links a{
-    color:#dce7f8;
+    color:#dbe7f7;
     text-decoration:none;
+
     padding:8px 12px;
+
     border-radius:8px;
+
     font-size:13px;
     font-weight:600;
+
     transition:.25s;
 }
 
 .nav-links a:hover{
-    background:#1769d1;
+    background:#1558a8;
     color:white;
 }
 
@@ -111,7 +124,7 @@ nav{
     position:relative;
     overflow:hidden;
 
-    padding:90px 20px 75px;
+    padding:90px 20px 80px;
 
     text-align:center;
     color:white;
@@ -119,102 +132,127 @@ nav{
     background:
 
     radial-gradient(
-        circle at 15% 20%,
-        rgba(54,130,255,.28),
-        transparent 30%
+        circle at 15% 25%,
+        rgba(30,125,255,.30),
+        transparent 28%
     ),
 
     radial-gradient(
-        circle at 85% 75%,
+        circle at 85% 65%,
         rgba(0,210,255,.18),
         transparent 30%
     ),
 
     linear-gradient(
         135deg,
-        #041022,
-        #092957,
-        #06172f
+        #041126,
+        #0a2850,
+        #06152d
     );
 }
 
-.hero:before{
-
+.hero::before{
     content:"";
 
     position:absolute;
 
-    width:500px;
-    height:500px;
+    width:650px;
+    height:650px;
 
     border-radius:50%;
 
-    border:1px solid rgba(255,255,255,.04);
+    border:1px solid rgba(78,160,255,.12);
 
-    left:-200px;
-    top:-200px;
+    top:-350px;
+    right:-200px;
+}
+
+.hero::after{
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+    height:400px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(78,160,255,.10);
+
+    bottom:-250px;
+    left:-180px;
 }
 
 .hero-content{
     position:relative;
     z-index:2;
+
     max-width:1000px;
     margin:auto;
 }
 
-.logo{
-    width:90px;
-    height:90px;
-
-    object-fit:cover;
-
-    border-radius:22px;
-
-    box-shadow:
-    0 0 45px rgba(54,143,255,.35);
-
-    margin-bottom:20px;
-}
-
-.hero h1{
-
-    font-size:clamp(42px,7vw,72px);
-
-    letter-spacing:4px;
-
-    font-weight:900;
-
-    margin-bottom:8px;
-}
-
-.hero h1 span{
-    color:#62aaff;
-}
-
-.hero p{
-    color:#b8c9df;
-    font-size:18px;
-    max-width:750px;
-    margin:10px auto;
-}
-
 .hero-badge{
 
-    display:inline-block;
+    display:inline-flex;
 
-    margin-top:20px;
+    align-items:center;
+    gap:8px;
 
     padding:7px 15px;
 
     border-radius:30px;
 
-    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.07);
 
-    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.13);
 
-    color:#9fc9ff;
+    color:#bcd8f7;
 
-    font-size:13px;
+    font-size:12px;
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    margin-bottom:22px;
+}
+
+.hero h1{
+
+    font-size:
+    clamp(42px,7vw,76px);
+
+    line-height:1.05;
+
+    letter-spacing:3px;
+
+    margin-bottom:15px;
+
+    font-weight:900;
+}
+
+.hero h1 span{
+    color:#56a5ff;
+}
+
+.hero-subtitle{
+
+    color:#c8d9ed;
+
+    font-size:
+    clamp(17px,3vw,23px);
+
+    margin-bottom:12px;
+}
+
+.hero-description{
+
+    max-width:720px;
+
+    margin:0 auto 30px;
+
+    color:#91a9c5;
+
+    font-size:15px;
 }
 
 
@@ -226,148 +264,74 @@ nav{
 
     max-width:850px;
 
-    margin:35px auto 0;
+    margin:auto;
+}
+
+.search-box{
 
     display:flex;
 
-    background:white;
-
     padding:7px;
+
+    background:white;
 
     border-radius:15px;
 
-    box-shadow:0 18px 50px rgba(0,0,0,.25);
+    box-shadow:
+    0 20px 55px rgba(0,0,0,.28);
 }
 
-.search-area input{
+.search-box input{
 
     flex:1;
 
-    border:0;
-    outline:0;
+    min-width:0;
 
-    padding:15px 18px;
+    border:none;
+    outline:none;
+
+    padding:16px;
 
     font-size:16px;
+
+    color:#172033;
 
     border-radius:10px;
 }
 
-.search-area button{
+.search-box button{
 
-    border:0;
+    border:none;
 
     padding:0 25px;
 
     border-radius:11px;
 
-    background:#1769d1;
+    background:
+    linear-gradient(
+        135deg,
+        #1670e8,
+        #0a53b5
+    );
 
     color:white;
 
     font-weight:800;
 
     cursor:pointer;
+
+    transition:.25s;
 }
 
+.search-box button:hover{
 
-/* =========================================================
-   STATISTICS
-========================================================= */
-
-.stats{
-
-    max-width:1150px;
-
-    margin:-30px auto 0;
-
-    position:relative;
-
-    z-index:5;
-
-    padding:0 20px;
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(180px,1fr));
-
-    gap:18px;
-}
-
-.stat{
-
-    background:white;
-
-    border-radius:17px;
-
-    padding:25px;
-
-    text-align:center;
-
-    border:1px solid #e3e9f2;
+    transform:translateY(-1px);
 
     box-shadow:
-    0 12px 35px rgba(20,45,80,.1);
+    0 8px 20px rgba(0,85,190,.25);
 }
 
-.stat h2{
-
-    color:#1769d1;
-
-    font-size:30px;
-
-    margin-bottom:3px;
-}
-
-.stat p{
-
-    color:#718096;
-
-    font-size:13px;
-}
-
-
-/* =========================================================
-   MAIN
-========================================================= */
-
-.container{
-
-    max-width:1250px;
-
-    margin:auto;
-
-    padding:70px 25px;
-}
-
-.section-heading{
-
-    text-align:center;
-
-    margin-bottom:30px;
-}
-
-.section-heading h2{
-
-    font-size:35px;
-
-    color:#102d55;
-}
-
-.section-heading p{
-
-    color:#718096;
-
-    margin-top:5px;
-}
-
-
-/* =========================================================
-   FILTERS
-========================================================= */
-
-.filters{
+.quick-search{
 
     display:flex;
 
@@ -375,18 +339,152 @@ nav{
 
     flex-wrap:wrap;
 
+    gap:8px;
+
+    margin-top:18px;
+}
+
+.quick-search button{
+
+    border:1px solid rgba(255,255,255,.14);
+
+    background:rgba(255,255,255,.05);
+
+    color:#c7d9ef;
+
+    border-radius:20px;
+
+    padding:7px 13px;
+
+    cursor:pointer;
+
+    font-size:12px;
+
+    transition:.25s;
+}
+
+.quick-search button:hover{
+
+    background:rgba(255,255,255,.10);
+
+    border-color:#4c9dff;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats-section{
+
+    padding:30px 20px;
+
+    background:#07182f;
+}
+
+.stats{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:15px;
+}
+
+.stat{
+
+    padding:22px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    background:
+    rgba(255,255,255,.045);
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.stat-number{
+
+    color:#5ba7ff;
+
+    font-size:28px;
+
+    font-weight:900;
+}
+
+.stat-label{
+
+    color:#9db2ca;
+
+    font-size:12px;
+}
+
+
+/* =========================================================
+   FILTER AREA
+========================================================= */
+
+.library{
+
+    max-width:1250px;
+
+    margin:auto;
+
+    padding:70px 22px;
+}
+
+.library-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+
+    gap:20px;
+
+    margin-bottom:30px;
+}
+
+.library-header h2{
+
+    color:#102d55;
+
+    font-size:34px;
+}
+
+.library-header p{
+
+    color:#6d7c90;
+
+    font-size:14px;
+}
+
+.filters{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
     gap:10px;
 
-    margin-bottom:35px;
+    margin-bottom:30px;
 }
 
 .filter{
 
-    border:1px solid #d8e1ed;
+    border:1px solid #dbe4ef;
 
     background:white;
 
-    color:#31506f;
+    color:#35516f;
 
     padding:9px 15px;
 
@@ -398,17 +496,17 @@ nav{
 
     font-size:13px;
 
-    transition:.25s;
+    transition:.2s;
 }
 
 .filter:hover,
 .filter.active{
 
-    background:#1769d1;
+    background:#0b56ae;
 
     color:white;
 
-    border-color:#1769d1;
+    border-color:#0b56ae;
 }
 
 
@@ -428,28 +526,34 @@ nav{
 
 .case-card{
 
-    background:white;
-
-    border:1px solid #e3e9f2;
-
-    border-radius:18px;
-
-    padding:26px;
-
     position:relative;
 
-    overflow:hidden;
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:310px;
+
+    background:white;
+
+    border:1px solid #e2e9f2;
+
+    border-radius:20px;
+
+    padding:27px;
 
     box-shadow:
-    0 8px 25px rgba(15,45,80,.07);
+    0 8px 25px rgba(14,46,83,.07);
 
     transition:
     transform .3s,
     box-shadow .3s,
     border-color .3s;
+
+    overflow:hidden;
 }
 
-.case-card:before{
+.case-card::before{
 
     content:"";
 
@@ -464,38 +568,32 @@ nav{
     background:
     linear-gradient(
         90deg,
-        #1769d1,
-        #38b5ff
+        #1265ca,
+        #43b7ff
     );
 }
 
 .case-card:hover{
 
-    transform:translateY(-7px);
+    transform:translateY(-8px);
+
+    border-color:#c7dbf1;
 
     box-shadow:
-    0 18px 42px rgba(15,45,80,.14);
-
-    border-color:#c6d9f1;
+    0 18px 45px rgba(12,62,115,.14);
 }
 
 .case-number{
 
-    display:inline-block;
+    color:#7c91aa;
 
-    background:#edf5ff;
-
-    color:#1769d1;
-
-    font-size:12px;
+    font-size:11px;
 
     font-weight:800;
 
-    padding:5px 9px;
+    letter-spacing:1px;
 
-    border-radius:7px;
-
-    margin-bottom:12px;
+    margin-bottom:9px;
 }
 
 .case-card h3{
@@ -504,37 +602,35 @@ nav{
 
     font-size:19px;
 
-    line-height:1.4;
+    line-height:1.35;
 
-    margin-bottom:8px;
+    margin-bottom:9px;
 }
 
-.meta{
+.case-meta{
 
-    color:#718096;
+    display:flex;
 
-    font-size:13px;
+    flex-wrap:wrap;
 
-    margin-bottom:13px;
+    gap:7px;
+
+    margin-bottom:15px;
 }
 
-.subject{
-
-    display:inline-block;
-
-    background:#f0f5fa;
-
-    color:#41617e;
+.badge{
 
     padding:5px 9px;
 
-    border-radius:7px;
+    border-radius:6px;
+
+    background:#edf5ff;
+
+    color:#1764b9;
 
     font-size:11px;
 
-    font-weight:700;
-
-    margin-bottom:14px;
+    font-weight:800;
 }
 
 .case-card p{
@@ -546,30 +642,55 @@ nav{
     margin-bottom:18px;
 }
 
+.principle{
+
+    margin-top:auto;
+
+    padding:11px;
+
+    border-radius:10px;
+
+    background:#f5f8fc;
+
+    color:#3c5875;
+
+    font-size:12px;
+}
+
 .read-btn{
 
-    border:0;
+    width:100%;
 
-    background:#1769d1;
+    margin-top:16px;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
 
     color:white;
 
-    padding:10px 17px;
+    background:
+    linear-gradient(
+        135deg,
+        #1169d5,
+        #0a4c9f
+    );
 
-    border-radius:9px;
+    font-weight:800;
 
     cursor:pointer;
-
-    font-weight:700;
 
     transition:.25s;
 }
 
 .read-btn:hover{
 
-    background:#0c55ad;
-
     transform:translateY(-2px);
+
+    box-shadow:
+    0 8px 18px rgba(0,80,180,.20);
 }
 
 
@@ -581,11 +702,22 @@ nav{
 
     display:none;
 
+    padding:50px 20px;
+
     text-align:center;
 
-    padding:50px;
-
     color:#718096;
+}
+
+.no-results strong{
+
+    display:block;
+
+    font-size:22px;
+
+    color:#304965;
+
+    margin-bottom:8px;
 }
 
 
@@ -599,118 +731,238 @@ nav{
 
     position:fixed;
 
-    z-index:2000;
+    z-index:5000;
 
-    left:0;
-    top:0;
+    inset:0;
 
-    width:100%;
-    height:100%;
+    padding:25px;
 
-    background:rgba(2,10,25,.78);
+    background:
+    rgba(1,10,23,.78);
 
-    backdrop-filter:blur(8px);
+    backdrop-filter:blur(10px);
 
-    padding:20px;
+    overflow-y:auto;
+}
 
-    overflow:auto;
+.modal.show{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
 }
 
 .modal-content{
 
-    background:white;
+    position:relative;
+
+    width:100%;
 
     max-width:900px;
 
-    margin:4% auto;
+    margin:35px auto;
 
-    border-radius:20px;
+    background:white;
 
-    padding:35px;
+    border-radius:22px;
 
-    position:relative;
+    overflow:hidden;
 
     box-shadow:
-    0 25px 80px rgba(0,0,0,.35);
+    0 30px 90px rgba(0,0,0,.35);
 
-    animation:modalIn .25s ease;
+    animation:
+    modalIn .25s ease;
 }
 
 @keyframes modalIn{
 
     from{
-        transform:translateY(20px);
         opacity:0;
+        transform:translateY(20px) scale(.98);
     }
 
     to{
-        transform:translateY(0);
         opacity:1;
+        transform:none;
     }
+}
+
+.modal-top{
+
+    padding:32px;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #071a35,
+        #0d4e98
+    );
+}
+
+.modal-top h2{
+
+    font-size:28px;
+
+    line-height:1.3;
+
+    margin-bottom:10px;
+}
+
+.modal-top p{
+
+    color:#bcd2eb;
+
+    font-size:13px;
 }
 
 .close{
 
     position:absolute;
 
-    right:20px;
     top:15px;
+    right:18px;
 
-    font-size:30px;
+    width:38px;
+    height:38px;
 
-    color:#607086;
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.10);
+
+    color:white;
+
+    font-size:25px;
 
     cursor:pointer;
 }
 
-.modal-content h2{
+.close:hover{
 
-    color:#102d55;
-
-    font-size:28px;
-
-    margin-right:35px;
+    background:rgba(255,255,255,.20);
 }
 
-.modal-meta{
+.modal-body{
 
-    color:#718096;
-
-    margin:8px 0 20px;
+    padding:32px;
 }
 
-.modal-section{
+.detail-section{
 
-    margin-top:25px;
-
-    padding:20px;
-
-    background:#f7f9fc;
-
-    border-radius:12px;
-
-    border-left:4px solid #1769d1;
+    margin-bottom:25px;
 }
 
-.modal-section h3{
+.detail-section h3{
 
-    color:#123d70;
+    color:#0e4c92;
 
-    margin-bottom:7px;
+    font-size:16px;
+
+    margin-bottom:8px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
 }
 
-.modal-section p{
+.detail-section p{
 
-    color:#4f6075;
+    color:#485b71;
 
     font-size:15px;
 }
 
-.principle{
+.detail-grid{
 
-    background:#edf5ff;
+    display:grid;
 
-    border-left-color:#38a9ff;
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:15px;
+
+    margin-bottom:25px;
+}
+
+.detail-box{
+
+    background:#f5f8fc;
+
+    border:1px solid #e5ebf3;
+
+    padding:17px;
+
+    border-radius:12px;
+}
+
+.detail-box span{
+
+    display:block;
+
+    color:#8393a7;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+
+    margin-bottom:4px;
+}
+
+.detail-box strong{
+
+    color:#263e5a;
+
+    font-size:14px;
+}
+
+.full-judgment{
+
+    padding:15px;
+
+    border-left:4px solid #1670d8;
+
+    background:#f5f8fc;
+
+    border-radius:7px;
+
+    color:#40566f;
+
+    font-size:14px;
+
+    white-space:pre-line;
+}
+
+.source-link{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    padding:10px 16px;
+
+    border-radius:9px;
+
+    background:#0b56ae;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    font-weight:800;
 }
 
 
@@ -722,11 +974,11 @@ footer{
 
     background:#041021;
 
-    color:#91a3ba;
-
-    text-align:center;
+    color:#91a4bb;
 
     padding:45px 20px;
+
+    text-align:center;
 }
 
 .footer-logo{
@@ -737,9 +989,9 @@ footer{
 
     font-weight:900;
 
-    letter-spacing:3px;
+    letter-spacing:2px;
 
-    margin-bottom:7px;
+    margin-bottom:5px;
 }
 
 .footer-links{
@@ -765,6 +1017,7 @@ footer{
 }
 
 .footer-links a:hover{
+
     color:white;
 }
 
@@ -773,25 +1026,41 @@ footer{
    MOBILE
 ========================================================= */
 
-@media(max-width:700px){
+@media(max-width:850px){
 
     nav{
 
         flex-direction:column;
 
         gap:10px;
-
-        padding:12px;
     }
 
-    .nav-links{
+    .stats{
 
-        justify-content:center;
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .library-header{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+    }
+}
+
+@media(max-width:600px){
+
+    .nav-links a{
+
+        font-size:11px;
+
+        padding:6px 8px;
     }
 
     .hero{
 
-        padding:65px 18px;
+        padding:65px 17px;
     }
 
     .hero h1{
@@ -799,46 +1068,68 @@ footer{
         font-size:44px;
     }
 
-    .search-area{
+    .search-box{
 
         flex-direction:column;
-
-        gap:7px;
     }
 
-    .search-area button{
+    .search-box button{
 
-        padding:13px;
+        padding:14px;
     }
 
-    .container{
+    .stats{
 
-        padding:55px 17px;
+        grid-template-columns:1fr 1fr;
+    }
+
+    .library{
+
+        padding:55px 15px;
+    }
+
+    .case-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .detail-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .modal{
+
+        padding:10px;
     }
 
     .modal-content{
 
-        padding:25px 20px;
-
-        margin-top:8%;
+        margin:10px auto;
     }
 
+    .modal-top,
+    .modal-body{
+
+        padding:22px;
+    }
 }
 
 </style>
 
 </head>
 
+
 <body>
 
 
-<!-- =====================================================
+<!-- =========================================================
      NAVIGATION
-===================================================== -->
+========================================================= -->
 
 <nav>
 
-<a href="index.html" class="brand">
+<a href="index.html" class="nav-brand">
 
 <img src="logo.png.jpeg" alt="Pendico">
 
@@ -849,17 +1140,11 @@ footer{
 <div class="nav-links">
 
 <a href="index.html">Home</a>
-
 <a href="bareacts.html">Bare Acts</a>
-
 <a href="caselaws.html">Case Laws</a>
-
 <a href="articles.html">Articles</a>
-
 <a href="legalnews.html">Legal News</a>
-
 <a href="about.html">About</a>
-
 <a href="contact.html">Contact</a>
 
 </div>
@@ -867,44 +1152,77 @@ footer{
 </nav>
 
 
-<!-- =====================================================
+<!-- =========================================================
      HERO
-===================================================== -->
+========================================================= -->
 
 <header class="hero">
 
 <div class="hero-content">
 
-<img
-src="logo.png.jpeg"
-class="logo"
-alt="Pendico Logo">
+<div class="hero-badge">
+⚖️ PENDICO LEGAL RESEARCH LIBRARY
+</div>
 
-<h1>CASE LA<span>WS</span></h1>
+<h1>
+CASE <span>LAWS</span>
+</h1>
 
-<p>
+<p class="hero-subtitle">
 Landmark Indian Judgments & Legal Principles
 </p>
 
-<p>
-Explore important decisions of the Supreme Court of India
-and understand their facts, issues, judgments and legal principles.
+<p class="hero-description">
+Explore important decisions that have shaped Indian
+constitutional law, criminal law, civil law, human rights,
+administrative law and the development of the legal system.
 </p>
 
-<div class="hero-badge">
-⚖️ Built for Law Students • Researchers • Advocates
-</div>
 
 <div class="search-area">
 
+<div class="search-box">
+
 <input
-id="caseSearch"
+id="searchInput"
 type="text"
-placeholder="Search case name, year, subject or legal principle...">
+placeholder="Search case name, citation, subject or legal principle..."
+autocomplete="off">
 
 <button onclick="searchCases()">
 🔍 Search
 </button>
+
+</div>
+
+
+<div class="quick-search">
+
+<button onclick="quickSearch('constitutional')">
+Constitutional
+</button>
+
+<button onclick="quickSearch('criminal')">
+Criminal
+</button>
+
+<button onclick="quickSearch('fundamental rights')">
+Fundamental Rights
+</button>
+
+<button onclick="quickSearch('Article 21')">
+Article 21
+</button>
+
+<button onclick="quickSearch('property')">
+Property
+</button>
+
+<button onclick="quickSearch('administrative')">
+Administrative
+</button>
+
+</div>
 
 </div>
 
@@ -913,1474 +1231,200 @@ placeholder="Search case name, year, subject or legal principle...">
 </header>
 
 
-<!-- =====================================================
-     STATISTICS
-===================================================== -->
+<!-- =========================================================
+     STATS
+========================================================= -->
 
-<section class="stats">
+<section class="stats-section">
+
+<div class="stats">
 
 <div class="stat">
-<h2>50+</h2>
-<p>Landmark Cases</p>
+<div class="stat-number">50</div>
+<div class="stat-label">Curated Landmark Cases</div>
 </div>
 
 <div class="stat">
-<h2>1950–2024</h2>
-<p>Important Decisions</p>
+<div class="stat-number">1940s+</div>
+<div class="stat-label">Modern Indian Jurisprudence</div>
 </div>
 
 <div class="stat">
-<h2>12+</h2>
-<p>Legal Subjects</p>
+<div class="stat-number">10+</div>
+<div class="stat-label">Legal Subjects</div>
 </div>
 
 <div class="stat">
-<h2>Free</h2>
-<p>Student Research</p>
+<div class="stat-number">24×7</div>
+<div class="stat-label">Research Access</div>
+</div>
+
 </div>
 
 </section>
 
 
-<!-- =====================================================
-     CASE LIBRARY
-===================================================== -->
+<!-- =========================================================
+     LIBRARY
+========================================================= -->
 
-<main class="container">
+<main class="library">
 
-<div class="section-heading">
+<div class="library-header">
 
-<h2>Landmark Case Law Library</h2>
+<div>
+
+<h2>Landmark Case Library</h2>
 
 <p>
-Essential Indian judgments every law student should know.
+50 important cases selected for legal study and research.
 </p>
 
 </div>
 
+<div>
+
+<strong id="resultCount">
+50 cases
+</strong>
+
+</div>
+
+</div>
+
+
+<!-- FILTERS -->
 
 <div class="filters">
 
-<button class="filter active" onclick="filterCases('all',this)">
-All
+<button class="filter active"
+data-filter="all">
+All Cases
 </button>
 
-<button class="filter" onclick="filterCases('constitutional',this)">
+<button class="filter"
+data-filter="constitutional">
 Constitutional
 </button>
 
-<button class="filter" onclick="filterCases('criminal',this)">
+<button class="filter"
+data-filter="criminal">
 Criminal
 </button>
 
-<button class="filter" onclick="filterCases('civil',this)">
-Civil
-</button>
-
-<button class="filter" onclick="filterCases('administrative',this)">
-Administrative
-</button>
-
-<button class="filter" onclick="filterCases('rights',this)">
+<button class="filter"
+data-filter="fundamental rights">
 Fundamental Rights
 </button>
 
-<button class="filter" onclick="filterCases('family',this)">
-Family Law
+<button class="filter"
+data-filter="administrative">
+Administrative
+</button>
+
+<button class="filter"
+data-filter="civil">
+Civil
+</button>
+
+<button class="filter"
+data-filter="property">
+Property
+</button>
+
+<button class="filter"
+data-filter="family">
+Family
 </button>
 
 </div>
 
+
+<!-- CASES -->
 
 <section class="case-grid" id="caseGrid">
-
-
-<!-- 1 -->
-
-<div class="case-card" data-category="constitutional rights">
-
-<span class="case-number">01</span>
-
-<h3>Kesavananda Bharati v. State of Kerala</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1973
-</div>
-
-<span class="subject">
-CONSTITUTIONAL LAW
-</span>
-
-<p>
-The landmark decision establishing the Basic Structure Doctrine.
-</p>
-
-<button class="read-btn"
-onclick="openCase(0)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 2 -->
-
-<div class="case-card" data-category="constitutional rights">
-
-<span class="case-number">02</span>
-
-<h3>Maneka Gandhi v. Union of India</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1978
-</div>
-
-<span class="subject">
-ARTICLE 21
-</span>
-
-<p>
-Expanded the interpretation of personal liberty and procedural fairness.
-</p>
-
-<button class="read-btn"
-onclick="openCase(1)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 3 -->
-
-<div class="case-card" data-category="constitutional rights">
-
-<span class="case-number">03</span>
-
-<h3>K.S. Puttaswamy v. Union of India</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 2017
-</div>
-
-<span class="subject">
-RIGHT TO PRIVACY
-</span>
-
-<p>
-Recognised privacy as a fundamental right protected by the Constitution.
-</p>
-
-<button class="read-btn"
-onclick="openCase(2)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 4 -->
-
-<div class="case-card" data-category="constitutional rights">
-
-<span class="case-number">04</span>
-
-<h3>Golaknath v. State of Punjab</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1967
-</div>
-
-<span class="subject">
-CONSTITUTIONAL AMENDMENT
-</span>
-
-<p>
-Important decision concerning Parliament's power to amend fundamental rights.
-</p>
-
-<button class="read-btn" onclick="openCase(3)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 5 -->
-
-<div class="case-card" data-category="constitutional rights">
-
-<span class="case-number">05</span>
-
-<h3>Minerva Mills v. Union of India</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1980
-</div>
-
-<span class="subject">
-BASIC STRUCTURE
-</span>
-
-<p>
-Reaffirmed limits on Parliament's amending power.
-</p>
-
-<button class="read-btn" onclick="openCase(4)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 6 -->
-
-<div class="case-card" data-category="constitutional rights">
-
-<span class="case-number">06</span>
-
-<h3>Indira Nehru Gandhi v. Raj Narain</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1975
-</div>
-
-<span class="subject">
-ELECTION LAW
-</span>
-
-<p>
-Important decision concerning democracy, elections and constitutional limitations.
-</p>
-
-<button class="read-btn" onclick="openCase(5)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 7 -->
-
-<div class="case-card" data-category="constitutional rights">
-
-<span class="case-number">07</span>
-
-<h3>S.R. Bommai v. Union of India</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1994
-</div>
-
-<span class="subject">
-FEDERALISM
-</span>
-
-<p>
-A leading authority on Article 356 and federalism.
-</p>
-
-<button class="read-btn" onclick="openCase(6)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 8 -->
-
-<div class="case-card" data-category="constitutional rights">
-
-<span class="case-number">08</span>
-
-<h3>Shreya Singhal v. Union of India</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 2015
-</div>
-
-<span class="subject">
-FREEDOM OF SPEECH
-</span>
-
-<p>
-Section 66A of the Information Technology Act was declared unconstitutional.
-</p>
-
-<button class="read-btn" onclick="openCase(7)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 9 -->
-
-<div class="case-card" data-category="rights">
-
-<span class="case-number">09</span>
-
-<h3>Vishaka v. State of Rajasthan</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1997
-</div>
-
-<span class="subject">
-WOMEN'S RIGHTS
-</span>
-
-<p>
-Established guidelines addressing sexual harassment at the workplace.
-</p>
-
-<button class="read-btn" onclick="openCase(8)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 10 -->
-
-<div class="case-card" data-category="rights">
-
-<span class="case-number">10</span>
-
-<h3>Navtej Singh Johar v. Union of India</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 2018
-</div>
-
-<span class="subject">
-FUNDAMENTAL RIGHTS
-</span>
-
-<p>
-Decriminalised consensual same-sex relations under Section 377 IPC.
-</p>
-
-<button class="read-btn" onclick="openCase(9)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 11 -->
-
-<div class="case-card" data-category="constitutional rights">
-
-<span class="case-number">11</span>
-
-<h3>Justice K.S. Puttaswamy (Aadhaar) v. Union of India</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 2018
-</div>
-
-<span class="subject">
-PRIVACY & AADHAAR
-</span>
-
-<p>
-Examined constitutional questions surrounding Aadhaar and privacy.
-</p>
-
-<button class="read-btn" onclick="openCase(10)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 12 -->
-
-<div class="case-card" data-category="constitutional rights">
-
-<span class="case-number">12</span>
-
-<h3>Indra Sawhney v. Union of India</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1992
-</div>
-
-<span class="subject">
-RESERVATION
-</span>
-
-<p>
-Landmark decision concerning reservations and the concept of creamy layer.
-</p>
-
-<button class="read-btn" onclick="openCase(11)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 13 -->
-
-<div class="case-card" data-category="constitutional rights">
-
-<span class="case-number">13</span>
-
-<h3>State of Madras v. Champakam Dorairajan</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1951
-</div>
-
-<span class="subject">
-EQUALITY
-</span>
-
-<p>
-One of the earliest important decisions concerning fundamental rights and reservations.
-</p>
-
-<button class="read-btn" onclick="openCase(12)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 14 -->
-
-<div class="case-card" data-category="constitutional rights">
-
-<span class="case-number">14</span>
-
-<h3>Gujarat v. Mirzapur Moti Kureshi Kassab Jamat</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 2005
-</div>
-
-<span class="subject">
-ARTICLE 19 & 21
-</span>
-
-<p>
-Considered constitutional restrictions and protection of cattle.
-</p>
-
-<button class="read-btn" onclick="openCase(13)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 15 -->
-
-<div class="case-card" data-category="constitutional">
-
-<span class="case-number">15</span>
-
-<h3>Berubari Union Case</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1960
-</div>
-
-<span class="subject">
-CONSTITUTIONAL LAW
-</span>
-
-<p>
-Important advisory opinion concerning territory and constitutional amendment.
-</p>
-
-<button class="read-btn" onclick="openCase(14)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 16 -->
-
-<div class="case-card" data-category="criminal rights">
-
-<span class="case-number">16</span>
-
-<h3>Hussainara Khatoon v. State of Bihar</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1979
-</div>
-
-<span class="subject">
-CRIMINAL JUSTICE
-</span>
-
-<p>
-Recognised speedy trial as an important aspect of Article 21.
-</p>
-
-<button class="read-btn" onclick="openCase(15)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 17 -->
-
-<div class="case-card" data-category="criminal rights">
-
-<span class="case-number">17</span>
-
-<h3>D.K. Basu v. State of West Bengal</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1997
-</div>
-
-<span class="subject">
-ARREST & CUSTODY
-</span>
-
-<p>
-Laid down safeguards concerning arrest and custodial violence.
-</p>
-
-<button class="read-btn" onclick="openCase(16)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 18 -->
-
-<div class="case-card" data-category="criminal rights">
-
-<span class="case-number">18</span>
-
-<h3>Joginder Kumar v. State of U.P.</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1994
-</div>
-
-<span class="subject">
-ARREST
-</span>
-
-<p>
-Explained that arrest cannot be made routinely without justification.
-</p>
-
-<button class="read-btn" onclick="openCase(17)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 19 -->
-
-<div class="case-card" data-category="criminal rights">
-
-<span class="case-number">19</span>
-
-<h3>Arnesh Kumar v. State of Bihar</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 2014
-</div>
-
-<span class="subject">
-ARREST & BAIL
-</span>
-
-<p>
-Important safeguards against unnecessary arrests in offences punishable up to seven years.
-</p>
-
-<button class="read-btn" onclick="openCase(18)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 20 -->
-
-<div class="case-card" data-category="criminal">
-
-<span class="case-number">20</span>
-
-<h3>Lalita Kumari v. Government of Uttar Pradesh</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 2013
-</div>
-
-<span class="subject">
-FIR
-</span>
-
-<p>
-Held that registration of FIR is mandatory when information discloses a cognizable offence.
-</p>
-
-<button class="read-btn" onclick="openCase(19)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 21 -->
-
-<div class="case-card" data-category="criminal">
-
-<span class="case-number">21</span>
-
-<h3>State of Haryana v. Bhajan Lal</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1992
-</div>
-
-<span class="subject">
-CRIMINAL PROCEDURE
-</span>
-
-<p>
-Provided illustrative categories for quashing criminal proceedings.
-</p>
-
-<button class="read-btn" onclick="openCase(20)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 22 -->
-
-<div class="case-card" data-category="criminal">
-
-<span class="case-number">22</span>
-
-<h3>Sharad Birdhichand Sarda v. State of Maharashtra</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1984
-</div>
-
-<span class="subject">
-CIRCUMSTANTIAL EVIDENCE
-</span>
-
-<p>
-Established important principles for evaluating circumstantial evidence.
-</p>
-
-<button class="read-btn" onclick="openCase(21)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 23 -->
-
-<div class="case-card" data-category="criminal">
-
-<span class="case-number">23</span>
-
-<h3>Virsa Singh v. State of Punjab</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1958
-</div>
-
-<span class="subject">
-MURDER
-</span>
-
-<p>
-Important authority concerning Section 300 thirdly of the IPC.
-</p>
-
-<button class="read-btn" onclick="openCase(22)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 24 -->
-
-<div class="case-card" data-category="criminal">
-
-<span class="case-number">24</span>
-
-<h3>Bachan Singh v. State of Punjab</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1980
-</div>
-
-<span class="subject">
-DEATH PENALTY
-</span>
-
-<p>
-Established the "rarest of rare" principle for capital punishment.
-</p>
-
-<button class="read-btn" onclick="openCase(23)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 25 -->
-
-<div class="case-card" data-category="criminal rights">
-
-<span class="case-number">25</span>
-
-<h3>Selvi v. State of Karnataka</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 2010
-</div>
-
-<span class="subject">
-SELF-INCRIMINATION
-</span>
-
-<p>
-Considered involuntary narco-analysis, polygraph and brain-mapping techniques.
-</p>
-
-<button class="read-btn" onclick="openCase(24)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 26 -->
-
-<div class="case-card" data-category="criminal">
-
-<span class="case-number">26</span>
-
-<h3>State of Punjab v. Baldev Singh</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1999
-</div>
-
-<span class="subject">
-NDPS
-</span>
-
-<p>
-Important interpretation of safeguards under the NDPS Act.
-</p>
-
-<button class="read-btn" onclick="openCase(25)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 27 -->
-
-<div class="case-card" data-category="criminal">
-
-<span class="case-number">27</span>
-
-<h3>Gurbaksh Singh Sibbia v. State of Punjab</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1980
-</div>
-
-<span class="subject">
-ANTICIPATORY BAIL
-</span>
-
-<p>
-Leading authority on the principles governing anticipatory bail.
-</p>
-
-<button class="read-btn" onclick="openCase(26)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 28 -->
-
-<div class="case-card" data-category="criminal">
-
-<span class="case-number">28</span>
-
-<h3>Satender Kumar Antil v. CBI</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 2022
-</div>
-
-<span class="subject">
-BAIL
-</span>
-
-<p>
-Important directions concerning arrest and bail jurisprudence.
-</p>
-
-<button class="read-btn" onclick="openCase(27)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 29 -->
-
-<div class="case-card" data-category="criminal">
-
-<span class="case-number">29</span>
-
-<h3>State of Rajasthan v. Kashi Ram</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 2006
-</div>
-
-<span class="subject">
-EVIDENCE
-</span>
-
-<p>
-Important principles concerning circumstantial evidence and burden of proof.
-</p>
-
-<button class="read-btn" onclick="openCase(28)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 30 -->
-
-<div class="case-card" data-category="criminal">
-
-<span class="case-number">30</span>
-
-<h3>Ritesh Sinha v. State of Uttar Pradesh</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 2019
-</div>
-
-<span class="subject">
-CRIMINAL INVESTIGATION
-</span>
-
-<p>
-Considered judicial powers concerning voice samples in criminal investigations.
-</p>
-
-<button class="read-btn" onclick="openCase(29)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 31 -->
-
-<div class="case-card" data-category="administrative">
-
-<span class="case-number">31</span>
-
-<h3>A.K. Kraipak v. Union of India</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1969
-</div>
-
-<span class="subject">
-NATURAL JUSTICE
-</span>
-
-<p>
-Expanded the application of natural justice to administrative actions.
-</p>
-
-<button class="read-btn" onclick="openCase(30)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 32 -->
-
-<div class="case-card" data-category="administrative rights">
-
-<span class="case-number">32</span>
-
-<h3>Mohinder Singh Gill v. Chief Election Commissioner</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1978
-</div>
-
-<span class="subject">
-ADMINISTRATIVE LAW
-</span>
-
-<p>
-Important authority on administrative decisions and election law.
-</p>
-
-<button class="read-btn" onclick="openCase(31)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 33 -->
-
-<div class="case-card" data-category="administrative">
-
-<span class="case-number">33</span>
-
-<h3>Ridge v. Baldwin</h3>
-
-<div class="meta">
-⚖️ House of Lords • 1964
-</div>
-
-<span class="subject">
-NATURAL JUSTICE
-</span>
-
-<p>
-A major common-law authority on procedural fairness and natural justice.
-</p>
-
-<button class="read-btn" onclick="openCase(32)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 34 -->
-
-<div class="case-card" data-category="administrative">
-
-<span class="case-number">34</span>
-
-<h3>Maneka Gandhi v. Union of India</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1978
-</div>
-
-<span class="subject">
-ADMINISTRATIVE FAIRNESS
-</span>
-
-<p>
-Connected natural justice, reasonableness and fundamental rights.
-</p>
-
-<button class="read-btn" onclick="openCase(33)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 35 -->
-
-<div class="case-card" data-category="civil">
-
-<span class="case-number">35</span>
-
-<h3>Donoghue v. Stevenson</h3>
-
-<div class="meta">
-⚖️ House of Lords • 1932
-</div>
-
-<span class="subject">
-LAW OF TORTS
-</span>
-
-<p>
-Established the modern neighbour principle in negligence.
-</p>
-
-<button class="read-btn" onclick="openCase(34)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 36 -->
-
-<div class="case-card" data-category="civil">
-
-<span class="case-number">36</span>
-
-<h3>Rylands v. Fletcher</h3>
-
-<div class="meta">
-⚖️ House of Lords • 1868
-</div>
-
-<span class="subject">
-TORT LAW
-</span>
-
-<p>
-Classic authority establishing the rule of strict liability.
-</p>
-
-<button class="read-btn" onclick="openCase(35)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 37 -->
-
-<div class="case-card" data-category="civil">
-
-<span class="case-number">37</span>
-
-<h3>Carlill v. Carbolic Smoke Ball Co.</h3>
-
-<div class="meta">
-⚖️ Court of Appeal • 1893
-</div>
-
-<span class="subject">
-CONTRACT LAW
-</span>
-
-<p>
-Leading case concerning unilateral offers and acceptance.
-</p>
-
-<button class="read-btn" onclick="openCase(36)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 38 -->
-
-<div class="case-card" data-category="civil">
-
-<span class="case-number">38</span>
-
-<h3>Hadley v. Baxendale</h3>
-
-<div class="meta">
-⚖️ Court of Exchequer • 1854
-</div>
-
-<span class="subject">
-CONTRACT DAMAGES
-</span>
-
-<p>
-Established principles governing remoteness of contractual damages.
-</p>
-
-<button class="read-btn" onclick="openCase(37)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 39 -->
-
-<div class="case-card" data-category="civil">
-
-<span class="case-number">39</span>
-
-<h3>Central Inland Water Transport Corporation v. Brojo Nath Ganguly</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1986
-</div>
-
-<span class="subject">
-CONTRACT LAW
-</span>
-
-<p>
-Examined unconscionable contractual clauses and public policy.
-</p>
-
-<button class="read-btn" onclick="openCase(38)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 40 -->
-
-<div class="case-card" data-category="civil">
-
-<span class="case-number">40</span>
-
-<h3>LIC of India v. Consumer Education & Research Centre</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1995
-</div>
-
-<span class="subject">
-CONSUMER RIGHTS
-</span>
-
-<p>
-Considered fairness and constitutional principles in insurance contracts.
-</p>
-
-<button class="read-btn" onclick="openCase(39)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 41 -->
-
-<div class="case-card" data-category="family rights">
-
-<span class="case-number">41</span>
-
-<h3>Shah Bano Begum Case</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1985
-</div>
-
-<span class="subject">
-FAMILY LAW
-</span>
-
-<p>
-Landmark decision concerning maintenance rights of a divorced Muslim woman.
-</p>
-
-<button class="read-btn" onclick="openCase(40)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 42 -->
-
-<div class="case-card" data-category="family rights">
-
-<span class="case-number">42</span>
-
-<h3>Shayara Bano v. Union of India</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 2017
-</div>
-
-<span class="subject">
-FAMILY LAW
-</span>
-
-<p>
-The Court addressed the constitutional validity of instant triple talaq.
-</p>
-
-<button class="read-btn" onclick="openCase(41)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 43 -->
-
-<div class="case-card" data-category="family rights">
-
-<span class="case-number">43</span>
-
-<h3>Vineeta Sharma v. Rakesh Sharma</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 2020
-</div>
-
-<span class="subject">
-HINDU SUCCESSION
-</span>
-
-<p>
-Clarified daughters' coparcenary rights under the Hindu Succession Act.
-</p>
-
-<button class="read-btn" onclick="openCase(42)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 44 -->
-
-<div class="case-card" data-category="family rights">
-
-<span class="case-number">44</span>
-
-<h3>Githa Hariharan v. Reserve Bank of India</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1999
-</div>
-
-<span class="subject">
-GUARDIANSHIP
-</span>
-
-<p>
-Considered the legal position of mothers as natural guardians.
-</p>
-
-<button class="read-btn" onclick="openCase(43)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 45 -->
-
-<div class="case-card" data-category="rights">
-
-<span class="case-number">45</span>
-
-<h3>Joseph Shine v. Union of India</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 2018
-</div>
-
-<span class="subject">
-EQUALITY & LIBERTY
-</span>
-
-<p>
-Struck down the offence of adultery under Section 497 IPC.
-</p>
-
-<button class="read-btn" onclick="openCase(44)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 46 -->
-
-<div class="case-card" data-category="rights">
-
-<span class="case-number">46</span>
-
-<h3>Common Cause v. Union of India</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 2018
-</div>
-
-<span class="subject">
-RIGHT TO DIE WITH DIGNITY
-</span>
-
-<p>
-Recognised constitutional dimensions of passive euthanasia and living wills.
-</p>
-
-<button class="read-btn" onclick="openCase(45)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 47 -->
-
-<div class="case-card" data-category="rights">
-
-<span class="case-number">47</span>
-
-<h3>Shafin Jahan v. Asokan K.M.</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 2018
-</div>
-
-<span class="subject">
-PERSONAL LIBERTY
-</span>
-
-<p>
-Recognised an individual's autonomy in choosing a life partner.
-</p>
-
-<button class="read-btn" onclick="openCase(46)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 48 -->
-
-<div class="case-card" data-category="constitutional">
-
-<span class="case-number">48</span>
-
-<h3>Kesavananda Bharati Review Principles</h3>
-
-<div class="meta">
-⚖️ Supreme Court • Constitutional Law
-</div>
-
-<span class="subject">
-BASIC STRUCTURE
-</span>
-
-<p>
-Study the continuing importance of the Basic Structure Doctrine.
-</p>
-
-<button class="read-btn" onclick="openCase(47)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 49 -->
-
-<div class="case-card" data-category="constitutional rights">
-
-<span class="case-number">49</span>
-
-<h3>ADM Jabalpur v. Shivkant Shukla</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 1976
-</div>
-
-<span class="subject">
-EMERGENCY & LIBERTY
-</span>
-
-<p>
-One of India's most significant constitutional decisions concerning personal liberty during Emergency.
-</p>
-
-<button class="read-btn" onclick="openCase(48)">
-Read Case
-</button>
-
-</div>
-
-
-<!-- 50 -->
-
-<div class="case-card" data-category="constitutional rights">
-
-<span class="case-number">50</span>
-
-<h3>Justice K.S. Puttaswamy v. Union of India</h3>
-
-<div class="meta">
-⚖️ Supreme Court • 2017
-</div>
-
-<span class="subject">
-PRIVACY
-</span>
-
-<p>
-A nine-judge Bench affirmed privacy as a constitutionally protected fundamental right.
-</p>
-
-<button class="read-btn" onclick="openCase(49)">
-Read Case
-</button>
-
-</div>
-
-
 </section>
 
 
 <div class="no-results" id="noResults">
 
-<h3>🔎 No cases found</h3>
+<strong>No matching cases found.</strong>
 
-<p>
-Try searching for another case name, year or legal subject.
-</p>
+Try another case name, citation, subject or legal principle.
 
 </div>
 
 </main>
 
 
-<!-- =====================================================
-     MODAL
-===================================================== -->
+<!-- =========================================================
+     CASE MODAL
+========================================================= -->
 
 <div class="modal" id="caseModal">
 
 <div class="modal-content">
 
-<span class="close" onclick="closeCase()">
-&times;
-</span>
+<button class="close"
+onclick="closeCase()">
+×
+</button>
 
-<h2 id="modalTitle"></h2>
 
-<div class="modal-meta" id="modalMeta"></div>
+<div class="modal-top">
 
-<div class="modal-section">
+<h2 id="modalTitle">
+Case Title
+</h2>
+
+<p id="modalMeta">
+Court • Year • Citation
+</p>
+
+</div>
+
+
+<div class="modal-body">
+
+
+<div class="detail-grid">
+
+<div class="detail-box">
+
+<span>Court</span>
+
+<strong id="modalCourt"></strong>
+
+</div>
+
+<div class="detail-box">
+
+<span>Year</span>
+
+<strong id="modalYear"></strong>
+
+</div>
+
+<div class="detail-box">
+
+<span>Citation</span>
+
+<strong id="modalCitation"></strong>
+
+</div>
+
+<div class="detail-box">
+
+<span>Subject</span>
+
+<strong id="modalSubject"></strong>
+
+</div>
+
+</div>
+
+
+<div class="detail-section">
 
 <h3>📌 Facts</h3>
 
@@ -2388,7 +1432,8 @@ Try searching for another case name, year or legal subject.
 
 </div>
 
-<div class="modal-section">
+
+<div class="detail-section">
 
 <h3>⚖️ Legal Issue</h3>
 
@@ -2396,30 +1441,60 @@ Try searching for another case name, year or legal subject.
 
 </div>
 
-<div class="modal-section">
 
-<h3>🏛️ Judgment</h3>
+<div class="detail-section">
 
-<p id="modalJudgment"></p>
+<h3>🏛 Judgment / Holding</h3>
+
+<div class="full-judgment"
+id="modalJudgment">
+</div>
 
 </div>
 
-<div class="modal-section principle">
 
-<h3>🧠 Key Legal Principle</h3>
+<div class="detail-section">
+
+<h3>📚 Legal Principle</h3>
 
 <p id="modalPrinciple"></p>
 
 </div>
 
-</div>
+
+<div class="detail-section">
+
+<h3>📖 Constitutional Provisions / Laws</h3>
+
+<p id="modalLaw"></p>
 
 </div>
 
 
-<!-- =====================================================
+<div>
+
+<a
+id="modalSource"
+class="source-link"
+href="#"
+target="_blank"
+rel="noopener">
+View Official Source
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================================================
      FOOTER
-===================================================== -->
+========================================================= -->
 
 <footer>
 
@@ -2434,17 +1509,11 @@ Indian Legal Information Portal
 <div class="footer-links">
 
 <a href="index.html">Home</a>
-
 <a href="bareacts.html">Bare Acts</a>
-
 <a href="caselaws.html">Case Laws</a>
-
 <a href="articles.html">Articles</a>
-
 <a href="legalnews.html">Legal News</a>
-
 <a href="about.html">About</a>
-
 <a href="contact.html">Contact</a>
 
 </div>
@@ -2452,7 +1521,7 @@ Indian Legal Information Portal
 <br>
 
 <p>
-© 2026 Pendico. All rights reserved.
+© 2026 Pendico. Legal information for educational and research purposes.
 </p>
 
 </footer>
@@ -2462,466 +1531,983 @@ Indian Legal Information Portal
 
 /* =========================================================
    CASE DATABASE
+   Each case has a UNIQUE ID.
+   The modal loads data only from that ID.
 ========================================================= */
 
 const cases = [
 
 {
+id:1,
 title:"Kesavananda Bharati v. State of Kerala",
-meta:"Supreme Court • 1973 • Constitutional Law",
-facts:"The petitioner challenged constitutional amendments affecting property rights and the constitutional power of Parliament to amend the Constitution.",
-issue:"Whether Parliament's power to amend the Constitution is unlimited.",
-judgment:"The Supreme Court held that Parliament can amend the Constitution but cannot destroy or alter its basic structure.",
-principle:"Basic Structure Doctrine."
+court:"Supreme Court of India",
+year:"1973",
+citation:"(1973) 4 SCC 225",
+subject:"Constitutional Law",
+tags:"constitutional fundamental rights",
+facts:"Kesavananda Bharati, the head of a religious mutt in Kerala, challenged land reform legislation and constitutional amendments affecting property and religious rights.",
+issue:"Whether Parliament's power to amend the Constitution under Article 368 was unlimited.",
+judgment:"By a narrow majority, the Supreme Court held that Parliament has wide power to amend the Constitution but cannot alter or destroy its basic structure.",
+principle:"Basic Structure Doctrine.",
+law:"Article 368; Fundamental Rights; constitutional structure.",
+source:"https://www.sci.gov.in/document/his-holiness-kesavananda-bharati-v-state-of-kerala-1973-supp-scr-1/"
 },
 
 {
+id:2,
 title:"Maneka Gandhi v. Union of India",
-meta:"Supreme Court • 1978 • Article 21",
-facts:"Maneka Gandhi's passport was impounded by the Government and she was not initially given adequate opportunity to contest the action.",
-issue:"Whether procedure affecting personal liberty must satisfy constitutional standards of fairness.",
-judgment:"The Court held that procedure under Article 21 must be fair, just and reasonable and connected Articles 14, 19 and 21.",
-principle:"Fair, just and reasonable procedure; interrelationship of Articles 14, 19 and 21."
+court:"Supreme Court of India",
+year:"1978",
+citation:"(1978) 1 SCC 248",
+subject:"Fundamental Rights",
+tags:"constitutional fundamental rights Article 21 administrative",
+facts:"Maneka Gandhi's passport was impounded by the Government without initially furnishing the reasons for the action.",
+issue:"Whether the procedure restricting personal liberty must satisfy constitutional standards of fairness and reasonableness.",
+judgment:"The Court expanded the interpretation of Article 21 and held that a procedure affecting life or personal liberty must be fair, just and reasonable. Articles 14, 19 and 21 were read together.",
+principle:"Fair, just and reasonable procedure; constitutional due process.",
+law:"Articles 14, 19 and 21.",
+source:"https://www.sci.gov.in/"
 },
 
 {
-title:"K.S. Puttaswamy v. Union of India",
-meta:"Supreme Court • 2017 • Privacy",
-facts:"A constitutional challenge raised fundamental questions regarding whether privacy is constitutionally protected.",
-issue:"Whether privacy constitutes a fundamental right.",
-judgment:"A nine-judge Bench unanimously recognised privacy as a fundamental right protected by the Constitution.",
-principle:"Right to Privacy is a fundamental constitutional right."
+id:3,
+title:"Minerva Mills Ltd. v. Union of India",
+court:"Supreme Court of India",
+year:"1980",
+citation:"(1980) 3 SCC 625",
+subject:"Constitutional Law",
+tags:"constitutional fundamental rights",
+facts:"The validity of constitutional amendments affecting judicial review and the relationship between Fundamental Rights and Directive Principles was challenged.",
+issue:"Whether Parliament could use its amending power to destroy constitutional limitations on that power.",
+judgment:"The Court held that limited amending power and judicial review are part of the Constitution's basic structure.",
+principle:"Limited amending power and judicial review are basic features.",
+law:"Articles 14, 19, 21 and 368.",
+source:"https://www.sci.gov.in/"
 },
 
 {
-title:"Golaknath v. State of Punjab",
-meta:"Supreme Court • 1967 • Constitutional Amendment",
-facts:"The petitioners challenged constitutional amendments affecting fundamental rights.",
-issue:"Whether Parliament could amend fundamental rights.",
-judgment:"The majority held that Parliament could not amend fundamental rights under the then-prevailing constitutional interpretation.",
-principle:"Fundamental rights and constitutional amendment power."
+id:4,
+title:"I.R. Coelho v. State of Tamil Nadu",
+court:"Supreme Court of India",
+year:"2007",
+citation:"(2007) 2 SCC 1",
+subject:"Constitutional Law",
+tags:"constitutional fundamental rights",
+facts:"The case concerned laws placed in the Ninth Schedule and the extent to which constitutional amendments could immunise such laws from judicial review.",
+issue:"Whether Ninth Schedule laws inserted after Kesavananda Bharati could escape scrutiny for violating basic structure.",
+judgment:"The Court held that laws inserted into the Ninth Schedule after 24 April 1973 can be tested against the basic structure doctrine.",
+principle:"Ninth Schedule immunity is not absolute.",
+law:"Articles 14, 19, 21, 31B and 368.",
+source:"https://www.sci.gov.in/"
 },
 
 {
-title:"Minerva Mills v. Union of India",
-meta:"Supreme Court • 1980 • Basic Structure",
-facts:"Constitutional amendments attempting to expand Parliament's amending power were challenged.",
-issue:"Whether Parliament could give itself unlimited constitutional amending power.",
-judgment:"The Court held that limited amending power itself forms part of the basic structure.",
-principle:"Limited amending power and judicial review are part of the Basic Structure."
-},
-
-{
+id:5,
 title:"Indira Nehru Gandhi v. Raj Narain",
-meta:"Supreme Court • 1975 • Election Law",
-facts:"The election of the then Prime Minister was challenged and constitutional amendments affecting election disputes were questioned.",
-issue:"Whether Parliament could immunise election disputes from judicial review.",
-judgment:"The Court recognised free and fair elections and rule of law as constitutionally fundamental.",
-principle:"Democracy, rule of law and free elections."
+court:"Supreme Court of India",
+year:"1975",
+citation:"1975 Supp SCC 1",
+subject:"Constitutional Law",
+tags:"constitutional election",
+facts:"The election of the then Prime Minister was challenged and constitutional amendments attempted to affect judicial scrutiny of election disputes.",
+issue:"Whether constitutional amendments could remove judicial review of election disputes.",
+judgment:"The Court treated free and fair elections, rule of law and judicial review as constitutional principles protected by the basic structure doctrine.",
+principle:"Free and fair elections are part of the constitutional scheme.",
+law:"Articles 14, 329 and 368.",
+source:"https://www.sci.gov.in/"
 },
 
 {
-title:"S.R. Bommai v. Union of India",
-meta:"Supreme Court • 1994 • Federalism",
-facts:"The dismissal of State governments under Article 356 was challenged.",
-issue:"Whether President's Rule was subject to judicial review.",
-judgment:"The Court held that the exercise of power under Article 356 is subject to judicial review.",
-principle:"Federalism and secularism are important constitutional features."
+id:6,
+title:"Golak Nath v. State of Punjab",
+court:"Supreme Court of India",
+year:"1967",
+citation:"AIR 1967 SC 1643",
+subject:"Constitutional Law",
+tags:"constitutional fundamental rights",
+facts:"The petitioners challenged constitutional amendments affecting property and Fundamental Rights.",
+issue:"Whether Parliament could amend Fundamental Rights.",
+judgment:"The majority held that Parliament could not amend Fundamental Rights. The later Kesavananda Bharati decision modified this position.",
+principle:"Constitutional amendment power and Fundamental Rights.",
+law:"Articles 13 and 368.",
+source:"https://www.sci.gov.in/"
 },
 
 {
-title:"Shreya Singhal v. Union of India",
-meta:"Supreme Court • 2015 • Freedom of Speech",
-facts:"The constitutional validity of Section 66A of the Information Technology Act was challenged.",
-issue:"Whether Section 66A violated freedom of speech under Article 19(1)(a).",
-judgment:"The Supreme Court struck down Section 66A as unconstitutional.",
-principle:"Protection of freedom of speech in the digital environment."
+id:7,
+title:"A.K. Gopalan v. State of Madras",
+court:"Supreme Court of India",
+year:"1950",
+citation:"AIR 1950 SC 27",
+subject:"Fundamental Rights",
+tags:"constitutional fundamental rights Article 21 criminal",
+facts:"A.K. Gopalan challenged preventive detention legislation on the ground that it violated Fundamental Rights.",
+issue:"How should the constitutional guarantees concerning personal liberty and detention be interpreted?",
+judgment:"The early Court adopted a relatively compartmentalised interpretation of Fundamental Rights. Later jurisprudence, particularly Maneka Gandhi, substantially broadened Article 21.",
+principle:"Early constitutional interpretation of personal liberty and preventive detention.",
+law:"Articles 14, 19, 21 and 22.",
+source:"https://www.sci.gov.in/"
 },
 
 {
-title:"Vishaka v. State of Rajasthan",
-meta:"Supreme Court • 1997 • Women's Rights",
-facts:"The case arose following the assault of a woman worker and highlighted the absence of a specific workplace sexual harassment law.",
-issue:"What safeguards should protect women from workplace sexual harassment.",
-judgment:"The Court laid down the Vishaka Guidelines until legislation was enacted.",
-principle:"Protection against workplace sexual harassment."
-},
-
-{
-title:"Navtej Singh Johar v. Union of India",
-meta:"Supreme Court • 2018 • Fundamental Rights",
-facts:"The constitutional validity of Section 377 IPC was challenged insofar as it criminalised consensual same-sex relations between adults.",
-issue:"Whether criminalisation violated constitutional guarantees of dignity, equality and liberty.",
-judgment:"The Court decriminalised consensual same-sex relations between adults.",
-principle:"Constitutional morality, dignity, equality and individual autonomy."
-},
-
-{
-title:"K.S. Puttaswamy (Aadhaar) v. Union of India",
-meta:"Supreme Court • 2018 • Aadhaar",
-facts:"Various aspects of the Aadhaar scheme were challenged on constitutional and privacy grounds.",
-issue:"Whether Aadhaar infringed constitutional rights and privacy.",
-judgment:"The Court upheld Aadhaar in substantial part while imposing limitations on its use.",
-principle:"Proportionality and informational privacy."
-},
-
-{
-title:"Indra Sawhney v. Union of India",
-meta:"Supreme Court • 1992 • Reservation",
-facts:"The Mandal Commission recommendations concerning reservation for socially and educationally backward classes were challenged.",
-issue:"Constitutional validity and limits of reservations.",
-judgment:"The Court upheld OBC reservation subject to important constitutional limitations.",
-principle:"Reservation, creamy layer and equality."
-},
-
-{
-title:"State of Madras v. Champakam Dorairajan",
-meta:"Supreme Court • 1951 • Equality",
-facts:"A communal government order distributing educational seats among communities was challenged.",
-issue:"Whether the order violated fundamental rights.",
-judgment:"The Court struck down the order for violating constitutional equality guarantees.",
-principle:"Fundamental rights prevail over inconsistent state action."
-},
-
-{
-title:"State of Gujarat v. Mirzapur Moti Kureshi Kassab Jamat",
-meta:"Supreme Court • 2005 • Article 19",
-facts:"Restrictions concerning slaughter of cattle were challenged.",
-issue:"Whether the restrictions were constitutionally permissible.",
-judgment:"The Court upheld the restrictions after examining constitutional interests and reasonableness.",
-principle:"Reasonable restrictions and Directive Principles."
-},
-
-{
-title:"In Re Berubari Union",
-meta:"Supreme Court • 1960 • Constitutional Law",
-facts:"The constitutional procedure for transferring territory was considered.",
-issue:"Whether constitutional amendment was necessary for cession of Indian territory.",
-judgment:"The Court examined the relationship between territorial transfer and constitutional amendment.",
-principle:"Constitutional procedure concerning territorial changes."
-},
-
-{
-title:"Hussainara Khatoon v. State of Bihar",
-meta:"Supreme Court • 1979 • Criminal Justice",
-facts:"Large numbers of undertrial prisoners had remained incarcerated for prolonged periods.",
-issue:"Whether prolonged delay in criminal trials violated fundamental rights.",
-judgment:"The Court recognised speedy trial as an important component of Article 21.",
-principle:"Right to speedy trial."
-},
-
-{
-title:"D.K. Basu v. State of West Bengal",
-meta:"Supreme Court • 1997 • Arrest",
-facts:"The Court considered allegations of custodial violence and deaths.",
-issue:"What safeguards should govern arrest and detention.",
-judgment:"The Court issued detailed procedural safeguards concerning arrest and custody.",
-principle:"Protection against custodial abuse."
-},
-
-{
-title:"Joginder Kumar v. State of Uttar Pradesh",
-meta:"Supreme Court • 1994 • Arrest",
-facts:"The legality and necessity of arrest without adequate justification was questioned.",
-issue:"Whether police possess unlimited discretion to arrest.",
-judgment:"The Court emphasised that arrest must be justified and not routine.",
-principle:"Arrest must be necessary and justified."
-},
-
-{
-title:"Arnesh Kumar v. State of Bihar",
-meta:"Supreme Court • 2014 • Criminal Procedure",
-facts:"The Court examined unnecessary arrests in offences punishable up to seven years.",
-issue:"Whether arrest should automatically follow registration of an offence.",
-judgment:"The Court directed police and magistrates to follow statutory safeguards before arrest and remand.",
-principle:"Arrest is not automatic."
-},
-
-{
-title:"Lalita Kumari v. Government of Uttar Pradesh",
-meta:"Supreme Court • 2013 • FIR",
-facts:"The petitioner sought registration of an FIR after police failed to act on information concerning a cognizable offence.",
-issue:"Whether registration of FIR is mandatory.",
-judgment:"The Court held that registration is mandatory where information discloses a cognizable offence, subject to limited preliminary inquiry situations.",
-principle:"Mandatory FIR registration in cognizable cases."
-},
-
-{
-title:"State of Haryana v. Bhajan Lal",
-meta:"Supreme Court • 1992 • Criminal Procedure",
-facts:"The Court examined circumstances in which criminal proceedings could be quashed.",
-issue:"When can criminal proceedings be interfered with under inherent jurisdiction.",
-judgment:"The Court provided illustrative categories for quashing proceedings.",
-principle:"Abuse of process and inherent jurisdiction."
-},
-
-{
-title:"Sharad Birdhichand Sarda v. State of Maharashtra",
-meta:"Supreme Court • 1984 • Evidence",
-facts:"The prosecution relied substantially on circumstantial evidence.",
-issue:"What standard must circumstantial evidence satisfy for conviction.",
-judgment:"The Court laid down principles requiring circumstances to form a complete chain pointing to guilt.",
-principle:"Five golden principles of circumstantial evidence."
-},
-
-{
-title:"Virsa Singh v. State of Punjab",
-meta:"Supreme Court • 1958 • Criminal Law",
-facts:"The accused was convicted in a case involving a fatal injury.",
-issue:"Interpretation of the third clause of Section 300 IPC.",
-judgment:"The Court explained the requirements for establishing murder under Section 300 thirdly.",
-principle:"Nature of injury and intention under murder law."
-},
-
-{
-title:"Bachan Singh v. State of Punjab",
-meta:"Supreme Court • 1980 • Death Penalty",
-facts:"The constitutional validity of the death penalty was challenged.",
-issue:"Whether capital punishment violated constitutional rights.",
-judgment:"The Court upheld the death penalty but restricted its application to the rarest of rare cases.",
-principle:"Rarest of rare doctrine."
-},
-
-{
-title:"Selvi v. State of Karnataka",
-meta:"Supreme Court • 2010 • Evidence",
-facts:"The case concerned involuntary narco-analysis, polygraph and brain-mapping tests.",
-issue:"Whether involuntary techniques violated constitutional safeguards.",
-judgment:"The Court held that involuntary administration of such techniques violates constitutional protections.",
-principle:"Right against self-incrimination and personal liberty."
-},
-
-{
-title:"State of Punjab v. Baldev Singh",
-meta:"Supreme Court • 1999 • NDPS",
-facts:"The case concerned procedural safeguards during searches under the NDPS Act.",
-issue:"Compliance with statutory search requirements.",
-judgment:"The Court emphasised strict compliance with safeguards applicable to searches.",
-principle:"Procedural safeguards under the NDPS Act."
-},
-
-{
-title:"Gurbaksh Singh Sibbia v. State of Punjab",
-meta:"Supreme Court • 1980 • Bail",
-facts:"The Court considered the scope and principles of anticipatory bail.",
-issue:"How should courts exercise jurisdiction under anticipatory bail provisions.",
-judgment:"The Court adopted a liberal and principled interpretation of anticipatory bail jurisdiction.",
-principle:"Anticipatory bail protects personal liberty against unjustified arrest."
-},
-
-{
-title:"Satender Kumar Antil v. CBI",
-meta:"Supreme Court • 2022 • Bail",
-facts:"The Court addressed widespread concerns concerning unnecessary arrests and prolonged incarceration.",
-issue:"How should arrest and bail principles be applied consistently.",
-judgment:"The Court issued extensive directions concerning arrest, bail and compliance with statutory safeguards.",
-principle:"Bail jurisprudence and personal liberty."
-},
-
-{
-title:"State of Rajasthan v. Kashi Ram",
-meta:"Supreme Court • 2006 • Evidence",
-facts:"The prosecution relied on circumstantial evidence.",
-issue:"Whether the evidence established guilt beyond reasonable doubt.",
-judgment:"The Court reiterated the requirement of a complete and reliable chain of circumstances.",
-principle:"Proof beyond reasonable doubt."
-},
-
-{
-title:"Ritesh Sinha v. State of Uttar Pradesh",
-meta:"Supreme Court • 2019 • Investigation",
-facts:"The case considered whether courts could direct collection of voice samples during investigation.",
-issue:"Judicial power concerning voice samples.",
-judgment:"The Court recognised judicial authority to direct collection of voice samples in appropriate circumstances.",
-principle:"Modern investigative techniques and criminal procedure."
-},
-
-{
-title:"A.K. Kraipak v. Union of India",
-meta:"Supreme Court • 1969 • Administrative Law",
-facts:"A selection process involving an administrative authority was challenged due to alleged bias.",
-issue:"Whether principles of natural justice apply to administrative decisions.",
-judgment:"The Court broadened the application of natural justice principles.",
-principle:"Bias and natural justice."
-},
-
-{
-title:"Mohinder Singh Gill v. Chief Election Commissioner",
-meta:"Supreme Court • 1978 • Election Law",
-facts:"An election decision was challenged on administrative and constitutional grounds.",
-issue:"Whether an administrative order can be supplemented by later reasons.",
-judgment:"The Court emphasised that an administrative order must stand on the reasons contained in it.",
-principle:"Administrative orders and recorded reasons."
-},
-
-{
-title:"Central Inland Water Transport Corporation v. Brojo Nath Ganguly",
-meta:"Supreme Court • 1986 • Contract Law",
-facts:"A contractual service condition permitting termination without adequate safeguards was challenged.",
-issue:"Whether unconscionable contractual clauses could be invalidated.",
-judgment:"The Court held that unconscionable clauses in certain public employment contracts could be struck down.",
-principle:"Unconscionable contracts and public policy."
-},
-
-{
-title:"LIC of India v. Consumer Education & Research Centre",
-meta:"Supreme Court • 1995 • Consumer Law",
-facts:"Insurance conditions were challenged on grounds of fairness and constitutional principles.",
-issue:"Whether unfair contractual terms could withstand constitutional scrutiny.",
-judgment:"The Court emphasised fairness and reasonableness in public sector insurance contracts.",
-principle:"Fairness in standard-form contracts."
-},
-
-{
-title:"Shah Bano Begum Case",
-meta:"Supreme Court • 1985 • Family Law",
-facts:"A divorced Muslim woman sought maintenance after divorce.",
-issue:"Whether a divorced Muslim woman could claim maintenance under secular criminal procedure.",
-judgment:"The Court recognised maintenance rights under the applicable statutory framework.",
-principle:"Maintenance and social justice."
-},
-
-{
-title:"Shayara Bano v. Union of India",
-meta:"Supreme Court • 2017 • Family Law",
-facts:"The constitutional validity of instant triple talaq was challenged.",
-issue:"Whether talaq-e-biddat was constitutionally sustainable.",
-judgment:"The Court set aside instant triple talaq.",
-principle:"Equality, dignity and constitutional review of personal law practices."
-},
-
-{
-title:"Vineeta Sharma v. Rakesh Sharma",
-meta:"Supreme Court • 2020 • Hindu Succession",
-facts:"The dispute concerned daughters' coparcenary rights under the Hindu Succession Act.",
-issue:"Whether daughters have equal coparcenary rights irrespective of whether the father was alive on the amendment date.",
-judgment:"The Court affirmed equal coparcenary rights for daughters in accordance with the amended law.",
-principle:"Equal coparcenary rights of daughters."
-},
-
-{
-title:"Githa Hariharan v. Reserve Bank of India",
-meta:"Supreme Court • 1999 • Family Law",
-facts:"The case concerned interpretation of the legal position of mothers as natural guardians.",
-issue:"Interpretation of the expression 'after' in guardianship law.",
-judgment:"The Court adopted an interpretation recognising the mother's role as natural guardian.",
-principle:"Gender equality in guardianship."
-},
-
-{
-title:"Joseph Shine v. Union of India",
-meta:"Supreme Court • 2018 • Fundamental Rights",
-facts:"The constitutional validity of the adultery offence under Section 497 IPC was challenged.",
-issue:"Whether the offence violated equality, dignity and autonomy.",
-judgment:"The Court struck down Section 497 IPC as unconstitutional.",
-principle:"Individual autonomy, equality and dignity."
-},
-
-{
-title:"Common Cause v. Union of India",
-meta:"Supreme Court • 2018 • Article 21",
-facts:"The case concerned end-of-life medical decisions and advance directives.",
-issue:"Whether passive euthanasia and living wills could receive constitutional protection.",
-judgment:"The Court recognised passive euthanasia subject to safeguards and recognised advance directives.",
-principle:"Right to die with dignity within Article 21."
-},
-
-{
-title:"Shafin Jahan v. Asokan K.M.",
-meta:"Supreme Court • 2018 • Personal Liberty",
-facts:"A marriage and personal choice dispute reached the Supreme Court.",
-issue:"Whether an adult has autonomy to choose a spouse.",
-judgment:"The Court emphasised personal autonomy and the freedom of adults to choose their life partners.",
-principle:"Individual autonomy and personal liberty."
-},
-
-{
-title:"ADM Jabalpur v. Shivkant Shukla",
-meta:"Supreme Court • 1976 • Emergency",
-facts:"The case concerned enforcement of personal liberty during the Emergency.",
-issue:"Whether habeas corpus could be sought during suspension of enforcement of certain rights.",
-judgment:"The majority adopted a restrictive approach, a position later strongly disapproved in constitutional jurisprudence.",
-principle:"Historical importance concerning personal liberty and constitutional emergencies."
-},
-
-{
-title:"Donoghue v. Stevenson",
-meta:"House of Lords • 1932 • Tort Law",
-facts:"A consumer became ill after consuming a product allegedly containing a foreign substance.",
-issue:"Whether a manufacturer owed a duty of care to the ultimate consumer.",
-judgment:"The Court established the modern neighbour principle in negligence.",
-principle:"Duty of care in negligence."
-},
-
-{
-title:"Rylands v. Fletcher",
-meta:"House of Lords • 1868 • Tort Law",
-facts:"Water escaped from a reservoir and caused damage to neighbouring property.",
-issue:"Whether liability could arise without proof of negligence.",
-judgment:"The rule of strict liability was developed.",
-principle:"Strict liability for escape of dangerous things."
-},
-
-{
-title:"Carlill v. Carbolic Smoke Ball Co.",
-meta:"Court of Appeal • 1893 • Contract Law",
-facts:"A company advertised a reward to anyone who used its product as directed and still contracted influenza.",
-issue:"Whether the advertisement constituted a legally enforceable offer.",
-judgment:"The Court recognised the advertisement as a unilateral offer capable of acceptance by performance.",
-principle:"Unilateral offer and acceptance."
-},
-
-{
-title:"Hadley v. Baxendale",
-meta:"Court of Exchequer • 1854 • Contract Law",
-facts:"Delay in delivery of a broken mill shaft caused business losses.",
-issue:"Which losses could be recovered as contractual damages.",
-judgment:"The Court established principles concerning remoteness of damages.",
-principle:"Foreseeability and remoteness of contractual damages."
-},
-
-{
-title:"Kesavananda Bharati Review Principles",
-meta:"Supreme Court • Constitutional Law",
-facts:"The Basic Structure Doctrine continues to influence constitutional adjudication.",
-issue:"What constitutional features cannot be destroyed through amendment.",
-judgment:"The doctrine remains a central limitation on constitutional amendment power.",
-principle:"Basic Structure Doctrine."
-},
-
-{
+id:8,
 title:"K.S. Puttaswamy v. Union of India",
-meta:"Supreme Court • 2017 • Fundamental Rights",
-facts:"The nine-judge Bench considered the constitutional status of privacy.",
-issue:"Whether privacy is protected as a fundamental right.",
-judgment:"The Court unanimously recognised privacy as a fundamental constitutional right.",
-principle:"Privacy, dignity and autonomy."
+court:"Supreme Court of India",
+year:"2017",
+citation:"(2017) 10 SCC 1",
+subject:"Fundamental Rights",
+tags:"constitutional fundamental rights Article 21 privacy",
+facts:"The constitutional status of the right to privacy was considered by a nine-judge Bench.",
+issue:"Whether privacy is a constitutionally protected Fundamental Right.",
+judgment:"The Supreme Court unanimously recognised privacy as a constitutionally protected right intrinsic to life, liberty, dignity and the freedoms guaranteed by the Constitution.",
+principle:"Right to privacy is a Fundamental Right.",
+law:"Articles 14, 19 and 21.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:9,
+title:"Justice K.S. Puttaswamy v. Union of India (Aadhaar)",
+court:"Supreme Court of India",
+year:"2018",
+citation:"(2019) 1 SCC 1",
+subject:"Constitutional Law",
+tags:"constitutional fundamental rights Article 21 privacy",
+facts:"The constitutional validity of the Aadhaar framework was challenged on privacy and proportionality grounds.",
+issue:"Whether the Aadhaar scheme and statutory framework satisfied constitutional requirements.",
+judgment:"The Court upheld Aadhaar in substantial part while striking down or reading down certain provisions and safeguards.",
+principle:"Proportionality, privacy and informational autonomy.",
+law:"Articles 14 and 21; Aadhaar legislation.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:10,
+title:"Vishaka v. State of Rajasthan",
+court:"Supreme Court of India",
+year:"1997",
+citation:"(1997) 6 SCC 241",
+subject:"Fundamental Rights",
+tags:"constitutional fundamental rights Article 21",
+facts:"The proceedings arose from the sexual harassment of a woman at the workplace and the absence of an adequate statutory framework.",
+issue:"What legal safeguards should protect women against workplace sexual harassment?",
+judgment:"The Supreme Court issued the Vishaka Guidelines to address workplace sexual harassment until Parliament enacted legislation.",
+principle:"Protection against workplace sexual harassment and constitutional dignity.",
+law:"Articles 14, 15, 19(1)(g) and 21.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:11,
+title:"Navtej Singh Johar v. Union of India",
+court:"Supreme Court of India",
+year:"2018",
+citation:"(2018) 10 SCC 1",
+subject:"Fundamental Rights",
+tags:"constitutional fundamental rights Article 21",
+facts:"The constitutional validity of Section 377 IPC was challenged insofar as it criminalised consensual same-sex relations between adults.",
+issue:"Whether criminalisation of consensual same-sex intimacy between adults violated constitutional rights.",
+judgment:"The Court decriminalised consensual same-sex relations between adults to the extent Section 377 criminalised such conduct.",
+principle:"Constitutional morality, dignity, autonomy and equality.",
+law:"Articles 14, 15, 19 and 21.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:12,
+title:"Joseph Shine v. Union of India",
+court:"Supreme Court of India",
+year:"2018",
+citation:"(2019) 3 SCC 39",
+subject:"Fundamental Rights",
+tags:"constitutional fundamental rights family",
+facts:"The constitutional validity of Section 497 IPC concerning adultery was challenged.",
+issue:"Whether the adultery offence violated equality, dignity and personal autonomy.",
+judgment:"The Court unanimously struck down Section 497 IPC and related provisions concerning adultery as unconstitutional.",
+principle:"Individual autonomy, dignity and substantive equality.",
+law:"Articles 14, 15 and 21.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:13,
+title:"Shayara Bano v. Union of India",
+court:"Supreme Court of India",
+year:"2017",
+citation:"(2017) 9 SCC 1",
+subject:"Family Law",
+tags:"constitutional fundamental rights family",
+facts:"The practice of talaq-e-biddat, commonly known as instant triple talaq, was challenged.",
+issue:"Whether instant triple talaq was constitutionally and legally valid.",
+judgment:"By majority, the Court set aside the practice of talaq-e-biddat.",
+principle:"Constitutional scrutiny of personal-law practices and gender justice.",
+law:"Articles 14, 15, 21 and relevant Muslim personal law principles.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:14,
+title:"NALSA v. Union of India",
+court:"Supreme Court of India",
+year:"2014",
+citation:"(2014) 5 SCC 438",
+subject:"Fundamental Rights",
+tags:"constitutional fundamental rights Article 21",
+facts:"The case concerned recognition of transgender persons and their constitutional rights.",
+issue:"Whether transgender persons are entitled to legal recognition and equal constitutional protection.",
+judgment:"The Court recognised transgender persons' right to self-identification and directed measures for equality and social welfare.",
+principle:"Equality, dignity and gender identity.",
+law:"Articles 14, 15, 16, 19 and 21.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:15,
+title:"National Legal Services Authority v. Union of India",
+court:"Supreme Court of India",
+year:"2014",
+citation:"(2014) 5 SCC 438",
+subject:"Fundamental Rights",
+tags:"constitutional fundamental rights",
+facts:"The case established constitutional protections for transgender persons.",
+issue:"Recognition of gender identity and equal protection.",
+judgment:"The Court affirmed constitutional rights of transgender persons and recognised self-identification.",
+principle:"Dignity and equality.",
+law:"Articles 14, 15, 16, 19 and 21.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:16,
+title:"Olga Tellis v. Bombay Municipal Corporation",
+court:"Supreme Court of India",
+year:"1985",
+citation:"(1985) 3 SCC 545",
+subject:"Fundamental Rights",
+tags:"constitutional fundamental rights Article 21",
+facts:"Pavement dwellers challenged eviction from pavements and streets in Mumbai.",
+issue:"Whether the right to livelihood forms part of the right to life.",
+judgment:"The Court recognised livelihood as an important facet of the right to life while also recognising lawful regulation of public spaces.",
+principle:"Right to livelihood is connected with Article 21.",
+law:"Article 21.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:17,
+title:"Hussainara Khatoon v. State of Bihar",
+court:"Supreme Court of India",
+year:"1979",
+citation:"(1980) 1 SCC 81",
+subject:"Criminal Law",
+tags:"criminal Article 21 fundamental rights",
+facts:"The litigation highlighted the plight of undertrial prisoners detained for long periods without trial.",
+issue:"Whether speedy trial is part of the constitutional guarantee of life and personal liberty.",
+judgment:"The Court recognised speedy trial as an essential component of Article 21.",
+principle:"Right to speedy trial.",
+law:"Article 21.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:18,
+title:"D.K. Basu v. State of West Bengal",
+court:"Supreme Court of India",
+year:"1997",
+citation:"(1997) 1 SCC 416",
+subject:"Criminal Law",
+tags:"criminal Article 21 fundamental rights",
+facts:"The case concerned custodial violence and deaths in police custody.",
+issue:"What safeguards are required to protect arrested persons from custodial abuse.",
+judgment:"The Court laid down detailed requirements concerning arrest and detention, including documentation and safeguards against custodial violence.",
+principle:"Protection of arrested persons and accountability in custody.",
+law:"Articles 21 and 22.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:19,
+title:"Joginder Kumar v. State of U.P.",
+court:"Supreme Court of India",
+year:"1994",
+citation:"(1994) 4 SCC 260",
+subject:"Criminal Law",
+tags:"criminal Article 21",
+facts:"The Court considered the limits on the police power to arrest.",
+issue:"Whether arrest can be made routinely merely because the police possess the power to arrest.",
+judgment:"The Court emphasised that arrest should not be routine and that reasonable justification is required.",
+principle:"Arrest is not to be treated as an automatic consequence of investigation.",
+law:"Articles 21 and 22; criminal procedure.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:20,
+title:"Arnesh Kumar v. State of Bihar",
+court:"Supreme Court of India",
+year:"2014",
+citation:"(2014) 8 SCC 273",
+subject:"Criminal Law",
+tags:"criminal Article 21",
+facts:"The case concerned unnecessary arrests in offences punishable with imprisonment up to seven years.",
+issue:"When should police arrest an accused in offences falling within the statutory framework considered by the Court?",
+judgment:"The Court issued directions requiring police officers and Magistrates to apply statutory safeguards before arrest and detention.",
+principle:"Arrest must satisfy statutory necessity and constitutional safeguards.",
+law:"Section 41 CrPC and related provisions.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:21,
+title:"Lalita Kumari v. Government of Uttar Pradesh",
+court:"Supreme Court of India",
+year:"2013",
+citation:"(2014) 2 SCC 1",
+subject:"Criminal Law",
+tags:"criminal FIR",
+facts:"The petition concerned police failure to register information disclosing a cognizable offence.",
+issue:"Whether registration of an FIR is mandatory when information discloses a cognizable offence.",
+judgment:"The Constitution Bench held that registration of FIR is mandatory where information discloses a cognizable offence, subject to the limited preliminary-inquiry categories recognised by the Court.",
+principle:"Mandatory FIR registration in cognizable cases, subject to recognised exceptions.",
+law:"Section 154 CrPC.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:22,
+title:"State of Haryana v. Bhajan Lal",
+court:"Supreme Court of India",
+year:"1992",
+citation:"1992 Supp (1) SCC 335",
+subject:"Criminal Law",
+tags:"criminal",
+facts:"The Court considered circumstances in which criminal proceedings could be quashed under the High Court's inherent jurisdiction.",
+issue:"When can criminal proceedings be quashed at the threshold?",
+judgment:"The Court illustrated categories of cases where interference may be justified to prevent abuse of the process of law.",
+principle:"Inherent jurisdiction to prevent abuse of process.",
+law:"Section 482 CrPC.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:23,
+title:"Sharad Birdhichand Sarda v. State of Maharashtra",
+court:"Supreme Court of India",
+year:"1984",
+citation:"(1984) 4 SCC 116",
+subject:"Criminal Law",
+tags:"criminal evidence",
+facts:"The case concerned a conviction based substantially on circumstantial evidence.",
+issue:"What principles govern conviction based on circumstantial evidence?",
+judgment:"The Court explained the well-known principles governing a case based on circumstantial evidence, including the requirement that circumstances form a complete chain consistent with guilt.",
+principle:"Five golden principles relating to circumstantial evidence.",
+law:"Indian Evidence Act; criminal jurisprudence.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:24,
+title:"Bachan Singh v. State of Punjab",
+court:"Supreme Court of India",
+year:"1980",
+citation:"(1980) 2 SCC 684",
+subject:"Criminal Law",
+tags:"criminal Article 21",
+facts:"The constitutional validity of the death penalty was challenged.",
+issue:"Whether capital punishment is constitutionally permissible and what principles govern its imposition.",
+judgment:"The Court upheld the constitutional validity of the death penalty but held that it should be imposed only in the 'rarest of rare' cases.",
+principle:"Rarest of rare doctrine.",
+law:"Article 21; Indian Penal Code and sentencing principles.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:25,
+title:"Machhi Singh v. State of Punjab",
+court:"Supreme Court of India",
+year:"1983",
+citation:"(1983) 3 SCC 470",
+subject:"Criminal Law",
+tags:"criminal",
+facts:"The Court considered sentencing principles in capital cases following the rarest-of-rare framework.",
+issue:"How should the rarest-of-rare principle be applied in sentencing.",
+judgment:"The Court developed illustrative categories to assist courts in applying the rarest-of-rare doctrine.",
+principle:"Sentencing proportionality and rarest-of-rare framework.",
+law:"Article 21 and sentencing law.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:26,
+title:"Mithu v. State of Punjab",
+court:"Supreme Court of India",
+year:"1983",
+citation:"(1983) 2 SCC 277",
+subject:"Criminal Law",
+tags:"criminal Article 21",
+facts:"The constitutional validity of mandatory death punishment under Section 303 IPC was challenged.",
+issue:"Whether mandatory death penalty violates constitutional guarantees.",
+judgment:"The Court struck down Section 303 IPC as unconstitutional because mandatory death punishment deprived courts of sentencing discretion.",
+principle:"Individualised sentencing and constitutional protection of life.",
+law:"Article 21.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:27,
+title:"Selvi v. State of Karnataka",
+court:"Supreme Court of India",
+year:"2010",
+citation:"(2010) 7 SCC 263",
+subject:"Criminal Law",
+tags:"criminal fundamental rights Article 21",
+facts:"The case concerned involuntary administration of narcoanalysis, polygraph and brain-mapping techniques.",
+issue:"Whether involuntary use of investigative techniques violates constitutional rights.",
+judgment:"The Court held that involuntary administration of the techniques violates protection against self-incrimination and personal liberty.",
+principle:"Mental privacy and protection against testimonial compulsion.",
+law:"Articles 20(3) and 21.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:28,
+title:"Kartar Singh v. State of Punjab",
+court:"Supreme Court of India",
+year:"1994",
+citation:"(1994) 3 SCC 569",
+subject:"Criminal Law",
+tags:"criminal fundamental rights",
+facts:"The constitutional validity of provisions of the Terrorist and Disruptive Activities legislation was challenged.",
+issue:"Whether special criminal procedures and provisions were constitutionally valid.",
+judgment:"The Court upheld substantial portions while reading constitutional safeguards into the operation of the special law.",
+principle:"Balancing national security legislation with constitutional safeguards.",
+law:"Articles 14, 21 and 22.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:29,
+title:"State of Punjab v. Baldev Singh",
+court:"Supreme Court of India",
+year:"1999",
+citation:"(1999) 6 SCC 172",
+subject:"Criminal Law",
+tags:"criminal evidence",
+facts:"The case concerned safeguards governing search and seizure under narcotics legislation.",
+issue:"Effect of failure to comply with statutory safeguards concerning personal search.",
+judgment:"The Constitution Bench emphasised strict compliance with the safeguards governing personal search under the NDPS Act.",
+principle:"Procedural safeguards in narcotics investigations.",
+law:"Section 50 NDPS Act.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:30,
+title:"K.M. Nanavati v. State of Maharashtra",
+court:"Supreme Court of India",
+year:"1962",
+citation:"AIR 1962 SC 605",
+subject:"Criminal Law",
+tags:"criminal",
+facts:"The case involved a homicide following a personal dispute and raised important questions concerning provocation and criminal responsibility.",
+issue:"Whether the circumstances established grave and sudden provocation sufficient to reduce criminal liability.",
+judgment:"The Supreme Court considered the statutory requirements for grave and sudden provocation and the evidentiary circumstances surrounding the offence.",
+principle:"Provocation and criminal liability.",
+law:"Indian Penal Code; criminal evidence.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:31,
+title:"Donoghue v. Stevenson",
+court:"House of Lords",
+year:"1932",
+citation:"[1932] AC 562",
+subject:"Tort Law",
+tags:"civil tort",
+facts:"A consumer became ill after consuming a drink containing a decomposed snail and brought an action against the manufacturer.",
+issue:"Whether a manufacturer owes a duty of care to the ultimate consumer.",
+judgment:"The House of Lords recognised the modern neighbour principle and established a foundational formulation of duty of care in negligence.",
+principle:"Duty of care in negligence.",
+law:"Law of torts.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:32,
+title:"Rylands v. Fletcher",
+court:"House of Lords",
+year:"1868",
+citation:"LR 3 HL 330",
+subject:"Tort Law",
+tags:"civil tort property",
+facts:"Water escaped from a reservoir constructed by the defendant and damaged the claimant's mine.",
+issue:"Whether a person who brings a dangerous thing onto land is strictly liable for its escape.",
+judgment:"The Court formulated the classic rule of strict liability for escape of dangerous things from land.",
+principle:"Rule in Rylands v Fletcher.",
+law:"Law of torts.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:33,
+title:"M.C. Mehta v. Union of India (Oleum Gas Leak)",
+court:"Supreme Court of India",
+year:"1987",
+citation:"(1987) 1 SCC 395",
+subject:"Environmental Law",
+tags:"civil environmental Article 21",
+facts:"A leakage of oleum gas from an industrial unit in Delhi caused harm and raised questions concerning liability of hazardous industries.",
+issue:"What standard of liability applies to enterprises engaged in hazardous or inherently dangerous activities.",
+judgment:"The Court evolved the doctrine of absolute liability for hazardous and inherently dangerous industries.",
+principle:"Absolute liability.",
+law:"Article 21; environmental and tort principles.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:34,
+title:"Vellore Citizens' Welfare Forum v. Union of India",
+court:"Supreme Court of India",
+year:"1996",
+citation:"(1996) 5 SCC 647",
+subject:"Environmental Law",
+tags:"civil environmental",
+facts:"Industrial pollution from tanneries affected water and the environment in Tamil Nadu.",
+issue:"Which environmental principles should govern industrial pollution control.",
+judgment:"The Court recognised the precautionary principle and polluter pays principle as part of Indian environmental law.",
+principle:"Precautionary principle and polluter pays principle.",
+law:"Environmental law; Article 21.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:35,
+title:"MC Mehta v. Union of India (Ganga Pollution)",
+court:"Supreme Court of India",
+year:"1988",
+citation:"(1988) 1 SCC 471",
+subject:"Environmental Law",
+tags:"civil environmental Article 21",
+facts:"Industrial discharge into the Ganga raised serious environmental and public-health concerns.",
+issue:"Whether polluting industries could continue operations without adequate treatment of industrial effluents.",
+judgment:"The Court issued directions against polluting industries and reinforced the constitutional importance of environmental protection.",
+principle:"Environmental protection and public health.",
+law:"Article 21 and environmental legislation.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:36,
+title:"Bangalore Water Supply v. A. Rajappa",
+court:"Supreme Court of India",
+year:"1978",
+citation:"(1978) 2 SCC 213",
+subject:"Labour Law",
+tags:"civil labour",
+facts:"The case concerned the meaning of 'industry' under the Industrial Disputes Act.",
+issue:"What activities fall within the statutory definition of industry.",
+judgment:"The Court formulated the well-known triple test for determining whether an activity constitutes an industry.",
+principle:"Triple test for 'industry'.",
+law:"Industrial Disputes Act, 1947.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:37,
+title:"D.K. Yadav v. J.M.A. Industries Ltd.",
+court:"Supreme Court of India",
+year:"1993",
+citation:"(1993) 3 SCC 259",
+subject:"Labour Law",
+tags:"civil Article 21",
+facts:"The case concerned termination of employment without adequate procedural safeguards.",
+issue:"Whether principles of natural justice apply to termination affecting livelihood.",
+judgment:"The Court connected procedural fairness in employment termination with constitutional protections concerning livelihood and dignity.",
+principle:"Natural justice and fair procedure in employment.",
+law:"Article 21 and labour law.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:38,
+title:"Basheshar Nath v. Commissioner of Income Tax",
+court:"Supreme Court of India",
+year:"1959",
+citation:"AIR 1959 SC 149",
+subject:"Constitutional Law",
+tags:"constitutional fundamental rights",
+facts:"The case concerned waiver of Fundamental Rights.",
+issue:"Whether a citizen can waive constitutional Fundamental Rights.",
+judgment:"The majority held that Fundamental Rights cannot generally be waived by an individual.",
+principle:"Non-waiver of Fundamental Rights.",
+law:"Article 14 and constitutional rights.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:39,
+title:"E.P. Royappa v. State of Tamil Nadu",
+court:"Supreme Court of India",
+year:"1974",
+citation:"(1974) 4 SCC 3",
+subject:"Administrative Law",
+tags:"constitutional administrative fundamental rights",
+facts:"A senior civil servant challenged his transfer and appointment arrangements.",
+issue:"Meaning and scope of equality under Article 14 in administrative action.",
+judgment:"The Court moved away from a narrow classification approach and connected arbitrariness with violation of equality.",
+principle:"Arbitrariness is antithetical to equality.",
+law:"Article 14.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:40,
+title:"Ajay Hasia v. Khalid Mujib Sehravardi",
+court:"Supreme Court of India",
+year:"1981",
+citation:"(1981) 1 SCC 722",
+subject:"Administrative Law",
+tags:"constitutional administrative",
+facts:"The status of a society running a regional engineering college was examined for determining whether it was an instrumentality of the State.",
+issue:"What makes a body an 'authority' or instrumentality of the State under Article 12.",
+judgment:"The Court developed factors for determining whether a body is financially, functionally or administratively dominated by government.",
+principle:"Instrumentality or agency of the State.",
+law:"Article 12.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:41,
+title:"R.D. Shetty v. International Airport Authority of India",
+court:"Supreme Court of India",
+year:"1979",
+citation:"(1979) 3 SCC 489",
+subject:"Administrative Law",
+tags:"constitutional administrative",
+facts:"The case concerned governmental tendering and the exclusion of a bidder from a contract process.",
+issue:"Whether government contracts and tender decisions must comply with Article 14.",
+judgment:"The Court held that State instrumentalities must act fairly and non-arbitrarily in contractual matters.",
+principle:"Non-arbitrariness in State contracts.",
+law:"Article 14.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:42,
+title:"Mohinder Singh Gill v. Chief Election Commissioner",
+court:"Supreme Court of India",
+year:"1978",
+citation:"(1978) 1 SCC 405",
+subject:"Constitutional Law",
+tags:"constitutional administrative",
+facts:"An election order was challenged and the scope of the Election Commission's constitutional powers was examined.",
+issue:"How should administrative decisions and the Election Commission's constitutional powers be exercised.",
+judgment:"The Court emphasised fairness in administrative action and the constitutional role of the Election Commission.",
+principle:"Fairness and reasoned administrative action.",
+law:"Article 324 and administrative law.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:43,
+title:"S.R. Bommai v. Union of India",
+court:"Supreme Court of India",
+year:"1994",
+citation:"(1994) 3 SCC 1",
+subject:"Constitutional Law",
+tags:"constitutional administrative",
+facts:"The dismissal of State governments under Article 356 raised questions concerning federalism and presidential rule.",
+issue:"Whether the exercise of Article 356 is subject to judicial review and constitutional limitations.",
+judgment:"The Court imposed important constitutional limitations on Article 356 and affirmed judicial review of its exercise.",
+principle:"Federalism, secularism and judicial review.",
+law:"Articles 356 and 365.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:44,
+title:"Indra Sawhney v. Union of India",
+court:"Supreme Court of India",
+year:"1992",
+citation:"1992 Supp (3) SCC 217",
+subject:"Constitutional Law",
+tags:"constitutional fundamental rights",
+facts:"The constitutional validity of reservations for Other Backward Classes was challenged.",
+issue:"Scope of reservation under Article 16 and the relationship between equality and affirmative action.",
+judgment:"The Court upheld reservations for OBCs subject to constitutional limitations and recognised the creamy-layer principle.",
+principle:"Substantive equality and reservation framework.",
+law:"Article 16(4); equality jurisprudence.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:45,
+title:"Kihoto Hollohan v. Zachillhu",
+court:"Supreme Court of India",
+year:"1992",
+citation:"1992 Supp (2) SCC 651",
+subject:"Constitutional Law",
+tags:"constitutional administrative",
+facts:"The constitutional validity of the anti-defection law was challenged.",
+issue:"Whether the Tenth Schedule and the role of the Speaker in disqualification proceedings are constitutionally valid.",
+judgment:"The Court upheld the basic validity of the anti-defection scheme while allowing judicial review of the Speaker's decision.",
+principle:"Anti-defection law and judicial review.",
+law:"Tenth Schedule; Articles 102 and 191.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:46,
+title:"Union of India v. Association for Democratic Reforms",
+court:"Supreme Court of India",
+year:"2002",
+citation:"(2002) 5 SCC 294",
+subject:"Constitutional Law",
+tags:"constitutional fundamental rights",
+facts:"The case concerned disclosure of information about candidates contesting elections.",
+issue:"Whether voters have a constitutional right to information concerning electoral candidates.",
+judgment:"The Court recognised voters' right to know relevant information about candidates as part of freedom of speech and expression.",
+principle:"Right to information of voters.",
+law:"Article 19(1)(a).",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:47,
+title:"People's Union for Civil Liberties v. Union of India",
+court:"Supreme Court of India",
+year:"2003",
+citation:"(2003) 4 SCC 399",
+subject:"Constitutional Law",
+tags:"constitutional fundamental rights",
+facts:"The case further examined disclosure requirements concerning candidates in elections.",
+issue:"Whether electoral transparency is protected by constitutional freedom of speech.",
+judgment:"The Court reinforced the voter's right to know relevant information about election candidates.",
+principle:"Electoral transparency and informed voting.",
+law:"Article 19(1)(a).",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:48,
+title:"Vineet Narain v. Union of India",
+court:"Supreme Court of India",
+year:"1998",
+citation:"(1998) 1 SCC 226",
+subject:"Administrative Law",
+tags:"constitutional administrative criminal",
+facts:"The litigation concerned investigation into allegations of corruption and the independence of investigative agencies.",
+issue:"How should investigation of serious allegations be protected from executive interference.",
+judgment:"The Court issued directions concerning institutional independence and investigative processes.",
+principle:"Institutional independence and fair investigation.",
+law:"Constitutional principles of rule of law and administrative accountability.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:49,
+title:"S.P. Gupta v. Union of India",
+court:"Supreme Court of India",
+year:"1981",
+citation:"1982 2 SCR 365",
+subject:"Constitutional Law",
+tags:"constitutional administrative",
+facts:"The case examined judicial appointments, transfer of judges and access to governmental information.",
+issue:"Questions concerning judicial independence and disclosure of governmental documents.",
+judgment:"The judgment became an important stage in the development of Indian jurisprudence concerning judicial independence and access to information.",
+principle:"Judicial independence and public interest in disclosure.",
+law:"Constitutional provisions concerning the judiciary and executive.",
+source:"https://www.sci.gov.in/"
+},
+
+{
+id:50,
+title:"M. Nagaraj v. Union of India",
+court:"Supreme Court of India",
+year:"2006",
+citation:"(2006) 8 SCC 212",
+subject:"Constitutional Law",
+tags:"constitutional fundamental rights",
+facts:"The constitutional validity of amendments concerning reservation in promotions was challenged.",
+issue:"Whether constitutional amendments enabling reservation in promotions were subject to constitutional limitations.",
+judgment:"The Court upheld the amendments subject to constitutional requirements and emphasised the need to satisfy conditions concerning backwardness, inadequate representation and administrative efficiency.",
+principle:"Constitutional limits on reservation in promotion.",
+law:"Articles 16(4A), 16(4B) and 335.",
+source:"https://www.sci.gov.in/"
 }
 
 ];
 
 
 /* =========================================================
+   ELEMENTS
+========================================================= */
+
+const caseGrid =
+document.getElementById("caseGrid");
+
+const searchInput =
+document.getElementById("searchInput");
+
+const noResults =
+document.getElementById("noResults");
+
+const resultCount =
+document.getElementById("resultCount");
+
+
+/* =========================================================
+   RENDER CASES
+========================================================= */
+
+function renderCases(list){
+
+    caseGrid.innerHTML = "";
+
+    if(list.length === 0){
+
+        noResults.style.display = "block";
+
+        resultCount.innerText = "0 cases";
+
+        return;
+    }
+
+    noResults.style.display = "none";
+
+    resultCount.innerText =
+    list.length + (list.length === 1 ? " case" : " cases");
+
+
+    list.forEach(caseItem => {
+
+        const card =
+        document.createElement("article");
+
+        card.className = "case-card";
+
+        card.innerHTML = `
+
+            <div class="case-number">
+                CASE ${String(caseItem.id).padStart(2,"0")}
+            </div>
+
+            <h3>
+                ${caseItem.title}
+            </h3>
+
+            <div class="case-meta">
+
+                <span class="badge">
+                    ${caseItem.court}
+                </span>
+
+                <span class="badge">
+                    ${caseItem.year}
+                </span>
+
+                <span class="badge">
+                    ${caseItem.subject}
+                </span>
+
+            </div>
+
+            <p>
+                ${caseItem.facts}
+            </p>
+
+            <div class="principle">
+                <strong>Key Principle:</strong><br>
+                ${caseItem.principle}
+            </div>
+
+            <button
+                class="read-btn"
+                data-case-id="${caseItem.id}">
+                Read Case Details →
+            </button>
+
+        `;
+
+        caseGrid.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================================================
+   SAFE BUTTON HANDLING
+   Each button retrieves the exact ID.
+========================================================= */
+
+caseGrid.addEventListener("click", function(event){
+
+    const button =
+    event.target.closest(".read-btn");
+
+    if(!button) return;
+
+    const id =
+    Number(button.dataset.caseId);
+
+    const selectedCase =
+    cases.find(item => item.id === id);
+
+    if(selectedCase){
+
+        openCase(selectedCase);
+
+    }
+
+});
+
+
+/* =========================================================
    OPEN CASE
 ========================================================= */
 
-function openCase(index){
+function openCase(caseItem){
 
-    const c = cases[index];
+    document.getElementById("modalTitle").innerText =
+    caseItem.title;
 
-    document.getElementById("modalTitle").innerText = c.title;
+    document.getElementById("modalMeta").innerText =
+    `${caseItem.court} • ${caseItem.year} • ${caseItem.citation}`;
 
-    document.getElementById("modalMeta").innerText = c.meta;
+    document.getElementById("modalCourt").innerText =
+    caseItem.court;
 
-    document.getElementById("modalFacts").innerText = c.facts;
+    document.getElementById("modalYear").innerText =
+    caseItem.year;
 
-    document.getElementById("modalIssue").innerText = c.issue;
+    document.getElementById("modalCitation").innerText =
+    caseItem.citation;
 
-    document.getElementById("modalJudgment").innerText = c.judgment;
+    document.getElementById("modalSubject").innerText =
+    caseItem.subject;
 
-    document.getElementById("modalPrinciple").innerText = c.principle;
+    document.getElementById("modalFacts").innerText =
+    caseItem.facts;
 
-    document.getElementById("caseModal").style.display = "block";
+    document.getElementById("modalIssue").innerText =
+    caseItem.issue;
+
+    document.getElementById("modalJudgment").innerText =
+    caseItem.judgment;
+
+    document.getElementById("modalPrinciple").innerText =
+    caseItem.principle;
+
+    document.getElementById("modalLaw").innerText =
+    caseItem.law;
+
+    document.getElementById("modalSource").href =
+    caseItem.source;
+
+    document.getElementById("caseModal")
+    .classList.add("show");
 
     document.body.style.overflow = "hidden";
 }
@@ -2933,24 +2519,43 @@ function openCase(index){
 
 function closeCase(){
 
-    document.getElementById("caseModal").style.display = "none";
+    document.getElementById("caseModal")
+    .classList.remove("show");
 
-    document.body.style.overflow = "auto";
+    document.body.style.overflow = "";
 }
 
 
-window.onclick = function(event){
+/* =========================================================
+   CLOSE WHEN CLICKING OUTSIDE
+========================================================= */
 
-    const modal =
-    document.getElementById("caseModal");
+document
+.getElementById("caseModal")
+.addEventListener("click", function(event){
 
-    if(event.target === modal){
+    if(event.target === this){
 
         closeCase();
 
     }
 
-};
+});
+
+
+/* =========================================================
+   ESC KEY
+========================================================= */
+
+document.addEventListener("keydown", function(event){
+
+    if(event.key === "Escape"){
+
+        closeCase();
+
+    }
+
+});
 
 
 /* =========================================================
@@ -2959,45 +2564,53 @@ window.onclick = function(event){
 
 function searchCases(){
 
-    const input =
-    document
-    .getElementById("caseSearch")
-    .value
+    const query =
+    searchInput.value
     .toLowerCase()
     .trim();
 
-    const cards =
-    document.querySelectorAll(".case-card");
+    if(query === ""){
 
-    let found = false;
+        renderCases(cases);
 
-    cards.forEach(function(card){
+        return;
+    }
 
-        const text =
-        card.innerText.toLowerCase();
+    const results =
+    cases.filter(caseItem => {
 
-        if(text.includes(input)){
+        const searchableText = `
 
-            card.style.display = "";
+            ${caseItem.title}
+            ${caseItem.court}
+            ${caseItem.year}
+            ${caseItem.citation}
+            ${caseItem.subject}
+            ${caseItem.tags}
+            ${caseItem.facts}
+            ${caseItem.issue}
+            ${caseItem.judgment}
+            ${caseItem.principle}
+            ${caseItem.law}
 
-            found = true;
+        `.toLowerCase();
 
-        }else{
-
-            card.style.display = "none";
-
-        }
+        return searchableText.includes(query);
 
     });
 
-    document.getElementById("noResults").style.display =
-    found ? "none" : "block";
+    renderCases(results);
+
 }
 
 
-document
-.getElementById("caseSearch")
-.addEventListener("keypress",function(event){
+/* =========================================================
+   ENTER TO SEARCH
+========================================================= */
+
+searchInput.addEventListener(
+"keydown",
+function(event){
 
     if(event.key === "Enter"){
 
@@ -3009,67 +2622,79 @@ document
 
 
 /* =========================================================
-   FILTER
+   QUICK SEARCH
 ========================================================= */
 
-function filterCases(category,button){
+function quickSearch(query){
 
-    const cards =
-    document.querySelectorAll(".case-card");
+    searchInput.value = query;
+
+    searchCases();
 
     document
-    .querySelectorAll(".filter")
-    .forEach(function(btn){
-
-        btn.classList.remove("active");
-
+    .querySelector(".library")
+    .scrollIntoView({
+        behavior:"smooth"
     });
-
-    button.classList.add("active");
-
-    let found = false;
-
-    cards.forEach(function(card){
-
-        const categories =
-        card.dataset.category;
-
-        if(
-            category === "all" ||
-            categories.includes(category)
-        ){
-
-            card.style.display = "";
-
-            found = true;
-
-        }else{
-
-            card.style.display = "none";
-
-        }
-
-    });
-
-    document.getElementById("noResults").style.display =
-    found ? "none" : "block";
 
 }
 
 
 /* =========================================================
-   ESCAPE KEY
+   CATEGORY FILTERS
 ========================================================= */
 
-document.addEventListener("keydown",function(event){
+document
+.querySelectorAll(".filter")
+.forEach(button => {
 
-    if(event.key === "Escape"){
+    button.addEventListener("click", function(){
 
-        closeCase();
+        document
+        .querySelectorAll(".filter")
+        .forEach(btn =>
+            btn.classList.remove("active")
+        );
 
-    }
+        this.classList.add("active");
+
+        const filter =
+        this.dataset.filter;
+
+        if(filter === "all"){
+
+            renderCases(cases);
+
+            return;
+        }
+
+        const filtered =
+        cases.filter(caseItem => {
+
+            const searchable =
+            `${caseItem.subject}
+             ${caseItem.tags}
+             ${caseItem.law}`
+            .toLowerCase();
+
+            return searchable.includes(
+                filter.toLowerCase()
+            );
+
+        });
+
+        renderCases(filtered);
+
+    });
 
 });
+
+
+/* =========================================================
+   INITIAL LOAD
+========================================================= */
+
+renderCases(cases);
 
 </script>
 
