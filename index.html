@@ -1,331 +1,1395 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pendico | Indian Legal Information Portal</title>
-<meta name="description" content="Pendico is an Indian legal information portal providing Bare Acts, case laws, legal news, articles and legal resources.">
 
-<meta name="keywords" content="Indian law, Bare Acts, case laws, Supreme Court, High Court, BNS, BNSS, legal news, Indian legal information">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pendico | Indian Legal Information Portal</title>
+
+<meta name="description"
+content="Pendico is an Indian legal information portal providing Bare Acts, case laws, legal news, articles and legal resources.">
+
+<meta name="keywords"
+content="Indian law, Bare Acts, case laws, Supreme Court, High Court, BNS, BNSS, legal news, legal articles">
 
 <meta name="author" content="Pendico">
 
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://pendico.pages.dev/">
-<link rel="icon" type="image/png" href="favicon.png">    
+
+<link rel="icon" type="image/png" href="favicon.png">
 
 <style>
 
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f4f7fb;
-color:#333;
+    font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:#f5f7fb;
+    color:#172033;
+    line-height:1.6;
 }
 
-header{
-background:linear-gradient(135deg,#0b3d91,#1565c0);
-color:white;
-padding:40px 20px;
-text-align:center;
-}
 
-header h1{
-margin:0;
-font-size:42px;
-}
-
-header p{
-font-size:18px;
-margin-top:10px;
-}
-
-.search{
-margin-top:25px;
-}
-
-.search input{
-width:90%;
-max-width:600px;
-padding:14px;
-font-size:16px;
-border:none;
-border-radius:10px;
-}
+/* =========================
+   NAVIGATION
+========================= */
 
 nav{
-background:#062b63;
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-}
+    position:sticky;
+    top:0;
+    z-index:1000;
 
-nav a{
-color:white;
-padding:16px 20px;
-text-decoration:none;
-font-weight:bold;
-}
-
-nav a:hover{
-background:#0b3d91;
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-padding:30px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,.12);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-}
-
-.card h2{
-color:#0b3d91;
-margin-top:0;
-}
-
-.button{
-display:inline-block;
-margin-top:15px;
-padding:10px 18px;
-background:#0b3d91;
-color:white;
-text-decoration:none;
-border-radius:8px;
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:15px;
-margin-top:35px;
-}
-
-.stat{
-background:white;
-padding:20px;
-text-align:center;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,.1);
-}
-
-footer{
-margin-top:40px;
-background:#062b63;
-color:white;
-text-align:center;
-padding:20px;
-}
-.brand{
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
-    gap:20px;
+
+    padding:15px 7%;
+
+    background:rgba(7,18,38,0.94);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.nav-brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    color:white;
+    text-decoration:none;
+
+    font-size:22px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.nav-brand img{
+    width:42px;
+    height:42px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.nav-links{
+    display:flex;
+    gap:8px;
     flex-wrap:wrap;
 }
 
-.brand img{
+.nav-links a{
+    color:#dce7f8;
+    text-decoration:none;
+
+    padding:9px 14px;
+
+    border-radius:8px;
+
+    font-size:14px;
+    font-weight:600;
+
+    transition:0.25s;
+}
+
+.nav-links a:hover{
+    background:#1c4f91;
+    color:white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    min-height:650px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:80px 20px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    radial-gradient(
+        circle at 20% 20%,
+        rgba(44,116,255,0.25),
+        transparent 30%
+    ),
+
+    radial-gradient(
+        circle at 80% 70%,
+        rgba(0,210,255,0.18),
+        transparent 30%
+    ),
+
+    linear-gradient(
+        135deg,
+        #061326,
+        #0b2345,
+        #07152d
+    );
+
+    color:white;
+}
+
+
+/* decorative glow */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    background:rgba(24,119,255,0.08);
+
+    filter:blur(30px);
+
+    top:-200px;
+    left:-150px;
+}
+
+.hero-content{
+
+    max-width:900px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.hero-logo{
+
     width:100px;
     height:100px;
-    border-radius:12px;
+
+    object-fit:cover;
+
+    border-radius:22px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+    0 0 30px rgba(61,146,255,0.35);
+
+    border:1px solid rgba(255,255,255,0.15);
 }
 
-.brand h1{
-    margin:0;
-    font-size:42px;
+.hero h1{
+
+    font-size:clamp(45px,8vw,82px);
+
+    letter-spacing:5px;
+
+    margin-bottom:8px;
+
+    font-weight:900;
+}
+
+.hero h1 span{
+    color:#5ba7ff;
+}
+
+.hero-subtitle{
+
+    font-size:clamp(18px,3vw,25px);
+
+    color:#cbd9ed;
+
+    margin-bottom:18px;
+}
+
+.hero-description{
+
+    max-width:680px;
+
+    margin:auto;
+
+    color:#9fb2cc;
+
+    font-size:17px;
+
+    margin-bottom:35px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box{
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    background:white;
+
+    padding:7px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 15px 45px rgba(0,0,0,0.25);
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+    outline:none;
+
+    padding:16px 18px;
+
+    font-size:16px;
+
+    border-radius:10px;
+}
+
+.search-box button{
+
+    border:none;
+
+    background:#1769d1;
+
+    color:white;
+
+    padding:0 25px;
+
+    border-radius:11px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:0.25s;
+}
+
+.search-box button:hover{
+
+    background:#0d55ae;
+
+    transform:translateY(-1px);
+}
+
+
+/* =========================
+   QUICK LINKS
+========================= */
+
+.quick-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin-top:25px;
+}
+
+.quick-links a{
+
+    color:#c9dcf5;
+
+    text-decoration:none;
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    padding:7px 14px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    transition:0.25s;
+}
+
+.quick-links a:hover{
+
+    background:rgba(255,255,255,0.08);
+
+    border-color:#438fff;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:80px 25px;
+}
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:45px;
+}
+
+.section-heading h2{
+
+    font-size:36px;
+
+    color:#102d55;
+
+    margin-bottom:8px;
+}
+
+.section-heading p{
+
+    color:#68778c;
+}
+
+
+/* =========================
+   RESOURCE CARDS
+========================= */
+
+.resource-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:22px;
+}
+
+.resource-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    border:1px solid #e5eaf1;
+
+    box-shadow:
+    0 8px 25px rgba(18,45,80,0.07);
+
+    transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.resource-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #1769d1,
+        #38a9ff
+    );
+}
+
+.resource-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 18px 40px rgba(18,45,80,0.14);
+
+    border-color:#cbdcf3;
+}
+
+.card-icon{
+
+    width:55px;
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:#edf5ff;
+
+    font-size:27px;
+
+    margin-bottom:20px;
+}
+
+.resource-card h3{
+
+    font-size:22px;
+
+    color:#102d55;
+
+    margin-bottom:10px;
+}
+
+.resource-card p{
+
+    color:#68778c;
+
+    font-size:15px;
+
+    margin-bottom:20px;
+}
+
+.card-button{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:#1769d1;
+
+    font-weight:700;
+
+    font-size:14px;
+
+    transition:0.2s;
+}
+
+.card-button:hover{
+
+    color:#0a4c9d;
+
+    transform:translateX(4px);
+
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats-section{
+
+    background:#07172e;
+
+    color:white;
+
+    padding:70px 25px;
+}
+
+.stats{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:20px;
+}
+
+.stat{
+
+    text-align:center;
+
+    padding:25px;
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    border-radius:16px;
+
+    backdrop-filter:blur(10px);
+}
+
+.stat-number{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    color:#61a9ff;
+
+    margin-bottom:4px;
+}
+
+.stat-label{
+
+    color:#aebfd5;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   WHY PENDICO
+========================= */
+
+.why-section{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:80px 25px;
+}
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(240px,1fr));
+
+    gap:20px;
+}
+
+.feature{
+
+    padding:28px;
+
+    border-radius:16px;
+
+    background:white;
+
+    border:1px solid #e6ebf2;
+
+    transition:0.3s;
+}
+
+.feature:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,0.08);
+}
+
+.feature h3{
+
+    color:#123d70;
+
+    margin-bottom:10px;
+
+    font-size:19px;
+}
+
+.feature p{
+
+    color:#69788c;
+
+    font-size:15px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+
+    margin:20px auto 80px;
+
+    max-width:1100px;
+
+    padding:55px 30px;
+
+    text-align:center;
+
+    border-radius:24px;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #0a3470,
+        #1769d1
+    );
+
+    box-shadow:
+    0 15px 40px rgba(18,72,140,0.2);
+}
+
+.cta h2{
+
+    font-size:32px;
+
+    margin-bottom:10px;
+}
+
+.cta p{
+
+    color:#d5e4f7;
+
+    margin-bottom:25px;
+}
+
+.cta-button{
+
+    display:inline-block;
+
+    padding:13px 25px;
+
+    background:white;
+
+    color:#0c4d9d;
+
+    text-decoration:none;
+
+    border-radius:10px;
+
+    font-weight:800;
+
+    transition:0.25s;
+}
+
+.cta-button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#041021;
+
+    color:#91a3ba;
+
+    padding:45px 25px;
+
+    text-align:center;
+}
+
+.footer-logo{
+
+    color:white;
+
+    font-size:25px;
+
+    font-weight:800;
+
     letter-spacing:2px;
+
+    margin-bottom:8px;
 }
 
-.brand p{
-    margin:5px 0 0;
-    font-size:18px;
+footer p{
+
+    font-size:14px;
+
+    margin-bottom:15px;
 }
-<style>
 
-    /* Your existing CSS */
-    
-    body {
-        ...
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.footer-links a{
+
+    color:#9eb1c8;
+
+    text-decoration:none;
+
+    font-size:13px;
+}
+
+.footer-links a:hover{
+
+    color:white;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:10px;
+
+        padding:12px 15px;
     }
 
-    .card {
-        ...
+    .nav-links{
+
+        justify-content:center;
     }
 
-    .button {
-        ...
+    .nav-links a{
+
+        padding:7px 9px;
+
+        font-size:12px;
     }
 
+    .hero{
 
-    /* NEW CODE — paste here */
+        min-height:600px;
 
-    .card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding:60px 18px;
     }
 
-    .card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    .hero-logo{
+
+        width:80px;
+        height:80px;
     }
 
-    .card .button {
-        display: inline-block;
-        margin-top: 12px;
-        padding: 11px 22px;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.25s ease;
+    .hero h1{
+
+        font-size:46px;
+
+        letter-spacing:3px;
     }
 
-    .card .button:hover {
-        transform: translateY(-2px);
+    .hero-description{
+
+        font-size:15px;
     }
 
-</style>    
+    .search-box{
+
+        flex-direction:column;
+
+        gap:7px;
+    }
+
+    .search-box button{
+
+        padding:13px;
+    }
+
+    .container,
+    .why-section{
+
+        padding:60px 18px;
+    }
+
+    .section-heading h2{
+
+        font-size:29px;
+    }
+
+}
+
+
+/* =========================
+   SEARCH RESULT HIGHLIGHT
+========================= */
+
+.hidden-card{
+
+    display:none !important;
+}
+
+.no-results{
+
+    text-align:center;
+
+    display:none;
+
+    padding:30px;
+
+    color:#718096;
+}
+
 </style>
 
 </head>
 
+
 <body>
 
-<header>
 
-<div class="brand">
-    <img src="logo.png.jpeg" alt="Pendico Logo">
-    <div>
-        <h1>PENDICO</h1>
-        <p>Indian Legal Information Portal</p>
-    </div>
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+<a href="index.html" class="nav-brand">
+
+<img src="logo.png.jpeg" alt="Pendico">
+
+<span>PENDICO</span>
+
+</a>
+
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+
+<a href="bareacts.html">Bare Acts</a>
+
+<a href="caselaws.html">Case Laws</a>
+
+<a href="articles.html">Articles</a>
+
+<a href="legalnews.html">Legal News</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
 </div>
 
-<div class="search">
-<input type="text" placeholder="Search Bare Acts, Case Laws, Articles (Coming Soon)">
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+<div class="hero-content">
+
+<img
+src="logo.png.jpeg"
+class="hero-logo"
+alt="Pendico Indian Legal Information Portal">
+
+
+<h1>PENDI<span>CO</span></h1>
+
+<p class="hero-subtitle">
+Indian Legal Information Portal
+</p>
+
+<p class="hero-description">
+
+Explore Indian Bare Acts, landmark judgments,
+legal articles and legal developments —
+all in one modern legal information platform.
+
+</p>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Acts, Case Laws, Articles...">
+
+<button onclick="searchContent()">
+Search
+</button>
+
+</div>
+
+
+<div class="quick-links">
+
+<a href="bareacts.html">BNS</a>
+
+<a href="bnss.html">BNSS</a>
+
+<a href="caselaws.html">Landmark Cases</a>
+
+<a href="articles.html">Legal Articles</a>
+
+<a href="legalnews.html">Legal News</a>
+
+</div>
+
 </div>
 
 </header>
 
-<nav>
 
-<a href="index.html">Home</a>
-<a href="bareacts.html">Bare Acts</a>
-<a href="caselaws.html">Case Laws</a>
-<a href="articles.html">Articles</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
 
-</nav>
+<!-- =========================
+     RESOURCES
+========================= -->
 
-<div class="container">
+<main>
+
+<section class="container">
+
+<div class="section-heading">
 
 <h2>Explore Pendico</h2>
 
-<div class="grid">
-
-<div class="card">
-<h2>📚 Bare Acts</h2>
-<p>Browse important Indian legislation including BNS, BNSS, BSA and more.</p>
-<a class="button" href="bareacts.html">Explore</a>
-</div>
-
-<div class="card">
-<h2>⚖️ Case Laws</h2>
-<p>Read landmark Supreme Court and High Court judgments.</p>
-<a class="button" href="caselaws.html">Explore</a>
-</div>
-
-<div class="card">
-<h2>📝 Articles</h2>
-<p>Simple legal articles and educational content.</p>
-<a class="button" href="articles.html">Explore</a>
-</div>
-
-<div class="card">
-    <h2>📰 Legal News</h2>
-    <p>Stay updated with the latest legal developments, court decisions, government notifications and important legal news from across India.</p>
-    <a href="legalnews.html" class="button">Explore News</a>
-</div>
+<p>
+Your gateway to Indian legal information
+</p>
 
 </div>
 
-<h2 style="margin-top:40px;">Pendico Statistics</h2>
 
-<div class="stats">
+<div class="resource-grid" id="resourceGrid">
 
-<div class="stat">
-<h3>📚 Acts</h3>
-<p>1+</p>
-</div>
 
-<div class="stat">
-<h3>📜 Sections</h3>
-<p>4+</p>
-</div>
+<div class="resource-card">
 
-<div class="stat">
-<h3>⚖️ Cases</h3>
-<p>Coming Soon</p>
-</div>
+<div class="card-icon">📚</div>
 
-<div class="stat">
-<h3>👥 Visitors</h3>
-<p>Growing</p>
-</div>
+<h3>Bare Acts</h3>
+
+<p>
+Browse important Indian legislation including
+BNS, BNSS, BSA and other laws.
+</p>
+
+<a href="bareacts.html" class="card-button">
+Explore Bare Acts →
+</a>
 
 </div>
 
-</div>
-<section class="why-pendico">
 
-<h2>Why Choose Pendico?</h2>
 
-<div class="features">
+<div class="resource-card">
 
-<div class="feature">
-<h3>📚 Comprehensive Bare Acts</h3>
-<p>Access important Indian laws including BNS, BNSS, BSA and many more.</p>
-</div>
+<div class="card-icon">⚖️</div>
 
-<div class="feature">
-<h3>⚖️ Case Law Library</h3>
-<p>Explore landmark Supreme Court and High Court judgments with simple summaries.</p>
-</div>
+<h3>Case Laws</h3>
 
-<div class="feature">
-<h3>📝 Easy Legal Articles</h3>
-<p>Understand complex legal concepts through simple, student-friendly articles.</p>
+<p>
+Explore landmark Supreme Court and High Court
+judgments and important legal precedents.
+</p>
+
+<a href="caselaws.html" class="card-button">
+Explore Case Laws →
+</a>
+
 </div>
 
-<div class="feature">
-<h3>🚀 Fast & Free</h3>
-<p>Pendico provides free legal knowledge with a clean, mobile-friendly experience.</p>
+
+
+<div class="resource-card">
+
+<div class="card-icon">📝</div>
+
+<h3>Legal Articles</h3>
+
+<p>
+Understand important legal concepts through
+simple and student-friendly articles.
+</p>
+
+<a href="articles.html" class="card-button">
+Read Articles →
+</a>
+
 </div>
+
+
+
+<div class="resource-card">
+
+<div class="card-icon">📰</div>
+
+<h3>Legal News</h3>
+
+<p>
+Stay updated with important court decisions,
+legal developments and Indian legal news.
+</p>
+
+<a href="legalnews.html" class="card-button">
+Read Legal News →
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="no-results" id="noResults">
+
+No matching resource found.
 
 </div>
 
 </section>
+
+
+
+<!-- =========================
+     STATISTICS
+========================= -->
+
+<section class="stats-section">
+
+<div class="section-heading">
+
+<h2 style="color:white;">
+Pendico at a Glance
+</h2>
+
+<p style="color:#9fb2cc;">
+A growing Indian legal information platform
+</p>
+
+</div>
+
+
+<div class="stats">
+
+
+<div class="stat">
+
+<div class="stat-number">
+1+
+</div>
+
+<div class="stat-label">
+Acts Available
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number">
+15+
+</div>
+
+<div class="stat-label">
+Sections Added
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number">
+Growing
+</div>
+
+<div class="stat-label">
+Case Law Library
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number">
+Free
+</div>
+
+<div class="stat-label">
+Legal Information
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY PENDICO
+========================= -->
+
+<section class="why-section">
+
+<div class="section-heading">
+
+<h2>
+Why Pendico?
+</h2>
+
+<p>
+Built to make legal information easier to access.
+</p>
+
+</div>
+
+
+<div class="features">
+
+
+<div class="feature">
+
+<h3>📚 Accessible Legal Resources</h3>
+
+<p>
+Important Indian legal materials organised
+in a simple and accessible format.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>⚖️ Landmark Case Laws</h3>
+
+<p>
+Discover important constitutional and
+Supreme Court decisions.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>🎓 Student Friendly</h3>
+
+<p>
+Designed to help law students understand
+and navigate legal information efficiently.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h3>🚀 Fast & Free</h3>
+
+<p>
+A lightweight legal information platform
+accessible across devices.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+<h2>
+Start Exploring Indian Law
+</h2>
+
+<p>
+Access legal resources through Pendico.
+</p>
+
+<a href="bareacts.html" class="cta-button">
+Explore Legal Resources
+</a>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-© 2026 Pendico | Indian Legal Information Portal
+<div class="footer-logo">
+PENDICO
+</div>
+
+<p>
+Indian Legal Information Portal
+</p>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+
+<a href="bareacts.html">Bare Acts</a>
+
+<a href="caselaws.html">Case Laws</a>
+
+<a href="articles.html">Articles</a>
+
+<a href="legalnews.html">Legal News</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<br>
+
+<p>
+© 2026 Pendico. All rights reserved.
+</p>
 
 </footer>
 
+
+
+<!-- =========================
+     SEARCH SCRIPT
+========================= -->
+
+<script>
+
+function searchContent(){
+
+    const input =
+    document
+    .getElementById("searchInput")
+    .value
+    .toLowerCase()
+    .trim();
+
+    const cards =
+    document
+    .querySelectorAll(".resource-card");
+
+    const noResults =
+    document
+    .getElementById("noResults");
+
+    if(input === ""){
+
+        cards.forEach(card => {
+            card.classList.remove("hidden-card");
+        });
+
+        noResults.style.display = "none";
+
+        return;
+    }
+
+    let found = false;
+
+    cards.forEach(card => {
+
+        const text =
+        card.innerText.toLowerCase();
+
+        if(text.includes(input)){
+
+            card.classList.remove("hidden-card");
+
+            found = true;
+
+        }else{
+
+            card.classList.add("hidden-card");
+
+        }
+
+    });
+
+    noResults.style.display =
+    found ? "none" : "block";
+
+}
+
+
+document
+.getElementById("searchInput")
+.addEventListener("keypress", function(event){
+
+    if(event.key === "Enter"){
+
+        searchContent();
+
+    }
+
+});
+
+</script>
+
+
 </body>
+
 </html>
