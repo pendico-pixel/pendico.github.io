@@ -1,26 +1,130 @@
 [
   {
-    "title": "Supreme Court issues important directions on access to justice",
-    "summary": "The Supreme Court considered important issues relating to access to justice and judicial administration.",
+    "title": "Supreme Court flags need for more commercial courts, seeks State-wise data",
+    "summary": "The Supreme Court has sought State-wise data on pending commercial cases and the infrastructure available to commercial courts, highlighting the importance of speedy resolution of commercial disputes.",
     "category": "Supreme Court",
-    "date": "2026-08-05",
-    "source": "Supreme Court of India",
-    "url": "https://www.sci.gov.in/"
+    "date": "2026-08-10",
+    "source": "Bar & Bench",
+    "url": "https://www.barandbench.com/news/litigation/supreme-court-flags-need-for-more-commercial-courts-seeks-state-wise-data-on-litigation-trends"
   },
   {
-    "title": "High Court examines important issues concerning legal rights",
-    "summary": "The High Court considered questions relating to constitutional rights and statutory interpretation.",
-    "category": "High Court",
-    "date": "2026-08-04",
-    "source": "High Court",
-    "url": "https://www.sci.gov.in/"
+    "title": "Karnataka tells Supreme Court bike taxis raise safety and insurance concerns",
+    "summary": "The Karnataka government has challenged a High Court ruling concerning bike-taxi operations before the Supreme Court, raising issues relating to passenger safety, insurance coverage and women's safety.",
+    "category": "Supreme Court",
+    "date": "2026-08-10",
+    "source": "Bar & Bench",
+    "url": "https://www.barandbench.com/news/litigation/bike-taxis-pose-safety-risks-lack-adequate-insurance-cover-karnataka-tells-supreme-court"
   },
   {
-    "title": "Important developments in the Indian legal profession",
-    "summary": "Recent developments concerning advocates, courts and the legal profession in India.",
+    "title": "Lok Sabha passes Tribunals Reforms Bill, 2026",
+    "summary": "The Lok Sabha passed the Tribunals Reforms Bill, 2026 on August 10. The legislation concerns the statutory framework governing tribunals.",
+    "category": "Law & Policy",
+    "date": "2026-08-10",
+    "source": "LiveLaw",
+    "url": "https://www.livelaw.in/top-stories/lok-sabha-passes-tribunals-reforms-bill-2026-without-debate-545083"
+  },
+  {
+    "title": "Supreme Court permits Abhishek Banerjee to travel abroad for eye treatment",
+    "summary": "The Supreme Court permitted Abhishek Banerjee to travel abroad for three weeks for medical treatment, subject to conditions concerning travel and disclosure of itinerary and place of stay.",
+    "category": "Supreme Court",
+    "date": "2026-08-10",
+    "source": "LiveLaw",
+    "url": "https://www.livelaw.in/top-stories/supreme-court-gives-abhishek-banerjee-foreign-travel-permission-for-eye-treatment-545055"
+  },
+  {
+    "title": "Supreme Court seeks Union and Assam replies on NRC identity cards plea",
+    "summary": "The Supreme Court directed the Union Government and Assam to file replies in petitions concerning identity cards for persons included in the National Register of Citizens list published in 2019.",
+    "category": "Constitutional Law",
+    "date": "2026-08-10",
+    "source": "LiveLaw",
+    "url": "https://www.livelaw.in/top-stories/supreme-court-asks-union-assam-to-reply-to-plea-seeking-i-cards-for-those-included-in-nrc-list-545049"
+  },
+  {
+    "title": "Supreme Court lists final hearing on challenge to Gurmeet Ram Rahim Singh acquittal",
+    "summary": "The Supreme Court has listed for final hearing a plea challenging the Punjab and Haryana High Court's acquittal of Gurmeet Ram Rahim Singh in the journalist murder case.",
+    "category": "Criminal Law",
+    "date": "2026-08-10",
+    "source": "LiveLaw",
+    "url": "https://www.livelaw.in/top-stories/supreme-court-lists-for-final-hearing-plea-against-punjab-haryana-hc-acquittal-of-dera-chief-gurmeet-ram-rahim-singh-in-journalist-murder-545146"
+  },
+  {
+    "title": "Collegium recommends Justice Ashwani Kumar Mishra as Chief Justice of Punjab and Haryana High Court",
+    "summary": "The Supreme Court Collegium has recommended Justice Ashwani Kumar Mishra for appointment as Chief Justice of the Punjab and Haryana High Court.",
+    "category": "Judicial Appointments",
+    "date": "2026-08-09",
+    "source": "Bar & Bench",
+    "url": "https://www.barandbench.com/news/supreme-court-collegium-recommends-justice-ashwani-kumar-mishra-as-chief-justice-of-punjab-haryana-high-court"
+  },
+  {
+    "title": "Collegium recommends Justice V Kameswar Rao as Chief Justice of Patna High Court",
+    "summary": "The Supreme Court Collegium has recommended Delhi High Court Justice V Kameswar Rao for appointment as Chief Justice of the Patna High Court.",
+    "category": "Judicial Appointments",
+    "date": "2026-08-09",
+    "source": "Bar & Bench",
+    "url": "https://www.barandbench.com/news/supreme-court-collegium-has-recommended-justice-v-kameswar-rao-as-chief-justice-of-patna-high-court"
+  },
+  {
+    "title": "Collegium recommends Justice RV Ghuge as Chief Justice of Calcutta High Court",
+    "summary": "The Supreme Court Collegium has recommended Justice Ravindra V Ghuge of the Bombay High Court for appointment as Chief Justice of the Calcutta High Court.",
+    "category": "Judicial Appointments",
+    "date": "2026-08-09",
+    "source": "Bar & Bench",
+    "url": "https://www.barandbench.com/news/supreme-court-collegium-recommends-justice-rv-ghuge-as-chief-justice-of-calcutta-high-court"
+  },
+  {
+    "title": "Centre notifies appointment of 15 judges to Madras High Court",
+    "summary": "The Central Government has notified the appointment of 15 judges to the Madras High Court, comprising advocates appointed as judges and judicial officers appointed as additional judges.",
+    "category": "Madras High Court",
+    "date": "2026-08-07",
+    "source": "Bar & Bench",
+    "url": "https://www.barandbench.com/news/centre-notifies-appointment-of-5-permanent-judges-10-additional-judges-to-madras-high-court"
+  },
+  {
+    "title": "Plea before Supreme Court challenges mid-cycle rollout of NCAHP regulations",
+    "summary": "A plea before the Supreme Court challenges the mid-cycle rollout of newly notified National Commission for Allied and Healthcare Professions regulations for the 2026-27 academic session.",
+    "category": "Supreme Court",
+    "date": "2026-08-10",
+    "source": "Bar & Bench",
+    "url": "https://www.barandbench.com/news/plea-before-supreme-court-against-mid-cycle-rollout-of-ncahp-regulations-for-2026-27-session"
+  },
+  {
+    "title": "Justice N Kotiswar Singh highlights mediation opportunities for younger lawyers",
+    "summary": "Justice N Kotiswar Singh highlighted the potential of mediation for younger lawyers and called for stronger mediation training in law colleges and universities.",
     "category": "Legal Profession",
-    "date": "2026-08-03",
-    "source": "Pendico",
-    "url": "https://www.sci.gov.in/"
+    "date": "2026-08-10",
+    "source": "Bar & Bench",
+    "url": "https://www.barandbench.com/news/gen-z-lawyers-more-open-to-mediation-supreme-court-justice-kotiswar-singh"
+  },
+  {
+    "title": "CJI Surya Kant highlights compliance benefits of mediated settlements",
+    "summary": "Chief Justice of India Surya Kant highlighted the role of mediation in dispute resolution and discussed research concerning compliance with settlements reached through mediation.",
+    "category": "Alternative Dispute Resolution",
+    "date": "2026-08-08",
+    "source": "Bar & Bench",
+    "url": "https://www.barandbench.com/news/law-policy/people-more-likely-to-honour-agreements-reached-through-mediation-than-imposed-decisions-cji-surya-kant"
+  },
+  {
+    "title": "Delhi High Court criticises questions concerning a victim's clothing in sexual harassment case",
+    "summary": "The Delhi High Court criticised questions concerning a victim's clothing during proceedings in a sexual harassment matter and addressed the relevance of such questions to the proceedings.",
+    "category": "High Court",
+    "date": "2026-08-10",
+    "source": "LiveLaw",
+    "url": "https://www.livelaw.in/high-court/delhi-high-court/minor-wearing-jeans-sexually-harassed-people-cant-dictate-women-clothing-style-545086"
+  },
+  {
+    "title": "Madras High Court grants relief in case concerning video alleging police foisted false cases",
+    "summary": "The Madras High Court dealt with a criminal case concerning a video alleging that police had foisted false cases against Muslims and granted relief in the matter.",
+    "category": "Madras High Court",
+    "date": "2026-08-10",
+    "source": "LiveLaw",
+    "url": "https://www.livelaw.in/high-court/madras-high-court/madras-high-court-man-video-police-foist-false-case-muslims-case-quashed-545034"
+  },
+  {
+    "title": "Supreme Court adjourns Shiv Sena UBT plea concerning MPs' merger",
+    "summary": "The Supreme Court adjourned the Shiv Sena UBT plea challenging the Speaker's decision concerning the merger of six MPs with the Shinde faction.",
+    "category": "Constitutional Law",
+    "date": "2026-08-10",
+    "source": "LiveLaw",
+    "url": "https://www.livelaw.in/top-stories/supreme-court-adjourns-ubt-plea-challenging-mps-merger-with-shiv-sena-as-speaker-doesnt-appear-545053"
   }
 ]
