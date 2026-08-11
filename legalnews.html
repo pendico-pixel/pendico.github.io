@@ -1,42 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Pendico | Legal Intelligence</title><meta name="description"
+content="Pendico Legal Intelligence — latest Supreme Court, High Court, legislative, constitutional and legal profession news from India.">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Pendico | Legal News</title>
-
-<meta name="description"
-content="Pendico Legal News — latest Supreme Court, High Court, legislation, legal profession and Indian legal developments.">
-
-<meta name="theme-color" content="#06150d">
-
-<style>
+<meta name="theme-color" content="#050b12"><style>
 
 /* =========================================================
-   PENDICO LEGAL NEWS
-   FUTURISTIC EDITION
-========================================================= */
+   PENDICO LEGAL INTELLIGENCE
+   VERSION 3.0
+   JSON-DRIVEN NEWS SYSTEM
+   ========================================================= */
 
 :root{
-    --green:#18c76a;
-    --green2:#32e184;
-    --green-dark:#0b6b3a;
 
-    --black:#030806;
-    --dark:#06150d;
-    --dark2:#0a2417;
+    --bg:#05080d;
+    --bg2:#080e16;
+    --panel:#0c131c;
+    --panel2:#101a25;
 
-    --white:#ffffff;
-    --text:#14221a;
-    --muted:#718078;
+    --white:#f5f8fb;
+    --text:#dce5ec;
+    --muted:#7e8c99;
 
-    --bg:#f3f7f5;
-    --card:#ffffff;
-    --border:#e2ebe5;
+    --green:#35e28a;
+    --green2:#14a968;
 
-    --shadow:0 20px 60px rgba(5,35,20,.10);
+    --cyan:#38d9ff;
+    --gold:#e8c66a;
+
+    --red:#ff5e6c;
+
+    --border:rgba(255,255,255,.08);
+    --border2:rgba(53,226,138,.18);
+
+    --shadow:0 30px 80px rgba(0,0,0,.35);
+
 }
 
 *{
@@ -48,133 +46,203 @@ html{
 }
 
 body{
+
     margin:0;
+
     font-family:
-        Inter,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Arial,
-        sans-serif;
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 
-    background:var(--bg);
+    background:
+    radial-gradient(circle at 10% 10%,rgba(53,226,138,.05),transparent 25%),
+    radial-gradient(circle at 90% 20%,rgba(56,217,255,.04),transparent 25%),
+    var(--bg);
+
     color:var(--text);
+
+    overflow-x:hidden;
+
 }
 
 
 /* =========================================================
-   SCROLLBAR
-========================================================= */
+   AMBIENT GRID
+   ========================================================= */
 
-::-webkit-scrollbar{
-    width:9px;
-}
+body:before{
 
-::-webkit-scrollbar-track{
-    background:#07150d;
-}
+    content:"";
 
-::-webkit-scrollbar-thumb{
-    background:#1a9f58;
-    border-radius:20px;
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.18;
+
+    background-image:
+
+    linear-gradient(
+        rgba(255,255,255,.025) 1px,
+        transparent 1px
+    ),
+
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.025) 1px,
+        transparent 1px
+    );
+
+    background-size:50px 50px;
+
+    mask-image:linear-gradient(
+        to bottom,
+        black,
+        transparent 80%
+    );
+
 }
 
 
 /* =========================================================
-   TOP NAVIGATION
-========================================================= */
+   NAVIGATION
+   ========================================================= */
 
-.topbar{
+.nav{
 
     position:sticky;
+
     top:0;
+
     z-index:9999;
 
     height:72px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     padding:0 6%;
 
-    background:rgba(3,12,7,.88);
+    background:rgba(5,8,13,.78);
 
-    backdrop-filter:
-        blur(20px)
-        saturate(140%);
+    backdrop-filter:blur(22px);
 
-    -webkit-backdrop-filter:
-        blur(20px)
-        saturate(140%);
+    border-bottom:1px solid var(--border);
 
-    border-bottom:
-        1px solid
-        rgba(255,255,255,.08);
 }
 
-.logo{
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
 
     color:white;
 
-    font-size:25px;
+    text-decoration:none;
 
     font-weight:900;
 
+    font-size:22px;
+
     letter-spacing:-1px;
+
 }
 
-.logo span{
-    color:var(--green2);
+.brand-mark{
+
+    width:38px;
+
+    height:38px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:12px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--green),
+        var(--cyan)
+    );
+
+    color:#04100b;
+
+    font-weight:1000;
+
+    box-shadow:
+    0 0 30px rgba(53,226,138,.22);
+
+}
+
+.brand span{
+
+    color:var(--green);
+
 }
 
 .nav-right{
 
     display:flex;
+
     align-items:center;
+
     gap:12px;
+
 }
 
-.live-status{
+.live-indicator{
 
     display:flex;
+
     align-items:center;
+
     gap:7px;
 
     padding:8px 12px;
 
+    border:1px solid rgba(53,226,138,.18);
+
     border-radius:30px;
 
-    background:rgba(24,199,106,.10);
-
-    border:
-        1px solid
-        rgba(50,225,132,.20);
-
-    color:#83efb1;
+    color:#9eeac0;
 
     font-size:11px;
 
     font-weight:800;
 
     letter-spacing:.5px;
+
 }
 
 .live-dot{
 
     width:7px;
+
     height:7px;
+
+    background:var(--green);
 
     border-radius:50%;
 
-    background:#35e47f;
+    box-shadow:0 0 12px var(--green);
 
-    box-shadow:
-        0 0 0 4px
-        rgba(53,228,127,.10);
+    animation:pulse 1.6s infinite;
 
-    animation:pulse 1.8s infinite;
 }
 
 @keyframes pulse{
@@ -185,368 +253,489 @@ body{
     }
 
     50%{
-        opacity:.45;
-        transform:scale(.75);
+        opacity:.35;
+        transform:scale(.65);
     }
+
 }
 
-.home-btn{
+.home{
 
     color:white;
 
     text-decoration:none;
 
-    padding:9px 16px;
+    padding:9px 15px;
 
-    border:
-        1px solid
-        rgba(255,255,255,.16);
+    border:1px solid var(--border);
 
-    border-radius:12px;
+    border-radius:11px;
 
     font-size:13px;
 
-    font-weight:700;
+    transition:.2s;
 
-    transition:.25s;
 }
 
-.home-btn:hover{
+.home:hover{
 
-    background:
-        rgba(255,255,255,.08);
+    background:white;
 
-    border-color:
-        rgba(255,255,255,.30);
+    color:#05080d;
+
+}
+
+
+/* =========================================================
+   BREAKING TICKER
+   ========================================================= */
+
+.ticker{
+
+    height:43px;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    border-bottom:1px solid var(--border);
+
+    background:#070d14;
+
+}
+
+.ticker-label{
+
+    height:100%;
+
+    min-width:125px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    background:var(--green);
+
+    color:#04100b;
+
+    font-size:11px;
+
+    font-weight:1000;
+
+    letter-spacing:1px;
+
+    position:relative;
+
+    z-index:3;
+
+}
+
+.ticker-track{
+
+    white-space:nowrap;
+
+    animation:tickerMove 42s linear infinite;
+
+    color:#aebbc6;
+
+    font-size:12px;
+
+}
+
+.ticker-track span{
+
+    margin-right:70px;
+
+}
+
+.ticker-track b{
+
+    color:var(--green);
+
+}
+
+@keyframes tickerMove{
+
+    from{
+        transform:translateX(100%);
+    }
+
+    to{
+        transform:translateX(-100%);
+    }
+
 }
 
 
 /* =========================================================
    HERO
-========================================================= */
+   ========================================================= */
 
 .hero{
 
     position:relative;
 
+    min-height:500px;
+
+    padding:100px 6% 130px;
+
     overflow:hidden;
 
-    min-height:470px;
-
     display:flex;
+
     align-items:center;
 
-    padding:
-        85px 7%
-        125px;
-
-    color:white;
-
-    background:
-
-        radial-gradient(
-            circle at 80% 20%,
-            rgba(42,221,125,.22),
-            transparent 26%
-        ),
-
-        radial-gradient(
-            circle at 10% 90%,
-            rgba(14,130,73,.25),
-            transparent 32%
-        ),
-
-        linear-gradient(
-            135deg,
-            #020a06,
-            #072718 55%,
-            #06150d
-        );
 }
 
-
-/* futuristic grid */
-
-.hero:before{
-
-    content:"";
+.hero-orb{
 
     position:absolute;
 
-    inset:0;
+    width:550px;
 
-    opacity:.16;
+    height:550px;
 
-    background-image:
+    right:-150px;
 
-        linear-gradient(
-            rgba(255,255,255,.08) 1px,
-            transparent 1px
-        ),
-
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.08) 1px,
-            transparent 1px
-        );
-
-    background-size:
-        55px 55px;
-
-    mask-image:
-        linear-gradient(
-            to bottom,
-            black,
-            transparent
-        );
-}
-
-
-/* glow */
-
-.hero:after{
-
-    content:"";
-
-    position:absolute;
-
-    width:600px;
-    height:600px;
-
-    right:-280px;
-    top:-300px;
-
-    border:
-        1px solid
-        rgba(50,225,132,.15);
+    top:-170px;
 
     border-radius:50%;
 
-    box-shadow:
+    background:
+    radial-gradient(
+        circle,
+        rgba(53,226,138,.13),
+        rgba(53,226,138,.03) 40%,
+        transparent 70%
+    );
 
-        0 0 0 80px
-        rgba(50,225,132,.025),
+    filter:blur(2px);
 
-        0 0 0 160px
-        rgba(50,225,132,.018);
+}
+
+.hero-orb2{
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    left:-100px;
+
+    bottom:-160px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(56,217,255,.08),
+        transparent 70%
+    );
+
 }
 
 .hero-content{
 
     position:relative;
 
-    z-index:3;
+    z-index:2;
 
-    max-width:900px;
+    width:min(1100px,100%);
+
+    margin:auto;
+
 }
 
-.eyebrow{
+.system-label{
 
     display:inline-flex;
 
     align-items:center;
+
     gap:9px;
 
-    padding:
-        9px 15px;
+    color:#8feab6;
+
+    border:1px solid var(--border2);
+
+    background:rgba(53,226,138,.05);
 
     border-radius:30px;
 
-    background:
-        rgba(255,255,255,.06);
-
-    border:
-        1px solid
-        rgba(255,255,255,.12);
-
-    color:#8bf0b5;
+    padding:9px 14px;
 
     font-size:11px;
 
     font-weight:900;
 
-    letter-spacing:1px;
+    letter-spacing:1.1px;
+
 }
 
 .hero h1{
 
-    margin:
-        22px 0 18px;
+    margin:24px 0 20px;
+
+    max-width:900px;
 
     font-size:
-        clamp(48px,8vw,92px);
+    clamp(48px,8vw,92px);
 
-    line-height:.95;
+    line-height:.92;
 
-    letter-spacing:-5px;
+    letter-spacing:-6px;
 
-    font-weight:950;
+    color:white;
+
 }
 
 .hero h1 span{
-    color:var(--green2);
+
+    background:
+    linear-gradient(
+        90deg,
+        var(--green),
+        var(--cyan)
+    );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
 }
 
 .hero-description{
 
     max-width:700px;
 
-    margin:0;
+    color:#94a4b1;
 
-    color:#afc4b7;
-
-    font-size:18px;
+    font-size:17px;
 
     line-height:1.8;
+
 }
 
-.hero-stats{
+.hero-status{
+
+    margin-top:35px;
 
     display:flex;
 
     flex-wrap:wrap;
 
-    gap:12px;
+    gap:10px;
 
-    margin-top:30px;
 }
 
-.hero-stat{
+.status-box{
 
-    padding:
-        11px 15px;
+    padding:11px 15px;
 
-    border-radius:13px;
+    background:rgba(255,255,255,.035);
 
-    background:
-        rgba(255,255,255,.055);
+    border:1px solid var(--border);
 
-    border:
-        1px solid
-        rgba(255,255,255,.09);
+    border-radius:12px;
 
-    color:#c8d9cf;
+    color:#aab7c1;
 
     font-size:12px;
 
-    font-weight:700;
 }
 
-.hero-stat strong{
+.status-box strong{
+
     color:white;
+
 }
 
 
 /* =========================================================
    MAIN
-========================================================= */
+   ========================================================= */
 
-.container{
+.main{
 
-    width:min(1200px,91%);
+    width:min(1180px,90%);
 
-    margin:
-        -55px auto
-        90px;
+    margin:-60px auto 100px;
 
     position:relative;
 
-    z-index:10;
+    z-index:5;
+
 }
 
 
 /* =========================================================
-   CONTROL PANEL
-========================================================= */
+   INTELLIGENCE PANEL
+   ========================================================= */
+
+.intelligence{
+
+    display:grid;
+
+    grid-template-columns:
+    1.5fr
+    .8fr
+    .8fr;
+
+    gap:1px;
+
+    overflow:hidden;
+
+    background:var(--border);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:45px;
+
+}
+
+.metric{
+
+    background:
+    linear-gradient(
+        145deg,
+        #0d151e,
+        #090f16
+    );
+
+    padding:25px;
+
+    min-height:120px;
+
+}
+
+.metric-label{
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    font-weight:800;
+
+}
+
+.metric-value{
+
+    margin-top:9px;
+
+    font-size:32px;
+
+    font-weight:900;
+
+    color:white;
+
+    letter-spacing:-1px;
+
+}
+
+.metric-sub{
+
+    margin-top:5px;
+
+    color:#72818d;
+
+    font-size:11px;
+
+}
+
+
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
 
 .toolbar{
 
     display:flex;
 
+    gap:12px;
+
     align-items:center;
 
-    gap:15px;
-
-    padding:17px;
+    padding:12px;
 
     background:
-        rgba(255,255,255,.94);
+    rgba(12,19,28,.92);
 
-    backdrop-filter:
-        blur(20px);
+    border:1px solid var(--border);
 
-    border:
-        1px solid
-        var(--border);
-
-    border-radius:22px;
+    border-radius:18px;
 
     box-shadow:
-        0 25px 65px
-        rgba(5,35,20,.13);
+    0 20px 50px rgba(0,0,0,.18);
 
-    margin-bottom:30px;
+    margin-bottom:35px;
+
 }
 
-.search-box{
+.search{
 
     flex:1;
 
     position:relative;
+
 }
 
 .search-icon{
 
     position:absolute;
 
-    left:17px;
+    left:15px;
+
     top:50%;
 
-    transform:
-        translateY(-50%);
+    transform:translateY(-50%);
 
-    color:#77857c;
+    color:#61707d;
 
-    font-size:16px;
 }
 
-.search{
+.search input{
 
     width:100%;
 
-    padding:
-        15px
-        18px
-        15px
-        47px;
+    padding:14px 15px 14px 43px;
 
-    border:
-        1px solid
-        var(--border);
+    border-radius:12px;
 
-    border-radius:14px;
+    border:1px solid var(--border);
 
-    background:#f7faf8;
+    background:#070d14;
+
+    color:white;
 
     outline:none;
 
     font-size:14px;
 
-    color:var(--text);
-
-    transition:.25s;
 }
 
-.search:focus{
+.search input:focus{
 
-    background:white;
-
-    border-color:
-        var(--green);
+    border-color:rgba(53,226,138,.5);
 
     box-shadow:
-        0 0 0 4px
-        rgba(24,199,106,.08);
+    0 0 0 4px rgba(53,226,138,.06);
+
 }
 
 .filters{
@@ -555,216 +744,183 @@ body{
 
     gap:7px;
 
-    flex-wrap:wrap;
+    overflow:auto;
+
+    scrollbar-width:none;
+
+}
+
+.filters::-webkit-scrollbar{
+
+    display:none;
+
 }
 
 .filters button{
 
-    border:
-        1px solid
-        var(--border);
-
-    background:white;
-
-    color:#405148;
-
-    padding:
-        11px 14px;
-
-    border-radius:12px;
+    flex:none;
 
     cursor:pointer;
 
-    font-size:12px;
+    border:1px solid var(--border);
+
+    background:#0b121a;
+
+    color:#8e9ca7;
+
+    padding:11px 13px;
+
+    border-radius:11px;
+
+    font-size:11px;
 
     font-weight:800;
 
     transition:.2s;
+
 }
 
-.filters button:hover{
-
-    border-color:
-        var(--green);
-
-    color:
-        var(--green-dark);
-}
-
+.filters button:hover,
 .filters button.active{
 
-    background:
-        var(--dark);
+    color:#04100b;
 
-    color:white;
+    background:var(--green);
 
-    border-color:
-        var(--dark);
+    border-color:var(--green);
+
 }
 
 
 /* =========================================================
-   SECTION HEADER
-========================================================= */
+   SECTION HEADING
+   ========================================================= */
 
-.section-heading{
+.heading{
 
     display:flex;
 
-    align-items:flex-end;
+    align-items:end;
 
     justify-content:space-between;
 
-    margin:
-        35px 0 20px;
+    margin:35px 0 20px;
+
 }
 
-.heading-label{
-
-    color:
-        var(--green-dark);
-
-    font-size:11px;
-
-    font-weight:900;
-
-    text-transform:uppercase;
-
-    letter-spacing:1.5px;
-
-    margin-bottom:7px;
-}
-
-.section-heading h2{
+.heading h2{
 
     margin:0;
 
-    font-size:30px;
+    font-size:29px;
+
+    color:white;
 
     letter-spacing:-1.5px;
+
 }
 
-.section-heading p{
+.heading p{
 
-    margin:
-        6px 0 0;
+    margin:6px 0 0;
 
-    color:var(--muted);
+    color:#6f7d88;
 
-    font-size:14px;
+    font-size:13px;
+
 }
 
-.result-count{
+.sort-label{
 
-    color:#819087;
+    color:#687681;
 
-    font-size:12px;
+    font-size:11px;
 
-    font-weight:700;
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
 }
 
 
 /* =========================================================
-   FEATURED STORY
-========================================================= */
+   FEATURED
+   ========================================================= */
 
 .featured{
 
     position:relative;
 
+    min-height:420px;
+
     overflow:hidden;
 
-    min-height:410px;
+    border:1px solid var(--border2);
 
-    padding:45px;
+    border-radius:28px;
+
+    padding:42px;
 
     display:flex;
 
     align-items:flex-end;
 
-    border-radius:30px;
-
-    color:white;
-
     background:
 
-        radial-gradient(
-            circle at 90% 10%,
-            rgba(48,226,127,.24),
-            transparent 30%
-        ),
+    radial-gradient(
+        circle at 90% 20%,
+        rgba(56,217,255,.12),
+        transparent 25%
+    ),
 
-        linear-gradient(
-            125deg,
-            #03100a,
-            #0b4428 58%,
-            #062015
-        );
+    radial-gradient(
+        circle at 65% 80%,
+        rgba(53,226,138,.10),
+        transparent 35%
+    ),
 
-    box-shadow:
-        0 30px 80px
-        rgba(4,32,18,.24);
-
-    margin-bottom:42px;
-}
-
-
-/* futuristic circles */
-
-.featured:before{
-
-    content:"";
-
-    position:absolute;
-
-    width:430px;
-    height:430px;
-
-    right:-180px;
-    top:-190px;
-
-    border:
-        1px solid
-        rgba(255,255,255,.10);
-
-    border-radius:50%;
+    linear-gradient(
+        135deg,
+        #0c1821,
+        #07120d
+    );
 
     box-shadow:
+    0 35px 100px rgba(0,0,0,.32);
 
-        0 0 0 55px
-        rgba(255,255,255,.018),
+    margin-bottom:50px;
 
-        0 0 0 110px
-        rgba(255,255,255,.012);
 }
 
 .featured:after{
 
-    content:"⚖";
+    content:"§";
 
     position:absolute;
 
-    right:70px;
-    bottom:-30px;
+    right:50px;
 
-    font-size:230px;
+    top:-45px;
 
-    color:
-        rgba(255,255,255,.035);
+    font-family:Georgia,serif;
 
-    font-weight:900;
+    font-size:300px;
+
+    color:rgba(255,255,255,.025);
+
 }
 
 .featured-content{
 
     position:relative;
 
-    z-index:5;
+    z-index:2;
 
-    max-width:820px;
+    max-width:780px;
+
 }
 
-.featured-label{
+.featured-tag{
 
     display:inline-flex;
 
@@ -772,137 +928,123 @@ body{
 
     gap:7px;
 
-    padding:
-        7px 11px;
+    padding:7px 11px;
 
-    border-radius:20px;
+    background:var(--green);
 
-    background:
-        var(--green2);
+    color:#031009;
 
-    color:#052113;
+    border-radius:8px;
 
     font-size:10px;
 
-    font-weight:950;
+    font-weight:1000;
 
-    letter-spacing:.8px;
-}
+    letter-spacing:1px;
 
-.featured-label:before{
-
-    content:"";
-
-    width:6px;
-    height:6px;
-
-    background:#06351d;
-
-    border-radius:50%;
 }
 
 .featured h2{
 
-    margin:
-        17px 0 14px;
+    margin:18px 0 14px;
 
     font-size:
-        clamp(28px,4vw,46px);
+    clamp(27px,4vw,48px);
 
     line-height:1.08;
 
-    letter-spacing:-1.8px;
+    letter-spacing:-2px;
+
+    color:white;
+
 }
 
-.featured p{
+.featured-summary{
 
-    margin:0;
+    color:#9babb5;
 
-    max-width:720px;
+    max-width:700px;
 
-    color:#c3d4ca;
+    line-height:1.75;
 
-    line-height:1.7;
+    font-size:14px;
 
-    font-size:15px;
 }
 
 .featured-meta{
 
     display:flex;
 
-    align-items:center;
-
     flex-wrap:wrap;
 
-    gap:10px;
+    gap:12px;
 
-    margin-top:18px;
+    margin-top:20px;
 
-    color:#9db3a6;
+    color:#70808c;
 
-    font-size:12px;
+    font-size:11px;
 
-    font-weight:700;
 }
 
-.featured-btn{
+.featured-meta strong{
+
+    color:#b7c4cc;
+
+}
+
+.featured-read{
 
     display:inline-flex;
 
     align-items:center;
 
-    gap:8px;
+    gap:10px;
 
     margin-top:22px;
 
-    padding:
-        12px 18px;
+    padding:13px 18px;
+
+    border-radius:11px;
 
     background:white;
 
-    color:#07331d;
-
-    border-radius:12px;
+    color:#07100b;
 
     text-decoration:none;
 
-    font-size:13px;
+    font-size:12px;
 
     font-weight:900;
 
     transition:.2s;
+
 }
 
-.featured-btn:hover{
+.featured-read:hover{
 
-    transform:
-        translateY(-3px);
+    transform:translateY(-3px);
 
     box-shadow:
-        0 10px 25px
-        rgba(0,0,0,.18);
+    0 10px 30px rgba(255,255,255,.12);
+
 }
 
 
 /* =========================================================
-   NEWS GRID
-========================================================= */
+   NEWS FEED
+   ========================================================= */
 
-.news-grid{
+.news-feed{
 
     display:grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+    repeat(2,1fr);
 
-    gap:20px;
+    gap:16px;
+
 }
-
-
-/* =========================================================
-   NEWS CARD
-========================================================= */
 
 .news-card{
 
@@ -911,33 +1053,36 @@ body{
     overflow:hidden;
 
     background:
-        var(--card);
+    linear-gradient(
+        145deg,
+        #0d151e,
+        #090f15
+    );
 
-    border:
-        1px solid
-        var(--border);
+    border:1px solid var(--border);
 
-    border-radius:21px;
+    border-radius:20px;
 
-    padding:23px;
+    padding:24px;
 
     transition:
-        transform .25s,
-        box-shadow .25s,
-        border-color .25s;
+
+    transform .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease;
+
 }
 
 .news-card:hover{
 
-    transform:
-        translateY(-7px);
-
-    box-shadow:
-        0 25px 55px
-        rgba(5,35,20,.12);
+    transform:translateY(-6px);
 
     border-color:
-        #cbded2;
+    rgba(53,226,138,.25);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.28);
+
 }
 
 .news-card:before{
@@ -946,248 +1091,210 @@ body{
 
     position:absolute;
 
-    top:0;
     left:0;
 
-    width:100%;
-    height:3px;
+    top:0;
+
+    width:3px;
+
+    height:100%;
 
     background:
-        linear-gradient(
-            90deg,
-            var(--green),
-            var(--green2)
-        );
+    linear-gradient(
+        to bottom,
+        var(--green),
+        var(--cyan)
+    );
 
-    transform:
-        scaleX(0);
+    transform:scaleY(0);
 
-    transform-origin:left;
+    transform-origin:top;
 
-    transition:.3s;
+    transition:.25s;
+
 }
 
 .news-card:hover:before{
-    transform:scaleX(1);
+
+    transform:scaleY(1);
+
 }
 
-
-/* newest marker */
-
-.news-card.latest{
-
-    border-color:
-        rgba(24,199,106,.32);
-
-    box-shadow:
-        0 10px 35px
-        rgba(24,199,106,.08);
-}
-
-.latest-badge{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:5px;
-
-    padding:
-        5px 8px;
-
-    border-radius:20px;
-
-    background:
-        #e4f9ec;
-
-    color:
-        #08753e;
-
-    font-size:9px;
-
-    font-weight:950;
-
-    letter-spacing:.6px;
-
-    margin-bottom:12px;
-}
-
-.latest-badge .dot{
-
-    width:5px;
-    height:5px;
-
-    background:
-        #14b961;
-
-    border-radius:50%;
-}
-
-
-/* card top */
-
-.card-top{
+.card-header{
 
     display:flex;
 
-    align-items:center;
-
     justify-content:space-between;
+
+    align-items:center;
 
     gap:10px;
 
-    margin-bottom:15px;
+    margin-bottom:17px;
+
 }
 
 .category{
 
-    padding:
-        6px 10px;
+    display:inline-flex;
 
-    border-radius:20px;
+    padding:6px 9px;
 
-    background:
-        #eaf7ef;
+    border-radius:7px;
 
-    color:
-        #08733d;
+    background:rgba(53,226,138,.07);
 
-    font-size:10px;
+    border:1px solid rgba(53,226,138,.12);
 
-    font-weight:950;
+    color:#6ce5a4;
+
+    font-size:9px;
+
+    font-weight:900;
 
     text-transform:uppercase;
 
-    letter-spacing:.4px;
+    letter-spacing:.7px;
+
 }
 
-.card-date{
+.date{
 
-    color:#89968e;
+    color:#596873;
 
-    font-size:11px;
+    font-size:10px;
 
     white-space:nowrap;
+
+}
+
+.today{
+
+    color:var(--green);
+
 }
 
 .news-card h3{
 
-    margin:
-        0 0 11px;
+    margin:0 0 12px;
+
+    color:#edf3f6;
 
     font-size:19px;
 
-    line-height:1.32;
+    line-height:1.35;
 
-    letter-spacing:-.6px;
+    letter-spacing:-.5px;
 
-    color:#102019;
 }
 
 .news-card p{
 
-    margin:
-        0 0 20px;
+    margin:0;
 
-    color:#68766e;
+    color:#7d8c97;
 
-    font-size:13.5px;
+    font-size:13px;
 
     line-height:1.7;
+
 }
 
-.card-footer{
+.card-bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+
+    border-top:1px solid var(--border);
+
+    margin-top:20px;
+
+    padding-top:15px;
+
+}
+
+.source{
+
+    color:#5d6c77;
+
+    font-size:10px;
+
+}
+
+.read-link{
+
+    color:#75dfa4;
+
+    text-decoration:none;
+
+    font-size:11px;
+
+    font-weight:900;
+
+}
+
+.read-link:hover{
+
+    color:white;
+
+}
+
+
+/* =========================================================
+   TIMELINE DATE DIVIDER
+   ========================================================= */
+
+.date-divider{
+
+    grid-column:1/-1;
 
     display:flex;
 
     align-items:center;
 
-    justify-content:space-between;
+    gap:15px;
 
-    gap:10px;
+    margin:12px 0 2px;
 
-    padding-top:15px;
-
-    border-top:
-        1px solid
-        #edf2ee;
 }
 
-.source{
+.date-divider:after{
 
-    color:#8a958f;
+    content:"";
 
-    font-size:11px;
+    height:1px;
 
-    font-weight:700;
+    flex:1;
+
+    background:var(--border);
+
 }
 
-.read{
+.date-divider span{
 
-    color:
-        var(--green-dark);
+    color:#61717d;
 
-    text-decoration:none;
+    font-size:10px;
 
-    font-size:12px;
+    font-weight:900;
 
-    font-weight:950;
-}
+    letter-spacing:1px;
 
-.read:hover{
-    text-decoration:underline;
+    text-transform:uppercase;
+
 }
 
 
 /* =========================================================
-   NO RESULTS
-========================================================= */
+   EMPTY / ERROR
+   ========================================================= */
 
 .empty{
-
-    grid-column:1/-1;
-
-    padding:
-        70px 25px;
-
-    text-align:center;
-
-    background:white;
-
-    border:
-        1px solid
-        var(--border);
-
-    border-radius:22px;
-}
-
-.empty-icon{
-
-    font-size:40px;
-
-    margin-bottom:10px;
-}
-
-.empty h3{
-
-    margin:0 0 8px;
-
-    font-size:21px;
-}
-
-.empty p{
-
-    margin:0;
-
-    color:var(--muted);
-}
-
-
-/* =========================================================
-   LOADING
-========================================================= */
-
-.loading{
 
     grid-column:1/-1;
 
@@ -1195,477 +1302,671 @@ body{
 
     padding:80px 20px;
 
-    color:#75847b;
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    background:#0b1219;
+
 }
 
-.loader{
+.empty-icon{
 
-    width:38px;
-    height:38px;
+    font-size:40px;
 
-    border:
-        3px solid
-        #dce9e1;
+    margin-bottom:12px;
 
-    border-top-color:
-        var(--green);
-
-    border-radius:50%;
-
-    margin:
-        0 auto 15px;
-
-    animation:
-        spin .8s linear infinite;
 }
 
-@keyframes spin{
+.empty h3{
 
-    to{
-        transform:rotate(360deg);
-    }
+    color:white;
+
+}
+
+.empty p{
+
+    color:var(--muted);
+
+    font-size:13px;
+
 }
 
 
 /* =========================================================
    FOOTER
-========================================================= */
+   ========================================================= */
 
-footer{
+.footer{
 
-    background:
-        #030b07;
+    border-top:1px solid var(--border);
 
-    color:#8ea298;
+    padding:55px 6%;
 
-    padding:
-        50px 20px;
+    background:#030609;
 
-    text-align:center;
 }
 
-.footer-logo{
+.footer-grid{
+
+    width:min(1180px,100%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    1.4fr
+    1fr
+    1fr;
+
+    gap:50px;
+
+}
+
+.footer-brand{
 
     color:white;
 
     font-size:24px;
 
-    font-weight:950;
+    font-weight:900;
+
 }
 
-.footer-logo span{
-    color:var(--green2);
+.footer-brand span{
+
+    color:var(--green);
+
 }
 
-footer p{
+.footer p{
 
-    margin:
-        10px 0 0;
+    color:#63717c;
 
     font-size:12px;
 
-    line-height:1.7;
+    line-height:1.8;
+
+    max-width:420px;
+
 }
 
-.footer-line{
+.footer h4{
 
-    width:60px;
-    height:2px;
+    color:white;
 
-    margin:25px auto;
+    margin:0 0 15px;
 
-    background:
-        var(--green);
+    font-size:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+.footer-list{
+
+    color:#65737e;
+
+    font-size:12px;
+
+    line-height:2;
+
+}
+
+.footer-bottom{
+
+    width:min(1180px,100%);
+
+    margin:40px auto 0;
+
+    padding-top:20px;
+
+    border-top:1px solid var(--border);
+
+    color:#4f5c66;
+
+    font-size:10px;
+
+    display:flex;
+
+    justify-content:space-between;
+
 }
 
 
 /* =========================================================
    RESPONSIVE
-========================================================= */
+   ========================================================= */
 
-@media(max-width:1000px){
+@media(max-width:900px){
+
+    .intelligence{
+
+        grid-template-columns:
+        1fr 1fr;
+
+    }
+
+    .metric:first-child{
+
+        grid-column:1/-1;
+
+    }
 
     .toolbar{
 
         flex-direction:column;
 
         align-items:stretch;
+
     }
 
-    .news-grid{
+    .news-feed{
 
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:1fr;
+
     }
+
+    .footer-grid{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
 }
 
+@media(max-width:600px){
 
-@media(max-width:650px){
+    .nav{
 
-    .topbar{
+        padding:0 5%;
 
-        height:65px;
-
-        padding:
-            0 5%;
     }
 
-    .logo{
-        font-size:22px;
-    }
+    .live-indicator{
 
-    .live-status{
         display:none;
+
     }
 
     .hero{
 
-        min-height:440px;
+        min-height:470px;
 
-        padding:
-            70px 6%
-            105px;
+        padding:80px 5% 120px;
+
     }
 
     .hero h1{
 
-        font-size:
-            clamp(48px,15vw,70px);
-
         letter-spacing:-4px;
+
     }
 
-    .hero-description{
-
-        font-size:15px;
-    }
-
-    .container{
+    .main{
 
         width:92%;
 
-        margin-top:-45px;
+    }
+
+    .intelligence{
+
+        grid-template-columns:1fr 1fr;
+
+        border-radius:18px;
+
+    }
+
+    .metric{
+
+        padding:18px;
+
+    }
+
+    .metric-value{
+
+        font-size:25px;
+
     }
 
     .featured{
 
-        padding:29px;
+        padding:28px;
 
-        min-height:450px;
+        min-height:470px;
+
+        border-radius:22px;
+
     }
 
     .featured:after{
 
-        right:-20px;
+        font-size:190px;
 
-        font-size:160px;
+        right:-10px;
+
     }
 
-    .news-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .section-heading{
+    .heading{
 
         display:block;
+
     }
 
-    .result-count{
+    .sort-label{
 
         display:block;
 
         margin-top:10px;
+
     }
 
-    .home-btn{
+    .footer-grid{
 
-        padding:
-            8px 12px;
+        grid-template-columns:1fr;
 
-        font-size:11px;
     }
+
+    .footer-bottom{
+
+        display:block;
+
+        line-height:2;
+
+    }
+
 }
 
-</style>
 
-</head>
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
 
+@media(prefers-reduced-motion:reduce){
 
-<body>
+    *,
+    *:before,
+    *:after{
 
+        animation:none !important;
 
-<!-- =======================================================
+        transition:none !important;
+
+    }
+
+}
+
+</style></head><body><!-- =====================================================
      NAVIGATION
-======================================================== -->
+     ===================================================== --><nav class="nav"><a href="index.html" class="brand">
 
-<nav class="topbar">
-
-    <div class="logo">
-        pendico<span>.</span>
+    <div class="brand-mark">
+        ⚖
     </div>
 
-    <div class="nav-right">
+    pendico<span>.</span>
 
-        <div class="live-status">
+</a>
 
-            <span class="live-dot"></span>
 
-            LIVE LEGAL FEED
+<div class="nav-right">
 
-        </div>
+    <div class="live-indicator">
 
-        <a
-            href="index.html"
-            class="home-btn"
-        >
-            ← Home
-        </a>
+        <span class="live-dot"></span>
+
+        LEGAL INTELLIGENCE
 
     </div>
 
-</nav>
+    <a href="index.html" class="home">
+        ← Home
+    </a>
 
+</div>
 
-<!-- =======================================================
+</nav><!-- =====================================================
+     BREAKING TICKER
+     ===================================================== --><div class="ticker"><div class="ticker-label">
+    ⚡ LIVE FEED
+</div>
+
+<div id="tickerTrack" class="ticker-track">
+
+    Loading latest legal developments...
+
+</div>
+
+</div><!-- =====================================================
      HERO
-======================================================== -->
+     ===================================================== --><section class="hero"><div class="hero-orb"></div>
+<div class="hero-orb2"></div>
 
-<section class="hero">
+<div class="hero-content">
 
-    <div class="hero-content">
+    <div class="system-label">
 
-        <div class="eyebrow">
-
-            ⚖ INDIA'S LEGAL INFORMATION PORTAL
-
-        </div>
-
-        <h1>
-
-            Legal
-            <span>News.</span>
-
-        </h1>
-
-        <p class="hero-description">
-
-            Track the latest developments across India's
-            Supreme Court, High Courts, legislation,
-            judicial appointments, legal profession,
-            constitutional law and legal technology.
-
-        </p>
-
-        <div class="hero-stats">
-
-            <div class="hero-stat">
-                <strong id="totalNews">
-                    —
-                </strong>
-                Stories
-            </div>
-
-            <div class="hero-stat">
-                Updated
-                <strong id="lastUpdated">
-                    —
-                </strong>
-            </div>
-
-            <div class="hero-stat">
-                Sorted
-                <strong>
-                    Latest First
-                </strong>
-            </div>
-
-        </div>
+        ◉ INDIA LEGAL INTELLIGENCE NETWORK
 
     </div>
 
-</section>
+    <h1>
+
+        Know the law.
+        <span>Before it matters.</span>
+
+    </h1>
+
+    <p class="hero-description">
+
+        A continuously updated legal-news intelligence
+        layer covering the Supreme Court, High Courts,
+        legislation, constitutional developments,
+        judicial appointments, legal technology and
+        the profession.
+
+    </p>
 
 
-<!-- =======================================================
-     MAIN
-======================================================== -->
+    <div class="hero-status">
 
-<main class="container">
+        <div class="status-box">
+            <strong id="heroCount">0</strong>
+            stories indexed
+        </div>
 
+        <div class="status-box">
+            <strong id="heroDate">—</strong>
+            latest update
+        </div>
 
-<!-- =======================================================
-     SEARCH / FILTER
-======================================================== -->
-
-<div class="toolbar">
-
-    <div class="search-box">
-
-        <span class="search-icon">
-            🔎
-        </span>
-
-        <input
-            id="search"
-            class="search"
-            type="text"
-            autocomplete="off"
-            placeholder="Search cases, courts, legislation, lawyers..."
-        >
-
-    </div>
-
-
-    <div class="filters">
-
-        <button
-            class="active"
-            onclick="filterNews('All',this)"
-        >
-            All
-        </button>
-
-        <button
-            onclick="filterNews('Supreme Court',this)"
-        >
-            Supreme Court
-        </button>
-
-        <button
-            onclick="filterNews('High Court',this)"
-        >
-            High Courts
-        </button>
-
-        <button
-            onclick="filterNews('Legal Profession',this)"
-        >
-            Profession
-        </button>
-
-        <button
-            onclick="filterNews('Law & Policy',this)"
-        >
-            Law & Policy
-        </button>
-
-        <button
-            onclick="filterNews('Legal Technology',this)"
-        >
-            Legal Tech
-        </button>
+        <div class="status-box">
+            <strong>INDIA</strong>
+            jurisdiction
+        </div>
 
     </div>
 
 </div>
 
+</section><!-- =====================================================
+     MAIN
+     ===================================================== --><main class="main"><!-- =====================================================
+     INTELLIGENCE METRICS
+     ===================================================== --><section class="intelligence"><div class="metric">
 
-<!-- =======================================================
+    <div class="metric-label">
+        News Intelligence
+    </div>
+
+    <div class="metric-value"
+         id="totalNews">
+        —
+    </div>
+
+    <div class="metric-sub">
+        indexed legal developments
+    </div>
+
+</div>
+
+
+<div class="metric">
+
+    <div class="metric-label">
+        Today
+    </div>
+
+    <div class="metric-value"
+         id="todayNews">
+        —
+    </div>
+
+    <div class="metric-sub">
+        latest stories
+    </div>
+
+</div>
+
+
+<div class="metric">
+
+    <div class="metric-label">
+        Categories
+    </div>
+
+    <div class="metric-value"
+         id="categoryCount">
+        —
+    </div>
+
+    <div class="metric-sub">
+        areas of law
+    </div>
+
+</div>
+
+</section><!-- =====================================================
+     SEARCH
+     ===================================================== --><section class="toolbar"><div class="search">
+
+    <span class="search-icon">
+        ⌕
+    </span>
+
+    <input
+        id="search"
+        type="search"
+        placeholder="Search judgments, courts, legislation, lawyers..."
+        autocomplete="off"
+    >
+
+</div>
+
+
+<div class="filters">
+
+    <button
+        class="active"
+        onclick="setCategory('All',this)">
+        All
+    </button>
+
+    <button
+        onclick="setCategory('Supreme Court',this)">
+        Supreme Court
+    </button>
+
+    <button
+        onclick="setCategory('High Court',this)">
+        High Courts
+    </button>
+
+    <button
+        onclick="setCategory('Madras High Court',this)">
+        Madras
+    </button>
+
+    <button
+        onclick="setCategory('Legal Profession',this)">
+        Profession
+    </button>
+
+    <button
+        onclick="setCategory('Constitutional Law',this)">
+        Constitutional
+    </button>
+
+    <button
+        onclick="setCategory('Law & Policy',this)">
+        Policy
+    </button>
+
+    <button
+        onclick="setCategory('Legal Technology',this)">
+        Legal Tech
+    </button>
+
+</div>
+
+</section><!-- =====================================================
      FEATURED
-======================================================== -->
+     ===================================================== --><div id="featured"></div><!-- =====================================================
+     HEADING
+     ===================================================== --><div class="heading"><div>
 
-<div id="featured"></div>
+    <h2>
+        Latest Intelligence
+    </h2>
 
+    <p>
+        Automatically arranged from newest to oldest.
+    </p>
 
-<!-- =======================================================
-     SECTION HEADER
-======================================================== -->
+</div>
 
-<div class="section-heading">
+<div class="sort-label">
+    Chronological feed ↓
+</div>
+
+</div><!-- =====================================================
+     NEWS FEED
+     ===================================================== --><section
+    id="newsContainer"
+    class="news-feed"><div class="empty">
+
+    <div class="empty-icon">
+        ◌
+    </div>
+
+    <h3>
+        Loading legal intelligence
+    </h3>
+
+    <p>
+        Connecting to the Pendico news database...
+    </p>
+
+</div>
+
+</section></main><!-- =====================================================
+     FOOTER
+     ===================================================== --><footer class="footer"><div class="footer-grid">
+
 
     <div>
 
-        <div class="heading-label">
-            LIVE INTELLIGENCE
+        <div class="footer-brand">
+            pendico<span>.</span>
         </div>
 
-        <h2>
-            Latest Legal Developments
-        </h2>
-
         <p>
-            India's legal landscape, arranged chronologically.
+
+            An independent legal information
+            platform designed to make Indian
+            law, judgments, legislation and
+            legal developments easier to discover.
+
         </p>
 
     </div>
 
-    <div
-        id="resultCount"
-        class="result-count"
-    >
-        Loading...
+
+    <div>
+
+        <h4>
+            Coverage
+        </h4>
+
+        <div class="footer-list">
+
+            Supreme Court<br>
+            High Courts<br>
+            Legislation<br>
+            Constitutional Law<br>
+            Legal Profession<br>
+            Legal Technology
+
+        </div>
+
+    </div>
+
+
+    <div>
+
+        <h4>
+            Information
+        </h4>
+
+        <div class="footer-list">
+
+            News is provided for
+            informational and educational
+            purposes.<br>
+
+            Verify important legal developments
+            with the original source.
+
+        </div>
+
     </div>
 
 </div>
 
 
-<!-- =======================================================
-     NEWS
-======================================================== -->
+<div class="footer-bottom">
 
-<div
-    id="newsContainer"
-    class="news-grid"
->
+    <span>
+        © 2026 Pendico
+    </span>
 
-    <div class="loading">
-
-        <div class="loader"></div>
-
-        Loading legal intelligence...
-
-    </div>
-
-</div>
-
-
-</main>
-
-
-<!-- =======================================================
-     FOOTER
-======================================================== -->
-
-<footer>
-
-    <div class="footer-logo">
-        pendico<span>.</span>
-    </div>
-
-    <div class="footer-line"></div>
-
-    <p>
+    <span>
         Indian Legal Information Portal
-    </p>
+    </span>
 
-    <p>
-        Case Laws • Bare Acts • Legal News • Legal Knowledge
-    </p>
+</div>
 
-    <p>
-        © 2026 Pendico. All rights reserved.
-    </p>
-
-</footer>
-
-
-<script>
+</footer><script>
 
 /* =========================================================
-   PENDICO LEGAL NEWS ENGINE
+   PENDICO NEWS ENGINE
+   =========================================================
 
    IMPORTANT:
-   Future news can simply be added to:
 
-   data/legalnews.json
+   Future news only needs to be added to:
+
+       data/legalnews.json
 
    No HTML modification is required.
 
-   The system automatically sorts:
+   Every news object should contain:
 
-   NEWEST → OLDEST
-========================================================= */
+   {
+       "title": "...",
+       "summary": "...",
+       "category": "...",
+       "date": "YYYY-MM-DD",
+       "source": "...",
+       "url": "..."
+   }
+
+   The engine automatically:
+
+   ✓ sorts newest → oldest
+   ✓ identifies today's news
+   ✓ generates featured story
+   ✓ updates ticker
+   ✓ calculates statistics
+   ✓ supports search
+   ✓ supports category filtering
+   ✓ creates date dividers
+   ✓ handles future additions
+
+   ========================================================= */
 
 
 let newsData = [];
@@ -1676,129 +1977,156 @@ let currentSearch = "";
 
 
 /* =========================================================
-   LOAD JSON
-========================================================= */
+   DATE UTILITIES
+   ========================================================= */
 
-fetch("data/legalnews.json")
+function parseDate(date){
 
-.then(response => {
+    const parts =
+        String(date).split("-");
 
-    if(!response.ok){
+    return new Date(
+        Number(parts[0]),
+        Number(parts[1]) - 1,
+        Number(parts[2])
+    );
 
-        throw new Error(
-            "Unable to load legalnews.json"
-        );
+}
 
+
+function formatDate(date){
+
+    if(!date){
+        return "—";
     }
 
-    return response.json();
+    const d = parseDate(date);
 
-})
+    return d.toLocaleDateString(
+        "en-IN",
+        {
+            day:"2-digit",
+            month:"short",
+            year:"numeric"
+        }
+    );
 
-.then(data => {
-
-    if(!Array.isArray(data)){
-
-        throw new Error(
-            "legalnews.json must contain an array."
-        );
-
-    }
-
-
-    /*
-       CLEAN + SORT DATA
-
-       This is the important part.
-
-       You can add news in ANY order
-       inside JSON.
-
-       Pendico automatically sorts it.
-    */
-
-    newsData = data
-
-        .filter(news =>
-            news &&
-            news.title &&
-            news.date
-        )
-
-        .sort((a,b) => {
-
-            return (
-                new Date(b.date)
-                -
-                new Date(a.date)
-            );
-
-        });
+}
 
 
-    updateStats();
+function isToday(date){
 
-    displayFeatured(newsData);
+    const now = new Date();
 
-    displayNews(newsData);
+    const d = parseDate(date);
 
+    return (
 
-})
+        d.getFullYear() === now.getFullYear() &&
 
-.catch(error => {
+        d.getMonth() === now.getMonth() &&
 
-    console.error(error);
+        d.getDate() === now.getDate()
 
-    document.getElementById(
-        "newsContainer"
-    ).innerHTML = `
+    );
 
-        <div class="empty">
-
-            <div class="empty-icon">
-                ⚠️
-            </div>
-
-            <h3>
-                Legal news unavailable
-            </h3>
-
-            <p>
-                Please check
-                data/legalnews.json
-            </p>
-
-        </div>
-
-    `;
-
-    document.getElementById(
-        "resultCount"
-    ).textContent = "Feed unavailable";
-
-});
+}
 
 
 /* =========================================================
-   UPDATE STATISTICS
-========================================================= */
+   LOAD JSON
+   ========================================================= */
 
-function updateStats(){
+async function loadNews(){
 
-    document.getElementById(
-        "totalNews"
-    ).textContent =
-        newsData.length;
+    try{
+
+        const response =
+            await fetch(
+                "data/legalnews.json",
+                {
+                    cache:"no-store"
+                }
+            );
 
 
-    if(newsData.length){
+        if(!response.ok){
+
+            throw new Error(
+                "News database returned HTTP " +
+                response.status
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        if(!Array.isArray(data)){
+
+            throw new Error(
+                "legalnews.json must contain an array."
+            );
+
+        }
+
+
+        newsData = data
+
+            .filter(
+                item =>
+                    item &&
+                    item.title &&
+                    item.date
+            )
+
+            .sort(
+                (a,b) =>
+                    parseDate(b.date) -
+                    parseDate(a.date)
+            );
+
+
+        updateStatistics();
+
+        updateTicker();
+
+        displayFeatured();
+
+        renderNews();
+
+
+    }catch(error){
+
+        console.error(error);
 
         document.getElementById(
-            "lastUpdated"
-        ).textContent =
-            formatDate(
-                newsData[0].date
-            );
+            "newsContainer"
+        ).innerHTML = `
+
+            <div class="empty">
+
+                <div class="empty-icon">
+                    ⚠
+                </div>
+
+                <h3>
+                    News database unavailable
+                </h3>
+
+                <p>
+                    Check that
+                    <strong>
+                    data/legalnews.json
+                    </strong>
+                    exists and contains valid JSON.
+                </p>
+
+            </div>
+
+        `;
 
     }
 
@@ -1806,98 +2134,229 @@ function updateStats(){
 
 
 /* =========================================================
-   FEATURED STORY
+   STATISTICS
+   ========================================================= */
 
-   Always selects the newest article.
-========================================================= */
+function updateStatistics(){
 
-function displayFeatured(data){
+    const total =
+        newsData.length;
 
-    const featured =
-        document.getElementById(
-            "featured"
+
+    const today =
+        newsData.filter(
+            news => isToday(news.date)
+        ).length;
+
+
+    const categories =
+        new Set(
+            newsData.map(
+                news => news.category
+            )
         );
 
 
-    if(!data.length){
+    document.getElementById(
+        "totalNews"
+    ).textContent = total;
 
-        featured.innerHTML = "";
+
+    document.getElementById(
+        "todayNews"
+    ).textContent = today;
+
+
+    document.getElementById(
+        "categoryCount"
+    ).textContent =
+        categories.size;
+
+
+    document.getElementById(
+        "heroCount"
+    ).textContent =
+        total;
+
+
+    document.getElementById(
+        "heroDate"
+    ).textContent =
+        newsData.length
+        ? formatDate(newsData[0].date)
+        : "—";
+
+}
+
+
+/* =========================================================
+   TICKER
+   ========================================================= */
+
+function updateTicker(){
+
+    const ticker =
+        document.getElementById(
+            "tickerTrack"
+        );
+
+
+    if(!newsData.length){
+
+        ticker.textContent =
+            "No legal developments available.";
 
         return;
 
     }
 
 
-    /*
-       IMPORTANT:
-
-       data is already sorted.
-       Therefore [0] is always newest.
-    */
-
-    const news = data[0];
+    const latest =
+        newsData.slice(0,12);
 
 
-    featured.innerHTML = `
+    ticker.innerHTML =
+        latest.map(
+            news => `
+
+                <span>
+
+                    <b>
+                        ${escapeHTML(
+                            news.category || "LEGAL"
+                        )}
+                    </b>
+
+                    &nbsp;—&nbsp;
+
+                    ${escapeHTML(
+                        news.title
+                    )}
+
+                </span>
+
+            `
+        ).join("");
+
+}
+
+
+/* =========================================================
+   FEATURED STORY
+   ========================================================= */
+
+function displayFeatured(){
+
+    const container =
+        document.getElementById(
+            "featured"
+        );
+
+
+    if(!newsData.length){
+
+        container.innerHTML = "";
+
+        return;
+
+    }
+
+
+    const news =
+        newsData[0];
+
+
+    container.innerHTML = `
 
         <article class="featured">
 
             <div class="featured-content">
 
-                <span class="featured-label">
+                <div class="featured-tag">
 
-                    LATEST STORY
+                    ⚡
+                    ${isToday(news.date)
+                        ? "BREAKING / TODAY"
+                        : "LATEST DEVELOPMENT"}
 
-                </span>
+                </div>
+
 
                 <h2>
 
-                    ${escapeHTML(news.title)}
+                    ${escapeHTML(
+                        news.title
+                    )}
 
                 </h2>
 
-                <p>
 
-                    ${escapeHTML(news.summary || "")}
+                <p class="featured-summary">
+
+                    ${escapeHTML(
+                        news.summary ||
+                        "Latest legal development."
+                    )}
 
                 </p>
+
 
                 <div class="featured-meta">
 
                     <span>
-                        ${escapeHTML(news.category || "Legal News")}
+
+                        <strong>
+                            ${escapeHTML(
+                                news.category ||
+                                "Legal"
+                            )}
+                        </strong>
+
                     </span>
 
                     <span>•</span>
 
                     <span>
-                        ${formatDate(news.date)}
+
+                        ${formatDate(
+                            news.date
+                        )}
+
                     </span>
 
                     <span>•</span>
 
                     <span>
-                        ${escapeHTML(news.source || "Source")}
+
+                        ${escapeHTML(
+                            news.source ||
+                            "Source"
+                        )}
+
                     </span>
 
                 </div>
 
-                ${
-                    news.url
-                    ?
-                    `
-                    <a
-                        href="${escapeAttribute(news.url)}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="featured-btn"
-                    >
-                        Read Full Story →
-                    </a>
-                    `
-                    :
-                    ""
-                }
+
+                <a
+
+                    href="${safeURL(
+                        news.url
+                    )}"
+
+                    target="_blank"
+
+                    rel="noopener noreferrer"
+
+                    class="featured-read"
+
+                >
+
+                    Read original report
+
+                    <span>↗</span>
+
+                </a>
 
             </div>
 
@@ -1909,10 +2368,91 @@ function displayFeatured(data){
 
 
 /* =========================================================
-   DISPLAY NEWS
-========================================================= */
+   FILTER DATA
+   ========================================================= */
 
-function displayNews(data){
+function getFilteredNews(){
+
+    let result =
+        [...newsData];
+
+
+    if(currentCategory !== "All"){
+
+        result =
+            result.filter(
+                news =>
+                    news.category ===
+                    currentCategory
+            );
+
+    }
+
+
+    if(currentSearch){
+
+        const q =
+            currentSearch.toLowerCase();
+
+
+        result =
+            result.filter(
+                news => {
+
+                    return (
+
+                        String(
+                            news.title || ""
+                        )
+                        .toLowerCase()
+                        .includes(q)
+
+                        ||
+
+                        String(
+                            news.summary || ""
+                        )
+                        .toLowerCase()
+                        .includes(q)
+
+                        ||
+
+                        String(
+                            news.category || ""
+                        )
+                        .toLowerCase()
+                        .includes(q)
+
+                        ||
+
+                        String(
+                            news.source || ""
+                        )
+                        .toLowerCase()
+                        .includes(q)
+
+                    );
+
+                }
+            );
+
+    }
+
+
+    return result.sort(
+        (a,b) =>
+            parseDate(b.date) -
+            parseDate(a.date)
+    );
+
+}
+
+
+/* =========================================================
+   RENDER NEWS
+   ========================================================= */
+
+function renderNews(){
 
     const container =
         document.getElementById(
@@ -1920,112 +2460,25 @@ function displayNews(data){
         );
 
 
+    const data =
+        getFilteredNews();
+
+
     container.innerHTML = "";
 
 
-    /*
-       Apply category
-    */
-
-    let filtered = data.filter(news => {
-
-        if(
-            currentCategory !== "All" &&
-            news.category !== currentCategory
-        ){
-
-            return false;
-
-        }
-
-        return true;
-
-    });
-
-
-    /*
-       Apply search
-    */
-
-    if(currentSearch){
-
-        const keyword =
-            currentSearch.toLowerCase();
-
-
-        filtered = filtered.filter(news => {
-
-            return (
-
-                String(
-                    news.title || ""
-                )
-                .toLowerCase()
-                .includes(keyword)
-
-                ||
-
-                String(
-                    news.summary || ""
-                )
-                .toLowerCase()
-                .includes(keyword)
-
-                ||
-
-                String(
-                    news.category || ""
-                )
-                .toLowerCase()
-                .includes(keyword)
-
-                ||
-
-                String(
-                    news.source || ""
-                )
-                .toLowerCase()
-                .includes(keyword)
-
-            );
-
-        });
-
-    }
-
-
-    /*
-       Update result counter
-    */
-
-    document.getElementById(
-        "resultCount"
-    ).textContent =
-
-        filtered.length +
-        (
-            filtered.length === 1
-            ? " story"
-            : " stories"
-        );
-
-
-    /*
-       Empty result
-    */
-
-    if(!filtered.length){
+    if(!data.length){
 
         container.innerHTML = `
 
             <div class="empty">
 
                 <div class="empty-icon">
-                    🔎
+                    ⌕
                 </div>
 
                 <h3>
-                    No legal news found
+                    No matching legal developments
                 </h3>
 
                 <p>
@@ -2041,64 +2494,102 @@ function displayNews(data){
     }
 
 
-    /*
-       Render cards
-    */
-
-    filtered.forEach((news,index) => {
+    let previousDate = null;
 
 
-        /*
-           Determine whether this
-           is the newest article.
-        */
-
-        const isNewest =
-            newsData.length &&
-            news.date === newsData[0].date &&
-            news.title === newsData[0].title;
+    data.forEach(
+        (news,index) => {
 
 
-        container.innerHTML += `
+            /*
+             * Show date separator whenever
+             * the calendar date changes.
+             */
 
-            <article
-                class="news-card
-                ${isNewest ? "latest" : ""}"
-            >
+            if(news.date !== previousDate){
 
-                ${
-                    isNewest
-                    ?
-                    `
-                    <div class="latest-badge">
+                const divider =
+                    document.createElement(
+                        "div"
+                    );
 
-                        <span class="dot"></span>
-
-                        LATEST UPDATE
-
-                    </div>
-                    `
-                    :
-                    ""
-                }
+                divider.className =
+                    "date-divider";
 
 
-                <div class="card-top">
+                divider.innerHTML = `
+
+                    <span>
+
+                        ${isToday(news.date)
+                            ? "TODAY"
+                            : formatDate(news.date)}
+
+                    </span>
+
+                `;
+
+
+                container.appendChild(
+                    divider
+                );
+
+
+                previousDate =
+                    news.date;
+
+            }
+
+
+            /*
+             * Don't repeat the first story
+             * in the general feed when viewing
+             * the complete All category.
+             */
+
+            if(
+                index === 0 &&
+                currentCategory === "All" &&
+                !currentSearch
+            ){
+
+                return;
+
+            }
+
+
+            const article =
+                document.createElement(
+                    "article"
+                );
+
+
+            article.className =
+                "news-card";
+
+
+            article.innerHTML = `
+
+                <div class="card-header">
 
                     <span class="category">
 
                         ${escapeHTML(
                             news.category ||
-                            "Legal News"
+                            "Legal"
                         )}
 
                     </span>
 
-                    <span class="card-date">
 
-                        ${relativeDate(
-                            news.date
-                        )}
+                    <span class="date
+                        ${isToday(news.date)
+                            ? "today"
+                            : ""}">
+
+                        ${isToday(news.date)
+                            ? "TODAY"
+                            : formatDate(news.date)}
 
                     </span>
 
@@ -2117,13 +2608,14 @@ function displayNews(data){
                 <p>
 
                     ${escapeHTML(
-                        news.summary || ""
+                        news.summary ||
+                        ""
                     )}
 
                 </p>
 
 
-                <div class="card-footer">
+                <div class="card-bottom">
 
                     <span class="source">
 
@@ -2135,146 +2627,33 @@ function displayNews(data){
                     </span>
 
 
-                    ${
-                        news.url
-                        ?
-                        `
-                        <a
-                            href="${escapeAttribute(news.url)}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="read"
-                        >
-                            Read →
-                        </a>
-                        `
-                        :
-                        `
-                        <span class="read">
-                            Details →
-                        </span>
-                        `
-                    }
+                    <a
+
+                        href="${safeURL(
+                            news.url
+                        )}"
+
+                        target="_blank"
+
+                        rel="noopener noreferrer"
+
+                        class="read-link"
+
+                    >
+
+                        Read source ↗
+
+                    </a>
 
                 </div>
 
-            </article>
-
-        `;
-
-    });
-
-}
+            `;
 
 
-/* =========================================================
-   SEARCH
-========================================================= */
-
-document
-.getElementById("search")
-.addEventListener(
-    "input",
-    function(){
-
-        currentSearch =
-            this.value.trim();
-
-
-        displayNews(newsData);
-
-    }
-);
-
-
-/* =========================================================
-   FILTER
-========================================================= */
-
-function filterNews(category,button){
-
-    currentCategory =
-        category;
-
-
-    document
-    .querySelectorAll(
-        ".filters button"
-    )
-    .forEach(btn => {
-
-        btn.classList.remove(
-            "active"
-        );
-
-    });
-
-
-    button.classList.add(
-        "active"
-    );
-
-
-    /*
-       If filtering is active,
-       don't show unrelated featured story.
-    */
-
-    if(category === "All"){
-
-        displayFeatured(
-            newsData
-        );
-
-    }
-
-    else{
-
-        const categoryNews =
-            newsData.filter(
-                news =>
-                    news.category ===
-                    category
+            container.appendChild(
+                article
             );
 
-
-        displayFeatured(
-            categoryNews
-        );
-
-    }
-
-
-    displayNews(
-        newsData
-    );
-
-}
-
-
-/* =========================================================
-   DATE FORMAT
-========================================================= */
-
-function formatDate(dateString){
-
-    const date =
-        new Date(dateString);
-
-
-    if(isNaN(date)){
-
-        return dateString;
-
-    }
-
-
-    return date.toLocaleDateString(
-        "en-IN",
-        {
-            day:"numeric",
-            month:"short",
-            year:"numeric"
         }
     );
 
@@ -2282,168 +2661,161 @@ function formatDate(dateString){
 
 
 /* =========================================================
-   RELATIVE DATE
+   CATEGORY
+   ========================================================= */
 
-   Example:
+function setCategory(
+    category,
+    button
+){
 
-   Today
-   Yesterday
-   3 days ago
-   12 Aug 2026
-========================================================= */
-
-function relativeDate(dateString){
-
-    const date =
-        new Date(dateString);
-
-    const now =
-        new Date();
+    currentCategory =
+        category;
 
 
-    date.setHours(0,0,0,0);
-
-    now.setHours(0,0,0,0);
-
-
-    const difference =
-        Math.floor(
-            (now - date)
-            /
-            (1000 * 60 * 60 * 24)
+    document
+        .querySelectorAll(
+            ".filters button"
+        )
+        .forEach(
+            btn =>
+                btn.classList.remove(
+                    "active"
+                )
         );
 
 
-    if(difference === 0){
-
-        return "Today";
-
-    }
-
-
-    if(difference === 1){
-
-        return "Yesterday";
-
-    }
-
-
-    if(
-        difference > 1 &&
-        difference < 7
-    ){
-
-        return difference +
-            " days ago";
-
-    }
-
-
-    return formatDate(
-        dateString
+    button.classList.add(
+        "active"
     );
+
+
+    renderNews();
 
 }
 
 
 /* =========================================================
-   SECURITY HELPERS
+   SEARCH
+   ========================================================= */
 
-   Prevents JSON text from accidentally
-   being interpreted as HTML.
-========================================================= */
+document
+    .getElementById("search")
+    .addEventListener(
+        "input",
+        function(){
+
+            currentSearch =
+                this.value.trim();
+
+
+            renderNews();
+
+        }
+    );
+
+
+/* =========================================================
+   BASIC HTML SAFETY
+   ========================================================= */
 
 function escapeHTML(value){
 
-    return String(value)
-        .replace(/&/g,"&amp;")
-        .replace(/</g,"&lt;")
-        .replace(/>/g,"&gt;")
-        .replace(/"/g,"&quot;")
-        .replace(/'/g,"&#039;");
+    return String(value ?? "")
 
-}
+        .replace(
+            /&/g,
+            "&amp;"
+        )
 
+        .replace(
+            /</g,
+            "&lt;"
+        )
 
-function escapeAttribute(value){
+        .replace(
+            />/g,
+            "&gt;"
+        )
 
-    return String(value)
-        .replace(/"/g,"&quot;")
-        .replace(/'/g,"&#039;");
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
 
 }
 
 
 /* =========================================================
-   AUTOMATIC REFRESH
+   URL SAFETY
+   ========================================================= */
 
-   Checks the JSON again every 10 minutes.
+function safeURL(url){
 
-   NOTE:
-   Browser cache may sometimes keep an old JSON file.
+    if(!url){
 
-   cache-busting timestamp forces a fresh request.
-========================================================= */
+        return "#";
 
-setInterval(() => {
-
-    fetch(
-        "data/legalnews.json?v=" +
-        Date.now()
-    )
-
-    .then(response => response.json())
-
-    .then(data => {
-
-        newsData = data
-
-            .filter(news =>
-                news &&
-                news.title &&
-                news.date
-            )
-
-            .sort((a,b) =>
-                new Date(b.date)
-                -
-                new Date(a.date)
-            );
+    }
 
 
-        updateStats();
+    try{
 
-        displayFeatured(
-            currentCategory === "All"
-            ?
-            newsData
-            :
-            newsData.filter(
-                news =>
-                    news.category ===
-                    currentCategory
-            )
+        const parsed =
+            new URL(url);
+
+
+        if(
+            parsed.protocol ===
+                "https:" ||
+
+            parsed.protocol ===
+                "http:"
+        ){
+
+            return parsed.href;
+
+        }
+
+    }catch(e){
+
+        console.warn(
+            "Invalid news URL:",
+            url
         );
 
-        displayNews(
-            newsData
-        );
-
-    })
-
-    .catch(error => {
-
-        console.log(
-            "Automatic news refresh failed:",
-            error
-        );
-
-    });
-
-}, 10 * 60 * 1000);
+    }
 
 
-</script>
+    return "#";
 
-</body>
+}
+
+
+/* =========================================================
+   INITIALIZE
+   ========================================================= */
+
+loadNews();
+
+
+/*
+ * Optional lightweight refresh.
+ *
+ * If you update the JSON while the page
+ * is open, the browser can refresh the
+ * news feed automatically.
+ */
+
+setInterval(
+    loadNews,
+    10 * 60 * 1000
+);
+
+</script></body>
 </html>
