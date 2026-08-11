@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pendico | Legal News</title>
+<title>Pendico | Legal Intelligence</title>
+
+<meta name="description"
+content="Pendico Legal Intelligence — latest Indian legal news, Supreme Court developments, High Court decisions, legislation and legal profession updates.">
 
 <style>
 
 :root{
-    --green:#0b6b3a;
-    --green2:#13a15c;
-    --dark:#071b12;
-    --text:#17251d;
-    --muted:#718078;
-    --bg:#f4f7f5;
-    --white:#ffffff;
-    --border:#e4ebe7;
+    --bg:#050806;
+    --bg2:#08100b;
+    --panel:#0c1510;
+    --panel2:#101b15;
+
+    --green:#23e67b;
+    --green2:#0ea95a;
+    --green3:#8affba;
+
+    --white:#f5faf7;
+    --text:#dce8e1;
+    --muted:#82958b;
+    --line:rgba(255,255,255,.09);
+
+    --red:#ff5b5b;
+    --gold:#f5c451;
+
+    --max:1250px;
 }
 
 *{
@@ -29,729 +43,1994 @@ html{
 
 body{
     margin:0;
-    font-family:Inter,Arial,Helvetica,sans-serif;
-    background:var(--bg);
+    background:
+        radial-gradient(circle at 15% 10%,rgba(35,230,123,.07),transparent 28%),
+        radial-gradient(circle at 85% 30%,rgba(35,230,123,.05),transparent 25%),
+        var(--bg);
+
     color:var(--text);
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    overflow-x:hidden;
 }
 
 
-/* ================= HEADER ================= */
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
 
-.topbar{
+body:before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.25;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+
+    background-size:55px 55px;
+
+    mask-image:linear-gradient(
+        to bottom,
+        black,
+        transparent 75%
+    );
+
+    z-index:-1;
+}
+
+
+/* =========================================================
+   TOP NAV
+========================================================= */
+
+.nav{
+
     position:sticky;
+
     top:0;
+
     z-index:1000;
 
+    height:72px;
+
     display:flex;
-    justify-content:space-between;
+
     align-items:center;
 
-    padding:18px 7%;
+    justify-content:space-between;
 
-    background:rgba(7,27,18,0.92);
-    backdrop-filter:blur(18px);
+    padding:0 5%;
 
-    border-bottom:1px solid rgba(255,255,255,0.08);
+    background:rgba(5,8,6,.82);
+
+    backdrop-filter:blur(22px);
+
+    border-bottom:1px solid var(--line);
 }
 
-.logo{
-    color:white;
-    font-size:24px;
-    font-weight:800;
-    letter-spacing:-0.5px;
-}
+.brand{
 
-.logo span{
-    color:#32d17c;
-}
+    display:flex;
 
-.home-btn{
+    align-items:center;
+
+    gap:12px;
+
     text-decoration:none;
+
     color:white;
-    padding:9px 17px;
-    border:1px solid rgba(255,255,255,0.18);
-    border-radius:12px;
-    transition:0.25s;
 }
 
-.home-btn:hover{
-    background:rgba(255,255,255,0.1);
-}
+.brand-mark{
 
+    width:37px;
 
-/* ================= HERO ================= */
+    height:37px;
 
-.hero{
-    position:relative;
-    overflow:hidden;
+    display:grid;
 
-    padding:85px 7% 100px;
+    place-items:center;
+
+    border-radius:11px;
 
     background:
-        radial-gradient(circle at 85% 20%,rgba(43,211,119,0.20),transparent 28%),
-        radial-gradient(circle at 10% 90%,rgba(20,150,85,0.18),transparent 30%),
-        linear-gradient(135deg,#061810,#0b3522 55%,#082217);
+        linear-gradient(
+            145deg,
+            #1ee878,
+            #08783d
+        );
 
-    color:white;
+    color:#03140a;
+
+    font-size:19px;
+
+    font-weight:900;
+
+    box-shadow:
+        0 0 25px rgba(35,230,123,.18);
 }
 
-.hero:after{
-    content:"";
-    position:absolute;
-    width:500px;
-    height:500px;
-    right:-220px;
-    top:-250px;
+.brand-name{
 
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:50%;
+    font-size:21px;
+
+    font-weight:900;
+
+    letter-spacing:-.7px;
 }
 
-.hero-content{
-    position:relative;
-    z-index:2;
-    max-width:850px;
+.brand-name span{
+
+    color:var(--green);
 }
 
-.eyebrow{
-    display:inline-flex;
+.nav-right{
+
+    display:flex;
+
     align-items:center;
-    gap:8px;
 
-    padding:8px 14px;
-    border-radius:30px;
+    gap:12px;
+}
 
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.12);
+.status{
 
-    color:#9af0bd;
-    font-size:13px;
-    font-weight:700;
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:8px 12px;
+
+    border:1px solid var(--line);
+
+    border-radius:20px;
+
+    color:#9aada3;
+
+    font-size:11px;
+
+    font-weight:800;
+
     letter-spacing:.5px;
 }
 
-.hero h1{
-    margin:20px 0 14px;
+.status-dot{
 
-    font-size:clamp(42px,6vw,72px);
-    line-height:1;
-    letter-spacing:-3px;
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    box-shadow:0 0 12px var(--green);
+}
+
+.home{
+
+    padding:9px 15px;
+
+    border:1px solid var(--line);
+
+    border-radius:11px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.home:hover{
+
+    background:rgba(255,255,255,.07);
+
+    border-color:rgba(35,230,123,.3);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    position:relative;
+
+    min-height:490px;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    padding:80px 5% 100px;
+
+    background:
+
+        radial-gradient(
+            circle at 75% 35%,
+            rgba(35,230,123,.13),
+            transparent 24%
+        ),
+
+        radial-gradient(
+            circle at 25% 75%,
+            rgba(14,169,90,.10),
+            transparent 28%
+        );
+}
+
+.hero-orbit{
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    right:-100px;
+
+    top:-90px;
+
+    border:1px solid rgba(35,230,123,.12);
+
+    border-radius:50%;
+}
+
+.hero-orbit:before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:70px;
+
+    border:1px solid rgba(35,230,123,.08);
+
+    border-radius:50%;
+}
+
+.hero-orbit:after{
+
+    content:"";
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    background:var(--green);
+
+    border-radius:50%;
+
+    top:95px;
+
+    left:80px;
+
+    box-shadow:0 0 25px var(--green);
+
+}
+
+.hero-inner{
+
+    position:relative;
+
+    z-index:2;
+
+    width:min(var(--max),100%);
+
+    margin:auto;
+}
+
+.hero-label{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 13px;
+
+    border:1px solid rgba(35,230,123,.2);
+
+    border-radius:30px;
+
+    background:rgba(35,230,123,.06);
+
+    color:var(--green3);
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:1.3px;
+}
+
+.hero h1{
+
+    max-width:850px;
+
+    margin:22px 0 20px;
+
+    font-size:
+        clamp(
+            48px,
+            8vw,
+            94px
+        );
+
+    line-height:.94;
+
+    letter-spacing:-5px;
+
+    color:white;
 }
 
 .hero h1 span{
-    color:#39d77f;
+
+    color:var(--green);
 }
 
-.hero p{
-    max-width:650px;
-    margin:0;
+.hero-description{
 
-    color:#b9c9c0;
+    max-width:700px;
+
+    color:#91a49a;
+
     font-size:18px;
+
     line-height:1.7;
+
+    margin-bottom:35px;
 }
 
+.hero-stats{
 
-/* ================= MAIN ================= */
-
-.container{
-    width:min(1180px,90%);
-    margin:-45px auto 80px;
-    position:relative;
-    z-index:5;
-}
-
-
-/* ================= TOOLBAR ================= */
-
-.toolbar{
     display:flex;
-    gap:15px;
-    align-items:center;
 
-    padding:18px;
+    gap:10px;
 
-    background:rgba(255,255,255,0.92);
-    backdrop-filter:blur(15px);
-
-    border:1px solid var(--border);
-    border-radius:20px;
-
-    box-shadow:0 20px 50px rgba(8,35,22,.10);
-
-    margin-bottom:30px;
-}
-
-.search-box{
-    flex:1;
-    position:relative;
-}
-
-.search-box span{
-    position:absolute;
-    left:16px;
-    top:50%;
-    transform:translateY(-50%);
-    color:#7a8880;
-}
-
-.search{
-    width:100%;
-    border:1px solid var(--border);
-    background:#f8faf9;
-
-    padding:14px 16px 14px 45px;
-
-    border-radius:13px;
-
-    outline:none;
-    font-size:15px;
-
-    transition:.2s;
-}
-
-.search:focus{
-    border-color:var(--green2);
-    background:white;
-    box-shadow:0 0 0 4px rgba(19,161,92,.08);
-}
-
-
-/* ================= FILTERS ================= */
-
-.filters{
-    display:flex;
-    gap:8px;
     flex-wrap:wrap;
 }
 
-.filters button{
-    border:1px solid var(--border);
-    background:white;
+.stat{
 
-    padding:11px 15px;
+    min-width:145px;
 
-    border-radius:12px;
+    padding:15px 18px;
+
+    border:1px solid var(--line);
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.025);
+
+    backdrop-filter:blur(12px);
+}
+
+.stat strong{
+
+    display:block;
+
+    color:white;
+
+    font-size:22px;
+}
+
+.stat span{
+
+    color:#72867b;
+
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.8px;
+}
+
+
+/* =========================================================
+   NEWS TICKER
+========================================================= */
+
+.ticker{
+
+    border-top:1px solid var(--line);
+
+    border-bottom:1px solid var(--line);
+
+    background:#08100b;
+
+    overflow:hidden;
+
+    white-space:nowrap;
+}
+
+.ticker-inner{
+
+    display:flex;
+
+    width:max-content;
+
+    animation:tickerMove 35s linear infinite;
+}
+
+.ticker-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px 30px;
+
+    color:#899c91;
+
+    font-size:12px;
 
     font-weight:700;
-    font-size:13px;
+}
+
+.ticker-item b{
+
+    color:var(--green);
+}
+
+@keyframes tickerMove{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main{
+
+    width:min(var(--max),90%);
+
+    margin:auto;
+
+    padding:65px 0 100px;
+}
+
+
+/* =========================================================
+   COMMAND BAR
+========================================================= */
+
+.command{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        auto;
+
+    gap:15px;
+
+    padding:14px;
+
+    border:1px solid var(--line);
+
+    border-radius:19px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.018)
+        );
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.25);
+
+    margin-bottom:50px;
+}
+
+.search{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:0 16px;
+
+    background:#070d09;
+
+    border:1px solid var(--line);
+
+    border-radius:13px;
+}
+
+.search-icon{
+
+    color:#708279;
+
+    font-size:18px;
+}
+
+.search input{
+
+    width:100%;
+
+    border:0;
+
+    outline:0;
+
+    background:none;
+
+    color:white;
+
+    padding:14px 0;
+
+    font-size:14px;
+}
+
+.search input::placeholder{
+
+    color:#61736a;
+}
+
+.filters{
+
+    display:flex;
+
+    gap:7px;
+
+    flex-wrap:wrap;
+
+    align-items:center;
+}
+
+.filter{
+
+    border:1px solid var(--line);
+
+    background:transparent;
+
+    color:#8fa097;
+
+    padding:11px 14px;
+
+    border-radius:11px;
+
+    font-size:11px;
+
+    font-weight:800;
 
     cursor:pointer;
 
     transition:.2s;
 }
 
-.filters button:hover,
-.filters button.active{
-    background:var(--dark);
-    color:white;
-    border-color:var(--dark);
+.filter:hover,
+.filter.active{
+
+    background:var(--green);
+
+    color:#03140a;
+
+    border-color:var(--green);
 }
 
 
-/* ================= SECTION TITLE ================= */
+/* =========================================================
+   SECTION HEADER
+========================================================= */
 
-.section-heading{
+.section-head{
+
     display:flex;
+
     justify-content:space-between;
-    align-items:end;
 
-    margin:35px 0 20px;
-}
-
-.section-heading h2{
-    margin:0;
-    font-size:28px;
-    letter-spacing:-1px;
-}
-
-.section-heading p{
-    margin:5px 0 0;
-    color:var(--muted);
-}
-
-
-/* ================= FEATURED NEWS ================= */
-
-.featured{
-    position:relative;
-    overflow:hidden;
-
-    min-height:360px;
-
-    border-radius:28px;
-
-    background:
-        linear-gradient(110deg,rgba(5,28,17,.96),rgba(8,64,36,.82)),
-        linear-gradient(135deg,#0b6b3a,#061b10);
-
-    color:white;
-
-    padding:42px;
-
-    display:flex;
     align-items:flex-end;
 
-    box-shadow:0 25px 70px rgba(5,30,17,.22);
-
-    margin-bottom:40px;
+    margin-bottom:22px;
 }
 
-.featured:before{
-    content:"⚖";
+.section-kicker{
 
-    position:absolute;
-    right:50px;
-    top:15px;
+    color:var(--green);
 
-    font-size:190px;
+    font-size:10px;
+
     font-weight:900;
 
-    color:rgba(255,255,255,.035);
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:7px;
 }
 
-.featured-content{
+.section-head h2{
+
+    margin:0;
+
+    color:white;
+
+    font-size:30px;
+
+    letter-spacing:-1.2px;
+}
+
+.section-note{
+
+    color:#718279;
+
+    font-size:12px;
+}
+
+
+/* =========================================================
+   INTELLIGENCE GRID
+========================================================= */
+
+.intelligence{
+
+    display:grid;
+
+    grid-template-columns:
+        1.6fr
+        1fr;
+
+    gap:18px;
+
+    margin-bottom:55px;
+}
+
+
+/* =========================================================
+   MAIN STORY
+========================================================= */
+
+.main-story{
+
+    min-height:460px;
+
     position:relative;
-    z-index:2;
-    max-width:760px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    border:1px solid rgba(35,230,123,.15);
+
+    border-radius:26px;
+
+    background:
+
+        radial-gradient(
+            circle at 75% 20%,
+            rgba(35,230,123,.17),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            145deg,
+            #0d2417,
+            #07120c 70%
+        );
+
+    box-shadow:
+        0 35px 80px rgba(0,0,0,.28);
 }
 
-.featured-label{
-    display:inline-block;
+.main-story:before{
 
-    padding:7px 12px;
+    content:"§";
+
+    position:absolute;
+
+    right:35px;
+
+    top:5px;
+
+    font-family:Georgia,serif;
+
+    font-size:240px;
+
+    line-height:1;
+
+    color:rgba(255,255,255,.025);
+}
+
+.story-lines{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 55%,
+            rgba(35,230,123,.05) 55.2%,
+            transparent 55.5%
+        );
+
+    pointer-events:none;
+}
+
+.main-story-content{
+
+    position:relative;
+
+    z-index:2;
+
+    padding:35px;
+
+    width:100%;
+}
+
+.latest-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:7px 11px;
 
     border-radius:20px;
 
-    background:#2ed477;
+    background:rgba(35,230,123,.12);
 
-    color:#062114;
+    border:1px solid rgba(35,230,123,.2);
 
-    font-size:12px;
+    color:var(--green);
+
+    font-size:10px;
+
     font-weight:900;
+
+    letter-spacing:.8px;
 }
 
-.featured h2{
-    font-size:clamp(28px,4vw,45px);
-    line-height:1.1;
+.latest-badge i{
 
-    margin:18px 0 12px;
+    width:6px;
 
-    letter-spacing:-1.5px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    box-shadow:0 0 10px var(--green);
 }
 
-.featured p{
-    color:#c6d5cc;
+.main-story h3{
+
+    max-width:800px;
+
+    margin:17px 0 13px;
+
+    color:white;
+
+    font-size:
+        clamp(
+            28px,
+            4vw,
+            48px
+        );
+
+    line-height:1.05;
+
+    letter-spacing:-2px;
+}
+
+.main-story p{
+
+    max-width:700px;
+
+    color:#94a79c;
+
     line-height:1.7;
+
+    font-size:14px;
 }
 
-.featured-meta{
+.story-meta{
+
     display:flex;
-    gap:15px;
+
     align-items:center;
 
-    color:#a9bdb2;
-    font-size:13px;
-}
+    gap:12px;
 
-.featured-btn{
-    display:inline-block;
+    flex-wrap:wrap;
+
+    color:#73857c;
+
+    font-size:11px;
 
     margin-top:20px;
+}
+
+.story-source{
+
+    color:#b5c7bc;
+
+    font-weight:800;
+}
+
+.story-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:23px;
 
     padding:12px 18px;
 
     background:white;
-    color:#07321d;
 
-    border-radius:12px;
+    color:#06150c;
+
+    border-radius:11px;
 
     text-decoration:none;
-    font-weight:800;
+
+    font-size:12px;
+
+    font-weight:900;
 
     transition:.2s;
 }
 
-.featured-btn:hover{
+.story-button:hover{
+
     transform:translateY(-2px);
+
+    box-shadow:
+        0 10px 30px rgba(255,255,255,.12);
 }
 
 
-/* ================= NEWS GRID ================= */
+/* =========================================================
+   SIDE STORIES
+========================================================= */
 
-.news-grid{
-    display:grid;
+.side-stories{
 
-    grid-template-columns:
-        repeat(3,1fr);
+    display:flex;
 
-    gap:20px;
+    flex-direction:column;
+
+    gap:12px;
 }
 
+.side-story{
 
-/* ================= NEWS CARD ================= */
+    flex:1;
 
-.news-card{
+    padding:22px;
+
+    border:1px solid var(--line);
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.035),
+            rgba(255,255,255,.015)
+        );
+
+    transition:.25s;
+
     position:relative;
-
-    background:white;
-
-    border:1px solid var(--border);
-
-    border-radius:22px;
-
-    padding:24px;
-
-    transition:
-        transform .25s,
-        box-shadow .25s,
-        border-color .25s;
 
     overflow:hidden;
 }
 
-.news-card:before{
+.side-story:hover{
+
+    transform:translateX(-5px);
+
+    border-color:rgba(35,230,123,.22);
+
+    background:rgba(35,230,123,.035);
+}
+
+.side-number{
+
+    color:#31453a;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    margin-bottom:13px;
+}
+
+.side-story h4{
+
+    margin:0 0 12px;
+
+    color:#e5eee8;
+
+    font-size:16px;
+
+    line-height:1.4;
+}
+
+.side-meta{
+
+    display:flex;
+
+    gap:8px;
+
+    color:#65776e;
+
+    font-size:10px;
+}
+
+.side-category{
+
+    color:var(--green);
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline{
+
+    position:relative;
+
+    margin-top:25px;
+}
+
+.timeline:before{
+
     content:"";
 
     position:absolute;
-    left:0;
+
+    left:9px;
+
     top:0;
 
-    width:100%;
-    height:3px;
+    bottom:0;
 
-    background:linear-gradient(90deg,var(--green),#39d77f);
+    width:1px;
 
-    transform:scaleX(0);
-    transform-origin:left;
+    background:
+        linear-gradient(
+            to bottom,
+            var(--green),
+            rgba(35,230,123,.03)
+        );
+}
+
+.news-item{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:30px 1fr;
+
+    gap:20px;
+
+    margin-bottom:13px;
+}
+
+.timeline-dot{
+
+    position:relative;
+
+    width:19px;
+
+    height:19px;
+
+    margin-top:25px;
+
+    border-radius:50%;
+
+    background:#08120c;
+
+    border:1px solid #355844;
+
+    box-shadow:0 0 0 5px var(--bg);
+
+    z-index:2;
+}
+
+.news-item:first-child .timeline-dot{
+
+    border-color:var(--green);
+
+    background:var(--green);
+
+    box-shadow:
+        0 0 20px rgba(35,230,123,.35),
+        0 0 0 5px var(--bg);
+}
+
+.news-panel{
+
+    padding:25px;
+
+    border:1px solid var(--line);
+
+    border-radius:19px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.035),
+            rgba(255,255,255,.012)
+        );
 
     transition:.25s;
 }
 
-.news-card:hover{
-    transform:translateY(-7px);
+.news-panel:hover{
 
-    box-shadow:0 20px 45px rgba(10,45,26,.12);
+    border-color:rgba(35,230,123,.22);
 
-    border-color:#d3e1d9;
+    transform:translateX(3px);
 }
 
-.news-card:hover:before{
-    transform:scaleX(1);
-}
+.news-top{
 
-.card-top{
     display:flex;
-    justify-content:space-between;
-    align-items:center;
 
-    margin-bottom:16px;
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-bottom:13px;
 }
 
-.category{
-    padding:6px 10px;
+.news-category{
 
-    background:#e8f7ee;
+    color:var(--green);
 
-    color:#0a7540;
+    font-size:10px;
 
-    border-radius:20px;
-
-    font-size:11px;
     font-weight:900;
+
+    letter-spacing:.7px;
+
     text-transform:uppercase;
 }
 
-.card-date{
-    color:#8a968f;
-    font-size:12px;
+.news-date{
+
+    color:#5e7066;
+
+    font-size:10px;
+
+    white-space:nowrap;
 }
 
-.news-card h3{
-    margin:0 0 12px;
+.news-panel h3{
+
+    margin:0 0 10px;
+
+    color:#e7f0eb;
 
     font-size:20px;
-    line-height:1.3;
 
-    letter-spacing:-.5px;
+    line-height:1.35;
+
+    letter-spacing:-.4px;
 }
 
-.news-card p{
-    color:#68756e;
+.news-panel p{
 
-    line-height:1.65;
+    margin:0;
 
-    font-size:14px;
+    color:#7f9188;
 
-    margin:0 0 20px;
+    font-size:13px;
+
+    line-height:1.7;
 }
 
-.card-footer{
+.news-bottom{
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
-    padding-top:16px;
+    gap:10px;
 
-    border-top:1px solid #edf1ee;
+    margin-top:17px;
+
+    padding-top:15px;
+
+    border-top:1px solid rgba(255,255,255,.05);
 }
 
 .source{
-    color:#8a958f;
-    font-size:12px;
+
+    color:#596b62;
+
+    font-size:10px;
+
+    font-weight:700;
 }
 
 .read{
+
     color:var(--green);
 
     text-decoration:none;
 
-    font-size:13px;
+    font-size:11px;
+
     font-weight:900;
 }
 
 .read:hover{
+
     text-decoration:underline;
 }
 
 
-/* ================= LOADING ================= */
+/* =========================================================
+   LOAD / EMPTY
+========================================================= */
 
 .loading{
+
+    padding:80px 20px;
+
     text-align:center;
-    padding:60px;
-    color:#77847d;
+
+    color:#687a70;
 }
 
+.loader{
 
-/* ================= EMPTY ================= */
+    width:35px;
+
+    height:35px;
+
+    margin:0 auto 15px;
+
+    border:2px solid rgba(255,255,255,.08);
+
+    border-top-color:var(--green);
+
+    border-radius:50%;
+
+    animation:spin .8s linear infinite;
+}
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
 
 .empty{
-    grid-column:1/-1;
 
-    padding:60px;
+    padding:70px 25px;
 
     text-align:center;
 
-    background:white;
+    border:1px solid var(--line);
 
     border-radius:20px;
 
-    color:#78847e;
+    background:#0a120d;
+}
+
+.empty h3{
+
+    color:white;
+}
+
+.empty p{
+
+    color:#72837a;
 }
 
 
-/* ================= FOOTER ================= */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
-    background:#06150d;
-    color:#a9b9b0;
 
-    padding:40px 20px;
+    border-top:1px solid var(--line);
+
+    padding:55px 5%;
+
+    background:#030604;
 
     text-align:center;
 }
 
-footer strong{
+.footer-logo{
+
     color:white;
+
+    font-size:22px;
+
+    font-weight:900;
+}
+
+.footer-logo span{
+
+    color:var(--green);
+}
+
+footer p{
+
+    color:#64766c;
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+
+.footer-line{
+
+    width:60px;
+
+    height:2px;
+
+    margin:20px auto;
+
+    background:var(--green);
 }
 
 
-/* ================= RESPONSIVE ================= */
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
-@media(max-width:900px){
+@media(max-width:950px){
 
-    .toolbar{
-        flex-direction:column;
-        align-items:stretch;
+    .intelligence{
+
+        grid-template-columns:1fr;
+
     }
 
-    .news-grid{
-        grid-template-columns:repeat(2,1fr);
+    .side-stories{
+
+        display:grid;
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+    .command{
+
+        grid-template-columns:1fr;
+
     }
 
 }
 
-@media(max-width:600px){
+@media(max-width:700px){
 
-    .topbar{
-        padding:15px 5%;
+    .nav{
+
+        padding:0 4%;
+
+    }
+
+    .status{
+
+        display:none;
+
     }
 
     .hero{
-        padding:65px 5% 85px;
+
+        min-height:500px;
+
+        padding:70px 5% 85px;
+
     }
 
     .hero h1{
-        letter-spacing:-2px;
+
+        letter-spacing:-3px;
+
     }
 
-    .container{
+    .hero-description{
+
+        font-size:15px;
+
+    }
+
+    .main{
+
         width:92%;
+
     }
 
-    .featured{
-        padding:28px;
-        min-height:420px;
+    .main-story{
+
+        min-height:520px;
+
     }
 
-    .news-grid{
-        grid-template-columns:1fr;
+    .main-story-content{
+
+        padding:25px;
+
     }
 
-    .section-heading{
+    .side-stories{
+
+        display:flex;
+
+    }
+
+    .news-panel{
+
+        padding:20px;
+
+    }
+
+    .news-panel h3{
+
+        font-size:17px;
+
+    }
+
+    .news-top{
+
         display:block;
+
+    }
+
+    .news-date{
+
+        display:block;
+
+        margin-top:6px;
+
+    }
+
+    .section-head{
+
+        display:block;
+
+    }
+
+    .section-note{
+
+        margin-top:8px;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
     }
 
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- TOP NAVIGATION -->
+<!-- ======================================================
+     NAVIGATION
+====================================================== -->
 
-<nav class="topbar">
+<nav class="nav">
 
-    <div class="logo">
-        pendico<span>.</span>
-    </div>
+    <a href="index.html" class="brand">
 
-    <a href="index.html" class="home-btn">
-        ← Home
+        <div class="brand-mark">
+            P
+        </div>
+
+        <div class="brand-name">
+            pendico<span>.</span>
+        </div>
+
     </a>
+
+
+    <div class="nav-right">
+
+        <div class="status">
+
+            <span class="status-dot"></span>
+
+            LEGAL INTELLIGENCE
+
+        </div>
+
+        <a href="index.html" class="home">
+            ← Home
+        </a>
+
+    </div>
 
 </nav>
 
 
-<!-- HERO -->
+
+<!-- ======================================================
+     HERO
+====================================================== -->
 
 <section class="hero">
 
-    <div class="hero-content">
+    <div class="hero-orbit"></div>
 
-        <div class="eyebrow">
-            ⚖ INDIA'S LEGAL INFORMATION PORTAL
+    <div class="hero-inner">
+
+        <div class="hero-label">
+
+            ⚖ INDIAN LEGAL INTELLIGENCE
+
         </div>
 
+
         <h1>
-            Legal <span>News.</span>
+
+            Know what is
+            <span>changing.</span>
+
         </h1>
 
-        <p>
-            Stay informed about the latest developments in the
-            Supreme Court, High Courts, legislation and the Indian
-            legal profession.
+
+        <p class="hero-description">
+
+            A focused stream of important developments from
+            India's courts, Parliament, legislation and legal
+            profession — organised for people who actually work
+            with law.
+
         </p>
+
+
+        <div class="hero-stats">
+
+            <div class="stat">
+
+                <strong id="storyCount">
+                    —
+                </strong>
+
+                <span>
+                    Stories
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    SC
+                </strong>
+
+                <span>
+                    Supreme Court
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    HC
+                </strong>
+
+                <span>
+                    High Courts
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    INDIA
+                </strong>
+
+                <span>
+                    Legal Updates
+                </span>
+
+            </div>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<main class="container">
+
+<!-- ======================================================
+     TICKER
+====================================================== -->
+
+<div class="ticker">
+
+    <div id="ticker" class="ticker-inner">
+
+        <div class="ticker-item">
+            <b>● LATEST</b>
+            Loading legal developments...
+        </div>
+
+        <div class="ticker-item">
+            <b>● PENDICO</b>
+            Indian Legal Intelligence
+        </div>
+
+    </div>
+
+</div>
 
 
-<!-- SEARCH + FILTER -->
 
-<div class="toolbar">
+<!-- ======================================================
+     MAIN
+====================================================== -->
 
-    <div class="search-box">
+<main class="main">
 
-        <span>🔎</span>
 
-        <input
-            id="search"
-            class="search"
-            type="text"
-            placeholder="Search legal news..."
+    <!-- COMMAND BAR -->
+
+    <div class="command">
+
+
+        <div class="search">
+
+            <span class="search-icon">
+                ⌕
+            </span>
+
+            <input
+                id="search"
+                type="text"
+                placeholder="Search judgments, courts, legislation, legal developments..."
+                autocomplete="off"
+            >
+
+        </div>
+
+
+        <div class="filters">
+
+            <button
+                class="filter active"
+                onclick="setFilter('All',this)"
+            >
+                ALL
+            </button>
+
+            <button
+                class="filter"
+                onclick="setFilter('Supreme Court',this)"
+            >
+                SUPREME COURT
+            </button>
+
+            <button
+                class="filter"
+                onclick="setFilter('High Court',this)"
+            >
+                HIGH COURTS
+            </button>
+
+            <button
+                class="filter"
+                onclick="setFilter('Legal Profession',this)"
+            >
+                PROFESSION
+            </button>
+
+            <button
+                class="filter"
+                onclick="setFilter('Legislation',this)"
+            >
+                LEGISLATION
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- INTELLIGENCE -->
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="section-kicker">
+                PENDICO INTELLIGENCE
+            </div>
+
+            <h2>
+                The legal landscape
+            </h2>
+
+        </div>
+
+        <div class="section-note">
+            Latest developments appear first
+        </div>
+
+    </div>
+
+
+    <div class="intelligence">
+
+
+        <!-- MAIN STORY -->
+
+        <div id="mainStory">
+
+            <div class="loading">
+
+                <div class="loader"></div>
+
+                Loading intelligence...
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDE STORIES -->
+
+        <div id="sideStories" class="side-stories">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- LATEST TIMELINE -->
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="section-kicker">
+                LIVE FEED
+            </div>
+
+            <h2>
+                Latest developments
+            </h2>
+
+        </div>
+
+        <div
+            id="resultCount"
+            class="section-note"
         >
+            Loading...
+        </div>
 
     </div>
 
 
-    <div class="filters">
+    <div
+        id="newsContainer"
+        class="timeline"
+    >
 
-        <button class="active" onclick="filterNews('All',this)">
-            All
-        </button>
+        <div class="loading">
 
-        <button onclick="filterNews('Supreme Court',this)">
-            Supreme Court
-        </button>
+            <div class="loader"></div>
 
-        <button onclick="filterNews('High Court',this)">
-            High Courts
-        </button>
+            Loading latest legal news...
 
-        <button onclick="filterNews('Legal Profession',this)">
-            Legal Profession
-        </button>
+        </div>
 
     </div>
-
-</div>
-
-
-<!-- FEATURED -->
-
-<div id="featured"></div>
-
-
-<!-- NEWS -->
-
-<div class="section-heading">
-
-    <div>
-
-        <h2>Latest Legal Developments</h2>
-
-        <p>
-            Important legal updates from across India
-        </p>
-
-    </div>
-
-</div>
-
-
-<div id="newsContainer" class="news-grid">
-
-    <div class="loading">
-        Loading latest legal news...
-    </div>
-
-</div>
 
 
 </main>
 
 
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
 <footer>
 
-    <strong>pendico.</strong>
+    <div class="footer-logo">
+        pendico<span>.</span>
+    </div>
 
-    <br><br>
+    <div class="footer-line"></div>
 
-    Indian Legal Information Portal
+    <p>
+        Indian Legal Information & Intelligence Portal
+    </p>
 
-    <br>
+    <p>
+        Case Laws • Bare Acts • Legal News • Legal Articles
+    </p>
 
-    © 2026 Pendico. All rights reserved.
+    <p>
+        © 2026 Pendico. All rights reserved.
+    </p>
 
 </footer>
 
 
+
 <script>
 
+
+/* =========================================================
+   GLOBAL STATE
+========================================================= */
+
 let newsData = [];
+
 let currentCategory = "All";
 
 
-/* ================= LOAD JSON ================= */
+/* =========================================================
+   DATE PARSER
+========================================================= */
+
+function parseNewsDate(value){
+
+    if(!value){
+        return 0;
+    }
+
+    /*
+        Handles common formats:
+
+        YYYY-MM-DD
+        YYYY/MM/DD
+        DD-MM-YYYY
+        DD/MM/YYYY
+        ISO dates
+    */
+
+    const raw = String(value).trim();
+
+
+    /* ISO / YYYY-MM-DD */
+
+    if(/^\d{4}[-/]\d{1,2}[-/]\d{1,2}/.test(raw)){
+
+        const normalized =
+            raw.replace(/\//g,"-");
+
+        const date =
+            new Date(normalized);
+
+        if(!isNaN(date.getTime())){
+            return date.getTime();
+        }
+
+    }
+
+
+    /* DD-MM-YYYY */
+
+    let match =
+        raw.match(
+            /^(\d{1,2})[-/](\d{1,2})[-/](\d{4})/
+        );
+
+    if(match){
+
+        const day =
+            Number(match[1]);
+
+        const month =
+            Number(match[2])-1;
+
+        const year =
+            Number(match[3]);
+
+        const date =
+            new Date(
+                year,
+                month,
+                day
+            );
+
+        if(!isNaN(date.getTime())){
+            return date.getTime();
+        }
+
+    }
+
+
+    /* Browser date parser */
+
+    const parsed =
+        new Date(raw);
+
+    if(!isNaN(parsed.getTime())){
+        return parsed.getTime();
+    }
+
+
+    return 0;
+}
+
+
+/* =========================================================
+   FORMAT DATE
+========================================================= */
+
+function formatDate(value){
+
+    const timestamp =
+        parseNewsDate(value);
+
+    if(!timestamp){
+        return value || "Date unavailable";
+    }
+
+    const date =
+        new Date(timestamp);
+
+    return date.toLocaleDateString(
+        "en-IN",
+        {
+            day:"2-digit",
+            month:"short",
+            year:"numeric"
+        }
+    );
+
+}
+
+
+/* =========================================================
+   RELATIVE DATE
+========================================================= */
+
+function relativeDate(value){
+
+    const timestamp =
+        parseNewsDate(value);
+
+    if(!timestamp){
+        return "";
+    }
+
+    const now =
+        new Date();
+
+    const date =
+        new Date(timestamp);
+
+
+    const startToday =
+        new Date(
+            now.getFullYear(),
+            now.getMonth(),
+            now.getDate()
+        );
+
+
+    const startDate =
+        new Date(
+            date.getFullYear(),
+            date.getMonth(),
+            date.getDate()
+        );
+
+
+    const difference =
+        Math.round(
+            (startToday-startDate)
+            /
+            (1000*60*60*24)
+        );
+
+
+    if(difference === 0){
+        return "TODAY";
+    }
+
+    if(difference === 1){
+        return "YESTERDAY";
+    }
+
+    if(difference > 1 && difference < 7){
+        return difference + " DAYS AGO";
+    }
+
+
+    return formatDate(value);
+}
+
+
+/* =========================================================
+   LOAD JSON
+========================================================= */
 
 fetch("data/legalnews.json")
 
@@ -760,8 +2039,7 @@ fetch("data/legalnews.json")
     if(!response.ok){
 
         throw new Error(
-            "Unable to load legalnews.json: " +
-            response.status
+            "Unable to load legalnews.json"
         );
 
     }
@@ -772,11 +2050,44 @@ fetch("data/legalnews.json")
 
 .then(data => {
 
-    newsData = data;
+    if(!Array.isArray(data)){
 
-    displayNews(newsData);
+        throw new Error(
+            "legalnews.json must contain an array"
+        );
 
-    displayFeatured(newsData);
+    }
+
+
+    /*
+        IMPORTANT:
+
+        Always sort newest → oldest.
+
+        This means you do NOT need to manually
+        place the newest story at the top.
+    */
+
+    newsData =
+        data.sort(
+            (a,b) =>
+                parseNewsDate(b.date)
+                -
+                parseNewsDate(a.date)
+        );
+
+
+    document.getElementById(
+        "storyCount"
+    ).textContent =
+        newsData.length;
+
+
+    updateTicker();
+
+    renderIntelligence();
+
+    renderNews();
 
 })
 
@@ -784,14 +2095,22 @@ fetch("data/legalnews.json")
 
     console.error(error);
 
-    document.getElementById("newsContainer").innerHTML = `
+    document.getElementById(
+        "newsContainer"
+    ).innerHTML = `
 
         <div class="empty">
 
-            <h3>Unable to load legal news</h3>
+            <h3>
+                Legal intelligence unavailable
+            </h3>
 
             <p>
-                Please check the legalnews.json file.
+                Please check
+                <strong>
+                    data/legalnews.json
+                </strong>
+                and try again.
             </p>
 
         </div>
@@ -801,207 +2120,75 @@ fetch("data/legalnews.json")
 });
 
 
-/* ================= FEATURED ================= */
+/* =========================================================
+   FILTER + SEARCH
+========================================================= */
 
-function displayFeatured(data){
-
-    if(!data.length){
-
-        return;
-
-    }
-
-    const news = data[0];
-
-    document.getElementById("featured").innerHTML = `
-
-        <article class="featured">
-
-            <div class="featured-content">
-
-                <span class="featured-label">
-                    FEATURED STORY
-                </span>
-
-                <h2>
-                    ${news.title}
-                </h2>
-
-                <p>
-                    ${news.summary}
-                </p>
-
-                <div class="featured-meta">
-
-                    <span>
-                        ${news.category}
-                    </span>
-
-                    <span>•</span>
-
-                    <span>
-                        ${news.date}
-                    </span>
-
-                </div>
-
-                <a
-                    href="${news.url}"
-                    target="_blank"
-                    class="featured-btn"
-                >
-                    Read Full Story →
-                </a>
-
-            </div>
-
-        </article>
-
-    `;
-
-}
-
-
-/* ================= DISPLAY NEWS ================= */
-
-function displayNews(data){
-
-    const container =
-        document.getElementById("newsContainer");
-
-    container.innerHTML = "";
-
-
-    if(!data.length){
-
-        container.innerHTML = `
-
-            <div class="empty">
-
-                <h3>No legal news found</h3>
-
-                <p>
-                    Try another search or category.
-                </p>
-
-            </div>
-
-        `;
-
-        return;
-
-    }
-
-
-    data.forEach((news,index) => {
-
-        /* First item is featured */
-        if(index === 0 && currentCategory === "All"){
-            return;
-        }
-
-
-        container.innerHTML += `
-
-            <article class="news-card">
-
-                <div class="card-top">
-
-                    <span class="category">
-                        ${news.category}
-                    </span>
-
-                    <span class="card-date">
-                        ${news.date}
-                    </span>
-
-                </div>
-
-
-                <h3>
-                    ${news.title}
-                </h3>
-
-
-                <p>
-                    ${news.summary}
-                </p>
-
-
-                <div class="card-footer">
-
-                    <span class="source">
-                        ${news.source}
-                    </span>
-
-                    <a
-                        href="${news.url}"
-                        target="_blank"
-                        class="read"
-                    >
-                        Read →
-                    </a>
-
-                </div>
-
-            </article>
-
-        `;
-
-    });
-
-}
-
-
-/* ================= SEARCH ================= */
-
-document
-.getElementById("search")
-.addEventListener("input", function(){
+function getFilteredNews(){
 
     const keyword =
-        this.value.toLowerCase().trim();
+        document
+        .getElementById("search")
+        .value
+        .toLowerCase()
+        .trim();
 
 
-    const filtered = newsData.filter(news => {
+    return newsData.filter(news => {
+
+
+        const matchesCategory =
+            currentCategory === "All"
+            ||
+            String(news.category || "")
+            .toLowerCase()
+            .includes(
+                currentCategory.toLowerCase()
+            );
+
+
+        const searchable =
+            (
+                String(news.title || "") +
+                " " +
+                String(news.summary || "") +
+                " " +
+                String(news.category || "") +
+                " " +
+                String(news.source || "")
+            )
+            .toLowerCase();
+
+
+        const matchesSearch =
+            !keyword
+            ||
+            searchable.includes(keyword);
+
 
         return (
-
-            news.title.toLowerCase().includes(keyword) ||
-
-            news.summary.toLowerCase().includes(keyword) ||
-
-            news.category.toLowerCase().includes(keyword)
-
+            matchesCategory
+            &&
+            matchesSearch
         );
 
     });
 
-
-    displayNews(
-
-        currentCategory === "All"
-
-        ? filtered
-
-        : filtered.filter(
-            news => news.category === currentCategory
-        )
-
-    );
-
-});
+}
 
 
-/* ================= FILTER ================= */
+/* =========================================================
+   SET FILTER
+========================================================= */
 
-function filterNews(category,button){
+function setFilter(category,button){
 
-    currentCategory = category;
+    currentCategory =
+        category;
 
 
     document
-    .querySelectorAll(".filters button")
+    .querySelectorAll(".filter")
     .forEach(btn =>
         btn.classList.remove("active")
     );
@@ -1010,28 +2197,420 @@ function filterNews(category,button){
     button.classList.add("active");
 
 
-    if(category === "All"){
+    renderIntelligence();
 
-        displayNews(newsData);
+    renderNews();
 
-        displayFeatured(newsData);
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+document
+.getElementById("search")
+.addEventListener(
+    "input",
+    function(){
+
+        renderIntelligence();
+
+        renderNews();
+
+    }
+);
+
+
+/* =========================================================
+   INTELLIGENCE SECTION
+========================================================= */
+
+function renderIntelligence(){
+
+    const data =
+        getFilteredNews();
+
+
+    const main =
+        document.getElementById(
+            "mainStory"
+        );
+
+    const side =
+        document.getElementById(
+            "sideStories"
+        );
+
+
+    if(!data.length){
+
+        main.innerHTML = "";
+
+        side.innerHTML = "";
 
         return;
 
     }
 
 
-    const filtered =
-        newsData.filter(
-            news => news.category === category
+    const first =
+        data[0];
+
+
+    main.innerHTML = `
+
+        <article class="main-story">
+
+            <div class="story-lines"></div>
+
+            <div class="main-story-content">
+
+                <span class="latest-badge">
+
+                    <i></i>
+
+                    ${currentCategory === "All"
+                        ? "LATEST DEVELOPMENT"
+                        : currentCategory.toUpperCase()
+                    }
+
+                </span>
+
+
+                <h3>
+                    ${escapeHTML(first.title)}
+                </h3>
+
+
+                <p>
+                    ${escapeHTML(first.summary || "")}
+                </p>
+
+
+                <div class="story-meta">
+
+                    <span class="story-source">
+                        ${escapeHTML(first.source || "Pendico")}
+                    </span>
+
+                    <span>•</span>
+
+                    <span>
+                        ${relativeDate(first.date)}
+                    </span>
+
+                    <span>•</span>
+
+                    <span>
+                        ${formatDate(first.date)}
+                    </span>
+
+                </div>
+
+
+                <a
+                    class="story-button"
+                    href="${safeURL(first.url)}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    Read full story
+
+                    →
+
+                </a>
+
+            </div>
+
+        </article>
+
+    `;
+
+
+    side.innerHTML =
+        data
+        .slice(1,4)
+        .map(
+            (news,index) => `
+
+                <article class="side-story">
+
+                    <div class="side-number">
+
+                        0${index+2}
+
+                    </div>
+
+
+                    <h4>
+
+                        ${escapeHTML(news.title)}
+
+                    </h4>
+
+
+                    <div class="side-meta">
+
+                        <span class="side-category">
+
+                            ${escapeHTML(news.category || "Legal")}
+
+                        </span>
+
+                        <span>•</span>
+
+                        <span>
+
+                            ${relativeDate(news.date)}
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+            `
+        )
+        .join("");
+
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+function renderNews(){
+
+    const container =
+        document.getElementById(
+            "newsContainer"
         );
 
 
-    displayNews(filtered);
+    const data =
+        getFilteredNews();
 
-    document.getElementById("featured").innerHTML = "";
+
+    document.getElementById(
+        "resultCount"
+    ).textContent =
+        data.length +
+        (
+            data.length === 1
+            ? " story"
+            : " stories"
+        );
+
+
+    if(!data.length){
+
+        container.innerHTML = `
+
+            <div class="empty">
+
+                <h3>
+                    No matching developments
+                </h3>
+
+                <p>
+                    Try another search term or category.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    container.innerHTML =
+        data
+        .map(
+            (news,index) => `
+
+                <article class="news-item">
+
+
+                    <div class="timeline-dot"></div>
+
+
+                    <div class="news-panel">
+
+
+                        <div class="news-top">
+
+                            <span class="news-category">
+
+                                ${escapeHTML(
+                                    news.category || "Legal"
+                                )}
+
+                            </span>
+
+
+                            <span class="news-date">
+
+                                ${relativeDate(news.date)}
+
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+
+                            ${escapeHTML(news.title)}
+
+                        </h3>
+
+
+                        <p>
+
+                            ${escapeHTML(
+                                news.summary || ""
+                            )}
+
+                        </p>
+
+
+                        <div class="news-bottom">
+
+                            <span class="source">
+
+                                ${escapeHTML(
+                                    news.source ||
+                                    "Pendico"
+                                )}
+
+                                •
+
+                                ${formatDate(news.date)}
+
+                            </span>
+
+
+                            <a
+                                href="${safeURL(news.url)}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="read"
+                            >
+
+                                READ STORY →
+
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+                </article>
+
+            `
+        )
+        .join("");
 
 }
+
+
+/* =========================================================
+   TICKER
+========================================================= */
+
+function updateTicker(){
+
+    const ticker =
+        document.getElementById(
+            "ticker"
+        );
+
+
+    if(!newsData.length){
+        return;
+    }
+
+
+    const latest =
+        newsData.slice(0,8);
+
+
+    const items =
+        latest
+        .map(
+            news => `
+
+                <div class="ticker-item">
+
+                    <b>
+                        ● ${escapeHTML(
+                            news.category ||
+                            "LEGAL"
+                        )}
+                    </b>
+
+                    ${escapeHTML(news.title)}
+
+                </div>
+
+            `
+        )
+        .join("");
+
+
+    /*
+        Duplicate content makes the ticker
+        continuously scroll.
+    */
+
+    ticker.innerHTML =
+        items + items;
+
+}
+
+
+/* =========================================================
+   SECURITY HELPERS
+========================================================= */
+
+function escapeHTML(value){
+
+    return String(value || "")
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
+
+}
+
+
+function safeURL(value){
+
+    const url =
+        String(value || "").trim();
+
+
+    if(
+        url.startsWith("https://")
+        ||
+        url.startsWith("http://")
+    ){
+
+        return url;
+
+    }
+
+
+    return "#";
+
+}
+
 
 </script>
 
