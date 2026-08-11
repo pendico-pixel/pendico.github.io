@@ -1,150 +1,2025 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<h1>📗 Bharatiya Nagarik Suraksha Sanhita, 2023</h1>
 
-<p>India's Criminal Procedure Code</p>
+<title>BNSS 2023 | Pendico Legal Research</title>
+
+<meta name="description"
+content="Bharatiya Nagarik Suraksha Sanhita, 2023 — searchable BNSS sections and legal research resource by Pendico.">
+
 <style>
+
+/* =========================================================
+   PENDICO BNSS — PREMIUM LEGAL RESEARCH INTERFACE
+========================================================= */
+
+:root{
+    --bg:#f4f7f6;
+    --surface:#ffffff;
+    --surface2:#f8faf9;
+
+    --dark:#061711;
+    --dark2:#0a261b;
+
+    --green:#0b7a43;
+    --green2:#16b364;
+    --green3:#55e39a;
+
+    --text:#14221b;
+    --muted:#718078;
+
+    --border:#e1e9e4;
+
+    --shadow:0 20px 60px rgba(5,30,18,.10);
+    --shadow2:0 10px 30px rgba(5,30,18,.08);
+
+    --radius:22px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-font-family:Arial,sans-serif;
-background:#f4f4f4;
-margin:0;
+    margin:0;
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:var(--bg);
+    color:var(--text);
+
+    line-height:1.6;
 }
-header{
-    background:linear-gradient(135deg,#0f7b43,#16a34a);
+
+
+/* =========================================================
+   TOP NAVIGATION
+========================================================= */
+
+.navbar{
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 6%;
+
+    background:rgba(5,22,15,.90);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+
+.logo{
+
     color:white;
-    padding:45px 20px;
-    text-align:center;
-    border-bottom-left-radius:30px;
-    border-bottom-right-radius:30px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+
+    font-size:25px;
+
+    font-weight:900;
+
+    letter-spacing:-1px;
 }
-.container{
-max-width:900px;
-margin:auto;
-padding:30px;
+
+
+.logo span{
+    color:#35db83;
 }
-.card{
-    background:#ffffff;
-    padding:25px;
-    margin-bottom:25px;
+
+
+.nav-actions{
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;
+}
+
+
+.nav-btn{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:9px 16px;
+
+    border-radius:11px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    font-size:13px;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+
+.nav-btn:hover{
+
+    background:rgba(255,255,255,.10);
+
+    transform:translateY(-1px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:75px 6% 90px;
+
+    color:white;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(53,219,131,.25),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(16,150,82,.20),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #04140d,
+            #0a3823 55%,
+            #061c12
+        );
+}
+
+
+.hero:before{
+
+    content:"§";
+
+    position:absolute;
+
+    right:7%;
+
+    top:-55px;
+
+    font-size:330px;
+
+    font-weight:900;
+
+    color:rgba(255,255,255,.035);
+
+    line-height:1;
+}
+
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1050px;
+
+    margin:auto;
+}
+
+
+.eyebrow{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:#9cf1bd;
+
+    font-size:12px;
+
+    font-weight:900;
+
+    letter-spacing:.8px;
+}
+
+
+.hero h1{
+
+    margin:20px 0 10px;
+
+    font-size:clamp(38px,6vw,70px);
+
+    line-height:1.02;
+
+    letter-spacing:-3px;
+}
+
+
+.hero h1 span{
+
+    color:#39dc82;
+}
+
+
+.hero-description{
+
+    max-width:720px;
+
+    margin:0;
+
+    color:#bfd0c7;
+
+    font-size:17px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   HERO STATS
+========================================================= */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,170px);
+
+    gap:15px;
+
+    margin-top:35px;
+}
+
+
+.stat{
+
+    padding:18px;
+
     border-radius:18px;
-    box-shadow:0 12px 30px rgba(0,0,0,0.12);
-    transition:all 0.3s ease;
+
+    background:rgba(255,255,255,.07);
+
+    border:1px solid rgba(255,255,255,.11);
+
+    backdrop-filter:blur(10px);
 }
-.card:hover{
+
+
+.stat strong{
+
+    display:block;
+
+    color:white;
+
+    font-size:26px;
+
+    line-height:1;
+}
+
+
+.stat span{
+
+    display:block;
+
+    margin-top:6px;
+
+    color:#9eb3a8;
+
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.7px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main{
+
+    width:min(1200px,92%);
+
+    margin:-45px auto 80px;
+
+    position:relative;
+
+    z-index:10;
+}
+
+
+/* =========================================================
+   RESEARCH TOOL
+========================================================= */
+
+.research-panel{
+
+    background:rgba(255,255,255,.95);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:22px;
+
+    box-shadow:var(--shadow);
+
+    backdrop-filter:blur(20px);
+}
+
+
+.search-row{
+
+    display:flex;
+
+    gap:12px;
+}
+
+
+.search-wrapper{
+
+    position:relative;
+
+    flex:1;
+}
+
+
+.search-icon{
+
+    position:absolute;
+
+    left:17px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#718078;
+
+    font-size:18px;
+}
+
+
+#search{
+
+    width:100%;
+
+    padding:16px 45px;
+
+    border-radius:15px;
+
+    border:1px solid var(--border);
+
+    background:#f8faf9;
+
+    outline:none;
+
+    font-size:15px;
+
+    color:var(--text);
+
+    transition:.2s;
+}
+
+
+#search:focus{
+
+    background:white;
+
+    border-color:var(--green2);
+
+    box-shadow:
+        0 0 0 4px rgba(22,179,100,.09);
+}
+
+
+.clear-btn{
+
+    display:none;
+
+    position:absolute;
+
+    right:10px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    border:0;
+
+    background:#e8efeb;
+
+    width:28px;
+
+    height:28px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    color:#506159;
+
+}
+
+
+/* =========================================================
+   FILTER BAR
+========================================================= */
+
+.filter-bar{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    flex-wrap:wrap;
+
+    margin-top:16px;
+}
+
+
+.filter-label{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    margin-right:4px;
+}
+
+
+.filter-btn{
+
+    border:1px solid var(--border);
+
+    background:white;
+
+    padding:8px 13px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    color:#536159;
+
+    transition:.2s;
+}
+
+
+.filter-btn:hover,
+.filter-btn.active{
+
+    background:var(--dark);
+
+    color:white;
+
+    border-color:var(--dark);
+}
+
+
+/* =========================================================
+   RESEARCH INFO
+========================================================= */
+
+.research-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:18px;
+
+    padding-top:16px;
+
+    border-top:1px solid #edf1ee;
+
+    color:var(--muted);
+
+    font-size:12px;
+}
+
+
+kbd{
+
+    padding:3px 7px;
+
+    border-radius:6px;
+
+    border:1px solid #dce4df;
+
+    background:#f5f7f6;
+
+    font-family:inherit;
+
+    font-size:11px;
+}
+
+
+/* =========================================================
+   CONTENT HEADER
+========================================================= */
+
+.content-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+
+    margin:42px 0 20px;
+}
+
+
+.content-header h2{
+
+    margin:0;
+
+    font-size:28px;
+
+    letter-spacing:-1px;
+}
+
+
+.content-header p{
+
+    margin:5px 0 0;
+
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+
+.result-count{
+
+    color:var(--green);
+
+    font-size:13px;
+
+    font-weight:900;
+}
+
+
+/* =========================================================
+   SECTION GRID
+========================================================= */
+
+.sections-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:18px;
+}
+
+
+/* =========================================================
+   SECTION CARD
+========================================================= */
+
+.section-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:24px;
+
+    transition:
+
+        transform .25s ease,
+
+        box-shadow .25s ease,
+
+        border-color .25s ease;
+}
+
+
+.section-card:before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            var(--green2),
+            var(--green3)
+        );
+
+    opacity:0;
+
+    transition:.25s;
+}
+
+
+.section-card:hover{
+
     transform:translateY(-5px);
-    box-shadow:0 18px 40px rgba(0,0,0,0.18);
-}    
-a{
-color:#0f7b43;
-text-decoration:none;
-font-weight:bold;
+
+    box-shadow:var(--shadow2);
+
+    border-color:#cfe0d6;
 }
+
+
+.section-card:hover:before{
+
+    opacity:1;
+}
+
+
+/* =========================================================
+   SECTION NUMBER
+========================================================= */
+
+.section-number{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:55px;
+
+    height:34px;
+
+    padding:0 12px;
+
+    border-radius:10px;
+
+    background:#e9f8ef;
+
+    color:#08733d;
+
+    font-size:12px;
+
+    font-weight:950;
+
+    letter-spacing:.4px;
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.section-head{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:start;
+
+    gap:15px;
+
+    margin-bottom:15px;
+}
+
+
+.section-card h3{
+
+    margin:0;
+
+    font-size:19px;
+
+    line-height:1.35;
+
+    letter-spacing:-.4px;
+}
+
+
+.chapter-tag{
+
+    display:inline-block;
+
+    margin-bottom:8px;
+
+    color:#0c8650;
+
+    font-size:10px;
+
+    font-weight:950;
+
+    text-transform:uppercase;
+
+    letter-spacing:.7px;
+}
+
+
+/* =========================================================
+   CHAPTER
+========================================================= */
+
+.chapter{
+
+    margin:14px 0;
+
+    padding:12px 14px;
+
+    border-radius:12px;
+
+    background:#f6f9f7;
+
+    border:1px solid #e8efeb;
+}
+
+
+.chapter strong{
+
+    display:block;
+
+    color:#56655d;
+
+    font-size:10px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.7px;
+
+    margin-bottom:3px;
+}
+
+
+.chapter span{
+
+    color:#17271f;
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+
+/* =========================================================
+   EXPLANATION
+========================================================= */
+
+.explanation{
+
+    color:#627169;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    margin:15px 0 0;
+}
+
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.card-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:20px;
+
+    padding-top:15px;
+
+    border-top:1px solid #edf1ee;
+}
+
+
+.copy-btn{
+
+    border:0;
+
+    background:#f0f6f2;
+
+    color:#08733d;
+
+    padding:8px 12px;
+
+    border-radius:9px;
+
+    cursor:pointer;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    transition:.2s;
+}
+
+
+.copy-btn:hover{
+
+    background:#dff3e7;
+}
+
+
+.section-link{
+
+    text-decoration:none;
+
+    color:var(--green);
+
+    font-size:12px;
+
+    font-weight:900;
+}
+
+
+/* =========================================================
+   EMPTY / ERROR
+========================================================= */
+
+.state-box{
+
+    grid-column:1/-1;
+
+    padding:70px 25px;
+
+    text-align:center;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+}
+
+
+.state-box .icon{
+
+    font-size:42px;
+
+    margin-bottom:10px;
+}
+
+
+.state-box h3{
+
+    margin:0 0 6px;
+}
+
+
+.state-box p{
+
+    color:var(--muted);
+
+    margin:0;
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:25px;
+
+    transform:
+        translate(-50%,20px);
+
+    z-index:3000;
+
+    background:#071b12;
+
+    color:white;
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.25s;
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+
+.toast.show{
+
+    opacity:1;
+
+    transform:
+        translate(-50%,0);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
 footer{
-background:#062b63;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:30px;
+
+    background:#05150d;
+
+    color:#9eafa6;
+
+    padding:45px 20px;
+
+    text-align:center;
 }
+
+
+.footer-logo{
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:900;
+}
+
+
+.footer-logo span{
+
+    color:#35db83;
+}
+
+
+footer p{
+
+    margin:8px 0;
+
+    font-size:13px;
+}
+
+
+.footer-note{
+
+    color:#65776e;
+
+    font-size:11px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:850px){
+
+    .sections-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+
+        grid-template-columns:
+            repeat(3,1fr);
+
+        width:100%;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .navbar{
+
+        padding:13px 5%;
+    }
+
+    .logo{
+
+        font-size:22px;
+    }
+
+    .nav-btn{
+
+        padding:8px 11px;
+
+        font-size:11px;
+    }
+
+    .hero{
+
+        padding:60px 5% 80px;
+    }
+
+    .hero h1{
+
+        letter-spacing:-2px;
+    }
+
+    .stats{
+
+        gap:8px;
+    }
+
+    .stat{
+
+        padding:14px 8px;
+
+        text-align:center;
+    }
+
+    .stat strong{
+
+        font-size:21px;
+    }
+
+    .stat span{
+
+        font-size:9px;
+    }
+
+    .main{
+
+        width:94%;
+
+        margin-top:-35px;
+    }
+
+    .research-panel{
+
+        padding:15px;
+
+        border-radius:18px;
+    }
+
+    .search-row{
+
+        display:block;
+    }
+
+    .content-header{
+
+        display:block;
+    }
+
+    .result-count{
+
+        display:block;
+
+        margin-top:8px;
+    }
+
+    .section-card{
+
+        padding:20px;
+    }
+
+    .research-info{
+
+        display:block;
+
+        line-height:1.8;
+    }
+
+}
+
 </style>
 
 </head>
 
+
 <body>
 
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        pendico<span>.</span>
+    </div>
+
+    <div class="nav-actions">
+
+        <a href="index.html" class="nav-btn">
+            ← Home
+        </a>
+
+        <a href="bareacts.html" class="nav-btn">
+            Bare Acts
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
 <header class="hero">
+
     <div class="hero-content">
-        <h1>🛡️ Bharatiya Nagarik Suraksha Sanhita, 2023</h1>
-        <p>India's Criminal Procedure Code</p>
+
+        <div class="eyebrow">
+            ⚖ PENDICO · LEGAL RESEARCH
+        </div>
+
+        <h1>
+            Bharatiya Nagarik
+            <span>Suraksha Sanhita</span>
+        </h1>
+
+        <p class="hero-description">
+            Bharatiya Nagarik Suraksha Sanhita, 2023 —
+            India's modern criminal procedure framework.
+            Explore sections, chapters and legal explanations
+            through a focused research interface designed for
+            students, advocates and legal professionals.
+        </p>
+
 
         <div class="stats">
-            <div class="stat-card">
-                <h2>39</h2>
-                <span>Chapters</span>
+
+            <div class="stat">
+
+                <strong id="sectionCount">
+                    —
+                </strong>
+
+                <span>
+                    Sections Loaded
+                </span>
+
             </div>
 
-            <div class="stat-card">
-                <h2>531</h2>
-                <span>Sections</span>
+
+            <div class="stat">
+
+                <strong id="chapterCount">
+                    —
+                </strong>
+
+                <span>
+                    Chapters
+                </span>
+
             </div>
 
-            <div class="stat-card">
-                <h2>2023</h2>
-                <span>Latest Act</span>
+
+            <div class="stat">
+
+                <strong>
+                    2023
+                </strong>
+
+                <span>
+                    Act
+                </span>
+
             </div>
+
         </div>
+
     </div>
-</header>                                                                    
-<div class="container">
 
-<div class="card">
-    <h2>🔎 Search BNSS Sections</h2>
+</header>
 
-    <input
-        type="text"
-        id="search"
-        placeholder="Search by section, title or keyword..."
-        onkeyup="searchSections()"
-        style="width:100%;padding:15px;border-radius:10px;border:1px solid #ccc;font-size:16px;"
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="main">
+
+
+    <!-- RESEARCH PANEL -->
+
+    <section class="research-panel">
+
+        <div class="search-row">
+
+            <div class="search-wrapper">
+
+                <span class="search-icon">
+                    🔎
+                </span>
+
+                <input
+                    type="search"
+                    id="search"
+                    placeholder="Search section number, title, chapter or legal concept..."
+                    autocomplete="off"
+                >
+
+                <button
+                    id="clearBtn"
+                    class="clear-btn"
+                    type="button"
+                >
+                    ×
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="filter-bar">
+
+            <span class="filter-label">
+                FILTER:
+            </span>
+
+            <button
+                class="filter-btn active"
+                data-filter="all"
+            >
+                All
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="preliminary"
+            >
+                Preliminary
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="courts"
+            >
+                Courts
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="arrest"
+            >
+                Arrest
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="procedure"
+            >
+                Procedure
+            </button>
+
+        </div>
+
+
+        <div class="research-info">
+
+            <span id="searchStatus">
+                Ready for legal research.
+            </span>
+
+            <span>
+                Press <kbd>/</kbd> to search
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTENT HEADER -->
+
+    <div class="content-header">
+
+        <div>
+
+            <h2>
+                BNSS Sections
+            </h2>
+
+            <p>
+                Browse the statutory framework section by section.
+            </p>
+
+        </div>
+
+
+        <div
+            class="result-count"
+            id="resultCount"
+        >
+            Loading...
+        </div>
+
+    </div>
+
+
+
+    <!-- SECTION RESULTS -->
+
+    <section
+        id="results"
+        class="sections-grid"
     >
 
-    <br><br>
+        <div class="state-box">
 
-    <div id="results"></div>
-</div>
+            <div class="icon">
+                ⚖️
+            </div>
 
-</div>
+            <h3>
+                Loading BNSS
+            </h3>
+
+            <p>
+                Preparing the legal research database...
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
-© 2026 Pendico
+
+    <div class="footer-logo">
+        pendico<span>.</span>
+    </div>
+
+    <p>
+        Indian Legal Information Portal
+    </p>
+
+    <p class="footer-note">
+        Bharatiya Nagarik Suraksha Sanhita, 2023 ·
+        Legal information and educational resource
+    </p>
+
+    <p class="footer-note">
+        © 2026 Pendico
+    </p>
+
 </footer>
+
+
+<!-- TOAST -->
+
+<div
+    id="toast"
+    class="toast"
+>
+    Copied to clipboard
+</div>
+
+
+
 <script>
+
+/* =========================================================
+   PENDICO BNSS ENGINE
+========================================================= */
+
 let sections = [];
 
+let currentFilter = "all";
+
+
+/* =========================================================
+   LOAD JSON
+========================================================= */
+
 fetch("data/bnss.json")
-.then(response => response.json())
+
+.then(response => {
+
+    if(!response.ok){
+
+        throw new Error(
+            "Unable to load bnss.json (" +
+            response.status +
+            ")"
+        );
+
+    }
+
+    return response.json();
+
+})
+
 .then(data => {
-    sections = data;
-    displaySections(data);
+
+    if(!Array.isArray(data)){
+
+        throw new Error(
+            "bnss.json must contain an array."
+        );
+
+    }
+
+
+    sections = data.map(item => ({
+
+        ...item,
+
+        section:
+            String(item.section ?? ""),
+
+        title:
+            String(item.title ?? ""),
+
+        chapter:
+            String(item.chapter ?? ""),
+
+        chapterTitle:
+            String(item.chapterTitle ?? ""),
+
+        explanation:
+            String(item.explanation ?? "")
+
+    }));
+
+
+    /* Sort numerically */
+
+    sections.sort(
+        (a,b) =>
+            parseInt(a.section) -
+            parseInt(b.section)
+    );
+
+
+    updateStats();
+
+    displaySections(sections);
+
+})
+
+.catch(error => {
+
+    console.error(error);
+
+    document.getElementById("results").innerHTML = `
+
+        <div class="state-box">
+
+            <div class="icon">
+                ⚠️
+            </div>
+
+            <h3>
+                BNSS database unavailable
+            </h3>
+
+            <p>
+                ${escapeHTML(error.message)}
+            </p>
+
+        </div>
+
+    `;
+
+    document.getElementById("resultCount")
+        .textContent = "Database error";
+
 });
 
-function displaySections(data) {
-    const results = document.getElementById("results");
+
+/* =========================================================
+   UPDATE STATISTICS
+========================================================= */
+
+function updateStats(){
+
+    document.getElementById("sectionCount")
+        .textContent =
+        sections.length;
+
+
+    const chapters =
+        new Set(
+            sections.map(
+                item => item.chapter
+            )
+        );
+
+
+    document.getElementById("chapterCount")
+        .textContent =
+        chapters.size;
+
+}
+
+
+/* =========================================================
+   DISPLAY SECTIONS
+========================================================= */
+
+function displaySections(data){
+
+    const results =
+        document.getElementById("results");
+
+
     results.innerHTML = "";
 
-    data.forEach(item => {
-        results.innerHTML += `
-        <div class="card" style="margin-top:20px;">
-            <h3>📖 Section ${item.section} - ${item.title}</h3>
 
-<p><strong>📂 Chapter:</strong> ${item.chapter}</p>
+    if(!data.length){
 
-<p><strong>📝 Chapter Title:</strong> ${item.chapterTitle}</p>
+        results.innerHTML = `
 
-<p>${item.explanation}</p>
-        </div>
+            <div class="state-box">
+
+                <div class="icon">
+                    🔎
+                </div>
+
+                <h3>
+                    No sections found
+                </h3>
+
+                <p>
+                    Try another legal term, section number
+                    or chapter.
+                </p>
+
+            </div>
+
         `;
+
+        document.getElementById("resultCount")
+            .textContent =
+            "0 results";
+
+        return;
+
+    }
+
+
+    document.getElementById("resultCount")
+        .textContent =
+        `${data.length} section${data.length === 1 ? "" : "s"}`;
+
+
+    data.forEach(item => {
+
+        const sectionText =
+            `BNSS Section ${item.section}
+
+${item.title}
+
+Chapter:
+${item.chapter}
+
+Chapter Title:
+${item.chapterTitle}
+
+${item.explanation}`;
+
+
+        results.innerHTML += `
+
+            <article
+                class="section-card"
+                id="section-${slug(item.section)}"
+            >
+
+                <div class="section-head">
+
+                    <div>
+
+                        <span class="chapter-tag">
+                            ${escapeHTML(item.chapter)}
+                        </span>
+
+                        <h3>
+                            ${escapeHTML(item.title)}
+                        </h3>
+
+                    </div>
+
+                    <span class="section-number">
+                        § ${escapeHTML(item.section)}
+                    </span>
+
+                </div>
+
+
+                <div class="chapter">
+
+                    <strong>
+                        Chapter
+                    </strong>
+
+                    <span>
+                        ${escapeHTML(item.chapterTitle)}
+                    </span>
+
+                </div>
+
+
+                <p class="explanation">
+
+                    ${escapeHTML(item.explanation)}
+
+                </p>
+
+
+                <div class="card-footer">
+
+                    <button
+                        class="copy-btn"
+                        onclick='copySection(${JSON.stringify(sectionText)})'
+                    >
+                        📋 Copy
+                    </button>
+
+
+                    <a
+                        class="section-link"
+                        href="#section-${slug(item.section)}"
+                    >
+                        § ${escapeHTML(item.section)}
+                        →
+                    </a>
+
+                </div>
+
+            </article>
+
+        `;
+
     });
+
 }
 
-function searchSections() {
-    const keyword = document.getElementById("search").value.toLowerCase();
 
-   const filtered = sections.filter(item =>
-    item.section.toLowerCase().includes(keyword) ||
-    item.title.toLowerCase().includes(keyword) ||
-    item.chapter.toLowerCase().includes(keyword) ||
-    item.chapterTitle.toLowerCase().includes(keyword) ||
-    item.explanation.toLowerCase().includes(keyword)
-); 
+/* =========================================================
+   SEARCH
+========================================================= */
+
+document
+.getElementById("search")
+.addEventListener("input", performSearch);
+
+
+function performSearch(){
+
+    const keyword =
+        document
+        .getElementById("search")
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    document.getElementById("clearBtn")
+        .style.display =
+        keyword ? "block" : "none";
+
+
+    let filtered =
+        sections.filter(item => {
+
+            const searchable = `
+
+                ${item.section}
+
+                ${item.title}
+
+                ${item.chapter}
+
+                ${item.chapterTitle}
+
+                ${item.explanation}
+
+            `.toLowerCase();
+
+
+            return searchable.includes(keyword);
+
+        });
+
+
+    /* Category filters */
+
+    if(currentFilter !== "all"){
+
+        filtered =
+            filtered.filter(item => {
+
+                const text = `
+
+                    ${item.chapter}
+
+                    ${item.chapterTitle}
+
+                    ${item.title}
+
+                    ${item.explanation}
+
+                `.toLowerCase();
+
+
+                return text.includes(currentFilter);
+
+            });
+
+    }
+
 
     displaySections(filtered);
+
+
+    if(keyword){
+
+        document.getElementById("searchStatus")
+            .textContent =
+            `Searching for "${keyword}"`;
+
+    }
+    else{
+
+        document.getElementById("searchStatus")
+            .textContent =
+            "Ready for legal research.";
+
+    }
+
 }
+
+
+/* =========================================================
+   FILTER BUTTONS
+========================================================= */
+
+document
+.querySelectorAll(".filter-btn")
+.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        function(){
+
+            document
+            .querySelectorAll(".filter-btn")
+            .forEach(btn =>
+                btn.classList.remove("active")
+            );
+
+
+            this.classList.add("active");
+
+
+            currentFilter =
+                this.dataset.filter;
+
+
+            performSearch();
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   CLEAR SEARCH
+========================================================= */
+
+document
+.getElementById("clearBtn")
+.addEventListener("click", function(){
+
+    document.getElementById("search")
+        .value = "";
+
+    currentFilter = "all";
+
+
+    document
+    .querySelectorAll(".filter-btn")
+    .forEach(btn =>
+        btn.classList.remove("active")
+    );
+
+
+    document
+    .querySelector('[data-filter="all"]')
+    .classList.add("active");
+
+
+    performSearch();
+
+    document.getElementById("search")
+        .focus();
+
+});
+
+
+/* =========================================================
+   KEYBOARD SHORTCUT
+========================================================= */
+
+document.addEventListener(
+"keydown",
+function(event){
+
+    if(
+        event.key === "/" &&
+        document.activeElement.tagName !== "INPUT" &&
+        document.activeElement.tagName !== "TEXTAREA"
+    ){
+
+        event.preventDefault();
+
+        document.getElementById("search")
+            .focus();
+
+    }
+
+});
+
+
+/* =========================================================
+   COPY SECTION
+========================================================= */
+
+function copySection(text){
+
+    navigator.clipboard
+    .writeText(text)
+
+    .then(() => {
+
+        showToast(
+            "Section copied to clipboard"
+        );
+
+    })
+
+    .catch(() => {
+
+        showToast(
+            "Unable to copy section"
+        );
+
+    });
+
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+function showToast(message){
+
+    const toast =
+        document.getElementById("toast");
+
+
+    toast.textContent =
+        message;
+
+
+    toast.classList.add("show");
+
+
+    setTimeout(() => {
+
+        toast.classList.remove("show");
+
+    },2200);
+
+}
+
+
+/* =========================================================
+   SAFE HTML
+========================================================= */
+
+function escapeHTML(value){
+
+    return String(value)
+
+        .replace(/&/g,"&amp;")
+
+        .replace(/</g,"&lt;")
+
+        .replace(/>/g,"&gt;")
+
+        .replace(/"/g,"&quot;")
+
+        .replace(/'/g,"&#039;");
+
+}
+
+
+/* =========================================================
+   URL SLUG
+========================================================= */
+
+function slug(value){
+
+    return String(value)
+
+        .toLowerCase()
+
+        .replace(/[^a-z0-9]+/g,"-")
+
+        .replace(/^-|-$/g,"");
+
+}
+
 </script>
+
 </body>
 </html>
-
