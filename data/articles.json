@@ -1,1 +1,342 @@
+[
+  {
+    "id": 1,
+    "title": "Understanding the Basic Structure of the Indian Constitution",
+    "category": "Constitutional Law",
+    "author": "Pendico Editorial",
+    "date": "2026-08-12",
+    "readTime": "8 min read",
+    "featured": true,
+    "summary": "A practical introduction to the structure, philosophy and functioning of the Constitution of India for law students and young advocates.",
+    "content": [
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "The Constitution of India is the supreme legal framework governing the Indian State. It establishes the structure of government, distributes powers among constitutional institutions and guarantees fundamental rights to individuals.",
+          "For a law student, constitutional law is not merely an academic subject. Constitutional principles frequently appear in litigation before the Supreme Court and High Courts."
+        ]
+      },
+      {
+        "heading": "Why the Constitution Matters",
+        "paragraphs": [
+          "Every legislation, executive action and governmental decision must operate within the constitutional framework.",
+          "The Constitution therefore acts as both a source of governmental authority and a limitation on governmental power."
+        ]
+      },
+      {
+        "heading": "Fundamental Rights",
+        "paragraphs": [
+          "Part III of the Constitution contains Fundamental Rights. These rights protect individual liberty and impose constitutional limitations on State action.",
+          "Articles 14, 19 and 21 are particularly important in constitutional litigation and have been interpreted extensively by the Supreme Court."
+        ]
+      },
+      {
+        "heading": "Judicial Review",
+        "paragraphs": [
+          "Judicial review enables constitutional courts to examine the legality and constitutionality of legislative and executive action.",
+          "The power of judicial review is closely connected with constitutional supremacy and the protection of fundamental rights."
+        ]
+      },
+      {
+        "heading": "For Law Students",
+        "paragraphs": [
+          "A strong constitutional-law foundation requires regular reading of the constitutional text together with leading Supreme Court judgments.",
+          "Students should learn to identify the constitutional provision involved, the issue before the Court, the ratio decidendi and the practical impact of the judgment."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "The Constitution is the supreme law of India.",
+      "Fundamental Rights impose important limitations on State action.",
+      "Constitutional courts exercise judicial review.",
+      "Understanding constitutional provisions requires reading leading judgments."
+    ],
+    "tags": [
+      "Constitution",
+      "Fundamental Rights",
+      "Judicial Review",
+      "Law Students"
+    ]
+  },
 
+  {
+    "id": 2,
+    "title": "How to Read a Supreme Court Judgment Like a Lawyer",
+    "category": "Legal Skills",
+    "author": "Pendico Editorial",
+    "date": "2026-08-12",
+    "readTime": "10 min read",
+    "featured": false,
+    "summary": "A practical method for reading lengthy Supreme Court judgments efficiently and extracting the principles that actually matter.",
+    "content": [
+      {
+        "heading": "Do Not Read Every Judgment Like a Textbook",
+        "paragraphs": [
+          "Judgments can contain extensive factual backgrounds, submissions of counsel, precedents, statutory provisions and reasoning. A lawyer must learn to identify the legally decisive portions.",
+          "The first objective should be to understand what question the Court was required to decide."
+        ]
+      },
+      {
+        "heading": "Step 1 — Identify the Facts",
+        "paragraphs": [
+          "Read the factual background carefully enough to understand the dispute.",
+          "Do not spend excessive time memorising facts that have no relevance to the legal principle."
+        ]
+      },
+      {
+        "heading": "Step 2 — Identify the Issues",
+        "paragraphs": [
+          "Ask: What precise legal question was before the Court?",
+          "An issue should preferably be expressed as a legal question rather than a general description of the dispute."
+        ]
+      },
+      {
+        "heading": "Step 3 — Find the Statutory Provisions",
+        "paragraphs": [
+          "Identify every important constitutional provision, section, rule or regulation considered by the Court.",
+          "Read the statutory language independently before analysing the Court's interpretation."
+        ]
+      },
+      {
+        "heading": "Step 4 — Identify the Ratio",
+        "paragraphs": [
+          "The ratio decidendi is the legal principle necessary for the decision.",
+          "A lawyer should distinguish the ratio from factual observations, background discussion and arguments advanced by counsel."
+        ]
+      },
+      {
+        "heading": "Step 5 — Note the Final Order",
+        "paragraphs": [
+          "Always read the operative portion of the judgment.",
+          "The final relief granted or refused determines the immediate legal result of the litigation."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "Start with the legal issue.",
+      "Identify the governing statutory provisions.",
+      "Separate arguments from the Court's reasoning.",
+      "Identify the ratio decidendi.",
+      "Always read the final order."
+    ],
+    "tags": [
+      "Judgments",
+      "Supreme Court",
+      "Legal Research",
+      "Advocacy Skills"
+    ]
+  },
+
+  {
+    "id": 3,
+    "title": "BNS, BNSS and BSA: Understanding India's New Criminal Laws",
+    "category": "Criminal Law",
+    "author": "Pendico Editorial",
+    "date": "2026-08-12",
+    "readTime": "12 min read",
+    "featured": true,
+    "summary": "An introductory guide to the three major criminal-law enactments that replaced the former IPC, CrPC and Evidence Act framework.",
+    "content": [
+      {
+        "heading": "The Three New Criminal Laws",
+        "paragraphs": [
+          "India introduced three major criminal-law enactments: the Bharatiya Nyaya Sanhita, 2023, the Bharatiya Nagarik Suraksha Sanhita, 2023 and the Bharatiya Sakshya Adhiniyam, 2023.",
+          "Together, these statutes address substantive criminal offences, criminal procedure and the law of evidence."
+        ]
+      },
+      {
+        "heading": "Bharatiya Nyaya Sanhita",
+        "paragraphs": [
+          "The Bharatiya Nyaya Sanhita deals primarily with substantive criminal offences and punishments.",
+          "For criminal practitioners, understanding the ingredients of each offence remains fundamental to drafting complaints, bail applications, discharge applications and trial strategy."
+        ]
+      },
+      {
+        "heading": "Bharatiya Nagarik Suraksha Sanhita",
+        "paragraphs": [
+          "The Bharatiya Nagarik Suraksha Sanhita governs criminal procedure.",
+          "It is particularly important for advocates dealing with FIRs, investigation, arrest, remand, bail, investigation reports, trials and appeals."
+        ]
+      },
+      {
+        "heading": "Bharatiya Sakshya Adhiniyam",
+        "paragraphs": [
+          "The Bharatiya Sakshya Adhiniyam deals with evidentiary principles.",
+          "Evidence law determines what material may be legally relied upon and how courts evaluate relevant evidence."
+        ]
+      },
+      {
+        "heading": "Practical Importance",
+        "paragraphs": [
+          "A young criminal lawyer should study all three statutes together rather than treating them as isolated subjects.",
+          "A criminal case often requires simultaneous analysis of the offence, procedural provision and evidentiary foundation."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "BNS primarily deals with offences and punishments.",
+      "BNSS primarily deals with criminal procedure.",
+      "BSA deals with evidence.",
+      "Criminal litigation requires understanding the interaction between all three."
+    ],
+    "tags": [
+      "BNS",
+      "BNSS",
+      "BSA",
+      "Criminal Law",
+      "Advocacy"
+    ]
+  },
+
+  {
+    "id": 4,
+    "title": "How to Build a Strong Legal Research Habit",
+    "category": "Legal Research",
+    "author": "Pendico Editorial",
+    "date": "2026-08-11",
+    "readTime": "7 min read",
+    "featured": false,
+    "summary": "A practical system for law students who want to become faster and more accurate legal researchers.",
+    "content": [
+      {
+        "heading": "Start With the Legal Question",
+        "paragraphs": [
+          "Legal research should begin with a precise legal question rather than a broad search.",
+          "The narrower the question, the easier it becomes to identify relevant legislation and precedents."
+        ]
+      },
+      {
+        "heading": "Use Primary Sources",
+        "paragraphs": [
+          "Whenever possible, begin with legislation, constitutional provisions and judgments.",
+          "Secondary sources are useful for orientation, but the final legal position should be verified against authoritative primary material."
+        ]
+      },
+      {
+        "heading": "Create a Case Note",
+        "paragraphs": [
+          "For every important judgment, record the facts, issues, provisions, arguments, reasoning, ratio and final order.",
+          "This creates a personal case-law database that becomes increasingly valuable during internships and practice."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "Begin with a precise legal question.",
+      "Prioritise primary legal sources.",
+      "Maintain structured case notes.",
+      "Verify important propositions before relying on them."
+    ],
+    "tags": [
+      "Research",
+      "Case Law",
+      "Law Students",
+      "Legal Writing"
+    ]
+  },
+
+  {
+    "id": 5,
+    "title": "The Indian Judicial System Explained",
+    "category": "Indian Judiciary",
+    "author": "Pendico Editorial",
+    "date": "2026-08-10",
+    "readTime": "9 min read",
+    "featured": false,
+    "summary": "An accessible overview of India's judicial hierarchy and the role of the Supreme Court, High Courts and subordinate courts.",
+    "content": [
+      {
+        "heading": "Supreme Court of India",
+        "paragraphs": [
+          "The Supreme Court is the highest constitutional court in India.",
+          "It exercises original, appellate and advisory jurisdiction in accordance with the Constitution and applicable law."
+        ]
+      },
+      {
+        "heading": "High Courts",
+        "paragraphs": [
+          "High Courts operate at the State or territorial level and exercise constitutional, appellate, supervisory and other jurisdictions conferred by law.",
+          "For advocates practising in Tamil Nadu, the Madras High Court is particularly important."
+        ]
+      },
+      {
+        "heading": "Subordinate Judiciary",
+        "paragraphs": [
+          "District and subordinate courts handle a large volume of civil and criminal litigation.",
+          "These courts are often where advocates develop the practical skills required for trial advocacy."
+        ]
+      },
+      {
+        "heading": "Why Young Lawyers Should Understand Court Structure",
+        "paragraphs": [
+          "Knowing jurisdiction is essential when deciding where a proceeding should be instituted or challenged.",
+          "A good advocate must understand territorial jurisdiction, pecuniary jurisdiction, subject-matter jurisdiction and appellate routes."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "The Supreme Court is India's apex court.",
+      "High Courts exercise important constitutional and appellate jurisdiction.",
+      "Subordinate courts form the foundation of day-to-day litigation.",
+      "Jurisdiction is a fundamental advocacy skill."
+    ],
+    "tags": [
+      "Judiciary",
+      "Supreme Court",
+      "High Courts",
+      "District Courts"
+    ]
+  },
+
+  {
+    "id": 6,
+    "title": "What Makes a Good Advocate?",
+    "category": "Legal Profession",
+    "author": "Pendico Editorial",
+    "date": "2026-08-09",
+    "readTime": "8 min read",
+    "featured": false,
+    "summary": "The essential professional habits that law students should develop before entering litigation practice.",
+    "content": [
+      {
+        "heading": "Legal Knowledge Is Only the Foundation",
+        "paragraphs": [
+          "A practising advocate requires more than knowledge of statutes and judgments.",
+          "Drafting, oral advocacy, client communication, procedural knowledge and professional discipline are equally important."
+        ]
+      },
+      {
+        "heading": "Courtroom Discipline",
+        "paragraphs": [
+          "Young advocates should observe courtroom procedure carefully and learn how matters are called, mentioned, argued and adjourned.",
+          "Professional courtesy toward judges, opponents and court staff is an essential part of practice."
+        ]
+      },
+      {
+        "heading": "Drafting Skills",
+        "paragraphs": [
+          "Clear drafting is one of the most valuable skills an advocate can develop.",
+          "A strong pleading should identify the relevant facts, legal grounds and relief sought without unnecessary repetition."
+        ]
+      },
+      {
+        "heading": "Continuous Learning",
+        "paragraphs": [
+          "Law changes continuously through legislation, judgments and procedural developments.",
+          "A serious advocate therefore treats legal research as a permanent professional habit."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "Develop drafting and oral advocacy together.",
+      "Observe courtroom procedure.",
+      "Maintain professional discipline.",
+      "Keep learning throughout practice."
+    ],
+    "tags": [
+      "Advocate",
+      "Career",
+      "Litigation",
+      "Law Students"
+    ]
+  }
+]
