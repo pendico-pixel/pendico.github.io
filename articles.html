@@ -1,39 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pendico Legal Insights | Indian Legal Articles</title>
+<title>Pendico | Legal Articles</title>
 
 <meta name="description"
-content="Pendico Legal Insights provides accessible articles on Indian criminal law, constitutional law, consumer law, legal rights and important legal concepts.">
-
-<meta name="keywords"
-content="Indian legal articles, law articles India, criminal law, constitutional law, consumer rights, FIR, arrest rights, legal education">
-
-<meta name="robots" content="index, follow">
-
-<link rel="canonical"
-href="https://pendico.pages.dev/articles.html">
-
-<link rel="icon"
-type="image/png"
-href="favicon.png">
-
+content="Pendico Legal Articles — legal analysis, constitutional law, criminal law, civil law, technology law and legal education.">
 
 <style>
 
-/* =====================================================
-   GLOBAL
-===================================================== */
+:root{
+    --bg:#050807;
+    --bg2:#09120e;
+    --panel:#0c1712;
+    --panel2:#101d17;
+    --green:#16d878;
+    --green2:#65f5a6;
+    --text:#eef8f2;
+    --muted:#91a59a;
+    --border:rgba(255,255,255,.09);
+    --shadow:0 25px 80px rgba(0,0,0,.35);
+}
 
 *{
-    margin:0;
-    padding:0;
     box-sizing:border-box;
 }
 
@@ -42,1839 +33,2129 @@ html{
 }
 
 body{
-
+    margin:0;
     font-family:
-    Inter,
-    Arial,
-    Helvetica,
-    sans-serif;
-
-    background:#f5f7fb;
-
-    color:#172033;
-
-    line-height:1.65;
-}
-
-a{
-    text-decoration:none;
-}
-
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
-
-.navbar{
-
-    position:sticky;
-
-    top:0;
-
-    z-index:1000;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    padding:14px 6%;
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
 
     background:
-    rgba(5,17,36,0.96);
+        radial-gradient(circle at 10% 10%,rgba(22,216,120,.08),transparent 25%),
+        radial-gradient(circle at 90% 30%,rgba(0,255,153,.06),transparent 30%),
+        var(--bg);
 
-    backdrop-filter:blur(18px);
-
-    border-bottom:
-    1px solid rgba(255,255,255,0.08);
+    color:var(--text);
 }
 
-.brand{
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    height:72px;
 
     display:flex;
-
     align-items:center;
+    justify-content:space-between;
 
-    gap:11px;
+    padding:0 6%;
 
-    color:white;
+    background:rgba(5,8,7,.78);
+    backdrop-filter:blur(20px);
 
-    font-size:21px;
-
-    font-weight:800;
-
-    letter-spacing:1px;
+    border-bottom:1px solid var(--border);
 }
 
-.brand img{
-
-    width:40px;
-
-    height:40px;
-
-    border-radius:9px;
-
-    object-fit:cover;
+.logo{
+    font-size:25px;
+    font-weight:900;
+    letter-spacing:-1px;
 }
 
-.nav-links{
+.logo span{
+    color:var(--green);
+}
 
+.nav-actions{
     display:flex;
-
-    gap:6px;
-
-    flex-wrap:wrap;
+    gap:10px;
 }
 
-.nav-links a{
+.nav-btn{
+    color:white;
+    text-decoration:none;
 
-    color:#d6e2f2;
+    border:1px solid var(--border);
 
-    padding:8px 12px;
+    padding:9px 15px;
 
-    border-radius:8px;
+    border-radius:11px;
 
     font-size:13px;
-
-    font-weight:600;
+    font-weight:700;
 
     transition:.25s;
 }
 
-.nav-links a:hover{
-
-    background:#174b87;
-
-    color:white;
+.nav-btn:hover{
+    border-color:var(--green);
+    color:var(--green2);
+    transform:translateY(-2px);
 }
 
 
-/* =====================================================
-   HERO
-===================================================== */
+/* ================= HERO ================= */
 
 .hero{
+    min-height:430px;
+
+    display:flex;
+    align-items:center;
 
     position:relative;
-
     overflow:hidden;
 
-    padding:
-    95px 20px 100px;
+    padding:80px 7%;
 
-    text-align:center;
-
-    color:white;
-
-    background:
-
-    radial-gradient(
-        circle at 15% 30%,
-        rgba(43,120,255,.22),
-        transparent 30%
-    ),
-
-    radial-gradient(
-        circle at 85% 70%,
-        rgba(0,200,255,.16),
-        transparent 28%
-    ),
-
-    linear-gradient(
-        135deg,
-        #061326,
-        #0b2345,
-        #06142a
-    );
+    border-bottom:1px solid var(--border);
 }
 
-.hero::after{
+.hero-grid{
+    position:absolute;
+    inset:0;
 
-    content:"";
+    opacity:.14;
 
+    background-image:
+        linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
+
+    background-size:55px 55px;
+
+    mask-image:linear-gradient(to bottom,black,transparent);
+}
+
+.glow{
     position:absolute;
 
     width:500px;
-
     height:500px;
+
+    right:-150px;
+    top:-150px;
 
     border-radius:50%;
 
-    border:
-    1px solid rgba(80,160,255,.12);
+    background:rgba(22,216,120,.10);
 
-    top:-250px;
-
-    right:-150px;
+    filter:blur(80px);
 }
 
 .hero-content{
+    position:relative;
+    z-index:2;
 
     max-width:850px;
-
-    margin:auto;
-
-    position:relative;
-
-    z-index:2;
 }
 
-.hero-label{
+.eyebrow{
+    display:inline-flex;
+    gap:8px;
 
-    display:inline-block;
+    padding:8px 13px;
 
-    padding:7px 14px;
-
-    border:
-    1px solid rgba(255,255,255,.15);
+    border:1px solid rgba(101,245,166,.25);
 
     border-radius:30px;
 
-    color:#9fc8ff;
+    color:var(--green2);
+
+    background:rgba(22,216,120,.07);
 
     font-size:12px;
+    font-weight:800;
+
+    letter-spacing:.8px;
+}
+
+.hero h1{
+    margin:22px 0 18px;
+
+    font-size:clamp(48px,8vw,92px);
+
+    line-height:.95;
+
+    letter-spacing:-5px;
+}
+
+.hero h1 span{
+    color:var(--green);
+}
+
+.hero p{
+    max-width:700px;
+
+    color:var(--muted);
+
+    font-size:18px;
+
+    line-height:1.75;
+}
+
+
+/* ================= MAIN ================= */
+
+.container{
+    width:min(1250px,90%);
+
+    margin:auto;
+
+    padding:55px 0 100px;
+}
+
+
+/* ================= CONTROL BAR ================= */
+
+.controls{
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    padding:16px;
+
+    background:rgba(16,29,23,.82);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:45px;
+}
+
+.search-wrap{
+    flex:1;
+    min-width:240px;
+
+    position:relative;
+}
+
+.search-icon{
+    position:absolute;
+
+    left:16px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#71857a;
+}
+
+.search{
+    width:100%;
+
+    padding:14px 16px 14px 45px;
+
+    background:#07100c;
+
+    border:1px solid var(--border);
+
+    color:white;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:14px;
+}
+
+.search:focus{
+    border-color:var(--green);
+
+    box-shadow:
+        0 0 0 3px rgba(22,216,120,.08);
+}
+
+.filters{
+    display:flex;
+
+    gap:7px;
+
+    flex-wrap:wrap;
+}
+
+.filter{
+    padding:10px 13px;
+
+    border-radius:10px;
+
+    border:1px solid var(--border);
+
+    background:#0a130e;
+
+    color:#aabbb1;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    font-size:12px;
+
+    transition:.2s;
+}
+
+.filter:hover,
+.filter.active{
+    background:var(--green);
+
+    border-color:var(--green);
+
+    color:#031008;
+}
+
+
+/* ================= FEATURED ================= */
+
+.section-label{
+    color:var(--green2);
+
+    font-size:11px;
+
+    font-weight:900;
 
     letter-spacing:1.5px;
 
     text-transform:uppercase;
 
-    margin-bottom:20px;
+    margin-bottom:14px;
 }
 
-.hero h1{
+.featured{
+    position:relative;
 
-    font-size:
-    clamp(42px,7vw,72px);
+    overflow:hidden;
 
-    line-height:1.05;
+    border:1px solid rgba(101,245,166,.15);
 
-    letter-spacing:-2px;
+    border-radius:30px;
 
-    margin-bottom:18px;
+    background:
+        linear-gradient(
+            120deg,
+            rgba(13,43,29,.95),
+            rgba(6,16,11,.95)
+        );
+
+    padding:45px;
+
+    margin-bottom:55px;
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.35);
+}
+
+.featured:after{
+    content:"⚖";
+
+    position:absolute;
+
+    right:40px;
+    top:-20px;
+
+    font-size:220px;
+
+    color:rgba(255,255,255,.025);
+}
+
+.featured-content{
+    position:relative;
+
+    z-index:2;
+
+    max-width:800px;
+}
+
+.featured-badge{
+    display:inline-block;
+
+    padding:7px 12px;
+
+    border-radius:20px;
+
+    background:var(--green);
+
+    color:#031008;
+
+    font-size:11px;
 
     font-weight:900;
 }
 
-.hero h1 span{
+.featured h2{
+    margin:20px 0 15px;
 
-    color:#5da8ff;
+    font-size:clamp(30px,5vw,52px);
+
+    line-height:1.08;
+
+    letter-spacing:-2px;
 }
 
-.hero p{
+.featured p{
+    color:#afc2b7;
 
-    max-width:680px;
-
-    margin:auto;
-
-    color:#aebed3;
-
-    font-size:17px;
-
-    margin-bottom:32px;
-}
-
-
-/* =====================================================
-   SEARCH
-===================================================== */
-
-.search-wrapper{
-
-    max-width:720px;
-
-    margin:auto;
-
-    background:white;
-
-    padding:7px;
-
-    border-radius:14px;
-
-    display:flex;
-
-    box-shadow:
-    0 18px 50px rgba(0,0,0,.3);
-}
-
-.search-wrapper input{
-
-    flex:1;
-
-    border:none;
-
-    outline:none;
-
-    padding:15px 17px;
+    line-height:1.75;
 
     font-size:15px;
-
-    border-radius:10px;
-
-    color:#172033;
 }
 
-.search-wrapper button{
-
-    border:none;
-
-    background:#1769d1;
-
-    color:white;
-
-    padding:
-    0 25px;
-
-    border-radius:10px;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:.25s;
-}
-
-.search-wrapper button:hover{
-
-    background:#0d55ae;
-}
-
-
-/* =====================================================
-   CATEGORY BAR
-===================================================== */
-
-.category-bar{
-
-    max-width:1150px;
-
-    margin:
-    -30px auto 0;
-
-    position:relative;
-
-    z-index:10;
-
-    padding:0 20px;
-}
-
-.category-inner{
-
-    background:white;
-
-    border-radius:16px;
-
-    padding:16px;
-
+.meta{
     display:flex;
-
-    gap:9px;
-
-    justify-content:center;
 
     flex-wrap:wrap;
 
-    box-shadow:
-    0 12px 35px rgba(18,45,80,.12);
+    gap:15px;
 
-    border:
-    1px solid #e5eaf1;
+    color:#7f9689;
+
+    font-size:12px;
+
+    margin-top:20px;
 }
 
-.category{
+.read-featured{
+    display:inline-block;
 
-    border:none;
+    margin-top:25px;
 
-    background:#f0f4f9;
+    padding:13px 18px;
 
-    color:#31445c;
+    background:white;
 
-    padding:9px 15px;
+    color:#06130c;
 
-    border-radius:20px;
+    text-decoration:none;
 
-    cursor:pointer;
+    border-radius:12px;
+
+    font-weight:900;
 
     font-size:13px;
 
-    font-weight:600;
-
-    transition:.25s;
+    transition:.2s;
 }
 
-.category:hover,
-.category.active{
+.read-featured:hover{
+    transform:translateY(-3px);
 
-    background:#1769d1;
-
-    color:white;
+    box-shadow:0 10px 30px rgba(255,255,255,.12);
 }
 
 
-/* =====================================================
-   MAIN
-===================================================== */
+/* ================= HEADING ================= */
 
-.main{
-
-    max-width:1200px;
-
-    margin:auto;
-
-    padding:
-    75px 22px;
-}
-
-.section-header{
-
+.heading{
     display:flex;
 
     justify-content:space-between;
 
     align-items:end;
 
-    gap:20px;
-
-    margin-bottom:28px;
+    margin-bottom:25px;
 }
 
-.section-header h2{
+.heading h2{
+    margin:0;
 
     font-size:30px;
 
-    color:#102d55;
+    letter-spacing:-1px;
 }
 
-.section-header p{
+.heading p{
+    margin:7px 0 0;
 
-    color:#718096;
+    color:var(--muted);
 
     font-size:14px;
 }
 
 
-/* =====================================================
-   FEATURED ARTICLE
-===================================================== */
+/* ================= ARTICLE GRID ================= */
 
-.featured{
-
+.article-grid{
     display:grid;
 
     grid-template-columns:
-    1.3fr 1fr;
+        repeat(3,1fr);
 
-    min-height:320px;
+    gap:20px;
+}
+
+
+/* ================= ARTICLE CARD ================= */
+
+.article-card{
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:330px;
+
+    padding:25px;
 
     border-radius:22px;
 
-    overflow:hidden;
-
-    margin-bottom:65px;
-
     background:
-    linear-gradient(
-        135deg,
-        #092448,
-        #1769d1
-    );
+        linear-gradient(
+            145deg,
+            rgba(16,29,23,.96),
+            rgba(8,15,11,.96)
+        );
 
-    color:white;
-
-    box-shadow:
-    0 18px 45px rgba(18,60,110,.18);
-}
-
-.featured-visual{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:100px;
-
-    background:
-    radial-gradient(
-        circle,
-        rgba(255,255,255,.15),
-        transparent 55%
-    );
-}
-
-.featured-content{
-
-    padding:45px;
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-direction:column;
-}
-
-.featured-label{
-
-    color:#a9d0ff;
-
-    text-transform:uppercase;
-
-    font-size:11px;
-
-    font-weight:800;
-
-    letter-spacing:1.5px;
-
-    margin-bottom:12px;
-}
-
-.featured-content h2{
-
-    font-size:34px;
-
-    line-height:1.2;
-
-    margin-bottom:15px;
-}
-
-.featured-content p{
-
-    color:#d0dff1;
-
-    font-size:15px;
-
-    margin-bottom:20px;
-}
-
-.read-featured{
-
-    align-self:flex-start;
-
-    background:white;
-
-    color:#0c4d9d;
-
-    padding:11px 20px;
-
-    border-radius:9px;
-
-    font-weight:800;
-
-    font-size:13px;
-}
-
-
-/* =====================================================
-   ARTICLE GRID
-===================================================== */
-
-.article-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-
-    gap:22px;
-}
-
-.article-card{
-
-    background:white;
-
-    border:
-    1px solid #e5eaf1;
-
-    border-radius:17px;
-
-    overflow:hidden;
+    border:1px solid var(--border);
 
     transition:
-    transform .3s,
-    box-shadow .3s;
+        transform .3s,
+        border-color .3s,
+        box-shadow .3s;
+}
 
-    box-shadow:
-    0 6px 22px rgba(18,45,80,.05);
+.article-card:before{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--green),
+            var(--green2)
+        );
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.3s;
 }
 
 .article-card:hover{
+    transform:translateY(-8px);
 
-    transform:translateY(-7px);
+    border-color:rgba(101,245,166,.22);
 
     box-shadow:
-    0 18px 38px rgba(18,45,80,.13);
+        0 25px 60px rgba(0,0,0,.35);
 }
 
-.article-image{
+.article-card:hover:before{
+    transform:scaleX(1);
+}
 
-    height:155px;
-
+.card-top{
     display:flex;
+
+    justify-content:space-between;
 
     align-items:center;
 
-    justify-content:center;
+    gap:10px;
 
-    font-size:55px;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #eaf3ff,
-        #d9eaff
-    );
+    margin-bottom:18px;
 }
 
-.article-content{
+.category{
+    padding:6px 10px;
 
-    padding:23px;
-}
+    border-radius:20px;
 
-.article-category{
+    background:rgba(22,216,120,.10);
 
-    color:#1769d1;
+    color:var(--green2);
 
-    font-size:11px;
+    font-size:10px;
 
-    font-weight:800;
-
-    letter-spacing:.8px;
+    font-weight:900;
 
     text-transform:uppercase;
+
+    letter-spacing:.5px;
+}
+
+.date{
+    color:#71857a;
+
+    font-size:11px;
 }
 
 .article-card h3{
+    margin:0 0 13px;
 
     font-size:21px;
 
-    color:#102d55;
-
-    margin:
-    8px 0 10px;
-
     line-height:1.3;
+
+    letter-spacing:-.6px;
 }
 
 .article-card p{
+    color:#84988d;
 
-    color:#6d7c90;
+    line-height:1.65;
 
-    font-size:14px;
+    font-size:13px;
 
-    margin-bottom:17px;
+    margin:0;
 }
 
-.article-meta{
+.card-bottom{
+    margin-top:auto;
+
+    padding-top:20px;
+
+    border-top:1px solid var(--border);
 
     display:flex;
 
     justify-content:space-between;
 
-    border-top:
-    1px solid #edf0f4;
+    align-items:center;
+}
 
-    padding-top:14px;
+.read-btn{
+    border:0;
 
-    color:#8793a3;
+    background:none;
+
+    color:var(--green2);
+
+    font-weight:900;
+
+    cursor:pointer;
+
+    font-size:12px;
+
+    padding:0;
+}
+
+.read-btn:hover{
+    text-decoration:underline;
+}
+
+.read-time{
+    color:#687b70;
 
     font-size:11px;
 }
 
-.read-link{
 
-    display:inline-block;
+/* ================= EMPTY ================= */
 
-    margin-top:18px;
+.empty{
+    grid-column:1/-1;
 
-    color:#1769d1;
+    padding:70px 20px;
+
+    text-align:center;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    background:var(--panel);
+
+    color:var(--muted);
+}
+
+
+/* ================= ARTICLE READER ================= */
+
+.reader{
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:3000;
+
+    background:
+        rgba(2,5,3,.94);
+
+    backdrop-filter:blur(20px);
+
+    overflow-y:auto;
+}
+
+.reader.active{
+    display:block;
+}
+
+.progress{
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    height:4px;
+
+    width:0;
+
+    background:var(--green);
+
+    z-index:4000;
+}
+
+.reader-inner{
+    width:min(900px,90%);
+
+    margin:80px auto;
+
+    padding-bottom:100px;
+}
+
+.close-reader{
+    position:fixed;
+
+    top:22px;
+    right:25px;
+
+    width:44px;
+    height:44px;
+
+    border-radius:50%;
+
+    border:1px solid var(--border);
+
+    background:#0d1812;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    z-index:3500;
+}
+
+.reader-category{
+    color:var(--green2);
+
+    font-size:11px;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+}
+
+.reader h1{
+    font-size:clamp(36px,6vw,65px);
+
+    line-height:1.03;
+
+    letter-spacing:-3px;
+
+    margin:18px 0;
+}
+
+.reader-meta{
+    color:#71857a;
 
     font-size:13px;
 
-    font-weight:800;
+    padding-bottom:25px;
+
+    border-bottom:1px solid var(--border);
 }
 
+.reader-summary{
+    margin:35px 0;
 
-/* =====================================================
-   TRENDING
-===================================================== */
+    padding:25px;
 
-.trending{
+    border-left:3px solid var(--green);
 
-    margin-top:75px;
+    background:rgba(22,216,120,.05);
 
-    display:grid;
+    color:#b8cabe;
 
-    grid-template-columns:
-    1fr 1fr;
+    line-height:1.8;
 
-    gap:25px;
+    border-radius:0 14px 14px 0;
 }
 
-.trending-panel{
+.article-body{
+    color:#c6d4cb;
 
-    background:white;
+    font-size:17px;
 
-    border:
-    1px solid #e5eaf1;
+    line-height:1.9;
+}
+
+.article-body h2{
+    color:white;
+
+    margin-top:45px;
+
+    font-size:28px;
+}
+
+.article-body h3{
+    color:var(--green2);
+
+    margin-top:30px;
+}
+
+.article-body p{
+    margin:20px 0;
+}
+
+.article-body ul{
+    padding-left:25px;
+}
+
+.article-body li{
+    margin:10px 0;
+}
+
+.key-points{
+    margin-top:40px;
+
+    padding:25px;
+
+    border:1px solid var(--border);
 
     border-radius:18px;
 
-    padding:28px;
+    background:#09130e;
 }
 
-.trending-panel h3{
+.key-points h3{
+    margin-top:0;
 
-    color:#102d55;
+    color:white;
+}
 
-    margin-bottom:20px;
+.key-points li{
+    margin:12px 0;
+
+    color:#a7b9ae;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    border-top:1px solid var(--border);
+
+    padding:45px 20px;
+
+    text-align:center;
+
+    background:#030604;
+
+    color:#718279;
+
+    font-size:13px;
+}
+
+footer strong{
+    color:white;
 
     font-size:20px;
 }
 
-.trending-item{
 
-    display:flex;
+/* ================= RESPONSIVE ================= */
 
-    gap:14px;
+@media(max-width:950px){
 
-    padding:15px 0;
-
-    border-bottom:
-    1px solid #edf0f4;
-}
-
-.trending-item:last-child{
-
-    border-bottom:none;
-}
-
-.trending-number{
-
-    font-size:25px;
-
-    font-weight:900;
-
-    color:#d8e4f2;
-
-    min-width:28px;
-}
-
-.trending-item h4{
-
-    font-size:14px;
-
-    color:#243a55;
-
-    line-height:1.4;
-}
-
-
-/* =====================================================
-   STUDENT SECTION
-===================================================== */
-
-.student-section{
-
-    margin-top:70px;
-
-    border-radius:22px;
-
-    padding:50px 35px;
-
-    background:#07172e;
-
-    color:white;
-}
-
-.student-section h2{
-
-    font-size:30px;
-
-    margin-bottom:10px;
-}
-
-.student-section > p{
-
-    color:#a9bad0;
-
-    margin-bottom:30px;
-}
-
-.student-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(180px,1fr));
-
-    gap:15px;
-}
-
-.student-card{
-
-    padding:20px;
-
-    border:
-    1px solid rgba(255,255,255,.08);
-
-    background:
-    rgba(255,255,255,.04);
-
-    border-radius:13px;
-
-    color:#d8e5f5;
-
-    transition:.25s;
-}
-
-.student-card:hover{
-
-    background:
-    rgba(255,255,255,.08);
-
-    transform:translateY(-4px);
-}
-
-.student-card strong{
-
-    display:block;
-
-    color:white;
-
-    margin-bottom:5px;
-}
-
-
-/* =====================================================
-   NEWSLETTER / CTA
-===================================================== */
-
-.cta{
-
-    margin-top:70px;
-
-    padding:50px 25px;
-
-    text-align:center;
-
-    border-radius:22px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #edf5ff,
-        #f8fbff
-    );
-
-    border:
-    1px solid #dce8f7;
-}
-
-.cta h2{
-
-    color:#102d55;
-
-    font-size:29px;
-
-    margin-bottom:8px;
-}
-
-.cta p{
-
-    color:#718096;
-
-    margin-bottom:20px;
-}
-
-.cta a{
-
-    display:inline-block;
-
-    background:#1769d1;
-
-    color:white;
-
-    padding:12px 24px;
-
-    border-radius:9px;
-
-    font-size:13px;
-
-    font-weight:800;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer{
-
-    background:#041021;
-
-    color:#92a4bb;
-
-    text-align:center;
-
-    padding:45px 20px;
-}
-
-.footer-brand{
-
-    color:white;
-
-    font-size:24px;
-
-    font-weight:800;
-
-    letter-spacing:2px;
-
-    margin-bottom:7px;
-}
-
-.footer-links{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-
-    margin-top:15px;
-}
-
-.footer-links a{
-
-    color:#9caec3;
-
-    font-size:13px;
-}
-
-.footer-links a:hover{
-
-    color:white;
-}
-
-
-/* =====================================================
-   SEARCH EMPTY
-===================================================== */
-
-.empty{
-
-    display:none;
-
-    text-align:center;
-
-    padding:40px;
-
-    color:#718096;
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media(max-width:800px){
-
-    .navbar{
-
-        flex-direction:column;
-
-        gap:10px;
+    .article-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .nav-links{
+}
 
-        justify-content:center;
+@media(max-width:650px){
+
+    .navbar{
+        padding:0 5%;
     }
 
     .hero{
-
-        padding:
-        70px 18px 85px;
+        padding:70px 6%;
     }
 
     .hero h1{
-
-        font-size:48px;
+        letter-spacing:-3px;
     }
 
-    .search-wrapper{
-
-        flex-direction:column;
-
-        gap:6px;
-    }
-
-    .search-wrapper button{
-
-        padding:13px;
+    .container{
+        width:92%;
     }
 
     .featured{
-
-        grid-template-columns:1fr;
-    }
-
-    .featured-visual{
-
-        min-height:160px;
-    }
-
-    .featured-content{
-
         padding:30px;
     }
 
-    .featured-content h2{
-
-        font-size:27px;
-    }
-
-    .trending{
-
+    .article-grid{
         grid-template-columns:1fr;
     }
 
-    .section-header{
+    .heading{
+        display:block;
+    }
 
-        align-items:flex-start;
+    .reader-inner{
+        width:90%;
 
-        flex-direction:column;
+        margin-top:90px;
+    }
+
+    .reader h1{
+        letter-spacing:-2px;
     }
 
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
+<!-- ================= NAVIGATION ================= -->
 
 <nav class="navbar">
 
-<a href="index.html" class="brand">
+    <div class="logo">
+        pendico<span>.</span>
+    </div>
 
-<img src="logo.png.jpeg" alt="Pendico">
+    <div class="nav-actions">
 
-<span>PENDICO</span>
+        <a href="index.html" class="nav-btn">
+            ← Home
+        </a>
 
-</a>
-
-
-<div class="nav-links">
-
-<a href="index.html">Home</a>
-
-<a href="bareacts.html">Bare Acts</a>
-
-<a href="caselaws.html">Case Laws</a>
-
-<a href="articles.html">Articles</a>
-
-<a href="legalnews.html">Legal News</a>
-
-<a href="about.html">About</a>
-
-<a href="contact.html">Contact</a>
-
-</div>
+    </div>
 
 </nav>
 
 
+<!-- ================= HERO ================= -->
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<section class="hero">
 
-<header class="hero">
+    <div class="hero-grid"></div>
 
-<div class="hero-content">
+    <div class="glow"></div>
 
-<div class="hero-label">
+    <div class="hero-content">
 
-PENDICO LEGAL INSIGHTS
+        <div class="eyebrow">
+            ⚖ PENDICO LEGAL KNOWLEDGE
+        </div>
 
-</div>
+        <h1>
+            Think.<br>
+            <span>Understand.</span><br>
+            Argue.
+        </h1>
 
-<h1>
+        <p>
+            In-depth legal articles, constitutional analysis,
+            criminal law insights, civil law concepts,
+            emerging legal technology and practical knowledge
+            for the next generation of Indian legal professionals.
+        </p>
 
-Understand Law.<br>
-
-<span>Think Legally.</span>
-
-</h1>
-
-<p>
-
-Explore accessible explanations of Indian law,
-landmark legal principles, rights, procedures
-and important legal developments.
-
-</p>
-
-
-<div class="search-wrapper">
-
-<input
-id="articleSearch"
-type="search"
-placeholder="Search legal articles, topics or concepts...">
-
-<button onclick="searchArticles()">
-
-Search
-
-</button>
-
-</div>
-
-</div>
-
-</header>
-
-
-
-<!-- =====================================================
-     CATEGORY BAR
-===================================================== -->
-
-<div class="category-bar">
-
-<div class="category-inner">
-
-<button class="category active"
-onclick="filterArticles('all',this)">
-All
-</button>
-
-<button class="category"
-onclick="filterArticles('criminal',this)">
-Criminal Law
-</button>
-
-<button class="category"
-onclick="filterArticles('constitutional',this)">
-Constitutional Law
-</button>
-
-<button class="category"
-onclick="filterArticles('consumer',this)">
-Consumer Law
-</button>
-
-<button class="category"
-onclick="filterArticles('rights',this)">
-Legal Rights
-</button>
-
-<button class="category"
-onclick="filterArticles('students',this)">
-Law Students
-</button>
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-     MAIN
-===================================================== -->
-
-<main class="main">
-
-
-<!-- FEATURED -->
-
-<div class="section-header">
-
-<div>
-
-<h2>Featured Insight</h2>
-
-<p>Start with an essential legal concept.</p>
-
-</div>
-
-</div>
-
-
-<section class="featured">
-
-<div class="featured-visual">
-
-⚖️
-
-</div>
-
-<div class="featured-content">
-
-<div class="featured-label">
-
-Criminal Law • Featured
-
-</div>
-
-<h2>
-
-Understanding the First Information Report
-
-</h2>
-
-<p>
-
-Learn what an FIR is, when it can be registered,
-its importance in criminal proceedings and the
-basic legal framework surrounding it.
-
-</p>
-
-<a
-href="#article-fir"
-class="read-featured">
-
-Read Article →
-
-</a>
-
-</div>
+    </div>
 
 </section>
 
 
+<!-- ================= MAIN ================= -->
 
-<!-- ARTICLE LIBRARY -->
+<main class="container">
 
-<div class="section-header">
 
-<div>
+    <!-- CONTROLS -->
 
-<h2>Latest Legal Articles</h2>
+    <div class="controls">
 
-<p>
-Clear explanations of important legal concepts.
-</p>
+        <div class="search-wrap">
 
-</div>
+            <span class="search-icon">⌕</span>
 
-</div>
+            <input
+                id="search"
+                class="search"
+                type="search"
+                placeholder="Search articles, law, concepts..."
+            >
 
+        </div>
 
-<section class="article-grid" id="articleGrid">
 
+        <div class="filters">
 
-<!-- FIR -->
+            <button
+                class="filter active"
+                onclick="filterArticles('All',this)"
+            >
+                All
+            </button>
 
-<article
-class="article-card"
-data-category="criminal"
-id="article-fir">
+            <button
+                class="filter"
+                onclick="filterArticles('Constitutional Law',this)"
+            >
+                Constitutional
+            </button>
 
-<div class="article-image">
+            <button
+                class="filter"
+                onclick="filterArticles('Criminal Law',this)"
+            >
+                Criminal
+            </button>
 
-🚨
+            <button
+                class="filter"
+                onclick="filterArticles('Civil Law',this)"
+            >
+                Civil
+            </button>
 
-</div>
+            <button
+                class="filter"
+                onclick="filterArticles('Legal Technology',this)"
+            >
+                Legal Tech
+            </button>
 
-<div class="article-content">
+            <button
+                class="filter"
+                onclick="filterArticles('Legal Education',this)"
+            >
+                Education
+            </button>
 
-<div class="article-category">
+        </div>
 
-Criminal Law
+    </div>
 
-</div>
 
-<h3>
+    <!-- FEATURED -->
 
-What is an FIR?
+    <div id="featured"></div>
 
-</h3>
 
-<p>
+    <!-- ARTICLE LIST -->
 
-Learn what an FIR is, when it can be filed,
-and why it is important in criminal law.
+    <div class="heading">
 
-</p>
+        <div>
 
-<div class="article-meta">
+            <h2>Explore the Library</h2>
 
-<span>📖 Pendico</span>
+            <p>
+                Analysis written for students, advocates and curious readers.
+            </p>
 
-<span>⏱ 5 min read</span>
+        </div>
 
-</div>
+    </div>
 
-<a href="#"
-class="read-link"
-onclick="comingSoon(event)">
 
-Read Article →
-
-</a>
-
-</div>
-
-</article>
-
-
-
-<!-- ARREST -->
-
-<article
-class="article-card"
-data-category="rights">
-
-<div class="article-image">
-
-🔐
-
-</div>
-
-<div class="article-content">
-
-<div class="article-category">
-
-Legal Rights
-
-</div>
-
-<h3>
-
-Rights During Arrest
-
-</h3>
-
-<p>
-
-Understand the fundamental legal protections
-available to a person during arrest.
-
-</p>
-
-<div class="article-meta">
-
-<span>📖 Pendico</span>
-
-<span>⏱ 6 min read</span>
-
-</div>
-
-<a href="#"
-class="read-link"
-onclick="comingSoon(event)">
-
-Read Article →
-
-</a>
-
-</div>
-
-</article>
-
-
-
-<!-- CONSUMER -->
-
-<article
-class="article-card"
-data-category="consumer">
-
-<div class="article-image">
-
-🛒
-
-</div>
-
-<div class="article-content">
-
-<div class="article-category">
-
-Consumer Law
-
-</div>
-
-<h3>
-
-Consumer Rights in India
-
-</h3>
-
-<p>
-
-Know the important rights available to consumers
-when purchasing goods and services.
-
-</p>
-
-<div class="article-meta">
-
-<span>📖 Pendico</span>
-
-<span>⏱ 5 min read</span>
-
-</div>
-
-<a href="#"
-class="read-link"
-onclick="comingSoon(event)">
-
-Read Article →
-
-</a>
-
-</div>
-
-</article>
-
-
-</section>
-
-
-<div class="empty" id="emptyMessage">
-
-No articles match your search.
-
-</div>
-
-
-
-<!-- =====================================================
-     TRENDING
-===================================================== -->
-
-<section class="trending">
-
-
-<div class="trending-panel">
-
-<h3>🔥 Popular Topics</h3>
-
-
-<div class="trending-item">
-
-<div class="trending-number">
-01
-</div>
-
-<h4>
-Fundamental Rights under the Constitution
-</h4>
-
-</div>
-
-
-<div class="trending-item">
-
-<div class="trending-number">
-02
-</div>
-
-<h4>
-FIR and Criminal Procedure
-</h4>
-
-</div>
-
-
-<div class="trending-item">
-
-<div class="trending-number">
-03
-</div>
-
-<h4>
-Rights of an Arrested Person
-</h4>
-
-</div>
-
-
-<div class="trending-item">
-
-<div class="trending-number">
-04
-</div>
-
-<h4>
-Consumer Protection in India
-</h4>
-
-</div>
-
-</div>
-
-
-
-<div class="trending-panel">
-
-<h3>⭐ Editor's Picks</h3>
-
-
-<div class="trending-item">
-
-<div class="trending-number">
-01
-</div>
-
-<h4>
-Understanding Indian Constitutional Law
-</h4>
-
-</div>
-
-
-<div class="trending-item">
-
-<div class="trending-number">
-02
-</div>
-
-<h4>
-How Criminal Proceedings Begin
-</h4>
-
-</div>
-
-
-<div class="trending-item">
-
-<div class="trending-number">
-03
-</div>
-
-<h4>
-Important Legal Rights Every Citizen Should Know
-</h4>
-
-</div>
-
-
-<div class="trending-item">
-
-<div class="trending-number">
-04
-</div>
-
-<h4>
-Guide to Reading a Court Judgment
-</h4>
-
-</div>
-
-</div>
-
-
-</section>
-
-
-
-<!-- =====================================================
-     LAW STUDENTS
-===================================================== -->
-
-<section class="student-section">
-
-<h2>
-
-🎓 Pendico for Law Students
-
-</h2>
-
-<p>
-
-Build your legal foundation with practical,
-easy-to-understand resources.
-
-</p>
-
-
-<div class="student-grid">
-
-
-<div class="student-card">
-
-<strong>
-Case Law
-</strong>
-
-Understand landmark judgments
-and legal principles.
-
-</div>
-
-
-<div class="student-card">
-
-<strong>
-Bare Acts
-</strong>
-
-Learn how to read and navigate
-statutory provisions.
-
-</div>
-
-
-<div class="student-card">
-
-<strong>
-Legal Concepts
-</strong>
-
-Break down complex legal concepts
-into simple explanations.
-
-</div>
-
-
-<div class="student-card">
-
-<strong>
-Legal Research
-</strong>
-
-Develop better legal research
-and analytical skills.
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CTA
-===================================================== -->
-
-<section class="cta">
-
-<h2>
-
-Stay Connected With Indian Law
-
-</h2>
-
-<p>
-
-Explore Pendico's growing collection of
-legal resources, articles and case laws.
-
-</p>
-
-<a href="bareacts.html">
-
-Explore Legal Resources
-
-</a>
-
-</section>
+    <div
+        id="articleGrid"
+        class="article-grid"
+    ></div>
 
 
 </main>
 
 
+<!-- ================= ARTICLE READER ================= -->
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<div
+    id="reader"
+    class="reader"
+>
+
+    <div
+        id="progress"
+        class="progress"
+    ></div>
+
+    <button
+        class="close-reader"
+        onclick="closeReader()"
+        aria-label="Close article"
+    >
+        ×
+    </button>
+
+
+    <div class="reader-inner">
+
+        <div
+            id="readerCategory"
+            class="reader-category"
+        ></div>
+
+
+        <h1 id="readerTitle"></h1>
+
+
+        <div
+            id="readerMeta"
+            class="reader-meta"
+        ></div>
+
+
+        <div
+            id="readerSummary"
+            class="reader-summary"
+        ></div>
+
+
+        <div
+            id="readerBody"
+            class="article-body"
+        ></div>
+
+
+        <div
+            id="keyPoints"
+            class="key-points"
+        ></div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-<div class="footer-brand">
+    <strong>pendico.</strong>
 
-PENDICO
+    <br><br>
 
-</div>
+    Indian Legal Information Portal
 
-<p>
+    <br><br>
 
-Indian Legal Information Portal
-
-</p>
-
-
-<div class="footer-links">
-
-<a href="index.html">Home</a>
-
-<a href="bareacts.html">Bare Acts</a>
-
-<a href="caselaws.html">Case Laws</a>
-
-<a href="articles.html">Articles</a>
-
-<a href="legalnews.html">Legal News</a>
-
-<a href="about.html">About</a>
-
-<a href="contact.html">Contact</a>
-
-</div>
-
-
-<br>
-
-<p>
-
-© 2026 Pendico. All rights reserved.
-
-</p>
+    © 2026 Pendico · Legal Knowledge · Research · Education
 
 </footer>
 
 
-
 <script>
 
-/* =====================================================
-   ARTICLE SEARCH
-===================================================== */
 
-function searchArticles(){
+/* =========================================================
+   ARTICLE DATABASE
 
-    const query =
-    document
-    .getElementById("articleSearch")
-    .value
-    .toLowerCase()
-    .trim();
+   TEMPORARY:
+   Articles are currently stored here.
 
-    const articles =
-    document
-    .querySelectorAll(".article-card");
+   NEXT STEP:
+   We will move this exact data into:
 
-    let found = false;
+   data/articles.json
 
-    articles.forEach(article => {
+   Then HTML will automatically load it.
+========================================================= */
 
-        const text =
-        article.innerText.toLowerCase();
 
-        if(text.includes(query)){
+const articles = [
 
-            article.style.display="block";
+{
+    id:1,
 
-            found=true;
+    title:
+    "Understanding the Basic Structure Doctrine of the Indian Constitution",
 
-        }else{
+    category:
+    "Constitutional Law",
 
-            article.style.display="none";
+    date:
+    "2026-08-10",
 
-        }
+    author:
+    "Pendico Legal Research",
 
-    });
+    readTime:
+    "8 min read",
 
-    document
-    .getElementById("emptyMessage")
-    .style.display =
-    found ? "none" : "block";
+    summary:
+    "The Basic Structure Doctrine is one of the most important principles developed by the Supreme Court of India. It places substantive limits on Parliament's constituent power under Article 368.",
+
+    body:`
+
+        <p>
+        The Constitution of India gives Parliament the power to amend
+        the Constitution. However, this power is not unlimited.
+        The Supreme Court developed the Basic Structure Doctrine to
+        preserve the fundamental identity of the Constitution.
+        </p>
+
+        <h2>What is the Basic Structure Doctrine?</h2>
+
+        <p>
+        The doctrine means that although Parliament may amend the
+        Constitution, it cannot destroy or alter its basic structure.
+        </p>
+
+        <p>
+        The doctrine was authoritatively established by the Supreme
+        Court in <strong>Kesavananda Bharati v. State of Kerala</strong>
+        in 1973.
+        </p>
+
+        <h2>Why was the doctrine necessary?</h2>
+
+        <p>
+        Article 368 confers constitutional amendment power on Parliament.
+        The central constitutional question was whether that power could
+        be used to completely alter the constitutional framework itself.
+        </p>
+
+        <p>
+        The Supreme Court answered this question by distinguishing
+        between an amendment and destruction of the Constitution's
+        essential identity.
+        </p>
+
+        <h2>Examples of basic features</h2>
+
+        <ul>
+
+            <li>Supremacy of the Constitution</li>
+
+            <li>Rule of law</li>
+
+            <li>Separation of powers</li>
+
+            <li>Judicial review</li>
+
+            <li>Federalism</li>
+
+            <li>Secularism</li>
+
+            <li>Democracy</li>
+
+            <li>Republican form of government</li>
+
+            <li>Free and fair elections</li>
+
+        </ul>
+
+        <h2>Importance for lawyers</h2>
+
+        <p>
+        The doctrine remains fundamental to constitutional litigation.
+        Whenever the validity of a constitutional amendment is challenged,
+        courts may examine whether the amendment damages an essential
+        constitutional feature.
+        </p>
+
+        <p>
+        For a law student, understanding this doctrine is essential because
+        it connects constitutional amendment power, judicial review,
+        separation of powers and constitutional supremacy.
+        </p>
+
+    `,
+
+    keyPoints:[
+
+        "Established by the Supreme Court in Kesavananda Bharati.",
+
+        "Parliament's amendment power is subject to constitutional limitations.",
+
+        "The doctrine protects the essential identity of the Constitution.",
+
+        "Judicial review is an important component of the doctrine."
+
+    ]
+
+},
+
+
+{
+    id:2,
+
+    title:
+    "How the Criminal Justice System Works in India",
+
+    category:
+    "Criminal Law",
+
+    date:
+    "2026-08-09",
+
+    author:
+    "Pendico Legal Research",
+
+    readTime:
+    "7 min read",
+
+    summary:
+    "A practical overview of the journey of a criminal case in India, from information to police through investigation, prosecution, trial and appeal.",
+
+    body:`
+
+        <p>
+        Criminal litigation involves several distinct procedural stages.
+        Understanding the sequence is essential for every law student and
+        young advocate.
+        </p>
+
+        <h2>1. Information to the police</h2>
+
+        <p>
+        Criminal proceedings may begin when information regarding a
+        cognizable offence reaches the police.
+        </p>
+
+        <h2>2. Registration of FIR</h2>
+
+        <p>
+        Where the statutory requirements for registration are satisfied,
+        the police register a First Information Report and commence
+        investigation.
+        </p>
+
+        <h2>3. Investigation</h2>
+
+        <p>
+        Investigation may include examination of witnesses, collection of
+        documentary evidence, forensic examination, seizure and other
+        investigative steps.
+        </p>
+
+        <h2>4. Arrest and bail</h2>
+
+        <p>
+        Depending upon the facts and applicable law, an accused may be
+        arrested. Bail becomes a major procedural issue at this stage.
+        </p>
+
+        <h2>5. Final report or chargesheet</h2>
+
+        <p>
+        After investigation, the police submit the appropriate report
+        before the competent court.
+        </p>
+
+        <h2>6. Trial</h2>
+
+        <p>
+        Depending upon the offence, the case proceeds through framing of
+        charge, examination of witnesses, cross-examination, statement of
+        the accused, defence evidence where applicable and final arguments.
+        </p>
+
+        <h2>7. Judgment and appeal</h2>
+
+        <p>
+        The trial court delivers judgment. Depending on the nature of the
+        order and governing statute, appellate or revisional remedies may
+        be available.
+        </p>
+
+        <h2>Practical lesson for young advocates</h2>
+
+        <p>
+        Do not treat criminal procedure as merely a sequence of textbook
+        provisions. A good advocate should maintain a chronological case
+        file containing every material procedural development.
+        </p>
+
+    `,
+
+    keyPoints:[
+
+        "Criminal litigation has multiple procedural stages.",
+
+        "Investigation and trial are legally distinct stages.",
+
+        "Bail strategy depends heavily on the facts and applicable statute.",
+
+        "Chronological case management is essential for effective advocacy."
+
+    ]
+
+},
+
+
+{
+    id:3,
+
+    title:
+    "Judicial Review and the Power of Constitutional Courts",
+
+    category:
+    "Constitutional Law",
+
+    date:
+    "2026-08-08",
+
+    author:
+    "Pendico Legal Research",
+
+    readTime:
+    "6 min read",
+
+    summary:
+    "Judicial review enables constitutional courts to examine legislative and executive action against constitutional requirements.",
+
+    body:`
+
+        <p>
+        Judicial review is a central feature of constitutional governance
+        in India. It allows courts to determine whether governmental action
+        conforms to constitutional requirements.
+        </p>
+
+        <h2>Constitutional foundation</h2>
+
+        <p>
+        Judicial review operates through several constitutional provisions,
+        including Articles 13, 32 and 226, together with the broader
+        constitutional scheme.
+        </p>
+
+        <h2>Article 32</h2>
+
+        <p>
+        Article 32 provides a constitutional remedy before the Supreme Court
+        for enforcement of fundamental rights.
+        </p>
+
+        <h2>Article 226</h2>
+
+        <p>
+        High Courts possess wide writ jurisdiction under Article 226.
+        The jurisdiction extends beyond fundamental rights to other legal
+        rights as well.
+        </p>
+
+        <h2>Why it matters</h2>
+
+        <p>
+        Judicial review maintains constitutional discipline by ensuring
+        that public authorities remain within the limits prescribed by law.
+        </p>
+
+        <h2>Advocacy perspective</h2>
+
+        <p>
+        A constitutional lawyer must identify the source of governmental
+        power, the statutory or constitutional limitation upon that power,
+        the nature of the alleged violation and the appropriate relief.
+        </p>
+
+    `,
+
+    keyPoints:[
+
+        "Judicial review is central to constitutional supremacy.",
+
+        "Articles 32 and 226 provide important constitutional remedies.",
+
+        "High Courts have broad writ jurisdiction.",
+
+        "Effective constitutional litigation requires precise identification of the source and limits of public power."
+
+    ]
+
+},
+
+
+{
+    id:4,
+
+    title:
+    "Why Legal Research Matters for a Young Advocate",
+
+    category:
+    "Legal Education",
+
+    date:
+    "2026-08-07",
+
+    author:
+    "Pendico Legal Research",
+
+    readTime:
+    "5 min read",
+
+    summary:
+    "Strong legal research is one of the most valuable professional skills a young advocate can develop.",
+
+    body:`
+
+        <p>
+        Advocacy is not simply about speaking confidently in court.
+        The quality of an argument depends heavily on the quality of
+        research supporting it.
+        </p>
+
+        <h2>Start with the issue</h2>
+
+        <p>
+        Before searching for cases, identify the precise legal issue.
+        A vague research question produces an unfocused result.
+        </p>
+
+        <h2>Read the statute first</h2>
+
+        <p>
+        Begin with the statutory provision. Understand its language,
+        ingredients, exceptions, explanations and related provisions.
+        </p>
+
+        <h2>Then search case law</h2>
+
+        <p>
+        Once the statutory framework is clear, identify leading judgments
+        interpreting the provision.
+        </p>
+
+        <h2>Read judgments strategically</h2>
+
+        <p>
+        Do not merely read the headnote. Identify the facts, issues,
+        arguments, ratio decidendi, authorities relied upon and final
+        relief.
+        </p>
+
+        <h2>Build a personal case-law database</h2>
+
+        <p>
+        Maintain organised notes containing important propositions of law,
+        case names, citations and the precise paragraph supporting each
+        proposition.
+        </p>
+
+        <h2>The professional advantage</h2>
+
+        <p>
+        A young advocate who can locate the correct authority quickly
+        becomes substantially more useful to a senior and more effective
+        before the court.
+        </p>
+
+    `,
+
+    keyPoints:[
+
+        "Define the legal issue before beginning research.",
+
+        "Read the statutory provision before relying on case law.",
+
+        "Identify the ratio rather than relying only on headnotes.",
+
+        "Maintain a structured personal case-law database."
+
+    ]
+
+},
+
+
+{
+    id:5,
+
+    title:
+    "Artificial Intelligence and the Future of Legal Practice",
+
+    category:
+    "Legal Technology",
+
+    date:
+    "2026-08-06",
+
+    author:
+    "Pendico Legal Research",
+
+    readTime:
+    "8 min read",
+
+    summary:
+    "Artificial intelligence is increasingly affecting legal research, document review, drafting and professional workflows, while creating new questions concerning accuracy, confidentiality and professional responsibility.",
+
+    body:`
+
+        <p>
+        Artificial intelligence is becoming an important technological
+        layer in modern legal practice. Lawyers are increasingly using
+        computational tools for research, document analysis and workflow
+        management.
+        </p>
+
+        <h2>Legal research</h2>
+
+        <p>
+        AI systems can assist lawyers in locating potentially relevant
+        authorities and identifying relationships between legal concepts.
+        However, every authority must still be independently verified.
+        </p>
+
+        <h2>Document review</h2>
+
+        <p>
+        Large document collections can be analysed more efficiently using
+        automated tools, particularly during commercial litigation and
+        regulatory investigations.
+        </p>
+
+        <h2>Drafting</h2>
+
+        <p>
+        AI can assist with first drafts, summaries and structured legal
+        analysis. The lawyer remains responsible for accuracy and judgment.
+        </p>
+
+        <h2>Confidentiality</h2>
+
+        <p>
+        Lawyers must carefully consider whether confidential client
+        information is being transmitted to an external technology
+        provider.
+        </p>
+
+        <h2>Verification is mandatory</h2>
+
+        <p>
+        AI-generated legal propositions may be incomplete or incorrect.
+        Authorities, citations, statutory provisions and factual assertions
+        should therefore be verified against reliable primary sources.
+        </p>
+
+        <h2>The future advocate</h2>
+
+        <p>
+        The strongest lawyers of the future are unlikely to be those who
+        merely use AI. They will be lawyers who understand law deeply and
+        know how to use technology without surrendering professional
+        judgment.
+        </p>
+
+    `,
+
+    keyPoints:[
+
+        "AI can improve legal research and document workflows.",
+
+        "Lawyers remain responsible for the accuracy of legal work.",
+
+        "Confidentiality must be considered when using external AI tools.",
+
+        "Primary legal sources should always be independently verified."
+
+    ]
 
 }
 
+];
 
-/* ENTER KEY */
 
-document
-.getElementById("articleSearch")
-.addEventListener("keypress",function(e){
+/* =========================================================
+   STATE
+========================================================= */
 
-    if(e.key==="Enter"){
+let currentCategory = "All";
 
-        searchArticles();
 
-    }
+/* =========================================================
+   INITIALISE
+========================================================= */
+
+document.addEventListener("DOMContentLoaded",function(){
+
+    sortArticles();
+
+    displayFeatured(articles);
+
+    displayArticles(articles);
 
 });
 
 
-/* =====================================================
-   CATEGORY FILTER
-===================================================== */
+/* =========================================================
+   SORT LATEST → OLDEST
+========================================================= */
 
-function filterArticles(category,button){
+function sortArticles(){
 
-    const articles =
-    document
-    .querySelectorAll(".article-card");
+    articles.sort((a,b)=>{
 
-    document
-    .querySelectorAll(".category")
-    .forEach(btn => {
-
-        btn.classList.remove("active");
+        return new Date(b.date) - new Date(a.date);
 
     });
-
-    button.classList.add("active");
-
-    let found=false;
-
-    articles.forEach(article => {
-
-        const articleCategory =
-        article.dataset.category;
-
-        if(
-            category==="all" ||
-            articleCategory===category
-        ){
-
-            article.style.display="block";
-
-            found=true;
-
-        }else{
-
-            article.style.display="none";
-
-        }
-
-    });
-
-    document
-    .getElementById("emptyMessage")
-    .style.display =
-    found ? "none" : "block";
 
 }
 
 
-/* =====================================================
-   COMING SOON
-===================================================== */
+/* =========================================================
+   FEATURED ARTICLE
+========================================================= */
 
-function comingSoon(event){
+function displayFeatured(data){
 
-    event.preventDefault();
+    const featured =
+        document.getElementById("featured");
 
-    alert(
-        "This article is being prepared for publication on Pendico."
+    if(!data.length){
+
+        featured.innerHTML="";
+
+        return;
+
+    }
+
+    const article=data[0];
+
+    featured.innerHTML=`
+
+        <div class="section-label">
+            EDITOR'S FEATURE
+        </div>
+
+        <article class="featured">
+
+            <div class="featured-content">
+
+                <span class="featured-badge">
+                    FEATURED
+                </span>
+
+                <h2>
+                    ${article.title}
+                </h2>
+
+                <p>
+                    ${article.summary}
+                </p>
+
+                <div class="meta">
+
+                    <span>
+                        ⚖ ${article.category}
+                    </span>
+
+                    <span>
+                        📅 ${formatDate(article.date)}
+                    </span>
+
+                    <span>
+                        ⏱ ${article.readTime}
+                    </span>
+
+                </div>
+
+                <a
+                    href="#"
+                    class="read-featured"
+                    onclick="openArticle(${article.id});return false;"
+                >
+                    Read Full Article →
+                </a>
+
+            </div>
+
+        </article>
+    `;
+}
+
+
+/* =========================================================
+   DISPLAY ARTICLES
+========================================================= */
+
+function displayArticles(data){
+
+    const grid =
+        document.getElementById("articleGrid");
+
+    grid.innerHTML="";
+
+
+    if(!data.length){
+
+        grid.innerHTML=`
+
+            <div class="empty">
+
+                <h3>No articles found</h3>
+
+                <p>
+                    Try another search term or category.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    data.forEach(article=>{
+
+        grid.innerHTML+=`
+
+            <article class="article-card">
+
+                <div class="card-top">
+
+                    <span class="category">
+                        ${article.category}
+                    </span>
+
+                    <span class="date">
+                        ${formatDate(article.date)}
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    ${article.title}
+                </h3>
+
+
+                <p>
+                    ${article.summary}
+                </p>
+
+
+                <div class="card-bottom">
+
+                    <span class="read-time">
+                        ⏱ ${article.readTime}
+                    </span>
+
+                    <button
+                        class="read-btn"
+                        onclick="openArticle(${article.id})"
+                    >
+                        Read Article →
+                    </button>
+
+                </div>
+
+            </article>
+
+        `;
+
+    });
+
+}
+
+
+/* =========================================================
+   OPEN ARTICLE
+========================================================= */
+
+function openArticle(id){
+
+    const article =
+        articles.find(item=>item.id===id);
+
+    if(!article) return;
+
+
+    document.getElementById("readerCategory")
+        .textContent=article.category;
+
+
+    document.getElementById("readerTitle")
+        .textContent=article.title;
+
+
+    document.getElementById("readerMeta")
+        .innerHTML=`
+
+            ${article.author}
+            &nbsp; • &nbsp;
+            ${formatDate(article.date)}
+            &nbsp; • &nbsp;
+            ${article.readTime}
+
+        `;
+
+
+    document.getElementById("readerSummary")
+        .textContent=article.summary;
+
+
+    document.getElementById("readerBody")
+        .innerHTML=article.body;
+
+
+    document.getElementById("keyPoints")
+        .innerHTML=`
+
+            <h3>
+                Key Takeaways
+            </h3>
+
+            <ul>
+
+                ${article.keyPoints
+                    .map(point=>`<li>${point}</li>`)
+                    .join("")
+                }
+
+            </ul>
+
+        `;
+
+
+    document
+        .getElementById("reader")
+        .classList.add("active");
+
+
+    document.body.style.overflow="hidden";
+
+
+    document
+        .querySelector(".reader")
+        .scrollTop=0;
+
+}
+
+
+/* =========================================================
+   CLOSE ARTICLE
+========================================================= */
+
+function closeReader(){
+
+    document
+        .getElementById("reader")
+        .classList.remove("active");
+
+    document.body.style.overflow="";
+
+}
+
+
+/* =========================================================
+   DATE FORMAT
+========================================================= */
+
+function formatDate(date){
+
+    return new Date(date).toLocaleDateString(
+        "en-IN",
+        {
+            day:"numeric",
+            month:"short",
+            year:"numeric"
+        }
     );
 
 }
 
+
+/* =========================================================
+   FILTER
+========================================================= */
+
+function filterArticles(category,button){
+
+    currentCategory=category;
+
+
+    document
+        .querySelectorAll(".filter")
+        .forEach(btn=>
+            btn.classList.remove("active")
+        );
+
+
+    button.classList.add("active");
+
+
+    applyFilters();
+
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+document
+    .getElementById("search")
+    .addEventListener(
+        "input",
+        applyFilters
+    );
+
+
+function applyFilters(){
+
+    const keyword =
+        document
+            .getElementById("search")
+            .value
+            .toLowerCase()
+            .trim();
+
+
+    let filtered=[...articles];
+
+
+    if(currentCategory!=="All"){
+
+        filtered=
+            filtered.filter(
+                article=>
+                    article.category===
+                    currentCategory
+            );
+
+    }
+
+
+    if(keyword){
+
+        filtered=
+            filtered.filter(article=>
+
+                article.title
+                    .toLowerCase()
+                    .includes(keyword)
+
+                ||
+
+                article.summary
+                    .toLowerCase()
+                    .includes(keyword)
+
+                ||
+
+                article.category
+                    .toLowerCase()
+                    .includes(keyword)
+
+                ||
+
+                article.body
+                    .toLowerCase()
+                    .includes(keyword)
+
+            );
+
+    }
+
+
+    displayArticles(filtered);
+
+
+    if(currentCategory==="All" && !keyword){
+
+        displayFeatured(articles);
+
+    }else{
+
+        displayFeatured(filtered);
+
+    }
+
+}
+
+
+/* =========================================================
+   READING PROGRESS
+========================================================= */
+
+document
+    .getElementById("reader")
+    .addEventListener(
+        "scroll",
+        function(){
+
+            const reader=this;
+
+            const scrollTop=
+                reader.scrollTop;
+
+            const scrollHeight=
+                reader.scrollHeight-
+                reader.clientHeight;
+
+
+            const progress=
+                scrollHeight>0
+                ?(scrollTop/scrollHeight)*100
+                :0;
+
+
+            document
+                .getElementById("progress")
+                .style.width=
+                progress+"%";
+
+        }
+    );
+
+
+/* =========================================================
+   ESCAPE KEY
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key==="Escape"){
+
+            closeReader();
+
+        }
+
+    }
+);
+
 </script>
 
-
 </body>
-
 </html>
