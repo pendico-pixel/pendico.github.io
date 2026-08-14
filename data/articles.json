@@ -1,61 +1,53 @@
 [
   {
     "id": 1,
-    "title": "Understanding the Basic Structure of the Indian Constitution",
+    "title": "Understanding the Basic Structure Doctrine of the Indian Constitution",
     "category": "Constitutional Law",
     "author": "Pendico Editorial",
     "date": "2026-08-12",
     "readTime": "8 min read",
     "featured": true,
-    "summary": "A practical introduction to the structure, philosophy and functioning of the Constitution of India for law students and young advocates.",
+    "summary": "A practical introduction to the Basic Structure Doctrine and its importance in constitutional litigation.",
     "content": [
       {
         "heading": "Introduction",
         "paragraphs": [
-          "The Constitution of India is the supreme legal framework governing the Indian State. It establishes the structure of government, distributes powers among constitutional institutions and guarantees fundamental rights to individuals.",
-          "For a law student, constitutional law is not merely an academic subject. Constitutional principles frequently appear in litigation before the Supreme Court and High Courts."
+          "The Constitution of India is the supreme legal framework governing the Indian State. It establishes institutions, distributes governmental power and protects constitutional rights.",
+          "The Basic Structure Doctrine places substantive limits on the constituent power of Parliament."
         ]
       },
       {
-        "heading": "Why the Constitution Matters",
+        "heading": "Kesavananda Bharati",
         "paragraphs": [
-          "Every legislation, executive action and governmental decision must operate within the constitutional framework.",
-          "The Constitution therefore acts as both a source of governmental authority and a limitation on governmental power."
+          "The doctrine was authoritatively recognised by the Supreme Court in Kesavananda Bharati v. State of Kerala in 1973.",
+          "The Court held that Parliament may amend the Constitution but cannot destroy its basic structure."
         ]
       },
       {
-        "heading": "Fundamental Rights",
+        "heading": "Important Basic Features",
         "paragraphs": [
-          "Part III of the Constitution contains Fundamental Rights. These rights protect individual liberty and impose constitutional limitations on State action.",
-          "Articles 14, 19 and 21 are particularly important in constitutional litigation and have been interpreted extensively by the Supreme Court."
+          "Features recognised in constitutional jurisprudence include constitutional supremacy, rule of law, judicial review, separation of powers, federalism, secularism, democracy and the republican form of government."
         ]
       },
       {
-        "heading": "Judicial Review",
+        "heading": "Importance for Advocates",
         "paragraphs": [
-          "Judicial review enables constitutional courts to examine the legality and constitutionality of legislative and executive action.",
-          "The power of judicial review is closely connected with constitutional supremacy and the protection of fundamental rights."
-        ]
-      },
-      {
-        "heading": "For Law Students",
-        "paragraphs": [
-          "A strong constitutional-law foundation requires regular reading of the constitutional text together with leading Supreme Court judgments.",
-          "Students should learn to identify the constitutional provision involved, the issue before the Court, the ratio decidendi and the practical impact of the judgment."
+          "The doctrine remains central whenever the constitutional validity of an amendment is challenged.",
+          "Young advocates should understand the relationship between Article 368, constitutional supremacy and judicial review."
         ]
       }
     ],
     "keyTakeaways": [
-      "The Constitution is the supreme law of India.",
-      "Fundamental Rights impose important limitations on State action.",
-      "Constitutional courts exercise judicial review.",
-      "Understanding constitutional provisions requires reading leading judgments."
+      "The Basic Structure Doctrine limits Parliament's constituent power.",
+      "It was recognised in Kesavananda Bharati.",
+      "The doctrine protects the constitutional identity of India.",
+      "Judicial review is an important constitutional principle."
     ],
     "tags": [
       "Constitution",
-      "Fundamental Rights",
-      "Judicial Review",
-      "Law Students"
+      "Basic Structure",
+      "Kesavananda Bharati",
+      "Judicial Review"
     ]
   },
 
@@ -67,63 +59,49 @@
     "date": "2026-08-12",
     "readTime": "10 min read",
     "featured": false,
-    "summary": "A practical method for reading lengthy Supreme Court judgments efficiently and extracting the principles that actually matter.",
+    "summary": "A practical method for reading lengthy judgments and extracting the legal principles that actually matter.",
     "content": [
       {
-        "heading": "Do Not Read Every Judgment Like a Textbook",
+        "heading": "Start With the Legal Issue",
         "paragraphs": [
-          "Judgments can contain extensive factual backgrounds, submissions of counsel, precedents, statutory provisions and reasoning. A lawyer must learn to identify the legally decisive portions.",
-          "The first objective should be to understand what question the Court was required to decide."
+          "A judgment should not be approached merely as a long academic document.",
+          "The first task is to identify the precise legal question that the Court was required to decide."
         ]
       },
       {
-        "heading": "Step 1 — Identify the Facts",
+        "heading": "Identify the Facts",
         "paragraphs": [
-          "Read the factual background carefully enough to understand the dispute.",
-          "Do not spend excessive time memorising facts that have no relevance to the legal principle."
+          "Understand the factual background sufficiently to determine why the dispute reached the Court.",
+          "Avoid memorising facts that have no relevance to the legal principle."
         ]
       },
       {
-        "heading": "Step 2 — Identify the Issues",
-        "paragraphs": [
-          "Ask: What precise legal question was before the Court?",
-          "An issue should preferably be expressed as a legal question rather than a general description of the dispute."
-        ]
-      },
-      {
-        "heading": "Step 3 — Find the Statutory Provisions",
-        "paragraphs": [
-          "Identify every important constitutional provision, section, rule or regulation considered by the Court.",
-          "Read the statutory language independently before analysing the Court's interpretation."
-        ]
-      },
-      {
-        "heading": "Step 4 — Identify the Ratio",
+        "heading": "Identify the Ratio",
         "paragraphs": [
           "The ratio decidendi is the legal principle necessary for the decision.",
-          "A lawyer should distinguish the ratio from factual observations, background discussion and arguments advanced by counsel."
+          "A lawyer must distinguish the ratio from arguments, observations and factual background."
         ]
       },
       {
-        "heading": "Step 5 — Note the Final Order",
+        "heading": "Read the Final Order",
         "paragraphs": [
           "Always read the operative portion of the judgment.",
-          "The final relief granted or refused determines the immediate legal result of the litigation."
+          "The final order determines the immediate result of the litigation."
         ]
       }
     ],
     "keyTakeaways": [
-      "Start with the legal issue.",
-      "Identify the governing statutory provisions.",
-      "Separate arguments from the Court's reasoning.",
+      "Identify the legal issue first.",
+      "Read the relevant statutory provisions.",
+      "Separate arguments from judicial reasoning.",
       "Identify the ratio decidendi.",
       "Always read the final order."
     ],
     "tags": [
-      "Judgments",
       "Supreme Court",
+      "Judgments",
       "Legal Research",
-      "Advocacy Skills"
+      "Advocacy"
     ]
   },
 
@@ -135,41 +113,36 @@
     "date": "2026-08-12",
     "readTime": "12 min read",
     "featured": true,
-    "summary": "An introductory guide to the three major criminal-law enactments that replaced the former IPC, CrPC and Evidence Act framework.",
+    "summary": "An introductory guide to India's three major new criminal-law enactments.",
     "content": [
       {
-        "heading": "The Three New Criminal Laws",
+        "heading": "The Three Laws",
         "paragraphs": [
-          "India introduced three major criminal-law enactments: the Bharatiya Nyaya Sanhita, 2023, the Bharatiya Nagarik Suraksha Sanhita, 2023 and the Bharatiya Sakshya Adhiniyam, 2023.",
-          "Together, these statutes address substantive criminal offences, criminal procedure and the law of evidence."
+          "The Bharatiya Nyaya Sanhita, 2023, Bharatiya Nagarik Suraksha Sanhita, 2023 and Bharatiya Sakshya Adhiniyam, 2023 form the central framework of India's reformed criminal-law system."
         ]
       },
       {
-        "heading": "Bharatiya Nyaya Sanhita",
+        "heading": "BNS",
         "paragraphs": [
-          "The Bharatiya Nyaya Sanhita deals primarily with substantive criminal offences and punishments.",
-          "For criminal practitioners, understanding the ingredients of each offence remains fundamental to drafting complaints, bail applications, discharge applications and trial strategy."
+          "The Bharatiya Nyaya Sanhita primarily deals with substantive criminal offences and punishments."
         ]
       },
       {
-        "heading": "Bharatiya Nagarik Suraksha Sanhita",
+        "heading": "BNSS",
         "paragraphs": [
-          "The Bharatiya Nagarik Suraksha Sanhita governs criminal procedure.",
-          "It is particularly important for advocates dealing with FIRs, investigation, arrest, remand, bail, investigation reports, trials and appeals."
+          "The Bharatiya Nagarik Suraksha Sanhita primarily governs criminal procedure, including investigation, arrest, bail, trial and related proceedings."
         ]
       },
       {
-        "heading": "Bharatiya Sakshya Adhiniyam",
+        "heading": "BSA",
         "paragraphs": [
-          "The Bharatiya Sakshya Adhiniyam deals with evidentiary principles.",
-          "Evidence law determines what material may be legally relied upon and how courts evaluate relevant evidence."
+          "The Bharatiya Sakshya Adhiniyam deals with principles governing evidence and proof in legal proceedings."
         ]
       },
       {
         "heading": "Practical Importance",
         "paragraphs": [
-          "A young criminal lawyer should study all three statutes together rather than treating them as isolated subjects.",
-          "A criminal case often requires simultaneous analysis of the offence, procedural provision and evidentiary foundation."
+          "A criminal practitioner should study all three enactments together because substantive offences, procedure and evidence operate together in actual litigation."
         ]
       }
     ],
@@ -177,14 +150,13 @@
       "BNS primarily deals with offences and punishments.",
       "BNSS primarily deals with criminal procedure.",
       "BSA deals with evidence.",
-      "Criminal litigation requires understanding the interaction between all three."
+      "Criminal litigation requires understanding their interaction."
     ],
     "tags": [
       "BNS",
       "BNSS",
       "BSA",
-      "Criminal Law",
-      "Advocacy"
+      "Criminal Law"
     ]
   },
 
@@ -196,35 +168,39 @@
     "date": "2026-08-11",
     "readTime": "7 min read",
     "featured": false,
-    "summary": "A practical system for law students who want to become faster and more accurate legal researchers.",
+    "summary": "A practical research system for law students and young advocates.",
     "content": [
       {
-        "heading": "Start With the Legal Question",
+        "heading": "Begin With the Legal Question",
         "paragraphs": [
-          "Legal research should begin with a precise legal question rather than a broad search.",
-          "The narrower the question, the easier it becomes to identify relevant legislation and precedents."
+          "Legal research should begin with a precise question rather than an unnecessarily broad search."
         ]
       },
       {
         "heading": "Use Primary Sources",
         "paragraphs": [
-          "Whenever possible, begin with legislation, constitutional provisions and judgments.",
-          "Secondary sources are useful for orientation, but the final legal position should be verified against authoritative primary material."
+          "Begin with legislation, constitutional provisions and judicial decisions wherever possible.",
+          "Secondary sources can provide orientation but important propositions should be verified against primary material."
         ]
       },
       {
-        "heading": "Create a Case Note",
+        "heading": "Create Case Notes",
         "paragraphs": [
-          "For every important judgment, record the facts, issues, provisions, arguments, reasoning, ratio and final order.",
-          "This creates a personal case-law database that becomes increasingly valuable during internships and practice."
+          "Record facts, issues, provisions, arguments, reasoning, ratio and final order for important judgments."
+        ]
+      },
+      {
+        "heading": "Build Your Own Database",
+        "paragraphs": [
+          "A structured personal database of authorities becomes increasingly valuable during internships and litigation practice."
         ]
       }
     ],
     "keyTakeaways": [
       "Begin with a precise legal question.",
-      "Prioritise primary legal sources.",
+      "Prioritise primary sources.",
       "Maintain structured case notes.",
-      "Verify important propositions before relying on them."
+      "Verify important propositions."
     ],
     "tags": [
       "Research",
@@ -242,41 +218,38 @@
     "date": "2026-08-10",
     "readTime": "9 min read",
     "featured": false,
-    "summary": "An accessible overview of India's judicial hierarchy and the role of the Supreme Court, High Courts and subordinate courts.",
+    "summary": "An accessible overview of India's Supreme Court, High Courts and subordinate judiciary.",
     "content": [
       {
         "heading": "Supreme Court of India",
         "paragraphs": [
-          "The Supreme Court is the highest constitutional court in India.",
-          "It exercises original, appellate and advisory jurisdiction in accordance with the Constitution and applicable law."
+          "The Supreme Court is India's apex constitutional court and exercises original, appellate and advisory jurisdiction under the Constitution and applicable law."
         ]
       },
       {
         "heading": "High Courts",
         "paragraphs": [
-          "High Courts operate at the State or territorial level and exercise constitutional, appellate, supervisory and other jurisdictions conferred by law.",
-          "For advocates practising in Tamil Nadu, the Madras High Court is particularly important."
+          "High Courts exercise constitutional, appellate, supervisory and other jurisdictions conferred by law.",
+          "For advocates practising in Tamil Nadu, the Madras High Court is particularly significant."
         ]
       },
       {
-        "heading": "Subordinate Judiciary",
+        "heading": "Subordinate Courts",
         "paragraphs": [
-          "District and subordinate courts handle a large volume of civil and criminal litigation.",
-          "These courts are often where advocates develop the practical skills required for trial advocacy."
+          "District and subordinate courts handle a substantial volume of civil and criminal litigation."
         ]
       },
       {
-        "heading": "Why Young Lawyers Should Understand Court Structure",
+        "heading": "Jurisdiction",
         "paragraphs": [
-          "Knowing jurisdiction is essential when deciding where a proceeding should be instituted or challenged.",
-          "A good advocate must understand territorial jurisdiction, pecuniary jurisdiction, subject-matter jurisdiction and appellate routes."
+          "Understanding territorial, pecuniary, subject-matter and appellate jurisdiction is fundamental to effective practice."
         ]
       }
     ],
     "keyTakeaways": [
       "The Supreme Court is India's apex court.",
       "High Courts exercise important constitutional and appellate jurisdiction.",
-      "Subordinate courts form the foundation of day-to-day litigation.",
+      "Subordinate courts handle day-to-day litigation.",
       "Jurisdiction is a fundamental advocacy skill."
     ],
     "tags": [
@@ -295,34 +268,30 @@
     "date": "2026-08-09",
     "readTime": "8 min read",
     "featured": false,
-    "summary": "The essential professional habits that law students should develop before entering litigation practice.",
+    "summary": "The professional habits that law students should develop before entering litigation practice.",
     "content": [
       {
-        "heading": "Legal Knowledge Is Only the Foundation",
+        "heading": "Knowledge Is Only the Foundation",
         "paragraphs": [
-          "A practising advocate requires more than knowledge of statutes and judgments.",
-          "Drafting, oral advocacy, client communication, procedural knowledge and professional discipline are equally important."
+          "A practising advocate requires statutory knowledge, case-law knowledge, drafting ability, procedural understanding and professional discipline."
         ]
       },
       {
         "heading": "Courtroom Discipline",
         "paragraphs": [
-          "Young advocates should observe courtroom procedure carefully and learn how matters are called, mentioned, argued and adjourned.",
-          "Professional courtesy toward judges, opponents and court staff is an essential part of practice."
+          "Young advocates should observe how matters are called, mentioned, argued and adjourned."
         ]
       },
       {
-        "heading": "Drafting Skills",
+        "heading": "Drafting",
         "paragraphs": [
-          "Clear drafting is one of the most valuable skills an advocate can develop.",
-          "A strong pleading should identify the relevant facts, legal grounds and relief sought without unnecessary repetition."
+          "Clear drafting is one of the most valuable professional skills. A pleading should identify relevant facts, legal grounds and relief sought."
         ]
       },
       {
         "heading": "Continuous Learning",
         "paragraphs": [
-          "Law changes continuously through legislation, judgments and procedural developments.",
-          "A serious advocate therefore treats legal research as a permanent professional habit."
+          "Legislation and case law continuously evolve. Legal learning therefore does not end after law school."
         ]
       }
     ],
@@ -335,6 +304,693 @@
     "tags": [
       "Advocate",
       "Career",
+      "Litigation",
+      "Law Students"
+    ]
+  },
+
+  {
+    "id": 7,
+    "title": "Article 21 and the Expanding Meaning of Personal Liberty",
+    "category": "Constitutional Law",
+    "author": "Pendico Editorial",
+    "date": "2026-08-08",
+    "readTime": "9 min read",
+    "featured": false,
+    "summary": "How judicial interpretation has transformed Article 21 from a narrow procedural guarantee into a major source of constitutional rights.",
+    "content": [
+      {
+        "heading": "Text of Article 21",
+        "paragraphs": [
+          "Article 21 protects life and personal liberty and provides that no person shall be deprived of them except according to procedure established by law."
+        ]
+      },
+      {
+        "heading": "Judicial Development",
+        "paragraphs": [
+          "Indian constitutional jurisprudence has significantly expanded the meaning of life and personal liberty through judicial interpretation."
+        ]
+      },
+      {
+        "heading": "Maneka Gandhi",
+        "paragraphs": [
+          "The jurisprudence associated with Maneka Gandhi v. Union of India strengthened the relationship between Articles 14, 19 and 21."
+        ]
+      },
+      {
+        "heading": "Practical Importance",
+        "paragraphs": [
+          "Article 21 now appears in litigation concerning dignity, privacy, procedural fairness and personal liberty."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "Article 21 protects life and personal liberty.",
+      "Its interpretation has developed substantially through case law.",
+      "Articles 14, 19 and 21 are closely interconnected.",
+      "Article 21 is central to constitutional litigation."
+    ],
+    "tags": [
+      "Article 21",
+      "Personal Liberty",
+      "Maneka Gandhi",
+      "Fundamental Rights"
+    ]
+  },
+
+  {
+    "id": 8,
+    "title": "Article 14: Equality Before Law and Equal Protection of Laws",
+    "category": "Constitutional Law",
+    "author": "Pendico Editorial",
+    "date": "2026-08-07",
+    "readTime": "8 min read",
+    "featured": false,
+    "summary": "Understanding the constitutional guarantee of equality and the doctrine of reasonable classification.",
+    "content": [
+      {
+        "heading": "The Constitutional Guarantee",
+        "paragraphs": [
+          "Article 14 guarantees equality before law and equal protection of laws within the constitutional framework."
+        ]
+      },
+      {
+        "heading": "Reasonable Classification",
+        "paragraphs": [
+          "The constitutional doctrine permits reasonable classification where the classification is founded on an intelligible differentia and bears a rational relationship to the objective sought."
+        ]
+      },
+      {
+        "heading": "Arbitrariness",
+        "paragraphs": [
+          "Modern Article 14 jurisprudence also examines arbitrary State action and constitutional fairness."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "Article 14 contains the guarantee of equality.",
+      "Reasonable classification is constitutionally permissible.",
+      "Arbitrariness can attract constitutional scrutiny.",
+      "Article 14 is frequently invoked in writ litigation."
+    ],
+    "tags": [
+      "Article 14",
+      "Equality",
+      "Constitution",
+      "Writ Jurisdiction"
+    ]
+  },
+
+  {
+    "id": 9,
+    "title": "FIR: What Every Young Criminal Lawyer Should Know",
+    "category": "Criminal Law",
+    "author": "Pendico Editorial",
+    "date": "2026-08-06",
+    "readTime": "8 min read",
+    "featured": false,
+    "summary": "A practical introduction to the First Information Report and its importance in criminal proceedings.",
+    "content": [
+      {
+        "heading": "What Is an FIR?",
+        "paragraphs": [
+          "An FIR records information relating to a cognizable offence received by the police in accordance with applicable criminal procedure."
+        ]
+      },
+      {
+        "heading": "Importance",
+        "paragraphs": [
+          "The FIR often becomes an important document for understanding the initial version of the prosecution case."
+        ]
+      },
+      {
+        "heading": "FIR Is Not Substantive Evidence of Every Fact",
+        "paragraphs": [
+          "An advocate must understand the evidentiary role and limitations of an FIR rather than treating it as proof of every allegation contained within it."
+        ]
+      },
+      {
+        "heading": "Practical Advocacy",
+        "paragraphs": [
+          "When studying an FIR, identify the date, time, place, allegations, accused, witnesses and unexplained inconsistencies."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "An FIR records information concerning a cognizable offence.",
+      "It is important for understanding the initial prosecution version.",
+      "Its evidentiary role has legal limitations.",
+      "Careful FIR analysis is essential in criminal practice."
+    ],
+    "tags": [
+      "FIR",
+      "Criminal Procedure",
+      "Police",
+      "Criminal Advocacy"
+    ]
+  },
+
+  {
+    "id": 10,
+    "title": "Bail and Personal Liberty: The Basic Framework",
+    "category": "Criminal Law",
+    "author": "Pendico Editorial",
+    "date": "2026-08-05",
+    "readTime": "10 min read",
+    "featured": false,
+    "summary": "A conceptual overview of bail, personal liberty and the factors courts commonly consider.",
+    "content": [
+      {
+        "heading": "Bail and Liberty",
+        "paragraphs": [
+          "Bail jurisprudence reflects the constitutional importance of personal liberty while balancing the interests of investigation, trial and public justice."
+        ]
+      },
+      {
+        "heading": "Important Factors",
+        "paragraphs": [
+          "Courts may consider the nature and gravity of the accusation, prima facie material, possibility of absconding, likelihood of tampering with evidence and other circumstances."
+        ]
+      },
+      {
+        "heading": "For Advocates",
+        "paragraphs": [
+          "A bail application should be fact-specific and supported by legally relevant grounds rather than generic statements."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "Bail involves a balance between liberty and administration of justice.",
+      "Courts consider the facts and circumstances of each case.",
+      "Bail applications should be precise and fact-specific."
+    ],
+    "tags": [
+      "Bail",
+      "Personal Liberty",
+      "Criminal Law",
+      "Advocacy"
+    ]
+  },
+
+  {
+    "id": 11,
+    "title": "Understanding Anticipatory Bail",
+    "category": "Criminal Law",
+    "author": "Pendico Editorial",
+    "date": "2026-08-04",
+    "readTime": "9 min read",
+    "featured": false,
+    "summary": "A conceptual guide to anticipatory bail and the considerations relevant to pre-arrest protection.",
+    "content": [
+      {
+        "heading": "Concept",
+        "paragraphs": [
+          "Anticipatory bail is a form of pre-arrest protection available under the applicable criminal procedure framework."
+        ]
+      },
+      {
+        "heading": "Why It Matters",
+        "paragraphs": [
+          "It may become important where a person apprehends arrest in connection with an accusation of a criminal offence."
+        ]
+      },
+      {
+        "heading": "Judicial Discretion",
+        "paragraphs": [
+          "Grant of anticipatory bail depends on statutory requirements, facts and judicial assessment."
+        ]
+      },
+      {
+        "heading": "Drafting Perspective",
+        "paragraphs": [
+          "An advocate should clearly state the factual basis for apprehension, relevant circumstances and the grounds supporting protection."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "Anticipatory bail concerns pre-arrest protection.",
+      "It is governed by applicable criminal procedure.",
+      "Courts exercise judicial discretion based on the facts.",
+      "Precise factual drafting is important."
+    ],
+    "tags": [
+      "Anticipatory Bail",
+      "Bail",
+      "Criminal Procedure",
+      "Advocacy"
+    ]
+  },
+
+  {
+    "id": 12,
+    "title": "Cross-Examination: The Art of Testing Evidence",
+    "category": "Trial Advocacy",
+    "author": "Pendico Editorial",
+    "date": "2026-08-03",
+    "readTime": "9 min read",
+    "featured": false,
+    "summary": "Core principles that every young trial advocate should understand before conducting cross-examination.",
+    "content": [
+      {
+        "heading": "Purpose of Cross-Examination",
+        "paragraphs": [
+          "Cross-examination is not simply an opportunity to ask questions. Its purpose is to test credibility, expose inconsistencies and obtain admissions where legally useful."
+        ]
+      },
+      {
+        "heading": "Preparation",
+        "paragraphs": [
+          "A lawyer should prepare from pleadings, previous statements, documents, exhibits and the expected testimony of the witness."
+        ]
+      },
+      {
+        "heading": "Leading Questions",
+        "paragraphs": [
+          "The law of evidence governs the circumstances in which leading questions may be asked. A trial advocate must understand those rules before conducting cross-examination."
+        ]
+      },
+      {
+        "heading": "Control",
+        "paragraphs": [
+          "Effective cross-examination is generally controlled, concise and directed toward specific propositions."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "Cross-examination tests the reliability of testimony.",
+      "Preparation is more important than improvisation.",
+      "Questions should have a clear evidentiary purpose.",
+      "Control and precision are essential."
+    ],
+    "tags": [
+      "Cross Examination",
+      "Trial Advocacy",
+      "Evidence",
+      "Litigation"
+    ]
+  },
+
+  {
+    "id": 13,
+    "title": "Civil Suit: Understanding the Basic Litigation Process",
+    "category": "Civil Law",
+    "author": "Pendico Editorial",
+    "date": "2026-08-02",
+    "readTime": "9 min read",
+    "featured": false,
+    "summary": "An introduction to the basic stages of civil litigation from institution to judgment.",
+    "content": [
+      {
+        "heading": "Institution of Suit",
+        "paragraphs": [
+          "Civil proceedings ordinarily begin with institution of a plaint before a competent court having jurisdiction."
+        ]
+      },
+      {
+        "heading": "Written Statement",
+        "paragraphs": [
+          "The defendant ordinarily responds to the plaint through a written statement in accordance with applicable procedural rules."
+        ]
+      },
+      {
+        "heading": "Issues",
+        "paragraphs": [
+          "The court identifies the material propositions of fact or law that require determination."
+        ]
+      },
+      {
+        "heading": "Evidence and Trial",
+        "paragraphs": [
+          "Parties lead evidence and witnesses may be examined and cross-examined according to the procedural and evidentiary framework."
+        ]
+      },
+      {
+        "heading": "Judgment and Decree",
+        "paragraphs": [
+          "The court delivers judgment and the resulting decree or order determines the legal outcome subject to available remedies."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "Civil litigation follows a structured procedural process.",
+      "Jurisdiction must be examined before institution.",
+      "Issues define the matters requiring adjudication.",
+      "Evidence and pleadings determine much of the trial strategy."
+    ],
+    "tags": [
+      "Civil Suit",
+      "CPC",
+      "Civil Procedure",
+      "Litigation"
+    ]
+  },
+
+  {
+    "id": 14,
+    "title": "Temporary Injunctions in Civil Litigation",
+    "category": "Civil Law",
+    "author": "Pendico Editorial",
+    "date": "2026-08-01",
+    "readTime": "8 min read",
+    "featured": false,
+    "summary": "Understanding the basic principles governing interim protection in civil proceedings.",
+    "content": [
+      {
+        "heading": "Purpose of an Injunction",
+        "paragraphs": [
+          "An interim injunction is intended to preserve the position or prevent specified harm pending adjudication."
+        ]
+      },
+      {
+        "heading": "Prima Facie Case",
+        "paragraphs": [
+          "The applicant ordinarily has to demonstrate a serious question requiring judicial consideration and a prima facie basis for relief."
+        ]
+      },
+      {
+        "heading": "Balance of Convenience",
+        "paragraphs": [
+          "The court considers which party would suffer greater prejudice from granting or refusing interim relief."
+        ]
+      },
+      {
+        "heading": "Irreparable Injury",
+        "paragraphs": [
+          "The applicant must generally establish that refusal of interim protection may result in injury that cannot adequately be compensated by damages."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "Interim injunctions provide temporary judicial protection.",
+      "Prima facie case is an important consideration.",
+      "Courts examine balance of convenience.",
+      "Irreparable injury is a significant consideration."
+    ],
+    "tags": [
+      "Injunction",
+      "Civil Law",
+      "CPC",
+      "Interim Relief"
+    ]
+  },
+
+  {
+    "id": 15,
+    "title": "Writ Jurisdiction Under Article 226",
+    "category": "Constitutional Litigation",
+    "author": "Pendico Editorial",
+    "date": "2026-07-31",
+    "readTime": "10 min read",
+    "featured": true,
+    "summary": "A practical introduction to High Court writ jurisdiction and the constitutional remedies available under Article 226.",
+    "content": [
+      {
+        "heading": "Article 226",
+        "paragraphs": [
+          "Article 226 empowers High Courts to issue writs and appropriate directions for enforcement of fundamental rights and for other legal purposes."
+        ]
+      },
+      {
+        "heading": "Common Writs",
+        "paragraphs": [
+          "The principal writs include habeas corpus, mandamus, prohibition, certiorari and quo warranto."
+        ]
+      },
+      {
+        "heading": "Wider Scope",
+        "paragraphs": [
+          "The jurisdiction under Article 226 is wider in scope than Article 32 because it may extend to enforcement of legal rights beyond fundamental rights."
+        ]
+      },
+      {
+        "heading": "Practical Advocacy",
+        "paragraphs": [
+          "Before filing a writ petition, an advocate should identify the public-law element, the impugned action, jurisdictional basis, alternative remedies and appropriate relief."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "Article 226 gives High Courts broad writ jurisdiction.",
+      "Five traditional writs are constitutionally recognised.",
+      "The jurisdiction extends beyond fundamental rights.",
+      "Public-law principles are central to writ litigation."
+    ],
+    "tags": [
+      "Article 226",
+      "Writ Petition",
+      "High Court",
+      "Constitutional Litigation"
+    ]
+  },
+
+  {
+    "id": 16,
+    "title": "Legal Notice: When and Why It Matters",
+    "category": "Legal Practice",
+    "author": "Pendico Editorial",
+    "date": "2026-07-30",
+    "readTime": "7 min read",
+    "featured": false,
+    "summary": "Understanding the purpose of legal notices and how advocates should approach their drafting.",
+    "content": [
+      {
+        "heading": "Purpose",
+        "paragraphs": [
+          "A legal notice can communicate a client's grievance, demand compliance and place the opposing party on formal notice of the legal position."
+        ]
+      },
+      {
+        "heading": "Before Drafting",
+        "paragraphs": [
+          "An advocate should collect the complete factual record, relevant documents, contractual terms and applicable statutory provisions."
+        ]
+      },
+      {
+        "heading": "Drafting",
+        "paragraphs": [
+          "A good notice should be clear, factually accurate and legally precise. Unnecessary allegations should be avoided."
+        ]
+      },
+      {
+        "heading": "Professional Importance",
+        "paragraphs": [
+          "A properly drafted notice may later become part of the litigation record, making accuracy particularly important."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "A notice communicates the client's legal position.",
+      "Facts and documents should be verified before drafting.",
+      "Drafting should be precise and professional.",
+      "The notice may become relevant in later litigation."
+    ],
+    "tags": [
+      "Legal Notice",
+      "Drafting",
+      "Legal Practice",
+      "Advocacy"
+    ]
+  },
+
+  {
+    "id": 17,
+    "title": "Artificial Intelligence and the Future of Legal Practice",
+    "category": "Legal Technology",
+    "author": "Pendico Editorial",
+    "date": "2026-07-29",
+    "readTime": "8 min read",
+    "featured": false,
+    "summary": "How artificial intelligence is changing legal research, drafting and professional workflows.",
+    "content": [
+      {
+        "heading": "Legal Research",
+        "paragraphs": [
+          "AI systems can assist lawyers in identifying potentially relevant legal authorities and organising large amounts of legal information."
+        ]
+      },
+      {
+        "heading": "Drafting",
+        "paragraphs": [
+          "AI can assist with first drafts, summaries and structured analysis, but the lawyer remains responsible for the final work."
+        ]
+      },
+      {
+        "heading": "Confidentiality",
+        "paragraphs": [
+          "Lawyers must carefully consider confidentiality and data-security implications before entering client information into external technology systems."
+        ]
+      },
+      {
+        "heading": "Verification",
+        "paragraphs": [
+          "AI-generated citations and legal propositions must be independently verified against reliable primary sources."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "AI can improve legal workflows.",
+      "Lawyers remain responsible for accuracy.",
+      "Client confidentiality must be protected.",
+      "Primary authorities should always be verified."
+    ],
+    "tags": [
+      "AI",
+      "Legal Technology",
+      "Legal Research",
+      "Future of Law"
+    ]
+  },
+
+  {
+    "id": 18,
+    "title": "How Young Advocates Should Prepare for a Court Hearing",
+    "category": "Advocacy Skills",
+    "author": "Pendico Editorial",
+    "date": "2026-07-28",
+    "readTime": "7 min read",
+    "featured": false,
+    "summary": "A practical preparation checklist for law students and young advocates attending court.",
+    "content": [
+      {
+        "heading": "Know the File",
+        "paragraphs": [
+          "Read the complete case file before the hearing. Know the pleadings, documents, previous orders and procedural history."
+        ]
+      },
+      {
+        "heading": "Know the Relief",
+        "paragraphs": [
+          "Be able to state exactly what relief is being sought and the legal provision supporting it."
+        ]
+      },
+      {
+        "heading": "Prepare Authorities",
+        "paragraphs": [
+          "Keep the most relevant statutory provisions and judgments readily accessible."
+        ]
+      },
+      {
+        "heading": "Anticipate Questions",
+        "paragraphs": [
+          "Consider the strongest question the court may ask and prepare a direct answer supported by law and facts."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "Read the entire file.",
+      "Know the exact relief sought.",
+      "Prepare relevant authorities.",
+      "Anticipate judicial questions."
+    ],
+    "tags": [
+      "Court Hearing",
+      "Advocacy",
+      "Young Advocates",
+      "Litigation"
+    ]
+  },
+
+  {
+    "id": 19,
+    "title": "Powers and Limits of Judicial Review",
+    "category": "Constitutional Law",
+    "author": "Pendico Editorial",
+    "date": "2026-07-27",
+    "readTime": "8 min read",
+    "featured": false,
+    "summary": "Understanding how constitutional courts review legislative and executive action.",
+    "content": [
+      {
+        "heading": "Purpose of Judicial Review",
+        "paragraphs": [
+          "Judicial review ensures that public authorities act within constitutional and statutory limits."
+        ]
+      },
+      {
+        "heading": "Legislative Review",
+        "paragraphs": [
+          "Courts may examine legislation for constitutional validity in appropriate proceedings."
+        ]
+      },
+      {
+        "heading": "Executive Review",
+        "paragraphs": [
+          "Administrative and executive decisions may be examined for illegality, procedural unfairness, jurisdictional error and other recognised grounds."
+        ]
+      },
+      {
+        "heading": "Judicial Restraint",
+        "paragraphs": [
+          "Judicial review is concerned with legality and constitutional limits and does not ordinarily permit courts to substitute their policy preferences for those of the competent authority."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "Judicial review maintains constitutional limits.",
+      "Legislative action can be constitutionally challenged.",
+      "Executive decisions can be reviewed on recognised legal grounds.",
+      "Judicial review is distinct from judicial policy-making."
+    ],
+    "tags": [
+      "Judicial Review",
+      "Constitution",
+      "High Court",
+      "Supreme Court"
+    ]
+  },
+
+  {
+    "id": 20,
+    "title": "The Professional Journey from Law Student to Advocate",
+    "category": "Legal Career",
+    "author": "Pendico Editorial",
+    "date": "2026-07-26",
+    "readTime": "8 min read",
+    "featured": false,
+    "summary": "A practical roadmap for students who want to build a serious career in litigation.",
+    "content": [
+      {
+        "heading": "Build the Foundation",
+        "paragraphs": [
+          "A law student should develop strong fundamentals in constitutional law, criminal law, civil procedure, evidence, contracts and professional ethics."
+        ]
+      },
+      {
+        "heading": "Internships",
+        "paragraphs": [
+          "Internships should be used to observe real files, drafting, court procedure, client interaction and research rather than merely collecting certificates."
+        ]
+      },
+      {
+        "heading": "Learn Drafting",
+        "paragraphs": [
+          "Drafting petitions, written statements, affidavits, notices and applications develops practical legal thinking."
+        ]
+      },
+      {
+        "heading": "Observe Courts",
+        "paragraphs": [
+          "Regular court observation teaches procedural habits that textbooks cannot fully convey."
+        ]
+      },
+      {
+        "heading": "Develop a Reputation for Reliability",
+        "paragraphs": [
+          "Young lawyers should focus on accuracy, punctuality, preparation, professional conduct and keeping commitments."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "Build strong legal fundamentals.",
+      "Use internships for practical learning.",
+      "Develop drafting skills.",
+      "Observe court proceedings regularly.",
+      "Professional reliability is a long-term advantage."
+    ],
+    "tags": [
+      "Law Career",
+      "Advocate",
+      "Internship",
       "Litigation",
       "Law Students"
     ]
