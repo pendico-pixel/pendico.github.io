@@ -1,0 +1,2313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- =====================================================
+     GOOGLE ANALYTICS
+===================================================== -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0BL89MBWGY"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+    dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config', 'G-0BL89MBWGY');
+</script>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Trending Today | Pendico</title>
+
+<meta name="description"
+content="Trending Today — discover what is trending across India in politics, law, sports, entertainment, technology, business, science and more.">
+
+<meta name="keywords"
+content="India trending today, trending news India, latest India trends, viral India, Pendico Trending Today">
+
+<meta name="robots"
+content="index, follow">
+
+<link rel="canonical"
+      href="https://pendico.pages.dev/trending.html">
+
+<link rel="icon"
+      type="image/png"
+      href="favicon.png">
+
+
+<style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:#f4f6fa;
+
+    color:#172033;
+
+    line-height:1.5;
+
+    transition:
+    background .3s ease,
+    color .3s ease;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+
+/* =====================================================
+   TOP NAV
+===================================================== */
+
+.top-nav{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 5%;
+
+    background:
+    rgba(255,255,255,.92);
+
+    backdrop-filter:
+    blur(18px);
+
+    border-bottom:
+    1px solid #e5e9f0;
+}
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    color:#102d55;
+
+    font-weight:900;
+
+    font-size:21px;
+
+    letter-spacing:1px;
+}
+
+.brand img{
+
+    width:40px;
+
+    height:40px;
+
+    object-fit:cover;
+
+    border-radius:11px;
+}
+
+.brand span{
+
+    color:#1769d1;
+}
+
+.nav-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+}
+
+.nav-button{
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#f0f3f8;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.2s;
+}
+
+.nav-button:hover{
+
+    transform:scale(1.05);
+
+    background:#e3e9f2;
+}
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.page-header{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:
+    45px 20px 20px;
+
+    text-align:center;
+}
+
+.page-header h1{
+
+    font-size:
+    clamp(35px,7vw,62px);
+
+    font-weight:950;
+
+    letter-spacing:-2px;
+
+    color:#102d55;
+}
+
+.page-header h1 span{
+
+    color:#1769d1;
+}
+
+.page-header p{
+
+    margin-top:8px;
+
+    color:#718096;
+
+    font-size:15px;
+}
+
+.live-indicator{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    margin-top:18px;
+
+    padding:7px 14px;
+
+    border-radius:30px;
+
+    background:#fff;
+
+    border:1px solid #e4e9f0;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    color:#526276;
+}
+
+.live-dot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#e53935;
+
+    box-shadow:
+    0 0 0 5px rgba(229,57,53,.10);
+
+    animation:pulse 1.7s infinite;
+}
+
+@keyframes pulse{
+
+    0%,100%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.45;
+    }
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-wrapper{
+
+    max-width:700px;
+
+    margin:
+    20px auto 10px;
+
+    padding:0 20px;
+}
+
+.search{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#fff;
+
+    border:1px solid #e3e8ef;
+
+    border-radius:15px;
+
+    padding:7px 10px;
+
+    box-shadow:
+    0 8px 25px rgba(20,40,70,.06);
+}
+
+.search-icon{
+
+    font-size:18px;
+
+    padding-left:8px;
+}
+
+.search input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:12px 5px;
+
+    font-size:15px;
+
+    background:transparent;
+}
+
+.search button{
+
+    border:none;
+
+    background:#1769d1;
+
+    color:#fff;
+
+    border-radius:10px;
+
+    padding:10px 17px;
+
+    font-weight:800;
+
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   CATEGORY BAR
+===================================================== */
+
+.categories{
+
+    max-width:1100px;
+
+    margin:
+    20px auto 25px;
+
+    padding:
+    0 20px;
+
+    display:flex;
+
+    gap:9px;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+}
+
+.categories::-webkit-scrollbar{
+    display:none;
+}
+
+.category{
+
+    flex:none;
+
+    border:1px solid #dfe5ed;
+
+    background:#fff;
+
+    color:#59697e;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.category:hover{
+
+    border-color:#1769d1;
+
+    color:#1769d1;
+}
+
+.category.active{
+
+    background:#1769d1;
+
+    color:#fff;
+
+    border-color:#1769d1;
+}
+
+
+/* =====================================================
+   FEED
+===================================================== */
+
+.feed{
+
+    width:100%;
+
+    max-width:720px;
+
+    margin:auto;
+
+    padding:
+    0 15px 100px;
+}
+
+
+/* =====================================================
+   TREND CARD
+===================================================== */
+
+.trend-card{
+
+    background:#fff;
+
+    border:
+    1px solid #e3e8ef;
+
+    border-radius:20px;
+
+    margin-bottom:24px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 35px rgba(20,40,70,.07);
+
+    transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.trend-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 18px 45px rgba(20,40,70,.12);
+}
+
+
+/* =====================================================
+   CARD HEADER
+===================================================== */
+
+.card-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:15px 17px;
+}
+
+.card-source{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+}
+
+.source-avatar{
+
+    width:43px;
+
+    height:43px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #1769d1,
+        #48a9ff
+    );
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
+
+    font-weight:900;
+}
+
+.source-info{
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.source-name{
+
+    font-weight:850;
+
+    color:#172033;
+
+    font-size:14px;
+}
+
+.source-meta{
+
+    color:#8390a2;
+
+    font-size:11px;
+}
+
+.rank{
+
+    font-size:13px;
+
+    font-weight:900;
+
+    color:#1769d1;
+
+    background:#edf5ff;
+
+    padding:6px 10px;
+
+    border-radius:20px;
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.card-content{
+
+    padding:
+    0 18px 18px;
+}
+
+.category-label{
+
+    display:inline-block;
+
+    color:#1769d1;
+
+    background:#edf5ff;
+
+    border-radius:6px;
+
+    padding:5px 9px;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+
+    margin-bottom:10px;
+}
+
+.card-title{
+
+    font-size:
+    clamp(21px,4vw,28px);
+
+    line-height:1.22;
+
+    color:#102d55;
+
+    font-weight:900;
+
+    margin-bottom:10px;
+}
+
+.card-summary{
+
+    color:#657388;
+
+    font-size:15px;
+
+    line-height:1.65;
+}
+
+
+/* =====================================================
+   IMAGE AREA
+===================================================== */
+
+.card-image{
+
+    width:100%;
+
+    aspect-ratio:
+    16 / 9;
+
+    background:
+    linear-gradient(
+        135deg,
+        #dcecff,
+        #f0f5fb
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+}
+
+.card-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+}
+
+.image-placeholder{
+
+    text-align:center;
+
+    color:#7b8ba0;
+
+    font-size:45px;
+}
+
+
+/* =====================================================
+   TAGS
+===================================================== */
+
+.tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:6px;
+
+    margin-top:15px;
+}
+
+.tag{
+
+    font-size:11px;
+
+    color:#68788d;
+
+    background:#f2f5f8;
+
+    padding:5px 9px;
+
+    border-radius:20px;
+}
+
+
+/* =====================================================
+   CARD ACTIONS
+===================================================== */
+
+.card-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:
+    12px 17px;
+
+    border-top:
+    1px solid #edf0f4;
+}
+
+.actions-left{
+
+    display:flex;
+
+    gap:7px;
+}
+
+.action{
+
+    border:none;
+
+    background:transparent;
+
+    cursor:pointer;
+
+    padding:7px 10px;
+
+    border-radius:9px;
+
+    color:#627187;
+
+    font-size:14px;
+
+    transition:.2s;
+}
+
+.action:hover{
+
+    background:#f1f4f8;
+
+    color:#1769d1;
+}
+
+.action.saved{
+
+    color:#1769d1;
+}
+
+.read-button{
+
+    text-decoration:none;
+
+    color:#1769d1;
+
+    font-size:13px;
+
+    font-weight:900;
+
+    padding:7px 11px;
+
+    border-radius:8px;
+}
+
+.read-button:hover{
+
+    background:#edf5ff;
+}
+
+
+/* =====================================================
+   TRENDING SCORE
+===================================================== */
+
+.trend-score{
+
+    margin:
+    0 18px 18px;
+
+    padding:11px 13px;
+
+    border-radius:12px;
+
+    background:#f7f9fc;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+}
+
+.score-label{
+
+    font-size:11px;
+
+    font-weight:800;
+
+    color:#7b899b;
+}
+
+.score-value{
+
+    font-size:13px;
+
+    font-weight:900;
+
+    color:#1769d1;
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.loading{
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    color:#738197;
+}
+
+.spinner{
+
+    width:40px;
+
+    height:40px;
+
+    border:
+    4px solid #e5eaf1;
+
+    border-top-color:#1769d1;
+
+    border-radius:50%;
+
+    margin:
+    0 auto 15px;
+
+    animation:spin .8s linear infinite;
+}
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+.empty{
+
+    display:none;
+
+    text-align:center;
+
+    padding:70px 20px;
+
+    color:#748196;
+}
+
+.empty-icon{
+
+    font-size:50px;
+
+    margin-bottom:10px;
+}
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+.back-top{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:25px;
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#1769d1;
+
+    color:#fff;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 10px 25px rgba(23,105,209,.3);
+
+    display:none;
+
+    z-index:900;
+}
+
+
+/* =====================================================
+   BOTTOM MOBILE NAV
+===================================================== */
+
+.mobile-nav{
+
+    display:none;
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    right:0;
+
+    z-index:1000;
+
+    background:
+    rgba(255,255,255,.96);
+
+    backdrop-filter:blur(15px);
+
+    border-top:
+    1px solid #e2e7ee;
+
+    padding:
+    8px 10px;
+}
+
+.mobile-nav-inner{
+
+    display:flex;
+
+    justify-content:space-around;
+}
+
+.mobile-nav a{
+
+    text-decoration:none;
+
+    color:#718096;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:2px;
+
+    font-size:10px;
+
+    font-weight:700;
+}
+
+.mobile-nav a.active{
+
+    color:#1769d1;
+}
+
+.mobile-nav-icon{
+
+    font-size:20px;
+}
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+body.dark{
+
+    background:#0b1220;
+
+    color:#e7edf6;
+}
+
+body.dark .top-nav{
+
+    background:
+    rgba(10,18,32,.94);
+
+    border-color:#202c3d;
+}
+
+body.dark .brand{
+
+    color:#fff;
+}
+
+body.dark .nav-button{
+
+    background:#182336;
+
+    color:#fff;
+}
+
+body.dark .page-header h1{
+
+    color:#fff;
+}
+
+body.dark .page-header p{
+
+    color:#94a3b8;
+}
+
+body.dark .live-indicator{
+
+    background:#111b2b;
+
+    border-color:#263448;
+
+    color:#aab8ca;
+}
+
+body.dark .category{
+
+    background:#111b2b;
+
+    border-color:#27364b;
+
+    color:#a9b7c9;
+}
+
+body.dark .category.active{
+
+    background:#1769d1;
+
+    color:#fff;
+}
+
+body.dark .trend-card{
+
+    background:#111a29;
+
+    border-color:#263449;
+
+    box-shadow:
+    0 12px 35px rgba(0,0,0,.25);
+}
+
+body.dark .source-name{
+
+    color:#fff;
+}
+
+body.dark .card-title{
+
+    color:#f2f6fc;
+}
+
+body.dark .card-summary{
+
+    color:#9cabc0;
+}
+
+body.dark .card-actions{
+
+    border-color:#243246;
+}
+
+body.dark .action{
+
+    color:#9aa9bd;
+}
+
+body.dark .action:hover{
+
+    background:#1a2638;
+}
+
+body.dark .tag{
+
+    background:#182336;
+
+    color:#9daabd;
+}
+
+body.dark .trend-score{
+
+    background:#151f30;
+}
+
+body.dark .search{
+
+    background:#111b2b;
+
+    border-color:#263448;
+}
+
+body.dark .search input{
+
+    color:#fff;
+}
+
+body.dark .mobile-nav{
+
+    background:
+    rgba(10,18,32,.96);
+
+    border-color:#253449;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:700px){
+
+    .top-nav{
+
+        height:62px;
+
+        padding:
+        0 15px;
+    }
+
+    .brand{
+
+        font-size:18px;
+    }
+
+    .brand img{
+
+        width:35px;
+
+        height:35px;
+    }
+
+    .nav-actions{
+
+        gap:5px;
+    }
+
+    .page-header{
+
+        padding:
+        32px 15px 15px;
+    }
+
+    .page-header h1{
+
+        font-size:42px;
+    }
+
+    .search-wrapper{
+
+        padding:0 12px;
+    }
+
+    .feed{
+
+        padding:
+        0 8px 90px;
+    }
+
+    .trend-card{
+
+        border-radius:17px;
+
+        margin-bottom:18px;
+    }
+
+    .card-title{
+
+        font-size:22px;
+    }
+
+    .card-summary{
+
+        font-size:14px;
+    }
+
+    .mobile-nav{
+
+        display:block;
+    }
+
+    .back-top{
+
+        bottom:75px;
+
+        right:15px;
+    }
+
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible{
+
+    outline:
+    3px solid rgba(23,105,209,.35);
+
+    outline-offset:2px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP NAV
+===================================================== -->
+
+<nav class="top-nav">
+
+<a href="index.html"
+   class="brand">
+
+<img src="logo.png.jpeg"
+     alt="Pendico">
+
+PENDI<span>CO</span>
+
+</a>
+
+
+<div class="nav-actions">
+
+<button
+class="nav-button"
+onclick="toggleDarkMode()"
+title="Toggle dark mode">
+
+🌙
+
+</button>
+
+<a href="index.html"
+   class="nav-button"
+   title="Home"
+   style="text-decoration:none;">
+
+⌂
+
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="page-header">
+
+<h1>
+Trending <span>Today</span>
+</h1>
+
+<p>
+What's attracting attention across India right now.
+</p>
+
+<div class="live-indicator">
+
+<span class="live-dot"></span>
+
+Updated from Pendico's trending feed
+
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     SEARCH
+===================================================== -->
+
+<div class="search-wrapper">
+
+<div class="search">
+
+<span class="search-icon">
+🔎
+</span>
+
+<input
+type="search"
+id="trendSearch"
+placeholder="Search today's trends...">
+
+<button onclick="performSearch()">
+Search
+</button>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     CATEGORIES
+===================================================== -->
+
+<div class="categories"
+     id="categories">
+
+<button
+class="category active"
+data-category="All">
+
+🔥 All
+
+</button>
+
+<button
+class="category"
+data-category="Politics">
+
+🏛️ Politics
+
+</button>
+
+<button
+class="category"
+data-category="Law">
+
+⚖️ Law
+
+</button>
+
+<button
+class="category"
+data-category="Sports">
+
+🏆 Sports
+
+</button>
+
+<button
+class="category"
+data-category="Entertainment">
+
+🎬 Entertainment
+
+</button>
+
+<button
+class="category"
+data-category="Technology">
+
+💻 Technology
+
+</button>
+
+<button
+class="category"
+data-category="Business">
+
+💼 Business
+
+</button>
+
+<button
+class="category"
+data-category="Science">
+
+🔬 Science
+
+</button>
+
+<button
+class="category"
+data-category="India">
+
+🇮🇳 India
+
+</button>
+
+</div>
+
+
+<!-- =====================================================
+     FEED
+===================================================== -->
+
+<main>
+
+<div class="feed"
+     id="feed">
+
+<div class="loading"
+     id="loading">
+
+<div class="spinner"></div>
+
+Loading today's trends...
+
+</div>
+
+</div>
+
+
+<div class="empty"
+     id="empty">
+
+<div class="empty-icon">
+🔎
+</div>
+
+<h3>
+No trends found
+</h3>
+
+<p>
+Try another category or search term.
+</p>
+
+</div>
+
+</main>
+
+
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<button
+class="back-top"
+id="backTop"
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+↑
+
+</button>
+
+
+<!-- =====================================================
+     MOBILE NAV
+===================================================== -->
+
+<nav class="mobile-nav">
+
+<div class="mobile-nav-inner">
+
+<a href="index.html">
+
+<span class="mobile-nav-icon">⌂</span>
+
+Home
+
+</a>
+
+<a href="trending.html"
+   class="active">
+
+<span class="mobile-nav-icon">🔥</span>
+
+Trending
+
+</a>
+
+<a href="legalnews.html">
+
+<span class="mobile-nav-icon">📰</span>
+
+News
+
+</a>
+
+<a href="caselaws.html">
+
+<span class="mobile-nav-icon">⚖️</span>
+
+Law
+
+</a>
+
+<a href="about.html">
+
+<span class="mobile-nav-icon">☰</span>
+
+More
+
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- =====================================================
+     SCRIPT
+===================================================== -->
+
+<script>
+
+let allTrends = [];
+
+let currentCategory = "All";
+
+let currentSearch = "";
+
+
+/* =====================================================
+   LOAD JSON
+===================================================== */
+
+async function loadTrending(){
+
+    const feed =
+    document.getElementById("feed");
+
+    const loading =
+    document.getElementById("loading");
+
+    try{
+
+        const response =
+        await fetch(
+            "data/trending.json"
+        );
+
+        if(!response.ok){
+
+            throw new Error(
+                "Unable to load trending.json"
+            );
+
+        }
+
+        const data =
+        await response.json();
+
+        /*
+         * Supports either:
+         *
+         * { "trends": [...] }
+         *
+         * OR
+         *
+         * [...]
+         */
+
+        allTrends =
+        Array.isArray(data)
+        ? data
+        : data.trends || [];
+
+        loading.remove();
+
+        renderFeed();
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+        loading.innerHTML = `
+
+        <div style="
+            font-size:40px;
+            margin-bottom:10px;
+        ">
+        ⚠️
+        </div>
+
+        <strong>
+        Unable to load today's trends.
+        </strong>
+
+        <p style="
+            margin-top:7px;
+            font-size:13px;
+        ">
+        Please check data/trending.json
+        </p>
+
+        `;
+
+    }
+
+}
+
+
+/* =====================================================
+   RENDER FEED
+===================================================== */
+
+function renderFeed(){
+
+    const feed =
+    document.getElementById("feed");
+
+    const empty =
+    document.getElementById("empty");
+
+    feed.innerHTML = "";
+
+    let filtered =
+    allTrends.filter(item => {
+
+        const categoryMatch =
+        currentCategory === "All" ||
+        String(item.category || "")
+        .toLowerCase()
+        ===
+        currentCategory.toLowerCase();
+
+        const searchText =
+        (
+
+            String(item.title || "") +
+            " " +
+            String(item.summary || "") +
+            " " +
+            String(item.category || "") +
+            " " +
+            (item.tags || []).join(" ")
+
+        ).toLowerCase();
+
+        const searchMatch =
+        !currentSearch ||
+        searchText.includes(
+            currentSearch
+        );
+
+        return (
+            categoryMatch &&
+            searchMatch
+        );
+
+    });
+
+
+    /*
+     * Highest rank first
+     */
+
+    filtered.sort(
+        (a,b) =>
+        Number(a.rank || 999)
+        -
+        Number(b.rank || 999)
+    );
+
+
+    if(filtered.length === 0){
+
+        empty.style.display =
+        "block";
+
+        return;
+
+    }
+
+    empty.style.display =
+    "none";
+
+
+    filtered.forEach(
+        (item,index) => {
+
+            feed.appendChild(
+                createCard(
+                    item,
+                    index
+                )
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   CREATE CARD
+===================================================== */
+
+function createCard(item,index){
+
+    const card =
+    document.createElement("article");
+
+    card.className =
+    "trend-card";
+
+
+    const rank =
+    item.rank ||
+    index + 1;
+
+    const category =
+    item.category ||
+    "India";
+
+
+    const icon =
+    getCategoryIcon(
+        category
+    );
+
+
+    const tags =
+    Array.isArray(item.tags)
+    ? item.tags
+    : [];
+
+
+    const tagsHTML =
+    tags.map(tag => `
+
+        <span class="tag">
+        #${escapeHTML(tag)}
+        </span>
+
+    `).join("");
+
+
+    const imageHTML =
+    item.image
+
+    ?
+
+    `
+
+    <div class="card-image">
+
+        <img
+        src="${escapeAttribute(item.image)}"
+        alt="${escapeAttribute(item.title || "Trending story")}"
+        loading="lazy">
+
+    </div>
+
+    `
+
+    :
+
+    `
+
+    <div class="card-image">
+
+        <div class="image-placeholder">
+
+        ${icon}
+
+        </div>
+
+    </div>
+
+    `;
+
+
+    const sourceName =
+    item.source?.name ||
+    "Pendico Trending";
+
+
+    const date =
+    item.date ||
+    "Today";
+
+
+    const time =
+    item.time ||
+    "";
+
+
+    const url =
+    item.source?.url ||
+    item.url ||
+    "";
+
+
+    const readButton =
+    url
+
+    ?
+
+    `
+
+    <a
+    class="read-button"
+    href="${escapeAttribute(url)}"
+    target="_blank"
+    rel="noopener">
+
+    Read source →
+
+    </a>
+
+    `
+
+    :
+
+    `
+
+    <span
+    class="read-button">
+
+    Trending →
+
+    </span>
+
+    `;
+
+
+    const score =
+    item.score ||
+    item.importance ||
+    "Trending";
+
+
+    card.innerHTML = `
+
+    <!-- CARD HEADER -->
+
+    <div class="card-header">
+
+        <div class="card-source">
+
+            <div class="source-avatar">
+
+                ${icon}
+
+            </div>
+
+            <div class="source-info">
+
+                <span class="source-name">
+
+                    ${escapeHTML(sourceName)}
+
+                </span>
+
+                <span class="source-meta">
+
+                    ${escapeHTML(date)}
+                    ${time ? " • " + escapeHTML(time) : ""}
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="rank">
+
+            #${escapeHTML(rank)}
+
+        </div>
+
+    </div>
+
+
+    ${imageHTML}
+
+
+    <!-- CONTENT -->
+
+    <div class="card-content">
+
+        <span class="category-label">
+
+            ${escapeHTML(category)}
+
+        </span>
+
+
+        <h2 class="card-title">
+
+            ${escapeHTML(
+                item.title ||
+                "Trending in India"
+            )}
+
+        </h2>
+
+
+        <p class="card-summary">
+
+            ${escapeHTML(
+                item.summary ||
+                "A developing trend attracting attention across India."
+            )}
+
+        </p>
+
+
+        <div class="tags">
+
+            ${tagsHTML}
+
+        </div>
+
+    </div>
+
+
+    <!-- TREND SCORE -->
+
+    <div class="trend-score">
+
+        <span class="score-label">
+
+            TREND STATUS
+
+        </span>
+
+        <span class="score-value">
+
+            🔥 ${escapeHTML(score)}
+
+        </span>
+
+    </div>
+
+
+    <!-- ACTIONS -->
+
+    <div class="card-actions">
+
+        <div class="actions-left">
+
+            <button
+            class="action"
+            onclick="shareTrend(this)">
+
+            ↗ Share
+
+            </button>
+
+
+            <button
+            class="action"
+            onclick="saveTrend(this)">
+
+            🔖 Save
+
+            </button>
+
+        </div>
+
+
+        ${readButton}
+
+    </div>
+
+    `;
+
+
+    return card;
+
+}
+
+
+/* =====================================================
+   CATEGORY ICON
+===================================================== */
+
+function getCategoryIcon(category){
+
+    const icons = {
+
+        Politics:"🏛️",
+
+        Law:"⚖️",
+
+        Sports:"🏆",
+
+        Entertainment:"🎬",
+
+        Technology:"💻",
+
+        Business:"💼",
+
+        Science:"🔬",
+
+        India:"🇮🇳",
+
+        Education:"🎓",
+
+        Health:"🩺",
+
+        World:"🌍"
+
+    };
+
+    return icons[category]
+    || "🔥";
+
+}
+
+
+/* =====================================================
+   CATEGORY FILTER
+===================================================== */
+
+document
+.querySelectorAll(".category")
+.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        function(){
+
+            document
+            .querySelectorAll(".category")
+            .forEach(btn =>
+                btn.classList.remove(
+                    "active"
+                )
+            );
+
+            this.classList.add(
+                "active"
+            );
+
+            currentCategory =
+            this.dataset.category;
+
+            renderFeed();
+
+        }
+    );
+
+});
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+function performSearch(){
+
+    currentSearch =
+    document
+    .getElementById("trendSearch")
+    .value
+    .toLowerCase()
+    .trim();
+
+    renderFeed();
+
+}
+
+
+document
+.getElementById("trendSearch")
+.addEventListener(
+    "input",
+    function(){
+
+        currentSearch =
+        this.value
+        .toLowerCase()
+        .trim();
+
+        renderFeed();
+
+    }
+);
+
+
+/* =====================================================
+   SHARE
+===================================================== */
+
+async function shareTrend(button){
+
+    const card =
+    button.closest(".trend-card");
+
+    const title =
+    card.querySelector(
+        ".card-title"
+    ).innerText;
+
+
+    if(
+        navigator.share
+    ){
+
+        try{
+
+            await navigator.share({
+
+                title:
+                title,
+
+                text:
+                "Trending Today on Pendico",
+
+                url:
+                window.location.href
+
+            });
+
+        }
+
+        catch(error){
+
+            console.log(
+                "Share cancelled"
+            );
+
+        }
+
+    }
+
+    else{
+
+        try{
+
+            await navigator.clipboard.writeText(
+                window.location.href
+            );
+
+            button.innerText =
+            "✓ Copied";
+
+            setTimeout(
+                () => {
+                    button.innerText =
+                    "↗ Share";
+                },
+                1500
+            );
+
+        }
+
+        catch(error){
+
+            alert(
+                "Copy failed"
+            );
+
+        }
+
+    }
+
+}
+
+
+/* =====================================================
+   SAVE
+===================================================== */
+
+function saveTrend(button){
+
+    button.classList.toggle(
+        "saved"
+    );
+
+    if(
+        button.classList.contains(
+            "saved"
+        )
+    ){
+
+        button.innerText =
+        "🔖 Saved";
+
+    }
+
+    else{
+
+        button.innerText =
+        "🔖 Save";
+
+    }
+
+}
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+function toggleDarkMode(){
+
+    document.body.classList.toggle(
+        "dark"
+    );
+
+    const dark =
+    document.body.classList.contains(
+        "dark"
+    );
+
+    localStorage.setItem(
+        "pendicoDarkMode",
+        dark
+        ? "1"
+        : "0"
+    );
+
+}
+
+
+if(
+    localStorage.getItem(
+        "pendicoDarkMode"
+    ) === "1"
+){
+
+    document.body.classList.add(
+        "dark"
+    );
+
+}
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+window.addEventListener(
+    "scroll",
+    function(){
+
+        const button =
+        document.getElementById(
+            "backTop"
+        );
+
+        button.style.display =
+        window.scrollY > 500
+        ? "flex"
+        : "none";
+
+        button.style.alignItems =
+        "center";
+
+        button.style.justifyContent =
+        "center";
+
+    }
+);
+
+
+/* =====================================================
+   SECURITY HELPERS
+===================================================== */
+
+function escapeHTML(value){
+
+    return String(value)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+
+}
+
+
+function escapeAttribute(value){
+
+    return escapeHTML(value);
+
+}
+
+
+/* =====================================================
+   START
+===================================================== */
+
+loadTrending();
+
+</script>
+
+
+</body>
+
+</html>
