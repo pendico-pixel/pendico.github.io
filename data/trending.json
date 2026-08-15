@@ -1,146 +1,102 @@
 {
-  "page": {
-    "title": "Trending Today",
-    "subtitle": "What's trending across India today",
-    "description": "A daily collection of major trending stories and developments from across India.",
-    "lastUpdated": "2026-08-15",
-    "timezone": "Asia/Kolkata"
-  },
-
-  "categories": [
-    "All",
-    "India",
-    "Tamil Nadu",
-    "Chennai",
-    "Law",
-    "Politics",
-    "Business",
-    "Technology",
-    "Sports",
-    "Entertainment",
-    "Education",
-    "Science"
-  ],
-
   "trends": [
     {
       "id": 1,
       "rank": 1,
-      "title": "Major National Development",
+      "title": "India Today",
       "category": "India",
-      "summary": "A major development attracting widespread attention across India.",
+      "summary": "Important developments and major events attracting attention across India today.",
       "location": "India",
-      "date": "2026-08-15",
-      "time": "10:30 AM",
-      "importance": "high",
-      "trending": true,
-      "tags": [
-        "India",
-        "National",
-        "Trending"
-      ],
-      "source": {
-        "name": "Official Source",
-        "url": ""
-      }
-    },
-
-    {
-      "id": 2,
-      "rank": 2,
-      "title": "Important Supreme Court Development",
-      "category": "Law",
-      "summary": "An important legal development involving the Supreme Court of India.",
-      "location": "New Delhi",
       "date": "2026-08-15",
       "time": "10:00 AM",
       "importance": "high",
       "trending": true,
       "tags": [
-        "Supreme Court",
-        "Law",
-        "India"
+        "India",
+        "Trending",
+        "Today"
       ],
       "source": {
-        "name": "Supreme Court of India",
-        "url": "https://www.sci.gov.in/"
-      }
+        "name": "Pendico",
+        "url": ""
+      },
+      "image": ""
     },
-
+    {
+      "id": 2,
+      "rank": 2,
+      "title": "Major Legal Development",
+      "category": "Law",
+      "summary": "An important legal development attracting attention among lawyers, students and the public.",
+      "location": "India",
+      "date": "2026-08-15",
+      "time": "09:45 AM",
+      "importance": "high",
+      "trending": true,
+      "tags": [
+        "Law",
+        "Courts",
+        "Legal News"
+      ],
+      "source": {
+        "name": "Pendico",
+        "url": ""
+      },
+      "image": ""
+    },
     {
       "id": 3,
       "rank": 3,
-      "title": "Tamil Nadu Development",
-      "category": "Tamil Nadu",
-      "summary": "An important development from Tamil Nadu receiving public attention today.",
-      "location": "Tamil Nadu",
+      "title": "Political Developments",
+      "category": "Politics",
+      "summary": "Political developments and public affairs currently attracting attention across India.",
+      "location": "India",
       "date": "2026-08-15",
       "time": "09:30 AM",
       "importance": "high",
       "trending": true,
       "tags": [
-        "Tamil Nadu",
-        "Chennai",
-        "India"
+        "Politics",
+        "India",
+        "Government"
       ],
       "source": {
-        "name": "Official Source",
+        "name": "Pendico",
         "url": ""
-      }
+      },
+      "image": ""
     },
-
     {
       "id": 4,
       "rank": 4,
-      "title": "Chennai Trending Update",
-      "category": "Chennai",
-      "summary": "A development in Chennai currently attracting attention among residents.",
-      "location": "Chennai",
+      "title": "Technology Update",
+      "category": "Technology",
+      "summary": "A notable technology, artificial intelligence or digital development gaining attention in India.",
+      "location": "India",
       "date": "2026-08-15",
       "time": "09:00 AM",
       "importance": "medium",
       "trending": true,
       "tags": [
-        "Chennai",
-        "Tamil Nadu"
+        "Technology",
+        "AI",
+        "Digital India"
       ],
       "source": {
-        "name": "Official Source",
+        "name": "Pendico",
         "url": ""
-      }
+      },
+      "image": ""
     },
-
     {
       "id": 5,
       "rank": 5,
-      "title": "Technology and Innovation Update",
-      "category": "Technology",
-      "summary": "A significant technology or innovation development attracting attention in India.",
+      "title": "Business & Economy",
+      "category": "Business",
+      "summary": "Important business, economy, market or financial development being discussed across India.",
       "location": "India",
       "date": "2026-08-15",
       "time": "08:30 AM",
-      "importance": "medium",
-      "trending": true,
-      "tags": [
-        "Technology",
-        "Innovation",
-        "India"
-      ],
-      "source": {
-        "name": "Official Source",
-        "url": ""
-      }
-    },
-
-    {
-      "id": 6,
-      "rank": 6,
-      "title": "Business and Economy Update",
-      "category": "Business",
-      "summary": "An important business or economic development being discussed today.",
-      "location": "India",
-      "date": "2026-08-15",
-      "time": "08:00 AM",
       "importance": "medium",
       "trending": true,
       "tags": [
@@ -149,41 +105,42 @@
         "India"
       ],
       "source": {
-        "name": "Official Source",
+        "name": "Pendico",
         "url": ""
-      }
+      },
+      "image": ""
     },
-
     {
-      "id": 7,
-      "rank": 7,
-      "title": "Major Sports Development",
+      "id": 6,
+      "rank": 6,
+      "title": "Sports Update",
       "category": "Sports",
-      "summary": "A major sports story receiving attention from fans across India.",
+      "summary": "A major sporting development, result or event attracting attention among Indian audiences.",
       "location": "India",
       "date": "2026-08-15",
-      "time": "07:30 AM",
+      "time": "08:00 AM",
       "importance": "medium",
       "trending": true,
       "tags": [
         "Sports",
-        "India"
+        "India",
+        "Trending"
       ],
       "source": {
-        "name": "Official Source",
+        "name": "Pendico",
         "url": ""
-      }
+      },
+      "image": ""
     },
-
     {
-      "id": 8,
-      "rank": 8,
-      "title": "Entertainment Trending Today",
+      "id": 7,
+      "rank": 7,
+      "title": "Entertainment Buzz",
       "category": "Entertainment",
-      "summary": "A major entertainment story currently attracting attention among Indian audiences.",
+      "summary": "A film, celebrity, television or entertainment development currently attracting public attention.",
       "location": "India",
       "date": "2026-08-15",
-      "time": "07:00 AM",
+      "time": "07:30 AM",
       "importance": "medium",
       "trending": true,
       "tags": [
@@ -192,33 +149,55 @@
         "India"
       ],
       "source": {
-        "name": "Official Source",
+        "name": "Pendico",
         "url": ""
-      }
+      },
+      "image": ""
     },
-
     {
-      "id": 9,
-      "rank": 9,
-      "title": "Education Update",
-      "category": "Education",
-      "summary": "An education-related development attracting attention from students and institutions.",
+      "id": 8,
+      "rank": 8,
+      "title": "Science & Innovation",
+      "category": "Science",
+      "summary": "A notable science, space, research or innovation development attracting attention today.",
       "location": "India",
       "date": "2026-08-15",
-      "time": "06:30 AM",
+      "time": "07:00 AM",
       "importance": "medium",
       "trending": true,
       "tags": [
-        "Education",
-        "Students",
+        "Science",
+        "Space",
+        "Innovation"
+      ],
+      "source": {
+        "name": "Pendico",
+        "url": ""
+      },
+      "image": ""
+    },
+    {
+      "id": 9,
+      "rank": 9,
+      "title": "Tamil Nadu Update",
+      "category": "India",
+      "summary": "Important developments, public affairs and events receiving attention in Tamil Nadu.",
+      "location": "Tamil Nadu",
+      "date": "2026-08-15",
+      "time": "06:30 AM",
+      "importance": "high",
+      "trending": true,
+      "tags": [
+        "Tamil Nadu",
+        "Chennai",
         "India"
       ],
       "source": {
-        "name": "Official Source",
+        "name": "Pendico",
         "url": ""
-      }
+      },
+      "image": ""
     },
-
     {
       "id": 10,
       "rank": 10,
@@ -236,9 +215,10 @@
         "India"
       ],
       "source": {
-        "name": "Official Source",
+        "name": "Pendico",
         "url": ""
-      }
+      },
+      "image": ""
     }
   ]
 }
