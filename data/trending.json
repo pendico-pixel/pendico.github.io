@@ -1,224 +1,188 @@
 {
-  "trends": [
+  "trending": [
     {
       "id": 1,
       "rank": 1,
-      "title": "India Today",
-      "category": "India",
-      "summary": "Important developments and major events attracting attention across India today.",
+      "title": "Supreme Court and High Court legal developments attract attention",
+      "category": "Law",
+      "summary": "Important developments in Indian courts and legal affairs are drawing attention among lawyers, students and the public today.",
+      "location": "India",
+      "date": "2026-08-15",
+      "time": "09:00 AM",
+      "importance": "high",
+      "trending": true,
+      "image": "",
+      "tags": [
+        "Law",
+        "Supreme Court",
+        "High Court",
+        "India"
+      ],
+      "source": {
+        "name": "Pendico",
+        "url": ""
+      }
+    },
+    {
+      "id": 2,
+      "rank": 2,
+      "title": "Major political developments across India",
+      "category": "Politics",
+      "summary": "Political developments and public discussions across India are among the topics receiving significant attention today.",
       "location": "India",
       "date": "2026-08-15",
       "time": "10:00 AM",
       "importance": "high",
       "trending": true,
+      "image": "",
       "tags": [
+        "Politics",
         "India",
-        "Trending",
-        "Today"
+        "Government",
+        "Elections"
       ],
       "source": {
         "name": "Pendico",
         "url": ""
-      },
-      "image": ""
-    },
-    {
-      "id": 2,
-      "rank": 2,
-      "title": "Major Legal Development",
-      "category": "Law",
-      "summary": "An important legal development attracting attention among lawyers, students and the public.",
-      "location": "India",
-      "date": "2026-08-15",
-      "time": "09:45 AM",
-      "importance": "high",
-      "trending": true,
-      "tags": [
-        "Law",
-        "Courts",
-        "Legal News"
-      ],
-      "source": {
-        "name": "Pendico",
-        "url": ""
-      },
-      "image": ""
+      }
     },
     {
       "id": 3,
       "rank": 3,
-      "title": "Political Developments",
-      "category": "Politics",
-      "summary": "Political developments and public affairs currently attracting attention across India.",
+      "title": "Latest developments in Indian technology",
+      "category": "Technology",
+      "summary": "New developments in artificial intelligence, digital services and technology are attracting attention across India.",
       "location": "India",
       "date": "2026-08-15",
-      "time": "09:30 AM",
+      "time": "11:00 AM",
       "importance": "high",
       "trending": true,
-      "tags": [
-        "Politics",
-        "India",
-        "Government"
-      ],
-      "source": {
-        "name": "Pendico",
-        "url": ""
-      },
-      "image": ""
-    },
-    {
-      "id": 4,
-      "rank": 4,
-      "title": "Technology Update",
-      "category": "Technology",
-      "summary": "A notable technology, artificial intelligence or digital development gaining attention in India.",
-      "location": "India",
-      "date": "2026-08-15",
-      "time": "09:00 AM",
-      "importance": "medium",
-      "trending": true,
+      "image": "",
       "tags": [
         "Technology",
         "AI",
-        "Digital India"
-      ],
-      "source": {
-        "name": "Pendico",
-        "url": ""
-      },
-      "image": ""
-    },
-    {
-      "id": 5,
-      "rank": 5,
-      "title": "Business & Economy",
-      "category": "Business",
-      "summary": "Important business, economy, market or financial development being discussed across India.",
-      "location": "India",
-      "date": "2026-08-15",
-      "time": "08:30 AM",
-      "importance": "medium",
-      "trending": true,
-      "tags": [
-        "Business",
-        "Economy",
-        "India"
-      ],
-      "source": {
-        "name": "Pendico",
-        "url": ""
-      },
-      "image": ""
-    },
-    {
-      "id": 6,
-      "rank": 6,
-      "title": "Sports Update",
-      "category": "Sports",
-      "summary": "A major sporting development, result or event attracting attention among Indian audiences.",
-      "location": "India",
-      "date": "2026-08-15",
-      "time": "08:00 AM",
-      "importance": "medium",
-      "trending": true,
-      "tags": [
-        "Sports",
-        "India",
-        "Trending"
-      ],
-      "source": {
-        "name": "Pendico",
-        "url": ""
-      },
-      "image": ""
-    },
-    {
-      "id": 7,
-      "rank": 7,
-      "title": "Entertainment Buzz",
-      "category": "Entertainment",
-      "summary": "A film, celebrity, television or entertainment development currently attracting public attention.",
-      "location": "India",
-      "date": "2026-08-15",
-      "time": "07:30 AM",
-      "importance": "medium",
-      "trending": true,
-      "tags": [
-        "Entertainment",
-        "Movies",
-        "India"
-      ],
-      "source": {
-        "name": "Pendico",
-        "url": ""
-      },
-      "image": ""
-    },
-    {
-      "id": 8,
-      "rank": 8,
-      "title": "Science & Innovation",
-      "category": "Science",
-      "summary": "A notable science, space, research or innovation development attracting attention today.",
-      "location": "India",
-      "date": "2026-08-15",
-      "time": "07:00 AM",
-      "importance": "medium",
-      "trending": true,
-      "tags": [
-        "Science",
-        "Space",
+        "Digital India",
         "Innovation"
       ],
       "source": {
         "name": "Pendico",
         "url": ""
-      },
-      "image": ""
+      }
     },
     {
-      "id": 9,
-      "rank": 9,
-      "title": "Tamil Nadu Update",
-      "category": "India",
-      "summary": "Important developments, public affairs and events receiving attention in Tamil Nadu.",
-      "location": "Tamil Nadu",
+      "id": 4,
+      "rank": 4,
+      "title": "Sports stories attracting attention today",
+      "category": "Sports",
+      "summary": "Major sporting events, performances and developments are generating strong interest among Indian sports fans.",
+      "location": "India",
       "date": "2026-08-15",
-      "time": "06:30 AM",
+      "time": "12:00 PM",
       "importance": "high",
       "trending": true,
+      "image": "",
       "tags": [
-        "Tamil Nadu",
-        "Chennai",
+        "Sports",
+        "Cricket",
+        "India",
+        "Athletics"
+      ],
+      "source": {
+        "name": "Pendico",
+        "url": ""
+      }
+    },
+    {
+      "id": 5,
+      "rank": 5,
+      "title": "Business and economic developments in India",
+      "category": "Business",
+      "summary": "Business, markets, startups and economic developments are being closely followed today.",
+      "location": "India",
+      "date": "2026-08-15",
+      "time": "01:00 PM",
+      "importance": "medium",
+      "trending": true,
+      "image": "",
+      "tags": [
+        "Business",
+        "Economy",
+        "Markets",
+        "Startups"
+      ],
+      "source": {
+        "name": "Pendico",
+        "url": ""
+      }
+    },
+    {
+      "id": 6,
+      "rank": 6,
+      "title": "Entertainment stories trending across India",
+      "category": "Entertainment",
+      "summary": "Films, television, celebrities and entertainment developments are receiving widespread attention today.",
+      "location": "India",
+      "date": "2026-08-15",
+      "time": "02:00 PM",
+      "importance": "medium",
+      "trending": true,
+      "image": "",
+      "tags": [
+        "Entertainment",
+        "Cinema",
+        "Films",
         "India"
       ],
       "source": {
         "name": "Pendico",
         "url": ""
-      },
-      "image": ""
+      }
     },
     {
-      "id": 10,
-      "rank": 10,
-      "title": "Science and Space Update",
+      "id": 7,
+      "rank": 7,
+      "title": "Science and space developments in focus",
       "category": "Science",
-      "summary": "A noteworthy science, space or innovation development attracting attention today.",
+      "summary": "Science, space exploration and new research developments are attracting public interest today.",
       "location": "India",
       "date": "2026-08-15",
-      "time": "06:00 AM",
+      "time": "03:00 PM",
       "importance": "medium",
       "trending": true,
+      "image": "",
       "tags": [
         "Science",
         "Space",
+        "Research",
         "India"
       ],
       "source": {
         "name": "Pendico",
         "url": ""
-      },
-      "image": ""
+      }
+    },
+    {
+      "id": 8,
+      "rank": 8,
+      "title": "Important India developments being discussed today",
+      "category": "India",
+      "summary": "National developments and issues affecting people across India are among today's widely discussed topics.",
+      "location": "India",
+      "date": "2026-08-15",
+      "time": "04:00 PM",
+      "importance": "medium",
+      "trending": true,
+      "image": "",
+      "tags": [
+        "India",
+        "National",
+        "News",
+        "Trending"
+      ],
+      "source": {
+        "name": "Pendico",
+        "url": ""
+      }
     }
   ]
-
+}
