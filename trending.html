@@ -3,13 +3,41 @@
 
 <head>
 
-<!-- =====================================================
-     GOOGLE ANALYTICS
-===================================================== -->
+<meta charset="UTF-8">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0BL89MBWGY"></script>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Trending Today | Pendico</title>
+
+<meta name="description"
+content="Trending Today by Pendico — discover what is attracting attention across India in law, politics, sports, technology, business, entertainment and more.">
+
+<meta name="keywords"
+content="Trending Today India, India trending news, trending topics India, Pendico trending">
+
+<meta name="author"
+content="Pendico">
+
+<meta name="robots"
+content="index, follow">
+
+<link rel="canonical"
+href="https://pendico.pages.dev/trending.html">
+
+<link rel="icon"
+type="image/png"
+href="favicon.png">
+
+
+<!-- Google Analytics -->
+
+<script async
+src="https://www.googletagmanager.com/gtag/js?id=G-0BL89MBWGY">
+</script>
 
 <script>
+
 window.dataLayer = window.dataLayer || [];
 
 function gtag(){
@@ -19,31 +47,8 @@ function gtag(){
 gtag('js', new Date());
 
 gtag('config', 'G-0BL89MBWGY');
+
 </script>
-
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<title>Trending Today | Pendico</title>
-
-<meta name="description"
-content="Trending Today — discover what is trending across India in politics, law, sports, entertainment, technology, business, science and more.">
-
-<meta name="keywords"
-content="India trending today, trending news India, latest India trends, viral India, Pendico Trending Today">
-
-<meta name="robots"
-content="index, follow">
-
-<link rel="canonical"
-      href="https://pendico.pages.dev/trending.html">
-
-<link rel="icon"
-      type="image/png"
-      href="favicon.png">
 
 
 <style>
@@ -70,11 +75,13 @@ body{
     Helvetica,
     sans-serif;
 
-    background:#f4f6fa;
+    background:#060a10;
 
-    color:#172033;
+    color:#f5f7fb;
 
-    line-height:1.5;
+    line-height:1.6;
+
+    min-height:100vh;
 
     transition:
     background .3s ease,
@@ -88,7 +95,7 @@ input{
 
 
 /* =====================================================
-   TOP NAV
+   TOP NAVIGATION
 ===================================================== */
 
 .top-nav{
@@ -99,7 +106,7 @@ input{
 
     z-index:1000;
 
-    height:70px;
+    height:68px;
 
     display:flex;
 
@@ -107,16 +114,20 @@ input{
 
     justify-content:space-between;
 
-    padding:0 5%;
+    padding:
+    0 6%;
 
     background:
-    rgba(255,255,255,.92);
+    rgba(6,10,16,.90);
 
     backdrop-filter:
-    blur(18px);
+    blur(20px);
+
+    -webkit-backdrop-filter:
+    blur(20px);
 
     border-bottom:
-    1px solid #e5e9f0;
+    1px solid #1b2635;
 }
 
 .brand{
@@ -129,38 +140,42 @@ input{
 
     text-decoration:none;
 
-    color:#102d55;
-
-    font-weight:900;
-
-    font-size:21px;
-
-    letter-spacing:1px;
+    color:white;
 }
 
 .brand img{
 
-    width:40px;
+    width:38px;
 
-    height:40px;
+    height:38px;
 
     object-fit:cover;
 
-    border-radius:11px;
+    border-radius:10px;
 }
 
-.brand span{
+.brand-name{
 
-    color:#1769d1;
+    font-size:20px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
 }
 
-.nav-actions{
+.brand-name span{
+
+    color:#4b9cff;
+}
+
+
+.nav-right{
 
     display:flex;
 
     align-items:center;
 
-    gap:10px;
+    gap:9px;
 }
 
 .nav-button{
@@ -169,15 +184,18 @@ input{
 
     height:40px;
 
-    border:none;
-
     border-radius:50%;
 
-    background:#f0f3f8;
+    border:
+    1px solid #243247;
+
+    background:#101722;
+
+    color:#dbe6f5;
 
     cursor:pointer;
 
-    font-size:18px;
+    font-size:17px;
 
     display:flex;
 
@@ -190,178 +208,179 @@ input{
 
 .nav-button:hover{
 
-    transform:scale(1.05);
+    background:#172335;
 
-    background:#e3e9f2;
+    border-color:#3b78c5;
+
+    transform:translateY(-1px);
 }
 
 
 /* =====================================================
-   PAGE HEADER
+   HERO
 ===================================================== */
 
-.page-header{
+.trending-hero{
 
-    max-width:900px;
+    position:relative;
 
-    margin:auto;
+    overflow:hidden;
 
     padding:
-    45px 20px 20px;
+    65px 20px 45px;
 
     text-align:center;
+
+    background:
+
+    radial-gradient(
+        circle at 15% 20%,
+        rgba(24,105,209,.20),
+        transparent 30%
+    ),
+
+    radial-gradient(
+        circle at 85% 70%,
+        rgba(255,72,38,.12),
+        transparent 30%
+    ),
+
+    linear-gradient(
+        135deg,
+        #080d16,
+        #0a1422,
+        #070b12
+    );
+
+    border-bottom:
+    1px solid #182536;
 }
 
-.page-header h1{
+.hero-glow{
 
-    font-size:
-    clamp(35px,7vw,62px);
+    position:absolute;
 
-    font-weight:950;
+    width:400px;
 
-    letter-spacing:-2px;
+    height:400px;
 
-    color:#102d55;
+    border-radius:50%;
+
+    background:
+    rgba(23,105,209,.08);
+
+    filter:blur(70px);
+
+    left:-170px;
+
+    top:-180px;
 }
 
-.page-header h1 span{
+.live-badge{
 
-    color:#1769d1;
-}
-
-.page-header p{
-
-    margin-top:8px;
-
-    color:#718096;
-
-    font-size:15px;
-}
-
-.live-indicator{
+    position:relative;
 
     display:inline-flex;
 
     align-items:center;
 
-    gap:7px;
+    gap:8px;
 
-    margin-top:18px;
-
-    padding:7px 14px;
+    padding:
+    7px 13px;
 
     border-radius:30px;
 
-    background:#fff;
+    background:
+    rgba(255,72,38,.10);
 
-    border:1px solid #e4e9f0;
+    border:
+    1px solid rgba(255,72,38,.25);
+
+    color:#ff846f;
 
     font-size:12px;
 
     font-weight:800;
 
-    color:#526276;
+    letter-spacing:.7px;
+
+    margin-bottom:18px;
 }
 
 .live-dot{
 
-    width:8px;
+    width:7px;
 
-    height:8px;
+    height:7px;
+
+    background:#ff4d38;
 
     border-radius:50%;
 
-    background:#e53935;
-
     box-shadow:
-    0 0 0 5px rgba(229,57,53,.10);
+    0 0 10px #ff4d38;
 
-    animation:pulse 1.7s infinite;
+    animation:
+    pulse 1.5s infinite;
 }
 
 @keyframes pulse{
 
     0%,100%{
         opacity:1;
+        transform:scale(1);
     }
 
     50%{
         opacity:.45;
+        transform:scale(.7);
     }
 }
 
+.trending-hero h1{
 
-/* =====================================================
-   SEARCH
-===================================================== */
+    position:relative;
 
-.search-wrapper{
+    font-size:
+    clamp(42px,8vw,72px);
 
-    max-width:700px;
+    line-height:1.05;
 
-    margin:
-    20px auto 10px;
+    font-weight:950;
 
-    padding:0 20px;
+    letter-spacing:-2px;
+
+    margin-bottom:12px;
 }
 
-.search{
+.trending-hero h1 span{
 
-    display:flex;
+    background:
+    linear-gradient(
+        90deg,
+        #ff613f,
+        #ff9b3d
+    );
 
-    align-items:center;
+    -webkit-background-clip:text;
 
-    gap:10px;
+    background-clip:text;
 
-    background:#fff;
-
-    border:1px solid #e3e8ef;
-
-    border-radius:15px;
-
-    padding:7px 10px;
-
-    box-shadow:
-    0 8px 25px rgba(20,40,70,.06);
+    color:transparent;
 }
 
-.search-icon{
+.hero-subtitle{
 
-    font-size:18px;
+    position:relative;
 
-    padding-left:8px;
-}
+    color:#9baabd;
 
-.search input{
+    font-size:16px;
 
-    flex:1;
+    max-width:620px;
 
-    border:none;
-
-    outline:none;
-
-    padding:12px 5px;
-
-    font-size:15px;
-
-    background:transparent;
-}
-
-.search button{
-
-    border:none;
-
-    background:#1769d1;
-
-    color:#fff;
-
-    border-radius:10px;
-
-    padding:10px 17px;
-
-    font-weight:800;
-
-    cursor:pointer;
+    margin:auto;
 }
 
 
@@ -369,83 +388,196 @@ input{
    CATEGORY BAR
 ===================================================== */
 
+.category-wrapper{
+
+    position:sticky;
+
+    top:68px;
+
+    z-index:900;
+
+    overflow-x:auto;
+
+    background:
+    rgba(6,10,16,.93);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:
+    1px solid #182536;
+
+    scrollbar-width:none;
+}
+
+.category-wrapper::-webkit-scrollbar{
+    display:none;
+}
+
 .categories{
 
-    max-width:1100px;
+    max-width:1200px;
 
-    margin:
-    20px auto 25px;
+    margin:auto;
 
     padding:
-    0 20px;
+    12px 20px;
 
     display:flex;
 
-    gap:9px;
+    gap:8px;
 
     overflow-x:auto;
 
     scrollbar-width:none;
 }
 
-.categories::-webkit-scrollbar{
-    display:none;
-}
-
 .category{
 
-    flex:none;
+    flex-shrink:0;
 
-    border:1px solid #dfe5ed;
+    border:
+    1px solid #263448;
 
-    background:#fff;
+    background:#0d141f;
 
-    color:#59697e;
+    color:#9eacbf;
 
-    padding:8px 15px;
+    border-radius:25px;
 
-    border-radius:30px;
+    padding:
+    8px 15px;
+
+    cursor:pointer;
 
     font-size:13px;
 
     font-weight:700;
-
-    cursor:pointer;
 
     transition:.2s;
 }
 
 .category:hover{
 
-    border-color:#1769d1;
+    color:white;
 
-    color:#1769d1;
+    border-color:#3d6591;
 }
 
 .category.active{
 
     background:#1769d1;
 
-    color:#fff;
-
     border-color:#1769d1;
+
+    color:white;
+
+    box-shadow:
+    0 5px 18px rgba(23,105,209,.25);
 }
 
 
 /* =====================================================
-   FEED
+   MAIN FEED
 ===================================================== */
 
-.feed{
+.feed-container{
 
-    width:100%;
-
-    max-width:720px;
+    max-width:900px;
 
     margin:auto;
 
     padding:
-    0 15px 100px;
+    35px 18px 90px;
+}
+
+
+/* =====================================================
+   FEED HEADER
+===================================================== */
+
+.feed-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+    gap:15px;
+}
+
+.feed-header h2{
+
+    font-size:20px;
+
+    font-weight:850;
+}
+
+.feed-count{
+
+    color:#728198;
+
+    font-size:13px;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-container{
+
+    margin-bottom:25px;
+
+    position:relative;
+}
+
+.search-input{
+
+    width:100%;
+
+    padding:
+    14px 18px 14px 46px;
+
+    background:#0d141f;
+
+    border:
+    1px solid #233147;
+
+    color:white;
+
+    border-radius:14px;
+
+    outline:none;
+
+    font-size:14px;
+
+    transition:.2s;
+}
+
+.search-input:focus{
+
+    border-color:#2879d5;
+
+    box-shadow:
+    0 0 0 3px rgba(40,121,213,.10);
+}
+
+.search-icon{
+
+    position:absolute;
+
+    left:17px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#6e7d92;
+
+    pointer-events:none;
 }
 
 
@@ -455,39 +587,51 @@ input{
 
 .trend-card{
 
-    background:#fff;
+    position:relative;
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #0d141f,
+        #0b111a
+    );
 
     border:
-    1px solid #e3e8ef;
+    1px solid #1d2a3b;
 
     border-radius:20px;
 
-    margin-bottom:24px;
+    margin-bottom:18px;
 
     overflow:hidden;
 
-    box-shadow:
-    0 10px 35px rgba(20,40,70,.07);
-
     transition:
     transform .25s ease,
+    border-color .25s ease,
     box-shadow .25s ease;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.20);
 }
 
 .trend-card:hover{
 
-    transform:translateY(-3px);
+    transform:
+    translateY(-3px);
+
+    border-color:#2d4059;
 
     box-shadow:
-    0 18px 45px rgba(20,40,70,.12);
+    0 18px 45px rgba(0,0,0,.35);
 }
 
 
 /* =====================================================
-   CARD HEADER
+   CARD TOP
 ===================================================== */
 
-.card-header{
+.card-top{
 
     display:flex;
 
@@ -495,34 +639,30 @@ input{
 
     justify-content:space-between;
 
-    padding:15px 17px;
+    padding:
+    16px 18px 8px;
 }
 
-.card-source{
+.rank{
 
     display:flex;
 
     align-items:center;
 
-    gap:11px;
+    gap:8px;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    color:#ff765b;
 }
 
-.source-avatar{
+.rank-number{
 
-    width:43px;
+    width:29px;
 
-    height:43px;
-
-    border-radius:50%;
-
-    background:
-    linear-gradient(
-        135deg,
-        #1769d1,
-        #48a9ff
-    );
-
-    color:#fff;
+    height:29px;
 
     display:flex;
 
@@ -530,47 +670,20 @@ input{
 
     justify-content:center;
 
-    font-size:18px;
+    border-radius:9px;
 
-    font-weight:900;
+    background:
+    rgba(255,82,55,.10);
+
+    border:
+    1px solid rgba(255,82,55,.18);
 }
 
-.source-info{
+.card-date{
 
-    display:flex;
+    color:#65748a;
 
-    flex-direction:column;
-}
-
-.source-name{
-
-    font-weight:850;
-
-    color:#172033;
-
-    font-size:14px;
-}
-
-.source-meta{
-
-    color:#8390a2;
-
-    font-size:11px;
-}
-
-.rank{
-
-    font-size:13px;
-
-    font-weight:900;
-
-    color:#1769d1;
-
-    background:#edf5ff;
-
-    padding:6px 10px;
-
-    border-radius:20px;
+    font-size:12px;
 }
 
 
@@ -581,99 +694,115 @@ input{
 .card-content{
 
     padding:
-    0 18px 18px;
+    8px 18px 16px;
 }
 
-.category-label{
+.card-category{
 
-    display:inline-block;
+    display:inline-flex;
 
-    color:#1769d1;
+    padding:
+    5px 10px;
 
-    background:#edf5ff;
+    border-radius:20px;
 
-    border-radius:6px;
+    background:#152132;
 
-    padding:5px 9px;
+    border:
+    1px solid #25364c;
+
+    color:#79aeea;
 
     font-size:11px;
 
-    font-weight:900;
+    font-weight:800;
+
+    margin-bottom:11px;
 
     text-transform:uppercase;
 
-    letter-spacing:.5px;
-
-    margin-bottom:10px;
+    letter-spacing:.4px;
 }
 
 .card-title{
 
+    color:#ffffff;
+
     font-size:
-    clamp(21px,4vw,28px);
+    clamp(20px,4vw,27px);
 
-    line-height:1.22;
+    line-height:1.25;
 
-    color:#102d55;
+    font-weight:850;
 
-    font-weight:900;
+    letter-spacing:-.3px;
 
     margin-bottom:10px;
 }
 
 .card-summary{
 
-    color:#657388;
+    color:#94a3b7;
 
-    font-size:15px;
+    font-size:14px;
 
-    line-height:1.65;
+    line-height:1.7;
+
+    margin-bottom:15px;
 }
 
 
 /* =====================================================
-   IMAGE AREA
+   TREND METER
 ===================================================== */
 
-.card-image{
-
-    width:100%;
-
-    aspect-ratio:
-    16 / 9;
-
-    background:
-    linear-gradient(
-        135deg,
-        #dcecff,
-        #f0f5fb
-    );
+.trend-meter{
 
     display:flex;
 
     align-items:center;
 
-    justify-content:center;
+    gap:10px;
+
+    margin-bottom:14px;
+}
+
+.meter-label{
+
+    color:#68778c;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    white-space:nowrap;
+}
+
+.meter{
+
+    height:5px;
+
+    flex:1;
+
+    background:#1b2635;
+
+    border-radius:10px;
 
     overflow:hidden;
 }
 
-.card-image img{
-
-    width:100%;
+.meter-fill{
 
     height:100%;
 
-    object-fit:cover;
-}
+    background:
+    linear-gradient(
+        90deg,
+        #1769d1,
+        #ff5c43
+    );
 
-.image-placeholder{
-
-    text-align:center;
-
-    color:#7b8ba0;
-
-    font-size:45px;
+    border-radius:10px;
 }
 
 
@@ -689,20 +818,24 @@ input{
 
     gap:6px;
 
-    margin-top:15px;
+    margin-bottom:3px;
 }
 
 .tag{
 
+    color:#8292a8;
+
+    background:#111a27;
+
+    border:
+    1px solid #202d40;
+
+    padding:
+    4px 9px;
+
+    border-radius:7px;
+
     font-size:11px;
-
-    color:#68788d;
-
-    background:#f2f5f8;
-
-    padding:5px 9px;
-
-    border-radius:20px;
 }
 
 
@@ -719,17 +852,20 @@ input{
     justify-content:space-between;
 
     padding:
-    12px 17px;
+    11px 18px;
 
     border-top:
-    1px solid #edf0f4;
+    1px solid #192638;
+
+    background:
+    rgba(255,255,255,.012);
 }
 
-.actions-left{
+.action-group{
 
     display:flex;
 
-    gap:7px;
+    gap:6px;
 }
 
 .action{
@@ -738,90 +874,85 @@ input{
 
     background:transparent;
 
+    color:#8190a5;
+
     cursor:pointer;
 
-    padding:7px 10px;
+    padding:
+    7px 9px;
 
-    border-radius:9px;
+    border-radius:8px;
 
-    color:#627187;
-
-    font-size:14px;
+    font-size:12px;
 
     transition:.2s;
 }
 
 .action:hover{
 
-    background:#f1f4f8;
+    color:white;
 
-    color:#1769d1;
+    background:#172232;
 }
 
-.action.saved{
+.action.liked{
 
-    color:#1769d1;
+    color:#ff5b62;
+}
+
+.action.bookmarked{
+
+    color:#5da4ff;
 }
 
 .read-button{
 
-    text-decoration:none;
+    border:none;
 
-    color:#1769d1;
+    background:#1769d1;
 
-    font-size:13px;
+    color:white;
 
-    font-weight:900;
+    border-radius:9px;
 
-    padding:7px 11px;
+    padding:
+    8px 13px;
 
-    border-radius:8px;
+    font-size:12px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.2s;
 }
 
 .read-button:hover{
 
-    background:#edf5ff;
+    background:#287bdc;
+
+    transform:translateY(-1px);
 }
 
 
 /* =====================================================
-   TRENDING SCORE
+   SOURCE
 ===================================================== */
 
-.trend-score{
+.source-line{
 
-    margin:
-    0 18px 18px;
+    margin-top:12px;
 
-    padding:11px 13px;
-
-    border-radius:12px;
-
-    background:#f7f9fc;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-}
-
-.score-label{
+    color:#59687c;
 
     font-size:11px;
-
-    font-weight:800;
-
-    color:#7b899b;
 }
 
-.score-value{
+.source-line a{
 
-    font-size:13px;
+    color:#6da9ed;
 
-    font-weight:900;
-
-    color:#1769d1;
+    text-decoration:none;
 }
 
 
@@ -831,30 +962,32 @@ input{
 
 .loading{
 
+    padding:
+    60px 20px;
+
     text-align:center;
 
-    padding:60px 20px;
-
-    color:#738197;
+    color:#7d8da2;
 }
 
 .spinner{
 
-    width:40px;
+    width:35px;
 
-    height:40px;
-
-    border:
-    4px solid #e5eaf1;
-
-    border-top-color:#1769d1;
-
-    border-radius:50%;
+    height:35px;
 
     margin:
     0 auto 15px;
 
-    animation:spin .8s linear infinite;
+    border:
+    3px solid #1c2939;
+
+    border-top-color:#3689e8;
+
+    border-radius:50%;
+
+    animation:
+    spin .8s linear infinite;
 }
 
 @keyframes spin{
@@ -871,363 +1004,386 @@ input{
 
 .empty{
 
-    display:none;
-
     text-align:center;
 
-    padding:70px 20px;
+    padding:
+    60px 20px;
 
-    color:#748196;
+    color:#77869b;
 }
 
 .empty-icon{
 
-    font-size:50px;
+    font-size:40px;
 
     margin-bottom:10px;
 }
 
 
 /* =====================================================
-   BACK TO TOP
+   MODAL
 ===================================================== */
 
-.back-top{
+.modal{
 
     position:fixed;
 
-    right:20px;
+    inset:0;
 
-    bottom:25px;
-
-    width:45px;
-
-    height:45px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#1769d1;
-
-    color:#fff;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    box-shadow:
-    0 10px 25px rgba(23,105,209,.3);
+    z-index:2000;
 
     display:none;
 
-    z-index:900;
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    background:
+    rgba(0,0,0,.78);
+
+    backdrop-filter:blur(8px);
+}
+
+.modal.show{
+
+    display:flex;
+}
+
+.modal-box{
+
+    width:min(700px,100%);
+
+    max-height:85vh;
+
+    overflow-y:auto;
+
+    background:#0d141f;
+
+    border:
+    1px solid #29384c;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.55);
+
+    padding:25px;
+
+    position:relative;
+}
+
+.modal-close{
+
+    position:absolute;
+
+    right:16px;
+
+    top:16px;
+
+    width:35px;
+
+    height:35px;
+
+    border-radius:50%;
+
+    border:
+    1px solid #29384c;
+
+    background:#121c29;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+.modal-category{
+
+    color:#5ca4ff;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+}
+
+.modal-title{
+
+    font-size:
+    clamp(25px,5vw,38px);
+
+    line-height:1.2;
+
+    margin-bottom:15px;
+}
+
+.modal-summary{
+
+    color:#a4b1c2;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+    margin-bottom:20px;
+}
+
+.modal-meta{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    margin-bottom:20px;
+}
+
+.modal-meta span{
+
+    padding:
+    6px 10px;
+
+    border-radius:8px;
+
+    background:#141e2c;
+
+    color:#8797ad;
+
+    font-size:12px;
 }
 
 
 /* =====================================================
-   BOTTOM MOBILE NAV
+   LIGHT THEME
 ===================================================== */
 
-.mobile-nav{
+body.light{
 
-    display:none;
+    background:#f4f7fb;
 
-    position:fixed;
+    color:#172033;
+}
 
-    bottom:0;
-
-    left:0;
-
-    right:0;
-
-    z-index:1000;
+body.light .top-nav,
+body.light .category-wrapper{
 
     background:
-    rgba(255,255,255,.96);
+    rgba(255,255,255,.94);
 
-    backdrop-filter:blur(15px);
-
-    border-top:
-    1px solid #e2e7ee;
-
-    padding:
-    8px 10px;
+    border-color:#dce4ee;
 }
 
-.mobile-nav-inner{
-
-    display:flex;
-
-    justify-content:space-around;
+body.light .brand{
+    color:#122039;
 }
 
-.mobile-nav a{
+body.light .nav-button{
 
-    text-decoration:none;
+    background:#f2f5f9;
 
-    color:#718096;
+    color:#23324a;
 
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:2px;
-
-    font-size:10px;
-
-    font-weight:700;
+    border-color:#d7e0eb;
 }
 
-.mobile-nav a.active{
+body.light .trending-hero{
+
+    background:
+    linear-gradient(
+        135deg,
+        #eaf3ff,
+        #f8fbff
+    );
+
+    border-color:#dce6f1;
+}
+
+body.light .hero-subtitle{
+    color:#65748a;
+}
+
+body.light .category{
+
+    background:white;
+
+    color:#627086;
+
+    border-color:#d8e1ec;
+}
+
+body.light .search-input{
+
+    background:white;
+
+    color:#172033;
+
+    border-color:#d7e0eb;
+}
+
+body.light .trend-card{
+
+    background:white;
+
+    border-color:#e0e7ef;
+
+    box-shadow:
+    0 8px 25px rgba(18,45,80,.08);
+}
+
+body.light .card-title{
+    color:#13213a;
+}
+
+body.light .card-summary{
+    color:#65748a;
+}
+
+body.light .card-actions{
+
+    border-color:#e5eaf1;
+
+    background:#fbfcfe;
+}
+
+body.light .tag{
+
+    background:#f2f5f9;
+
+    border-color:#e1e7ee;
+
+    color:#66758a;
+}
+
+body.light .card-category{
+
+    background:#edf5ff;
+
+    border-color:#d9e9fc;
 
     color:#1769d1;
 }
 
-.mobile-nav-icon{
+body.light .meter{
 
-    font-size:20px;
+    background:#e2e8ef;
+}
+
+body.light .modal-box{
+
+    background:white;
+
+    color:#172033;
+
+    border-color:#dce4ed;
+}
+
+body.light .modal-title{
+    color:#13213a;
+}
+
+body.light .modal-summary{
+    color:#65748a;
+}
+
+body.light .modal-meta span{
+    background:#f1f5f9;
 }
 
 
 /* =====================================================
-   DARK MODE
-===================================================== */
-
-body.dark{
-
-    background:#0b1220;
-
-    color:#e7edf6;
-}
-
-body.dark .top-nav{
-
-    background:
-    rgba(10,18,32,.94);
-
-    border-color:#202c3d;
-}
-
-body.dark .brand{
-
-    color:#fff;
-}
-
-body.dark .nav-button{
-
-    background:#182336;
-
-    color:#fff;
-}
-
-body.dark .page-header h1{
-
-    color:#fff;
-}
-
-body.dark .page-header p{
-
-    color:#94a3b8;
-}
-
-body.dark .live-indicator{
-
-    background:#111b2b;
-
-    border-color:#263448;
-
-    color:#aab8ca;
-}
-
-body.dark .category{
-
-    background:#111b2b;
-
-    border-color:#27364b;
-
-    color:#a9b7c9;
-}
-
-body.dark .category.active{
-
-    background:#1769d1;
-
-    color:#fff;
-}
-
-body.dark .trend-card{
-
-    background:#111a29;
-
-    border-color:#263449;
-
-    box-shadow:
-    0 12px 35px rgba(0,0,0,.25);
-}
-
-body.dark .source-name{
-
-    color:#fff;
-}
-
-body.dark .card-title{
-
-    color:#f2f6fc;
-}
-
-body.dark .card-summary{
-
-    color:#9cabc0;
-}
-
-body.dark .card-actions{
-
-    border-color:#243246;
-}
-
-body.dark .action{
-
-    color:#9aa9bd;
-}
-
-body.dark .action:hover{
-
-    background:#1a2638;
-}
-
-body.dark .tag{
-
-    background:#182336;
-
-    color:#9daabd;
-}
-
-body.dark .trend-score{
-
-    background:#151f30;
-}
-
-body.dark .search{
-
-    background:#111b2b;
-
-    border-color:#263448;
-}
-
-body.dark .search input{
-
-    color:#fff;
-}
-
-body.dark .mobile-nav{
-
-    background:
-    rgba(10,18,32,.96);
-
-    border-color:#253449;
-}
-
-
-/* =====================================================
-   RESPONSIVE
+   MOBILE
 ===================================================== */
 
 @media(max-width:700px){
 
     .top-nav{
 
-        height:62px;
+        height:60px;
 
         padding:
         0 15px;
     }
 
-    .brand{
+    .brand-name{
 
         font-size:18px;
     }
 
     .brand img{
 
-        width:35px;
+        width:34px;
 
-        height:35px;
+        height:34px;
     }
 
-    .nav-actions{
+    .category-wrapper{
 
-        gap:5px;
+        top:60px;
     }
 
-    .page-header{
+    .trending-hero{
 
         padding:
-        32px 15px 15px;
+        50px 18px 38px;
     }
 
-    .page-header h1{
+    .trending-hero h1{
 
-        font-size:42px;
+        letter-spacing:-1.5px;
     }
 
-    .search-wrapper{
-
-        padding:0 12px;
-    }
-
-    .feed{
+    .feed-container{
 
         padding:
-        0 8px 90px;
+        25px 12px 70px;
     }
 
     .trend-card{
 
-        border-radius:17px;
-
-        margin-bottom:18px;
+        border-radius:16px;
     }
 
-    .card-title{
+    .card-content{
 
-        font-size:22px;
+        padding:
+        7px 15px 15px;
     }
 
-    .card-summary{
+    .card-top{
 
-        font-size:14px;
+        padding:
+        14px 15px 6px;
     }
 
-    .mobile-nav{
+    .card-actions{
 
-        display:block;
+        padding:
+        10px 12px;
     }
 
-    .back-top{
+    .action{
 
-        bottom:75px;
-
-        right:15px;
+        padding:
+        7px;
     }
 
-}
+    .read-button{
 
+        padding:
+        8px 10px;
+    }
 
-/* =====================================================
-   ACCESSIBILITY
-===================================================== */
+    .source-line{
 
-button:focus-visible,
-a:focus-visible,
-input:focus-visible{
-
-    outline:
-    3px solid rgba(23,105,209,.35);
-
-    outline-offset:2px;
+        margin-top:10px;
+    }
 }
 
 </style>
@@ -1239,41 +1395,44 @@ input:focus-visible{
 
 
 <!-- =====================================================
-     TOP NAV
+     NAVIGATION
 ===================================================== -->
 
 <nav class="top-nav">
 
 <a href="index.html"
-   class="brand">
+class="brand">
 
-<img src="logo.png.jpeg"
-     alt="Pendico">
+<img
+src="logo.png.jpeg"
+alt="Pendico">
 
+<div class="brand-name">
 PENDI<span>CO</span>
+</div>
 
 </a>
 
 
-<div class="nav-actions">
+<div class="nav-right">
 
-<button
+<a
+href="index.html"
 class="nav-button"
-onclick="toggleDarkMode()"
-title="Toggle dark mode">
-
-🌙
-
-</button>
-
-<a href="index.html"
-   class="nav-button"
-   title="Home"
-   style="text-decoration:none;">
+title="Home">
 
 ⌂
 
 </a>
+
+<button
+class="nav-button"
+id="themeButton"
+title="Toggle theme">
+
+☀️
+
+</button>
 
 </div>
 
@@ -1281,76 +1440,52 @@ title="Toggle dark mode">
 
 
 <!-- =====================================================
-     HEADER
+     HERO
 ===================================================== -->
 
-<header class="page-header">
+<header class="trending-hero">
 
-<h1>
-Trending <span>Today</span>
-</h1>
+<div class="hero-glow"></div>
 
-<p>
-What's attracting attention across India right now.
-</p>
 
-<div class="live-indicator">
+<div class="live-badge">
 
 <span class="live-dot"></span>
 
-Updated from Pendico's trending feed
+LIVE DISCOVERY
 
 </div>
+
+
+<h1>
+🔥 Trending <span>Today</span>
+</h1>
+
+
+<p class="hero-subtitle">
+
+What India is talking about right now —
+from law and politics to sports, technology,
+business, science and entertainment.
+
+</p>
 
 </header>
-
-
-<!-- =====================================================
-     SEARCH
-===================================================== -->
-
-<div class="search-wrapper">
-
-<div class="search">
-
-<span class="search-icon">
-🔎
-</span>
-
-<input
-type="search"
-id="trendSearch"
-placeholder="Search today's trends...">
-
-<button onclick="performSearch()">
-Search
-</button>
-
-</div>
-
-</div>
 
 
 <!-- =====================================================
      CATEGORIES
 ===================================================== -->
 
-<div class="categories"
-     id="categories">
+<div class="category-wrapper">
+
+<div class="categories">
 
 <button
 class="category active"
 data-category="All">
 
-🔥 All
-
-</button>
-
-<button
-class="category"
-data-category="Politics">
-
-🏛️ Politics
+All
 
 </button>
 
@@ -1364,17 +1499,17 @@ data-category="Law">
 
 <button
 class="category"
-data-category="Sports">
+data-category="Politics">
 
-🏆 Sports
+🏛️ Politics
 
 </button>
 
 <button
 class="category"
-data-category="Entertainment">
+data-category="Sports">
 
-🎬 Entertainment
+🏏 Sports
 
 </button>
 
@@ -1396,6 +1531,14 @@ data-category="Business">
 
 <button
 class="category"
+data-category="Entertainment">
+
+🎬 Entertainment
+
+</button>
+
+<button
+class="category"
 data-category="Science">
 
 🔬 Science
@@ -1412,18 +1555,51 @@ data-category="India">
 
 </div>
 
+</div>
+
 
 <!-- =====================================================
      FEED
 ===================================================== -->
 
-<main>
+<main class="feed-container">
 
-<div class="feed"
-     id="feed">
 
-<div class="loading"
-     id="loading">
+<div class="feed-header">
+
+<h2>
+🔥 Today's Feed
+</h2>
+
+<div
+class="feed-count"
+id="feedCount">
+
+Loading...
+
+</div>
+
+</div>
+
+
+<div class="search-container">
+
+<span class="search-icon">
+⌕
+</span>
+
+<input
+type="search"
+id="feedSearch"
+class="search-input"
+placeholder="Search today's trends...">
+
+</div>
+
+
+<div id="feed">
+
+<div class="loading">
 
 <div class="spinner"></div>
 
@@ -1434,105 +1610,81 @@ Loading today's trends...
 </div>
 
 
-<div class="empty"
-     id="empty">
-
-<div class="empty-icon">
-🔎
-</div>
-
-<h3>
-No trends found
-</h3>
-
-<p>
-Try another category or search term.
-</p>
-
-</div>
-
 </main>
 
 
 <!-- =====================================================
-     BACK TO TOP
+     MODAL
 ===================================================== -->
 
-<button
-class="back-top"
-id="backTop"
-onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<div
+class="modal"
+id="trendModal">
 
-↑
+<div class="modal-box">
+
+<button
+class="modal-close"
+id="modalClose">
+
+×
 
 </button>
 
+<div
+class="modal-category"
+id="modalCategory">
+</div>
 
-<!-- =====================================================
-     MOBILE NAV
-===================================================== -->
+<h2
+class="modal-title"
+id="modalTitle">
+</h2>
 
-<nav class="mobile-nav">
+<div
+class="modal-meta"
+id="modalMeta">
+</div>
 
-<div class="mobile-nav-inner">
+<p
+class="modal-summary"
+id="modalSummary">
+</p>
 
-<a href="index.html">
+<div
+class="tags"
+id="modalTags">
+</div>
 
-<span class="mobile-nav-icon">⌂</span>
+<br>
 
-Home
+<a
+id="modalSource"
+href="#"
+target="_blank"
+rel="noopener noreferrer"
+class="read-button">
 
-</a>
-
-<a href="trending.html"
-   class="active">
-
-<span class="mobile-nav-icon">🔥</span>
-
-Trending
-
-</a>
-
-<a href="legalnews.html">
-
-<span class="mobile-nav-icon">📰</span>
-
-News
-
-</a>
-
-<a href="caselaws.html">
-
-<span class="mobile-nav-icon">⚖️</span>
-
-Law
-
-</a>
-
-<a href="about.html">
-
-<span class="mobile-nav-icon">☰</span>
-
-More
+View Source →
 
 </a>
 
 </div>
 
-</nav>
+</div>
 
-
-<!-- =====================================================
-     SCRIPT
-===================================================== -->
 
 <script>
+
+/* =====================================================
+   VARIABLES
+===================================================== */
 
 let allTrends = [];
 
 let currentCategory = "All";
 
-let currentSearch = "";
+let searchTerm = "";
 
 
 /* =====================================================
@@ -1544,15 +1696,10 @@ async function loadTrending(){
     const feed =
     document.getElementById("feed");
 
-    const loading =
-    document.getElementById("loading");
-
     try{
 
         const response =
-        await fetch(
-            "data/trending.json"
-        );
+        await fetch("data/trending.json");
 
         if(!response.ok){
 
@@ -1566,21 +1713,49 @@ async function loadTrending(){
         await response.json();
 
         /*
-         * Supports either:
-         *
-         * { "trends": [...] }
-         *
-         * OR
-         *
-         * [...]
-         */
+         Supports either:
 
-        allTrends =
-        Array.isArray(data)
-        ? data
-        : data.trends || [];
+         {
+             "trending": [...]
+         }
 
-        loading.remove();
+         OR directly:
+
+         [...]
+        */
+
+        if(Array.isArray(data)){
+
+            allTrends = data;
+
+        }
+
+        else if(
+            Array.isArray(data.trending)
+        ){
+
+            allTrends =
+            data.trending;
+
+        }
+
+        else if(
+            Array.isArray(data.items)
+        ){
+
+            allTrends =
+            data.items;
+
+        }
+
+        else{
+
+            throw new Error(
+                "Invalid JSON structure"
+            );
+
+        }
+
 
         renderFeed();
 
@@ -1590,27 +1765,31 @@ async function loadTrending(){
 
         console.error(error);
 
-        loading.innerHTML = `
+        feed.innerHTML = `
 
-        <div style="
-            font-size:40px;
-            margin-bottom:10px;
-        ">
-        ⚠️
+        <div class="empty">
+
+            <div class="empty-icon">
+                ⚠️
+            </div>
+
+            <h3>
+                Unable to load today's trends
+            </h3>
+
+            <p>
+                Please check data/trending.json
+                and try again.
+            </p>
+
         </div>
 
-        <strong>
-        Unable to load today's trends.
-        </strong>
-
-        <p style="
-            margin-top:7px;
-            font-size:13px;
-        ">
-        Please check data/trending.json
-        </p>
-
         `;
+
+        document.getElementById(
+            "feedCount"
+        ).textContent =
+        "Error";
 
     }
 
@@ -1626,51 +1805,57 @@ function renderFeed(){
     const feed =
     document.getElementById("feed");
 
-    const empty =
-    document.getElementById("empty");
-
-    feed.innerHTML = "";
-
     let filtered =
-    allTrends.filter(item => {
+    [...allTrends];
 
-        const categoryMatch =
-        currentCategory === "All" ||
-        String(item.category || "")
-        .toLowerCase()
-        ===
-        currentCategory.toLowerCase();
 
-        const searchText =
-        (
+    /* CATEGORY */
 
-            String(item.title || "") +
-            " " +
-            String(item.summary || "") +
-            " " +
-            String(item.category || "") +
-            " " +
-            (item.tags || []).join(" ")
+    if(currentCategory !== "All"){
 
-        ).toLowerCase();
+        filtered =
+        filtered.filter(item =>
 
-        const searchMatch =
-        !currentSearch ||
-        searchText.includes(
-            currentSearch
+            String(
+                item.category || ""
+            ).toLowerCase()
+            ===
+            currentCategory.toLowerCase()
+
         );
 
-        return (
-            categoryMatch &&
-            searchMatch
-        );
-
-    });
+    }
 
 
-    /*
-     * Highest rank first
-     */
+    /* SEARCH */
+
+    if(searchTerm){
+
+        filtered =
+        filtered.filter(item => {
+
+            const searchable = `
+
+                ${item.title || ""}
+
+                ${item.summary || ""}
+
+                ${item.category || ""}
+
+                ${(item.tags || []).join(" ")}
+
+            `.toLowerCase();
+
+            return searchable.includes(
+                searchTerm
+            );
+
+        });
+
+    }
+
+
+    /* SORT */
 
     filtered.sort(
         (a,b) =>
@@ -1680,31 +1865,51 @@ function renderFeed(){
     );
 
 
-    if(filtered.length === 0){
+    document.getElementById(
+        "feedCount"
+    ).textContent =
 
-        empty.style.display =
-        "block";
+    filtered.length
+    +
+    (
+        filtered.length === 1
+        ? " trend"
+        : " trends"
+    );
+
+
+    if(!filtered.length){
+
+        feed.innerHTML = `
+
+        <div class="empty">
+
+            <div class="empty-icon">
+                🔎
+            </div>
+
+            <h3>
+                No trends found
+            </h3>
+
+            <p>
+                Try another category or search term.
+            </p>
+
+        </div>
+
+        `;
 
         return;
 
     }
 
-    empty.style.display =
-    "none";
 
-
-    filtered.forEach(
-        (item,index) => {
-
-            feed.appendChild(
-                createCard(
-                    item,
-                    index
-                )
-            );
-
-        }
-    );
+    feed.innerHTML =
+    filtered.map(
+        (item,index) =>
+        createCard(item,index)
+    ).join("");
 
 }
 
@@ -1715,26 +1920,44 @@ function renderFeed(){
 
 function createCard(item,index){
 
-    const card =
-    document.createElement("article");
-
-    card.className =
-    "trend-card";
-
-
     const rank =
-    item.rank ||
-    index + 1;
+    item.rank || index + 1;
 
     const category =
-    item.category ||
-    "India";
+    item.category || "India";
+
+    const title =
+    item.title ||
+    "Trending Topic";
+
+    const summary =
+    item.summary ||
+    "A trending development attracting attention.";
+
+    const date =
+    item.date ||
+    "Today";
+
+    const time =
+    item.time ||
+    "";
+
+    const importance =
+    String(
+        item.importance ||
+        "medium"
+    ).toLowerCase();
 
 
-    const icon =
-    getCategoryIcon(
-        category
-    );
+    let meterWidth = 55;
+
+    if(importance === "high"){
+        meterWidth = 92;
+    }
+
+    if(importance === "low"){
+        meterWidth = 35;
+    }
 
 
     const tags =
@@ -1743,288 +1966,236 @@ function createCard(item,index){
     : [];
 
 
-    const tagsHTML =
-    tags.map(tag => `
-
-        <span class="tag">
-        #${escapeHTML(tag)}
-        </span>
-
-    `).join("");
-
-
-    const imageHTML =
-    item.image
-
-    ?
-
-    `
-
-    <div class="card-image">
-
-        <img
-        src="${escapeAttribute(item.image)}"
-        alt="${escapeAttribute(item.title || "Trending story")}"
-        loading="lazy">
-
-    </div>
-
-    `
-
-    :
-
-    `
-
-    <div class="card-image">
-
-        <div class="image-placeholder">
-
-        ${icon}
-
-        </div>
-
-    </div>
-
-    `;
-
+    const source =
+    item.source || {};
 
     const sourceName =
-    item.source?.name ||
-    "Pendico Trending";
+    source.name ||
+    "Source";
+
+    const sourceUrl =
+    source.url || "#";
 
 
-    const date =
-    item.date ||
-    "Today";
+    const safeTitle =
+    escapeHtml(title);
 
 
-    const time =
-    item.time ||
-    "";
+    const safeSummary =
+    escapeHtml(summary);
 
 
-    const url =
-    item.source?.url ||
-    item.url ||
-    "";
+    return `
+
+    <article
+    class="trend-card"
+    data-id="${rank}">
 
 
-    const readButton =
-    url
-
-    ?
-
-    `
-
-    <a
-    class="read-button"
-    href="${escapeAttribute(url)}"
-    target="_blank"
-    rel="noopener">
-
-    Read source →
-
-    </a>
-
-    `
-
-    :
-
-    `
-
-    <span
-    class="read-button">
-
-    Trending →
-
-    </span>
-
-    `;
+        <div class="card-top">
 
 
-    const score =
-    item.score ||
-    item.importance ||
-    "Trending";
+            <div class="rank">
 
+                <span class="rank-number">
+                    #${rank}
+                </span>
 
-    card.innerHTML = `
-
-    <!-- CARD HEADER -->
-
-    <div class="card-header">
-
-        <div class="card-source">
-
-            <div class="source-avatar">
-
-                ${icon}
+                🔥 Trending
 
             </div>
 
-            <div class="source-info">
 
-                <span class="source-name">
+            <div class="card-date">
 
-                    ${escapeHTML(sourceName)}
+                ${escapeHtml(date)}
 
-                </span>
-
-                <span class="source-meta">
-
-                    ${escapeHTML(date)}
-                    ${time ? " • " + escapeHTML(time) : ""}
-
-                </span>
+                ${time
+                    ? " • " + escapeHtml(time)
+                    : ""
+                }
 
             </div>
 
-        </div>
-
-
-        <div class="rank">
-
-            #${escapeHTML(rank)}
 
         </div>
 
-    </div>
+
+        <div class="card-content">
 
 
-    ${imageHTML}
+            <div class="card-category">
+
+                ${escapeHtml(category)}
+
+            </div>
 
 
-    <!-- CONTENT -->
+            <h2 class="card-title">
 
-    <div class="card-content">
+                ${safeTitle}
 
-        <span class="category-label">
-
-            ${escapeHTML(category)}
-
-        </span>
+            </h2>
 
 
-        <h2 class="card-title">
+            <p class="card-summary">
 
-            ${escapeHTML(
-                item.title ||
-                "Trending in India"
-            )}
+                ${safeSummary}
 
-        </h2>
+            </p>
 
 
-        <p class="card-summary">
+            <div class="trend-meter">
 
-            ${escapeHTML(
-                item.summary ||
-                "A developing trend attracting attention across India."
-            )}
+                <span class="meter-label">
 
-        </p>
+                    TRENDING
+
+                </span>
+
+                <div class="meter">
+
+                    <div
+                    class="meter-fill"
+                    style="
+                    width:${meterWidth}%;
+                    ">
+                    </div>
+
+                </div>
+
+            </div>
 
 
-        <div class="tags">
+            ${
+                tags.length
+                ?
+                `
 
-            ${tagsHTML}
+                <div class="tags">
+
+                    ${
+                        tags
+                        .slice(0,6)
+                        .map(tag =>
+
+                            `<span class="tag">
+                            #${escapeHtml(tag)}
+                            </span>`
+
+                        ).join("")
+                    }
+
+                </div>
+
+                `
+                :
+                ""
+            }
+
+
+            <div class="source-line">
+
+                Source:
+
+                ${
+                    sourceUrl !== "#"
+                    ?
+                    `<a
+                    href="${escapeAttribute(sourceUrl)}"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    ${escapeHtml(sourceName)}
+
+                    </a>`
+                    :
+                    escapeHtml(sourceName)
+                }
+
+            </div>
+
 
         </div>
 
-    </div>
+
+        <div class="card-actions">
 
 
-    <!-- TREND SCORE -->
-
-    <div class="trend-score">
-
-        <span class="score-label">
-
-            TREND STATUS
-
-        </span>
-
-        <span class="score-value">
-
-            🔥 ${escapeHTML(score)}
-
-        </span>
-
-    </div>
+            <div class="action-group">
 
 
-    <!-- ACTIONS -->
+                <button
+                class="action like-button"
+                onclick="toggleLike(this)">
 
-    <div class="card-actions">
+                    ♡ Like
 
-        <div class="actions-left">
+                </button>
+
+
+                <button
+                class="action bookmark-button"
+                onclick="toggleBookmark(this)">
+
+                    🔖 Save
+
+                </button>
+
+
+                <button
+                class="action"
+                onclick="shareTrend(
+                    '${escapeAttribute(title)}'
+                )">
+
+                    ↗ Share
+
+                </button>
+
+
+            </div>
+
 
             <button
-            class="action"
-            onclick="shareTrend(this)">
+            class="read-button"
+            onclick='openModal(${JSON.stringify(item)})'>
 
-            ↗ Share
+                Read More →
 
             </button>
 
 
-            <button
-            class="action"
-            onclick="saveTrend(this)">
-
-            🔖 Save
-
-            </button>
-
         </div>
 
 
-        ${readButton}
-
-    </div>
+    </article>
 
     `;
-
-
-    return card;
 
 }
 
 
 /* =====================================================
-   CATEGORY ICON
+   HTML ESCAPING
 ===================================================== */
 
-function getCategoryIcon(category){
+function escapeHtml(value){
 
-    const icons = {
+    return String(value)
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
 
-        Politics:"🏛️",
+}
 
-        Law:"⚖️",
+function escapeAttribute(value){
 
-        Sports:"🏆",
-
-        Entertainment:"🎬",
-
-        Technology:"💻",
-
-        Business:"💼",
-
-        Science:"🔬",
-
-        India:"🇮🇳",
-
-        Education:"🎓",
-
-        Health:"🩺",
-
-        World:"🌍"
-
-    };
-
-    return icons[category]
-    || "🔥";
+    return String(value)
+        .replace(/"/g,"%22")
+        .replace(/'/g,"%27");
 
 }
 
@@ -2044,14 +2215,10 @@ document
             document
             .querySelectorAll(".category")
             .forEach(btn =>
-                btn.classList.remove(
-                    "active"
-                )
+                btn.classList.remove("active")
             );
 
-            this.classList.add(
-                "active"
-            );
+            this.classList.add("active");
 
             currentCategory =
             this.dataset.category;
@@ -2068,27 +2235,13 @@ document
    SEARCH
 ===================================================== */
 
-function performSearch(){
-
-    currentSearch =
-    document
-    .getElementById("trendSearch")
-    .value
-    .toLowerCase()
-    .trim();
-
-    renderFeed();
-
-}
-
-
 document
-.getElementById("trendSearch")
+.getElementById("feedSearch")
 .addEventListener(
     "input",
     function(){
 
-        currentSearch =
+        searchTerm =
         this.value
         .toLowerCase()
         .trim();
@@ -2100,79 +2253,24 @@ document
 
 
 /* =====================================================
-   SHARE
+   LIKE
 ===================================================== */
 
-async function shareTrend(button){
+function toggleLike(button){
 
-    const card =
-    button.closest(".trend-card");
+    button.classList.toggle("liked");
 
-    const title =
-    card.querySelector(
-        ".card-title"
-    ).innerText;
+    if(button.classList.contains("liked")){
 
-
-    if(
-        navigator.share
-    ){
-
-        try{
-
-            await navigator.share({
-
-                title:
-                title,
-
-                text:
-                "Trending Today on Pendico",
-
-                url:
-                window.location.href
-
-            });
-
-        }
-
-        catch(error){
-
-            console.log(
-                "Share cancelled"
-            );
-
-        }
+        button.innerHTML =
+        "♥ Liked";
 
     }
 
     else{
 
-        try{
-
-            await navigator.clipboard.writeText(
-                window.location.href
-            );
-
-            button.innerText =
-            "✓ Copied";
-
-            setTimeout(
-                () => {
-                    button.innerText =
-                    "↗ Share";
-                },
-                1500
-            );
-
-        }
-
-        catch(error){
-
-            alert(
-                "Copy failed"
-            );
-
-        }
+        button.innerHTML =
+        "♡ Like";
 
     }
 
@@ -2180,29 +2278,29 @@ async function shareTrend(button){
 
 
 /* =====================================================
-   SAVE
+   BOOKMARK
 ===================================================== */
 
-function saveTrend(button){
+function toggleBookmark(button){
 
     button.classList.toggle(
-        "saved"
+        "bookmarked"
     );
 
     if(
         button.classList.contains(
-            "saved"
+            "bookmarked"
         )
     ){
 
-        button.innerText =
+        button.innerHTML =
         "🔖 Saved";
 
     }
 
     else{
 
-        button.innerText =
+        button.innerHTML =
         "🔖 Save";
 
     }
@@ -2211,92 +2309,302 @@ function saveTrend(button){
 
 
 /* =====================================================
-   DARK MODE
+   SHARE
 ===================================================== */
 
-function toggleDarkMode(){
+async function shareTrend(title){
 
-    document.body.classList.toggle(
-        "dark"
-    );
+    const shareData = {
 
-    const dark =
-    document.body.classList.contains(
-        "dark"
-    );
+        title:
+        title,
 
-    localStorage.setItem(
-        "pendicoDarkMode",
-        dark
-        ? "1"
-        : "0"
-    );
+        text:
+        title +
+        " — Trending Today on Pendico",
 
-}
+        url:
+        window.location.href
+
+    };
 
 
-if(
-    localStorage.getItem(
-        "pendicoDarkMode"
-    ) === "1"
-){
+    try{
 
-    document.body.classList.add(
-        "dark"
-    );
+        if(
+            navigator.share
+        ){
+
+            await navigator.share(
+                shareData
+            );
+
+        }
+
+        else{
+
+            await navigator.clipboard.writeText(
+                window.location.href
+            );
+
+            alert(
+                "Link copied!"
+            );
+
+        }
+
+    }
+
+    catch(error){
+
+        console.log(
+            "Share cancelled"
+        );
+
+    }
 
 }
 
 
 /* =====================================================
-   BACK TO TOP
+   MODAL
 ===================================================== */
 
-window.addEventListener(
-    "scroll",
-    function(){
+function openModal(item){
 
-        const button =
-        document.getElementById(
-            "backTop"
-        );
+    const modal =
+    document.getElementById(
+        "trendModal"
+    );
 
-        button.style.display =
-        window.scrollY > 500
-        ? "flex"
-        : "none";
 
-        button.style.alignItems =
-        "center";
+    document.getElementById(
+        "modalCategory"
+    ).textContent =
+    item.category || "India";
 
-        button.style.justifyContent =
-        "center";
+
+    document.getElementById(
+        "modalTitle"
+    ).textContent =
+    item.title || "Trending Topic";
+
+
+    document.getElementById(
+        "modalSummary"
+    ).textContent =
+    item.summary ||
+    "No additional summary available.";
+
+
+    document.getElementById(
+        "modalMeta"
+    ).innerHTML = `
+
+        <span>
+            📅 ${escapeHtml(
+                item.date || "Today"
+            )}
+        </span>
+
+        <span>
+            🔥 Rank #${escapeHtml(
+                item.rank || "—"
+            )}
+        </span>
+
+        <span>
+            📍 ${escapeHtml(
+                item.location || "India"
+            )}
+        </span>
+
+    `;
+
+
+    const tags =
+    Array.isArray(item.tags)
+    ? item.tags
+    : [];
+
+
+    document.getElementById(
+        "modalTags"
+    ).innerHTML =
+
+    tags.map(tag =>
+
+        `<span class="tag">
+            #${escapeHtml(tag)}
+        </span>`
+
+    ).join("");
+
+
+    const source =
+    item.source || {};
+
+
+    const sourceButton =
+    document.getElementById(
+        "modalSource"
+    );
+
+
+    if(source.url){
+
+        sourceButton.href =
+        source.url;
+
+        sourceButton.style.display =
+        "inline-block";
+
+    }
+
+    else{
+
+        sourceButton.style.display =
+        "none";
+
+    }
+
+
+    modal.classList.add(
+        "show"
+    );
+
+    document.body.style.overflow =
+    "hidden";
+
+}
+
+
+/* =====================================================
+   CLOSE MODAL
+===================================================== */
+
+function closeModal(){
+
+    document
+    .getElementById(
+        "trendModal"
+    )
+    .classList.remove(
+        "show"
+    );
+
+    document.body.style.overflow =
+    "";
+
+}
+
+
+document
+.getElementById(
+    "modalClose"
+)
+.addEventListener(
+    "click",
+    closeModal
+);
+
+
+document
+.getElementById(
+    "trendModal"
+)
+.addEventListener(
+    "click",
+    function(event){
+
+        if(
+            event.target === this
+        ){
+
+            closeModal();
+
+        }
+
+    }
+);
+
+
+document
+.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            closeModal();
+
+        }
 
     }
 );
 
 
 /* =====================================================
-   SECURITY HELPERS
+   THEME
 ===================================================== */
 
-function escapeHTML(value){
+const themeButton =
+document.getElementById(
+    "themeButton"
+);
 
-    return String(value)
-    .replaceAll("&","&amp;")
-    .replaceAll("<","&lt;")
-    .replaceAll(">","&gt;")
-    .replaceAll('"',"&quot;")
-    .replaceAll("'","&#039;");
+
+function updateTheme(){
+
+    const light =
+    localStorage.getItem(
+        "pendico-theme"
+    )
+    ===
+    "light";
+
+
+    document.body
+    .classList.toggle(
+        "light",
+        light
+    );
+
+
+    themeButton.textContent =
+    light
+    ? "🌙"
+    : "☀️";
 
 }
 
 
-function escapeAttribute(value){
+themeButton
+.addEventListener(
+    "click",
+    function(){
 
-    return escapeHTML(value);
+        const isLight =
+        document.body
+        .classList
+        .contains("light");
 
-}
+
+        localStorage.setItem(
+            "pendico-theme",
+            isLight
+            ? "dark"
+            : "light"
+        );
+
+
+        updateTheme();
+
+    }
+);
+
+
+updateTheme();
 
 
 /* =====================================================
