@@ -1,0 +1,244 @@
+{
+  "page": {
+    "title": "Trending Today",
+    "subtitle": "What's trending across India today",
+    "description": "A daily collection of major trending stories and developments from across India.",
+    "lastUpdated": "2026-08-15",
+    "timezone": "Asia/Kolkata"
+  },
+
+  "categories": [
+    "All",
+    "India",
+    "Tamil Nadu",
+    "Chennai",
+    "Law",
+    "Politics",
+    "Business",
+    "Technology",
+    "Sports",
+    "Entertainment",
+    "Education",
+    "Science"
+  ],
+
+  "trends": [
+    {
+      "id": 1,
+      "rank": 1,
+      "title": "Major National Development",
+      "category": "India",
+      "summary": "A major development attracting widespread attention across India.",
+      "location": "India",
+      "date": "2026-08-15",
+      "time": "10:30 AM",
+      "importance": "high",
+      "trending": true,
+      "tags": [
+        "India",
+        "National",
+        "Trending"
+      ],
+      "source": {
+        "name": "Official Source",
+        "url": ""
+      }
+    },
+
+    {
+      "id": 2,
+      "rank": 2,
+      "title": "Important Supreme Court Development",
+      "category": "Law",
+      "summary": "An important legal development involving the Supreme Court of India.",
+      "location": "New Delhi",
+      "date": "2026-08-15",
+      "time": "10:00 AM",
+      "importance": "high",
+      "trending": true,
+      "tags": [
+        "Supreme Court",
+        "Law",
+        "India"
+      ],
+      "source": {
+        "name": "Supreme Court of India",
+        "url": "https://www.sci.gov.in/"
+      }
+    },
+
+    {
+      "id": 3,
+      "rank": 3,
+      "title": "Tamil Nadu Development",
+      "category": "Tamil Nadu",
+      "summary": "An important development from Tamil Nadu receiving public attention today.",
+      "location": "Tamil Nadu",
+      "date": "2026-08-15",
+      "time": "09:30 AM",
+      "importance": "high",
+      "trending": true,
+      "tags": [
+        "Tamil Nadu",
+        "Chennai",
+        "India"
+      ],
+      "source": {
+        "name": "Official Source",
+        "url": ""
+      }
+    },
+
+    {
+      "id": 4,
+      "rank": 4,
+      "title": "Chennai Trending Update",
+      "category": "Chennai",
+      "summary": "A development in Chennai currently attracting attention among residents.",
+      "location": "Chennai",
+      "date": "2026-08-15",
+      "time": "09:00 AM",
+      "importance": "medium",
+      "trending": true,
+      "tags": [
+        "Chennai",
+        "Tamil Nadu"
+      ],
+      "source": {
+        "name": "Official Source",
+        "url": ""
+      }
+    },
+
+    {
+      "id": 5,
+      "rank": 5,
+      "title": "Technology and Innovation Update",
+      "category": "Technology",
+      "summary": "A significant technology or innovation development attracting attention in India.",
+      "location": "India",
+      "date": "2026-08-15",
+      "time": "08:30 AM",
+      "importance": "medium",
+      "trending": true,
+      "tags": [
+        "Technology",
+        "Innovation",
+        "India"
+      ],
+      "source": {
+        "name": "Official Source",
+        "url": ""
+      }
+    },
+
+    {
+      "id": 6,
+      "rank": 6,
+      "title": "Business and Economy Update",
+      "category": "Business",
+      "summary": "An important business or economic development being discussed today.",
+      "location": "India",
+      "date": "2026-08-15",
+      "time": "08:00 AM",
+      "importance": "medium",
+      "trending": true,
+      "tags": [
+        "Business",
+        "Economy",
+        "India"
+      ],
+      "source": {
+        "name": "Official Source",
+        "url": ""
+      }
+    },
+
+    {
+      "id": 7,
+      "rank": 7,
+      "title": "Major Sports Development",
+      "category": "Sports",
+      "summary": "A major sports story receiving attention from fans across India.",
+      "location": "India",
+      "date": "2026-08-15",
+      "time": "07:30 AM",
+      "importance": "medium",
+      "trending": true,
+      "tags": [
+        "Sports",
+        "India"
+      ],
+      "source": {
+        "name": "Official Source",
+        "url": ""
+      }
+    },
+
+    {
+      "id": 8,
+      "rank": 8,
+      "title": "Entertainment Trending Today",
+      "category": "Entertainment",
+      "summary": "A major entertainment story currently attracting attention among Indian audiences.",
+      "location": "India",
+      "date": "2026-08-15",
+      "time": "07:00 AM",
+      "importance": "medium",
+      "trending": true,
+      "tags": [
+        "Entertainment",
+        "Movies",
+        "India"
+      ],
+      "source": {
+        "name": "Official Source",
+        "url": ""
+      }
+    },
+
+    {
+      "id": 9,
+      "rank": 9,
+      "title": "Education Update",
+      "category": "Education",
+      "summary": "An education-related development attracting attention from students and institutions.",
+      "location": "India",
+      "date": "2026-08-15",
+      "time": "06:30 AM",
+      "importance": "medium",
+      "trending": true,
+      "tags": [
+        "Education",
+        "Students",
+        "India"
+      ],
+      "source": {
+        "name": "Official Source",
+        "url": ""
+      }
+    },
+
+    {
+      "id": 10,
+      "rank": 10,
+      "title": "Science and Space Update",
+      "category": "Science",
+      "summary": "A noteworthy science, space or innovation development attracting attention today.",
+      "location": "India",
+      "date": "2026-08-15",
+      "time": "06:00 AM",
+      "importance": "medium",
+      "trending": true,
+      "tags": [
+        "Science",
+        "Space",
+        "India"
+      ],
+      "source": {
+        "name": "Official Source",
+        "url": ""
+      }
+    }
+  ]
+}
