@@ -184,5 +184,435 @@
         "url": ""
       }
     }
+  
+},
+{
+  "updated": "2026-08-19",
+  "trending": [
+    {
+      "id": 1,
+      "rank": 1,
+      "title": "India defeat Sri Lanka by 165 runs in Galle Test",
+      "category": "Sports",
+      "summary": "India defeated Sri Lanka by 165 runs in the first Test in Galle, taking a 1-0 lead in the two-match series. The result also keeps India's World Test Championship campaign alive.",
+      "location": "Galle, Sri Lanka",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "high",
+      "trending": true,
+      "tags": ["Cricket", "India", "Sri Lanka", "Test Cricket", "WTC"],
+      "source": {
+        "name": "Times of India",
+        "url": "https://timesofindia.indiatimes.com/sports/cricket/india-vs-sri-lanka/world-test-championship-what-indias-galle-win-means-for-their-road-to-the-oval/articleshow/133344219.cms"
+      }
+    },
+    {
+      "id": 2,
+      "rank": 2,
+      "title": "Supreme Court latest orders updated",
+      "category": "Law",
+      "summary": "The Supreme Court of India has published fresh orders and case updates on its official website, covering matters listed and uploaded on August 19, 2026.",
+      "location": "New Delhi",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "high",
+      "trending": true,
+      "tags": ["Supreme Court", "Judiciary", "India", "Law"],
+      "source": {
+        "name": "Supreme Court of India",
+        "url": "https://www.sci.gov.in/latest-orders/"
+      }
+    },
+    {
+      "id": 3,
+      "rank": 3,
+      "title": "Supreme Court discusses constitutional questions surrounding hanging as execution method",
+      "category": "Law",
+      "summary": "A Supreme Court judgment concerning the constitutional validity of hanging as a mode of execution has drawn significant legal attention and debate around dignity and the death penalty.",
+      "location": "New Delhi",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "high",
+      "trending": true,
+      "tags": ["Supreme Court", "Death Penalty", "Constitution", "Fundamental Rights"],
+      "source": {
+        "name": "Indian Express",
+        "url": "https://indianexpress.com/article/explained/explained-law/supreme-court-hanging-constitutional-death-penalty-10839650/"
+      }
+    },
+    {
+      "id": 4,
+      "rank": 4,
+      "title": "Supreme Court to examine July 20 clash and allegations of police action",
+      "category": "Law",
+      "summary": "The Supreme Court is set to constitute a high-powered committee to examine allegations and counter-allegations concerning police action during the July 20 clash.",
+      "location": "India",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "high",
+      "trending": true,
+      "tags": ["Supreme Court", "Police", "Investigation", "Public Law"],
+      "source": {
+        "name": "Times of India",
+        "url": "https://timesofindia.indiatimes.com/videos/news/supreme-court-to-form-panel-on-july-20-clash-examine-police-force-and-alleged-pellet-gun-use/videoshow/133337676.cms"
+      }
+    },
+    {
+      "id": 5,
+      "rank": 5,
+      "title": "Supreme Court's SAMADHAN SAMAROH heads toward Special Lok Adalat",
+      "category": "Law",
+      "summary": "The Supreme Court's SAMADHAN SAMAROH initiative is scheduled to culminate in a Special Lok Adalat on August 21, 22 and 23, 2026, promoting mediation and dispute resolution.",
+      "location": "India",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "high",
+      "trending": true,
+      "tags": ["Lok Adalat", "Mediation", "Supreme Court", "ADR"],
+      "source": {
+        "name": "Supreme Court of India",
+        "url": "https://www.sci.gov.in/samadhan-samaroh-2026/"
+      }
+    },
+    {
+      "id": 6,
+      "rank": 6,
+      "title": "AICTE revises 2026-27 academic calendar",
+      "category": "India",
+      "summary": "AICTE has revised the academic calendar for technical and management institutions for 2026-27, including updated admission timelines and a September 14 deadline.",
+      "location": "India",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "high",
+      "trending": true,
+      "tags": ["AICTE", "Education", "Students", "Admissions"],
+      "source": {
+        "name": "Times of India",
+        "url": "https://timesofindia.indiatimes.com/education/news/aicte-academic-calendar-2026-27-revised-check-new-admission-dates-class-start-date-and-september-14-deadline/articleshow/133338242.cms"
+      }
+    },
+    {
+      "id": 7,
+      "rank": 7,
+      "title": "India's chip startups see major funding growth",
+      "category": "Technology",
+      "summary": "India's semiconductor startup ecosystem is seeing larger funding rounds, signalling increasing investor confidence in the country's chip-design and semiconductor ambitions.",
+      "location": "India",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "high",
+      "trending": true,
+      "tags": ["Semiconductors", "Startups", "Chips", "Technology", "India"],
+      "source": {
+        "name": "India Today",
+        "url": "https://www.indiatoday.in/amp/business/story/from-15-million-to-768-million-indias-chip-startups-see-funding-surge-2974768-2026-08-19"
+      }
+    },
+    {
+      "id": 8,
+      "rank": 8,
+      "title": "ISRO experts highlight AI and quantum technology for future satellites",
+      "category": "Science",
+      "summary": "Experts discussing India's future space systems highlighted AI, machine learning, quantum technologies and inter-satellite links as important technologies for next-generation satellites.",
+      "location": "India",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "high",
+      "trending": true,
+      "tags": ["ISRO", "AI", "Quantum", "Satellites", "Space"],
+      "source": {
+        "name": "The Quantum Insider",
+        "url": "https://thequantuminsider.com/2026/08/18/ai-quantum-technology-india-next-generation-satellite-systems/"
+      }
+    },
+    {
+      "id": 9,
+      "rank": 9,
+      "title": "KKR to acquire around 6% stake in BookMyShow",
+      "category": "Business",
+      "summary": "Global investment firm KKR is reported to be buying about a 6% stake in Indian entertainment-ticketing platform BookMyShow for up to $50 million.",
+      "location": "India",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "high",
+      "trending": true,
+      "tags": ["KKR", "BookMyShow", "Investment", "Business", "Entertainment"],
+      "source": {
+        "name": "Reuters",
+        "url": "https://www.reuters.com/world/india/kkr-buy-stake-indias-bookmyshow-amid-live-entertainment-boom-2026-08-19/"
+      }
+    },
+    {
+      "id": 10,
+      "rank": 10,
+      "title": "India's startup ecosystem remains active with fresh funding and business developments",
+      "category": "Business",
+      "summary": "The Indian startup ecosystem continues to attract attention with new funding, company developments and investment activity across technology and consumer businesses.",
+      "location": "India",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "medium",
+      "trending": true,
+      "tags": ["Startups", "Funding", "Entrepreneurship", "India"],
+      "source": {
+        "name": "YourStory",
+        "url": "https://yourstory.com/2026/08/startup-news-and-updates-daily-roundup-august-19-2026"
+      }
+    },
+    {
+      "id": 11,
+      "rank": 11,
+      "title": "India's AI ecosystem faces talent and data challenges",
+      "category": "Technology",
+      "summary": "A new report highlights talent availability and data-related constraints as important challenges that India will need to address while expanding its artificial intelligence ecosystem.",
+      "location": "India",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "medium",
+      "trending": true,
+      "tags": ["AI", "Artificial Intelligence", "Data", "Technology"],
+      "source": {
+        "name": "Rediff",
+        "url": "https://m.rediff.com/amp/business/report/indias-ai-ecosystem-talent-and-data-are-key-hurdles/20260819.htm"
+      }
+    },
+    {
+      "id": 12,
+      "rank": 12,
+      "title": "India's World Test Championship hopes strengthened after Galle victory",
+      "category": "Sports",
+      "summary": "India's 165-run victory over Sri Lanka has improved its position in the ongoing World Test Championship campaign and strengthened its route toward the final.",
+      "location": "Galle, Sri Lanka",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "high",
+      "trending": true,
+      "tags": ["WTC", "Cricket", "India", "Sri Lanka"],
+      "source": {
+        "name": "Times of India",
+        "url": "https://timesofindia.indiatimes.com/sports/cricket/india-vs-sri-lanka/world-test-championship-what-indias-galle-win-means-for-their-road-to-the-oval/articleshow/133344219.cms"
+      }
+    },
+    {
+      "id": 13,
+      "rank": 13,
+      "title": "Manav Suthar makes headlines after India's Galle victory",
+      "category": "Sports",
+      "summary": "Young Indian spinner Manav Suthar drew major attention after a standout bowling performance helped India complete its Test victory over Sri Lanka.",
+      "location": "Galle, Sri Lanka",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "high",
+      "trending": true,
+      "tags": ["Manav Suthar", "Cricket", "India", "Bowling"],
+      "source": {
+        "name": "Times of India",
+        "url": "https://timesofindia.indiatimes.com/sports/cricket/india-vs-sri-lanka/galle-conquered-boxes-ticked-indias-test-blueprint-takes-shape/articleshow/133341836.cms"
+      }
+    },
+    {
+      "id": 14,
+      "rank": 14,
+      "title": "India schedule draws attention at BWF World Championships",
+      "category": "Sports",
+      "summary": "Indian badminton stars including Lakshya Sen, PV Sindhu and the Satwik-Chirag combination feature in the Day 3 schedule at the BWF World Championships in New Delhi.",
+      "location": "New Delhi",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "high",
+      "trending": true,
+      "tags": ["Badminton", "BWF", "Lakshya Sen", "PV Sindhu", "Satwik Chirag"],
+      "source": {
+        "name": "Business Standard",
+        "url": "https://www.business-standard.com/amp/sports/other-sports-news/bwf-worlds-day-3-order-of-play-india-schedule-match-timings-on-august-19-sindhu-lakshya-ayush-satwik-chirag-126081900338_1.html"
+      }
+    },
+    {
+      "id": 15,
+      "rank": 15,
+      "title": "Awarapan 2 approaches the ₹100 crore mark",
+      "category": "Entertainment",
+      "summary": "Emraan Hashmi and Disha Patani's Awarapan 2 continues its theatrical run and is drawing attention at the Indian box office.",
+      "location": "India",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "high",
+      "trending": true,
+      "tags": ["Awarapan 2", "Bollywood", "Box Office", "Emraan Hashmi"],
+      "source": {
+        "name": "Times of India",
+        "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/box-office/awarapan-2-box-office-collection-day-5-live-emraan-hashmi-and-disha-patani-starrer-narrowly-misses-rs-100-crore-in-india-amid-batwara-1947-and-spider-man-brand-new-day-buzz/articleshow/133317285.cms"
+      }
+    },
+    {
+      "id": 16,
+      "rank": 16,
+      "title": "Batwara 1947 crosses the ₹30 crore mark",
+      "category": "Entertainment",
+      "summary": "Sunny Deol and Preity Zinta's Batwara 1947 has crossed ₹30 crore in India net collections while continuing its theatrical competition with Awarapan 2.",
+      "location": "India",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "medium",
+      "trending": true,
+      "tags": ["Batwara 1947", "Sunny Deol", "Bollywood", "Box Office"],
+      "source": {
+        "name": "Times of India",
+        "url": "https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/batwara-1947-box-office-collection-day-6-live-sunny-deol-film-sees-continued-slowdown-eyes-to-cross-rs-32-crore/articleshow/133341298.cms"
+      }
+    },
+    {
+      "id": 17,
+      "rank": 17,
+      "title": "Amitabh Bachchan recalls early career struggles on KBC 18",
+      "category": "Entertainment",
+      "summary": "Amitabh Bachchan shared an anecdote about being told to leave a set early in his career because of his height while speaking with guests on Kaun Banega Crorepati 18.",
+      "location": "India",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "medium",
+      "trending": true,
+      "tags": ["Amitabh Bachchan", "KBC", "Bollywood", "Television"],
+      "source": {
+        "name": "India Today",
+        "url": "https://www.indiatoday.in/amp/entertainment/television/story/youre-too-tall-go-home-amitabh-bachchan-recalls-early-career-struggle-on-kbc-18-2974500-2026-08-19"
+      }
+    },
+    {
+      "id": 18,
+      "rank": 18,
+      "title": "Akshaye Khanna's Shukracharya look attracts attention",
+      "category": "Entertainment",
+      "summary": "The makers of Mahakali have unveiled Akshaye Khanna's Shukracharya avatar and announced details surrounding the upcoming teaser.",
+      "location": "India",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "medium",
+      "trending": true,
+      "tags": ["Akshaye Khanna", "Mahakali", "Bollywood", "Shukracharya"],
+      "source": {
+        "name": "NDTV",
+        "url": "https://www.ndtv.com/entertainment/bollywood"
+      }
+    },
+    {
+      "id": 19,
+      "rank": 19,
+      "title": "A new generation of Indian space technology gets attention",
+      "category": "Science",
+      "summary": "AI, quantum technology and advanced satellite connectivity are increasingly being discussed as important components of India's future space systems.",
+      "location": "India",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "medium",
+      "trending": true,
+      "tags": ["Space", "ISRO", "AI", "Quantum Technology"],
+      "source": {
+        "name": "The Quantum Insider",
+        "url": "https://thequantuminsider.com/2026/08/18/ai-quantum-technology-india-next-generation-satellite-systems/"
+      }
+    },
+    {
+      "id": 20,
+      "rank": 20,
+      "title": "IIT Patna and ISRO engage students in India's space ambitions",
+      "category": "Science",
+      "summary": "IIT Patna and ISRO's URSC held a programme for hundreds of students featuring space talks, quizzes and discussions aimed at encouraging young people to participate in India's space journey.",
+      "location": "Patna, Bihar",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "medium",
+      "trending": true,
+      "tags": ["ISRO", "IIT Patna", "Students", "Space", "Science"],
+      "source": {
+        "name": "Times of India",
+        "url": "https://timesofindia.indiatimes.com/city/patna/iit-p-inspires-students-to-join-indias-space-journey/articleshow/133348192.cms"
+      }
+    },
+    {
+      "id": 21,
+      "rank": 21,
+      "title": "Assam moves to regulate private coaching centres",
+      "category": "India",
+      "summary": "The Assam Cabinet has approved rules aimed at regulating private coaching institutes and introducing safeguards relating to students' mental health.",
+      "location": "Assam",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "medium",
+      "trending": true,
+      "tags": ["Assam", "Education", "Coaching", "Students"],
+      "source": {
+        "name": "EdexLive",
+        "url": "https://www.edexlive.com/amp/story/news/assam-to-set-new-rules-to-regulate-private-coaching-centres"
+      }
+    },
+    {
+      "id": 22,
+      "rank": 22,
+      "title": "Tamil Nadu announces changes involving milk procurement and welfare initiatives",
+      "category": "India",
+      "summary": "The Tamil Nadu government announced an enhancement of milk procurement price along with health and family welfare initiatives and measures involving Members of the Legislative Assembly.",
+      "location": "Tamil Nadu",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "high",
+      "trending": true,
+      "tags": ["Tamil Nadu", "Government", "Milk", "Welfare"],
+      "source": {
+        "name": "Tamil Nadu Government",
+        "url": "https://www.tn.gov.in/kyg_template_tn/press_release.php"
+      }
+    },
+    {
+      "id": 23,
+      "rank": 23,
+      "title": "National Teachers' Awards 2026 selection process enters key stage",
+      "category": "India",
+      "summary": "The National Teachers' Awards process is active during August, with selected candidates being informed following approval and jury interaction.",
+      "location": "India",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "medium",
+      "trending": true,
+      "tags": ["Teachers", "Education", "Awards", "India"],
+      "source": {
+        "name": "Ministry of Education",
+        "url": "https://nationalawardstoteachers.education.gov.in/"
+      }
+    },
+    {
+      "id": 24,
+      "rank": 24,
+      "title": "India's space infrastructure continues to expand",
+      "category": "Science",
+      "summary": "India is expanding its space-launch infrastructure, including the development of a second spaceport at Kulasekarapattinam in Tamil Nadu and further launch infrastructure at Sriharikota.",
+      "location": "Tamil Nadu / India",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "medium",
+      "trending": true,
+      "tags": ["ISRO", "Tamil Nadu", "Kulasekarapattinam", "Spaceport"],
+      "source": {
+        "name": "Press Information Bureau",
+        "url": "https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=158973&lang=1&reg=3"
+      }
+    },
+    {
+      "id": 25,
+      "rank": 25,
+      "title": "Razorpay's growth story draws renewed attention",
+      "category": "Business",
+      "summary": "Razorpay's journey from an early-stage fintech startup to a major Indian financial technology company is receiving renewed attention as India's startup ecosystem continues to mature.",
+      "location": "Bengaluru, India",
+      "date": "2026-08-19",
+      "time": "Today",
+      "importance": "medium",
+      "trending": true,
+      "tags": ["Razorpay", "Fintech", "Startup", "Business"],
+      "source": {
+        "name": "Moneycontrol",
+        "url": "https://www.moneycontrol.com/news/business/markets/razorpay-success-story-from-100-bank-rejections-to-rs-70000-crore-company-how-harshil-mathur-and-shashank-kumar-built-a-fintech-giant-14010420.html"
+      }
+    }
   ]
 }
