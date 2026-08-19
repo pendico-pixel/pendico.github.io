@@ -17,7 +17,6 @@ function gtag(){
 }
 
 gtag('js', new Date());
-
 gtag('config', 'G-0BL89MBWGY');
 </script>
 
@@ -31,13 +30,13 @@ gtag('config', 'G-0BL89MBWGY');
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Pendico | Indian Legal Information & Trending India</title>
+<title>Pendico | Indian Legal Information & Knowledge Platform</title>
 
 <meta name="description"
-content="Pendico is an Indian information platform featuring Bare Acts, landmark case laws, legal articles, legal news and Trending Today — important developments happening across India.">
+content="Pendico brings Indian Bare Acts, landmark case laws, legal articles, legal news and important developments together in one modern legal information platform.">
 
 <meta name="keywords"
-content="Indian law, Bare Acts, BNS, BNSS, case laws, Supreme Court, High Court, legal news, legal articles, India trending news, Trending Today">
+content="Indian law, Bare Acts, BNS, BNSS, BSA, Indian case laws, Supreme Court judgments, High Court judgments, legal news, legal articles, Indian legal information, Pendico">
 
 <meta name="author"
 content="Pendico">
@@ -58,10 +57,10 @@ href="favicon.png">
 ===================================================== -->
 
 <meta property="og:title"
-content="Pendico | Indian Legal Information & Trending India">
+content="Pendico | Indian Legal Information & Knowledge Platform">
 
 <meta property="og:description"
-content="Explore Indian law, landmark judgments, legal news, articles and the latest trending developments across India.">
+content="Explore Indian law, landmark judgments, legal articles, legal news and important developments in one place.">
 
 <meta property="og:type"
 content="website">
@@ -74,26 +73,80 @@ content="https://pendico.pages.dev/logo.png.jpeg">
 
 
 <!-- =====================================================
-     TWITTER CARD
+     TWITTER
 ===================================================== -->
 
 <meta name="twitter:card"
 content="summary_large_image">
 
 <meta name="twitter:title"
-content="Pendico | Indian Legal Information & Trending India">
+content="Pendico | Indian Legal Information & Knowledge Platform">
 
 <meta name="twitter:description"
-content="Indian legal information, legal developments and Trending Today.">
+content="Explore Indian law, landmark judgments, legal articles and important developments.">
 
 <meta name="twitter:image"
 content="https://pendico.pages.dev/logo.png.jpeg">
 
 
+<!-- =====================================================
+     PERFORMANCE
+===================================================== -->
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+
+<!-- =====================================================
+     STYLES
+===================================================== -->
+
 <style>
 
+:root{
+
+    --bg:#f5f7fb;
+
+    --surface:#ffffff;
+
+    --surface-2:#f8faff;
+
+    --navy:#061426;
+
+    --navy-2:#0a2341;
+
+    --blue:#2478ff;
+
+    --blue-2:#4ba0ff;
+
+    --cyan:#56d8ff;
+
+    --text:#0c1b2e;
+
+    --muted:#68778d;
+
+    --border:#e4eaf2;
+
+    --success:#20c997;
+
+    --danger:#ff5266;
+
+    --shadow:
+    0 15px 45px rgba(8,34,65,.08);
+
+    --shadow-lg:
+    0 30px 80px rgba(4,25,52,.14);
+
+    --radius:24px;
+}
+
+
 /* =====================================================
-   GLOBAL
+   RESET
 ===================================================== */
 
 *{
@@ -107,84 +160,131 @@ html{
 }
 
 body{
+
     font-family:
     Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
     Arial,
-    Helvetica,
     sans-serif;
 
-    background:#f4f7fb;
+    background:var(--bg);
 
-    color:#172033;
+    color:var(--text);
 
     line-height:1.6;
+
+    overflow-x:hidden;
 }
 
 a{
     text-decoration:none;
+    color:inherit;
 }
 
 button,
 input{
-    font-family:inherit;
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+img{
+    max-width:100%;
+    display:block;
 }
 
 
 /* =====================================================
-   NAVIGATION
+   ACCESSIBILITY
 ===================================================== */
 
-nav{
+:focus-visible{
+
+    outline:3px solid
+    rgba(75,160,255,.55);
+
+    outline-offset:3px;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
 
     position:sticky;
 
     top:0;
 
-    z-index:1000;
+    z-index:9999;
+
+    height:72px;
 
     display:flex;
+
+    align-items:center;
 
     justify-content:space-between;
 
-    align-items:center;
-
-    padding:13px 6%;
+    padding:0 clamp(18px,5vw,70px);
 
     background:
-    rgba(4,15,32,0.96);
+    rgba(4,17,34,.88);
 
-    backdrop-filter:blur(18px);
+    backdrop-filter:
+    blur(22px);
+
+    -webkit-backdrop-filter:
+    blur(22px);
 
     border-bottom:
-    1px solid rgba(255,255,255,0.08);
+    1px solid
+    rgba(255,255,255,.08);
 }
 
-.nav-brand{
+.brand{
 
     display:flex;
 
     align-items:center;
 
-    gap:10px;
+    gap:11px;
 
-    color:white;
+    color:#fff;
 
-    font-size:22px;
-
-    font-weight:900;
-
-    letter-spacing:1px;
+    flex-shrink:0;
 }
 
-.nav-brand img{
+.brand-logo{
 
     width:40px;
-
     height:40px;
+
+    border-radius:12px;
 
     object-fit:cover;
 
-    border-radius:10px;
+    box-shadow:
+    0 7px 25px
+    rgba(36,120,255,.25);
+}
+
+.brand-name{
+
+    font-size:21px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+}
+
+.brand-dot{
+    color:var(--blue-2);
 }
 
 .nav-links{
@@ -193,46 +293,46 @@ nav{
 
     align-items:center;
 
-    gap:5px;
-
-    flex-wrap:wrap;
+    gap:3px;
 }
 
 .nav-links a{
 
-    color:#dbe7f7;
+    color:#c9d8ea;
 
-    padding:8px 12px;
-
-    border-radius:8px;
-
-    font-size:13px;
+    font-size:12px;
 
     font-weight:700;
 
-    transition:0.25s;
+    padding:9px 11px;
+
+    border-radius:10px;
+
+    transition:.2s ease;
 }
 
 .nav-links a:hover{
 
-    background:#1769d1;
+    color:#fff;
 
-    color:white;
+    background:
+    rgba(255,255,255,.08);
 }
 
-.nav-links .trending-link{
+.nav-links .active{
+
+    color:#fff;
 
     background:
     linear-gradient(
         135deg,
-        #1769d1,
-        #248cff
+        rgba(36,120,255,.95),
+        rgba(75,160,255,.75)
     );
 
-    color:white;
-
     box-shadow:
-    0 5px 18px rgba(23,105,209,0.25);
+    0 7px 20px
+    rgba(36,120,255,.2);
 }
 
 
@@ -242,43 +342,38 @@ nav{
 
 .hero{
 
-    min-height:700px;
+    position:relative;
+
+    min-height:
+    calc(100vh - 72px);
 
     display:flex;
 
     align-items:center;
 
-    justify-content:center;
-
-    text-align:center;
-
-    padding:90px 20px;
-
-    position:relative;
-
     overflow:hidden;
 
-    color:white;
+    color:#fff;
 
     background:
 
     radial-gradient(
-        circle at 10% 15%,
-        rgba(52,132,255,0.30),
-        transparent 30%
+        circle at 15% 20%,
+        rgba(40,125,255,.25),
+        transparent 28%
     ),
 
     radial-gradient(
-        circle at 90% 75%,
-        rgba(0,213,255,0.18),
-        transparent 30%
+        circle at 85% 75%,
+        rgba(64,215,255,.14),
+        transparent 27%
     ),
 
     linear-gradient(
         135deg,
-        #041022,
-        #0a2448,
-        #06162e
+        #030d1b 0%,
+        #061a32 48%,
+        #092b50 100%
     );
 }
 
@@ -288,20 +383,30 @@ nav{
 
     position:absolute;
 
-    width:600px;
+    inset:0;
 
-    height:600px;
+    opacity:.25;
 
-    border-radius:50%;
+    background-image:
+    linear-gradient(
+        rgba(255,255,255,.035) 1px,
+        transparent 1px
+    ),
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.035) 1px,
+        transparent 1px
+    );
 
-    background:
-    rgba(25,116,255,0.07);
+    background-size:
+    55px 55px;
 
-    filter:blur(35px);
-
-    left:-250px;
-
-    top:-250px;
+    mask-image:
+    linear-gradient(
+        to bottom,
+        black,
+        transparent
+    );
 }
 
 .hero::after{
@@ -310,131 +415,152 @@ nav{
 
     position:absolute;
 
-    width:350px;
-
-    height:350px;
+    width:700px;
+    height:700px;
 
     border-radius:50%;
 
+    right:-350px;
+    top:-300px;
+
     background:
-    rgba(0,211,255,0.06);
+    rgba(51,153,255,.10);
 
-    filter:blur(35px);
-
-    right:-120px;
-
-    bottom:-120px;
+    filter:blur(30px);
 }
 
-.hero-content{
+.hero-inner{
 
     position:relative;
 
     z-index:2;
 
-    width:100%;
+    width:min(1250px,92%);
 
-    max-width:950px;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    1.15fr .85fr;
+
+    align-items:center;
+
+    gap:70px;
+
+    padding:
+    90px 0 100px;
 }
 
-.hero-logo{
 
-    width:105px;
+/* =====================================================
+   HERO CONTENT
+===================================================== */
 
-    height:105px;
+.hero-content{
+    max-width:760px;
+}
 
-    object-fit:cover;
+.eyebrow{
 
-    border-radius:25px;
+    display:inline-flex;
 
-    margin-bottom:22px;
+    align-items:center;
+
+    gap:8px;
+
+    padding:
+    7px 12px;
+
+    border-radius:999px;
+
+    background:
+    rgba(255,255,255,.07);
 
     border:
-    1px solid rgba(255,255,255,0.18);
+    1px solid
+    rgba(255,255,255,.11);
+
+    color:#bcd6f2;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    margin-bottom:22px;
+}
+
+.eyebrow-dot{
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:#4ee0aa;
 
     box-shadow:
-    0 0 45px rgba(60,150,255,0.35);
+    0 0 12px
+    rgba(78,224,170,.8);
 }
 
 .hero h1{
 
     font-size:
-    clamp(52px,9vw,92px);
+    clamp(52px,7vw,91px);
+
+    line-height:.96;
+
+    letter-spacing:-4px;
 
     font-weight:950;
 
-    letter-spacing:5px;
-
-    line-height:1;
-
-    margin-bottom:15px;
+    margin-bottom:24px;
 }
 
-.hero h1 span{
+.hero h1 .accent{
 
-    color:#5ba7ff;
+    background:
+    linear-gradient(
+        90deg,
+        #58a8ff,
+        #6be2ff
+    );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
 }
 
-.hero-subtitle{
+.hero-lead{
 
     font-size:
-    clamp(19px,3vw,27px);
+    clamp(18px,2vw,22px);
 
-    color:#d2e0f2;
+    color:#d0deed;
 
-    margin-bottom:14px;
+    max-width:700px;
+
+    margin-bottom:15px;
 
     font-weight:600;
 }
 
-.hero-description{
+.hero-copy{
 
-    max-width:700px;
+    color:#91a9c3;
 
-    margin:auto;
+    max-width:650px;
 
-    color:#9fb3cc;
+    font-size:15px;
 
-    font-size:17px;
-
-    margin-bottom:35px;
-}
-
-
-/* =====================================================
-   HERO BADGES
-===================================================== */
-
-.hero-badges{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:10px;
-
-    flex-wrap:wrap;
-
-    margin-bottom:28px;
-}
-
-.hero-badge{
-
-    padding:7px 13px;
-
-    border-radius:30px;
-
-    background:
-    rgba(255,255,255,0.07);
-
-    border:
-    1px solid rgba(255,255,255,0.12);
-
-    color:#c9dcf4;
-
-    font-size:12px;
-
-    font-weight:700;
+    margin-bottom:32px;
 }
 
 
@@ -442,22 +568,43 @@ nav{
    SEARCH
 ===================================================== */
 
+.search-wrapper{
+
+    width:min(760px,100%);
+
+    position:relative;
+
+    margin-bottom:22px;
+}
+
 .search-box{
-
-    max-width:720px;
-
-    margin:auto;
 
     display:flex;
 
+    align-items:center;
+
+    min-height:66px;
+
     padding:7px;
 
-    background:white;
+    border-radius:18px;
 
-    border-radius:16px;
+    background:#fff;
 
     box-shadow:
-    0 18px 55px rgba(0,0,0,0.28);
+    0 25px 70px
+    rgba(0,0,0,.28);
+}
+
+.search-icon{
+
+    width:50px;
+
+    text-align:center;
+
+    font-size:21px;
+
+    color:#6d7f94;
 }
 
 .search-box input{
@@ -466,55 +613,101 @@ nav{
 
     min-width:0;
 
-    border:none;
+    border:0;
 
-    outline:none;
+    outline:0;
 
-    padding:16px 18px;
+    background:transparent;
 
-    font-size:16px;
+    color:#102238;
 
-    color:#172033;
-
-    border-radius:11px;
+    font-size:15px;
 }
 
-.search-box button{
+.search-box input::placeholder{
+    color:#8a98a9;
+}
 
-    border:none;
+.search-button{
 
-    padding:0 25px;
+    min-height:50px;
 
-    border-radius:11px;
+    padding:
+    0 22px;
 
-    background:#1769d1;
+    border:0;
+
+    border-radius:13px;
 
     color:white;
 
-    font-weight:800;
+    font-weight:850;
 
-    cursor:pointer;
+    background:
+    linear-gradient(
+        135deg,
+        #1769d1,
+        #328fff
+    );
 
-    transition:0.25s;
+    box-shadow:
+    0 8px 22px
+    rgba(36,120,255,.25);
+
+    transition:.2s ease;
 }
 
-.search-box button:hover{
+.search-button:hover{
 
-    background:#0d55ae;
+    transform:translateY(-2px);
 
-    transform:translateY(-1px);
+    box-shadow:
+    0 12px 28px
+    rgba(36,120,255,.35);
+}
+
+.search-hint{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    color:#8098b2;
+
+    font-size:11px;
+
+    margin-left:4px;
+}
+
+.kbd{
+
+    padding:
+    3px 7px;
+
+    border-radius:5px;
+
+    border:
+    1px solid
+    rgba(255,255,255,.15);
+
+    background:
+    rgba(255,255,255,.06);
+
+    color:#a9bdd4;
+
+    font-size:10px;
 }
 
 
 /* =====================================================
-   QUICK LINKS
+   HERO ACTIONS
 ===================================================== */
 
-.quick-links{
+.hero-actions{
 
     display:flex;
-
-    justify-content:center;
 
     gap:10px;
 
@@ -523,374 +716,220 @@ nav{
     margin-top:25px;
 }
 
-.quick-links a{
+.hero-action{
 
-    color:#c8daf1;
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:
+    10px 15px;
+
+    border-radius:12px;
 
     border:
-    1px solid rgba(255,255,255,0.14);
+    1px solid
+    rgba(255,255,255,.11);
 
-    padding:7px 13px;
+    background:
+    rgba(255,255,255,.055);
 
-    border-radius:25px;
+    color:#cbdcf0;
 
     font-size:12px;
 
-    font-weight:700;
+    font-weight:750;
 
-    transition:0.25s;
+    transition:.2s;
 }
 
-.quick-links a:hover{
+.hero-action:hover{
 
-    border-color:#4b98ff;
+    color:#fff;
 
     background:
-    rgba(255,255,255,0.07);
+    rgba(255,255,255,.10);
+
+    transform:translateY(-2px);
 }
 
 
 /* =====================================================
-   GENERAL CONTAINER
+   HERO RIGHT RESEARCH PANEL
 ===================================================== */
 
-.container{
+.hero-panel{
 
-    max-width:1200px;
+    position:relative;
 
-    margin:auto;
-
-    padding:80px 25px;
-}
-
-.section-heading{
-
-    text-align:center;
-
-    margin-bottom:40px;
-}
-
-.section-heading h2{
-
-    font-size:36px;
-
-    color:#102d55;
-
-    margin-bottom:8px;
-}
-
-.section-heading p{
-
-    color:#6b7b90;
-
-    font-size:15px;
-}
-
-
-/* =====================================================
-   TRENDING TODAY FEATURE
-===================================================== */
-
-.trending-section{
-
-    padding:
-    75px 25px 85px;
-
-    background:white;
-
-    border-bottom:
-    1px solid #e5eaf1;
-}
-
-.trending-container{
-
-    max-width:1200px;
-
-    margin:auto;
-}
-
-.trending-header{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:flex-end;
-
-    gap:20px;
-
-    margin-bottom:30px;
-}
-
-.trending-title-area{
+    min-height:450px;
 
     display:flex;
 
     align-items:center;
 
-    gap:13px;
+    justify-content:center;
 }
 
-.trending-live{
+.glow{
 
-    width:12px;
+    position:absolute;
 
-    height:12px;
+    width:330px;
+    height:330px;
 
     border-radius:50%;
 
-    background:#ff3d55;
+    background:
+    radial-gradient(
+        circle,
+        rgba(52,151,255,.28),
+        transparent 68%
+    );
 
-    box-shadow:
-    0 0 0 5px rgba(255,61,85,0.10);
+    filter:blur(8px);
 }
 
-.trending-header h2{
-
-    font-size:34px;
-
-    color:#102d55;
-}
-
-.trending-header p{
-
-    color:#718096;
-
-    font-size:14px;
-}
-
-.trending-view{
-
-    color:#1769d1;
-
-    font-weight:800;
-
-    font-size:14px;
-}
-
-.trending-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    1.4fr 1fr 1fr;
-
-    gap:20px;
-}
-
-.trending-card{
+.research-card{
 
     position:relative;
 
-    overflow:hidden;
+    width:min(390px,100%);
 
-    min-height:230px;
+    padding:25px;
 
-    padding:27px;
-
-    border-radius:20px;
-
-    border:
-    1px solid #e4eaf2;
+    border-radius:26px;
 
     background:
     linear-gradient(
         145deg,
-        #ffffff,
-        #f5f9ff
+        rgba(255,255,255,.12),
+        rgba(255,255,255,.045)
     );
 
-    box-shadow:
-    0 10px 30px rgba(20,50,90,0.07);
-
-    transition:0.3s;
-}
-
-.trending-card:hover{
-
-    transform:translateY(-6px);
+    border:
+    1px solid
+    rgba(255,255,255,.14);
 
     box-shadow:
-    0 18px 40px rgba(20,50,90,0.13);
+    0 35px 80px
+    rgba(0,0,0,.25);
+
+    backdrop-filter:blur(20px);
+
+    transform:
+    rotate(1deg);
 }
 
-.trending-card.featured{
+.research-top{
 
-    background:
-    linear-gradient(
-        135deg,
-        #07182f,
-        #104784
-    );
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+}
+
+.research-label{
+
+    color:#a9c4df;
+
+    font-size:10px;
+
+    letter-spacing:1.4px;
+
+    font-weight:850;
+
+    text-transform:uppercase;
+}
+
+.live{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    color:#83e8bf;
+
+    font-size:10px;
+
+    font-weight:800;
+}
+
+.live span{
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:#41dca0;
+
+    box-shadow:
+    0 0 12px
+    rgba(65,220,160,.8);
+}
+
+.research-title{
+
+    font-size:28px;
 
     color:white;
-}
-
-.trending-card-number{
-
-    font-size:12px;
 
     font-weight:900;
 
-    color:#1769d1;
+    line-height:1.15;
 
-    margin-bottom:12px;
-
-    letter-spacing:1px;
+    margin-bottom:10px;
 }
 
-.trending-card.featured
-.trending-card-number{
+.research-desc{
 
-    color:#73b5ff;
+    color:#9db2c9;
+
+    font-size:12px;
+
+    margin-bottom:22px;
 }
 
-.trending-category{
-
-    display:inline-block;
-
-    padding:5px 10px;
-
-    border-radius:20px;
-
-    background:#eaf3ff;
-
-    color:#1769d1;
-
-    font-size:11px;
-
-    font-weight:800;
-
-    margin-bottom:15px;
-}
-
-.trending-card.featured
-.trending-category{
-
-    background:
-    rgba(255,255,255,0.10);
-
-    color:#b9ddff;
-}
-
-.trending-card h3{
-
-    font-size:21px;
-
-    line-height:1.35;
-
-    margin-bottom:12px;
-
-    color:#102d55;
-}
-
-.trending-card.featured h3{
-
-    color:white;
-
-    font-size:27px;
-}
-
-.trending-card p{
-
-    color:#718096;
-
-    font-size:14px;
-
-    margin-bottom:18px;
-}
-
-.trending-card.featured p{
-
-    color:#c5d7eb;
-}
-
-.trending-read{
-
-    font-size:13px;
-
-    color:#1769d1;
-
-    font-weight:800;
-}
-
-.trending-card.featured
-.trending-read{
-
-    color:#74b7ff;
-}
-
-
-/* =====================================================
-   RESOURCE CARDS
-===================================================== */
-
-.resource-grid{
+.research-list{
 
     display:grid;
 
-    grid-template-columns:
-    repeat(4,1fr);
-
-    gap:20px;
+    gap:9px;
 }
 
-.resource-card{
+.research-item{
 
-    background:white;
+    display:flex;
 
-    padding:27px;
+    align-items:center;
 
-    border-radius:18px;
+    gap:12px;
 
-    border:
-    1px solid #e5eaf1;
+    padding:
+    12px;
 
-    box-shadow:
-    0 8px 25px rgba(18,45,80,0.06);
-
-    transition:0.3s;
-
-    position:relative;
-
-    overflow:hidden;
-}
-
-.resource-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:4px;
+    border-radius:13px;
 
     background:
-    linear-gradient(
-        90deg,
-        #1769d1,
-        #38a9ff
-    );
+    rgba(255,255,255,.055);
+
+    border:
+    1px solid
+    rgba(255,255,255,.06);
 }
 
-.resource-card:hover{
+.research-item-icon{
 
-    transform:translateY(-8px);
-
-    box-shadow:
-    0 18px 40px rgba(18,45,80,0.13);
-}
-
-.card-icon{
-
-    width:55px;
-
-    height:55px;
+    width:36px;
+    height:36px;
 
     display:flex;
 
@@ -898,347 +937,1151 @@ nav{
 
     justify-content:center;
 
+    border-radius:10px;
+
+    background:
+    rgba(64,148,255,.16);
+
+    font-size:16px;
+}
+
+.research-item strong{
+
+    display:block;
+
+    color:#edf5ff;
+
+    font-size:12px;
+}
+
+.research-item small{
+
+    display:block;
+
+    color:#7890aa;
+
+    font-size:10px;
+}
+
+.floating-card{
+
+    position:absolute;
+
+    padding:
+    12px 15px;
+
     border-radius:14px;
 
-    background:#edf5ff;
+    background:#fff;
 
-    font-size:26px;
+    color:#15253a;
 
-    margin-bottom:18px;
-}
+    box-shadow:
+    0 20px 50px
+    rgba(0,0,0,.25);
 
-.resource-card h3{
-
-    font-size:20px;
-
-    color:#102d55;
-
-    margin-bottom:9px;
-}
-
-.resource-card p{
-
-    color:#68778c;
-
-    font-size:14px;
-
-    margin-bottom:18px;
-}
-
-.card-button{
-
-    color:#1769d1;
+    font-size:11px;
 
     font-weight:800;
+}
 
-    font-size:13px;
+.floating-card.one{
+
+    top:28px;
+
+    left:-15px;
+}
+
+.floating-card.two{
+
+    bottom:25px;
+
+    right:-18px;
 }
 
 
 /* =====================================================
-   APP
+   TRUST STRIP
 ===================================================== */
 
-.app-download{
+.trust-strip{
+
+    background:#fff;
+
+    border-bottom:
+    1px solid var(--border);
+
+    padding:19px 20px;
+}
+
+.trust-inner{
 
     max-width:1100px;
 
-    margin:
-    10px auto 70px;
+    margin:auto;
 
-    padding:50px 35px;
+    display:flex;
 
-    border-radius:24px;
+    justify-content:center;
 
-    background:
-    linear-gradient(
-        135deg,
-        #07172e,
-        #0d3d78,
-        #1769d1
-    );
+    align-items:center;
 
-    color:white;
+    gap:35px;
+
+    flex-wrap:wrap;
+}
+
+.trust-item{
 
     display:flex;
 
     align-items:center;
 
-    justify-content:space-between;
+    gap:8px;
 
-    gap:40px;
-
-    box-shadow:
-    0 18px 45px rgba(10,45,90,0.18);
-
-    position:relative;
-
-    overflow:hidden;
-}
-
-.app-download-content{
-
-    position:relative;
-
-    z-index:2;
-}
-
-.app-download-badge{
-
-    display:inline-block;
-
-    padding:6px 13px;
-
-    border-radius:20px;
-
-    background:
-    rgba(255,255,255,0.12);
-
-    border:
-    1px solid rgba(255,255,255,0.15);
-
-    color:#cfe5ff;
+    color:#617287;
 
     font-size:11px;
 
-    font-weight:800;
-
-    margin-bottom:13px;
+    font-weight:750;
 }
 
-.app-download h2{
+.trust-icon{
 
-    font-size:31px;
-
-    margin-bottom:10px;
-}
-
-.app-download p{
-
-    color:#c8d9ee;
-
-    max-width:650px;
-
-    margin-bottom:22px;
-}
-
-.app-download-button{
-
-    display:inline-flex;
-
-    padding:13px 21px;
-
-    background:white;
-
-    color:#0b4f9f;
-
-    border-radius:11px;
-
-    font-weight:800;
-
-    transition:0.25s;
-}
-
-.app-download-button:hover{
-
-    transform:translateY(-3px);
-}
-
-.app-download-icon{
-
-    width:120px;
-
-    height:120px;
-
-    object-fit:cover;
-
-    border-radius:25px;
-
-    box-shadow:
-    0 15px 35px rgba(0,0,0,0.25);
+    font-size:16px;
 }
 
 
 /* =====================================================
-   STATISTICS
+   MAIN CONTAINER
 ===================================================== */
 
-.stats-section{
+.container{
 
-    background:#07172e;
-
-    color:white;
-
-    padding:70px 25px;
-}
-
-.stats{
-
-    max-width:1100px;
+    width:min(1200px,92%);
 
     margin:auto;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.section{
+
+    padding:
+    95px 0;
+}
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+
+    gap:25px;
+
+    margin-bottom:35px;
+}
+
+.section-label{
+
+    color:var(--blue);
+
+    text-transform:uppercase;
+
+    letter-spacing:1.7px;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    margin-bottom:8px;
+}
+
+.section-title{
+
+    color:#0a203a;
+
+    font-size:
+    clamp(30px,4vw,43px);
+
+    line-height:1.05;
+
+    letter-spacing:-1.5px;
+
+    font-weight:950;
+}
+
+.section-description{
+
+    max-width:560px;
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    margin-top:10px;
+}
+
+.view-link{
+
+    color:var(--blue);
+
+    font-size:12px;
+
+    font-weight:850;
+
+    white-space:nowrap;
+}
+
+.view-link:hover{
+    text-decoration:underline;
+}
+
+
+/* =====================================================
+   TRENDING
+===================================================== */
+
+.trending-section{
+
+    background:#fff;
+
+    border-bottom:
+    1px solid var(--border);
+}
+
+.trending-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    1.35fr .8fr .8fr;
+
+    gap:18px;
+}
+
+.trend-card{
+
+    position:relative;
+
+    min-height:245px;
+
+    padding:25px;
+
+    border-radius:22px;
+
+    border:
+    1px solid var(--border);
+
+    background:
+    linear-gradient(
+        145deg,
+        #fff,
+        #f6f9fd
+    );
+
+    overflow:hidden;
+
+    transition:.25s ease;
+}
+
+.trend-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    var(--shadow);
+}
+
+.trend-card.featured{
+
+    color:#fff;
+
+    border:0;
+
+    background:
+    radial-gradient(
+        circle at 90% 10%,
+        rgba(78,185,255,.25),
+        transparent 30%
+    ),
+    linear-gradient(
+        135deg,
+        #06162a,
+        #0c3b72
+    );
+
+    box-shadow:
+    0 20px 55px
+    rgba(5,38,78,.2);
+}
+
+.trend-rank{
+
+    color:var(--blue);
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    margin-bottom:16px;
+}
+
+.featured .trend-rank{
+    color:#6ebcff;
+}
+
+.trend-category{
+
+    display:inline-flex;
+
+    padding:
+    5px 9px;
+
+    border-radius:999px;
+
+    background:#eaf3ff;
+
+    color:#1769d1;
+
+    font-size:9px;
+
+    font-weight:900;
+
+    margin-bottom:14px;
+}
+
+.featured .trend-category{
+
+    background:
+    rgba(255,255,255,.09);
+
+    color:#bce0ff;
+}
+
+.trend-card h3{
+
+    color:#102a47;
+
+    font-size:19px;
+
+    line-height:1.3;
+
+    margin-bottom:10px;
+}
+
+.featured h3{
+
+    color:#fff;
+
+    font-size:28px;
+
+    max-width:500px;
+}
+
+.trend-card p{
+
+    color:#708096;
+
+    font-size:12px;
+
+    max-width:520px;
+
+    margin-bottom:19px;
+}
+
+.featured p{
+    color:#a9bfd6;
+}
+
+.trend-link{
+
+    color:var(--blue);
+
+    font-size:11px;
+
+    font-weight:900;
+}
+
+.featured .trend-link{
+    color:#75bdff;
+}
+
+
+/* =====================================================
+   EXPLORE CARDS
+===================================================== */
+
+.explore-section{
+    background:var(--bg);
+}
+
+.explore-grid{
 
     display:grid;
 
     grid-template-columns:
     repeat(4,1fr);
 
-    gap:18px;
+    gap:16px;
+}
+
+.explore-card{
+
+    position:relative;
+
+    padding:25px;
+
+    min-height:245px;
+
+    background:#fff;
+
+    border:
+    1px solid var(--border);
+
+    border-radius:22px;
+
+    box-shadow:
+    0 8px 25px
+    rgba(15,45,80,.045);
+
+    transition:.25s;
+}
+
+.explore-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:
+    var(--shadow);
+}
+
+.explore-number{
+
+    position:absolute;
+
+    top:18px;
+    right:20px;
+
+    color:#dbe4ee;
+
+    font-size:12px;
+
+    font-weight:900;
+}
+
+.explore-icon{
+
+    width:53px;
+    height:53px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:#edf5ff;
+
+    font-size:24px;
+
+    margin-bottom:20px;
+}
+
+.explore-card h3{
+
+    color:#102944;
+
+    font-size:19px;
+
+    margin-bottom:8px;
+}
+
+.explore-card p{
+
+    color:#718096;
+
+    font-size:12px;
+
+    margin-bottom:20px;
+}
+
+.explore-link{
+
+    color:#1769d1;
+
+    font-size:11px;
+
+    font-weight:900;
+}
+
+
+/* =====================================================
+   FEATURED CASE
+===================================================== */
+
+.case-section{
+
+    background:#fff;
+}
+
+.case-layout{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:30px;
+
+    align-items:stretch;
+}
+
+.case-intro{
+
+    padding:40px;
+
+    border-radius:25px;
+
+    color:#fff;
+
+    background:
+    radial-gradient(
+        circle at 80% 20%,
+        rgba(71,169,255,.22),
+        transparent 30%
+    ),
+    linear-gradient(
+        135deg,
+        #06182f,
+        #0d427c
+    );
+
+    box-shadow:
+    var(--shadow-lg);
+}
+
+.case-badge{
+
+    display:inline-flex;
+
+    padding:
+    6px 10px;
+
+    border-radius:999px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    color:#b9dfff;
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    margin-bottom:20px;
+}
+
+.case-intro h2{
+
+    font-size:
+    clamp(29px,4vw,45px);
+
+    line-height:1.05;
+
+    margin-bottom:15px;
+}
+
+.case-intro p{
+
+    color:#b2c8df;
+
+    font-size:13px;
+
+    max-width:500px;
+
+    margin-bottom:25px;
+}
+
+.case-button{
+
+    display:inline-flex;
+
+    padding:
+    11px 15px;
+
+    border-radius:11px;
+
+    background:#fff;
+
+    color:#0a4f9e;
+
+    font-size:11px;
+
+    font-weight:900;
+}
+
+.case-card{
+
+    padding:38px;
+
+    border:
+    1px solid var(--border);
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #ffffff,
+        #f6f9fd
+    );
+}
+
+.case-meta{
+
+    display:flex;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:20px;
+}
+
+.meta{
+
+    padding:
+    5px 9px;
+
+    border-radius:8px;
+
+    background:#edf4fc;
+
+    color:#536a83;
+
+    font-size:9px;
+
+    font-weight:800;
+}
+
+.case-card h3{
+
+    color:#102a47;
+
+    font-size:25px;
+
+    line-height:1.25;
+
+    margin-bottom:13px;
+}
+
+.case-card p{
+
+    color:#718096;
+
+    font-size:13px;
+
+    margin-bottom:20px;
+}
+
+.case-card-link{
+
+    color:var(--blue);
+
+    font-size:11px;
+
+    font-weight:900;
+}
+
+
+/* =====================================================
+   NEWS / CURRENT DEVELOPMENTS
+===================================================== */
+
+.news-section{
+
+    background:
+    linear-gradient(
+        180deg,
+        #f5f7fb,
+        #eef3f9
+    );
+}
+
+.news-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:17px;
+}
+
+.news-card{
+
+    background:#fff;
+
+    border:
+    1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:24px;
+
+    transition:.25s;
+}
+
+.news-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow);
+}
+
+.news-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+}
+
+.news-category{
+
+    color:#1769d1;
+
+    background:#edf5ff;
+
+    border-radius:999px;
+
+    padding:5px 9px;
+
+    font-size:9px;
+
+    font-weight:900;
+}
+
+.news-time{
+
+    color:#9aa7b7;
+
+    font-size:9px;
+}
+
+.news-card h3{
+
+    color:#132b47;
+
+    font-size:17px;
+
+    line-height:1.35;
+
+    margin-bottom:10px;
+}
+
+.news-card p{
+
+    color:#748297;
+
+    font-size:12px;
+
+    margin-bottom:18px;
+}
+
+.news-link{
+
+    color:#1769d1;
+
+    font-size:10px;
+
+    font-weight:900;
+}
+
+
+/* =====================================================
+   APP CTA
+===================================================== */
+
+.app-section{
+
+    padding:
+    35px 0 95px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #eef3f9,
+        var(--bg)
+    );
+}
+
+.app-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    padding:
+    45px;
+
+    border-radius:28px;
+
+    color:#fff;
+
+    background:
+    radial-gradient(
+        circle at 90% 20%,
+        rgba(71,185,255,.22),
+        transparent 28%
+    ),
+    linear-gradient(
+        135deg,
+        #06162b,
+        #0b3970
+    );
+
+    box-shadow:
+    0 25px 65px
+    rgba(7,37,72,.18);
+}
+
+.app-card h2{
+
+    font-size:
+    clamp(28px,4vw,42px);
+
+    line-height:1.05;
+
+    margin-bottom:12px;
+}
+
+.app-card p{
+
+    color:#b5cbe0;
+
+    max-width:650px;
+
+    font-size:13px;
+
+    margin-bottom:22px;
+}
+
+.app-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:
+    12px 17px;
+
+    border-radius:11px;
+
+    background:#fff;
+
+    color:#0a4f9d;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    transition:.2s;
+}
+
+.app-button:hover{
+    transform:translateY(-2px);
+}
+
+.app-logo{
+
+    width:120px;
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:28px;
+
+    box-shadow:
+    0 20px 45px
+    rgba(0,0,0,.3);
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats-section{
+
+    padding:
+    70px 0;
+
+    color:#fff;
+
+    background:#041426;
+}
+
+.stats-header{
+
+    text-align:center;
+
+    margin-bottom:38px;
+}
+
+.stats-header h2{
+
+    font-size:
+    clamp(28px,4vw,40px);
+
+    margin-bottom:7px;
+}
+
+.stats-header p{
+
+    color:#8fa5bd;
+
+    font-size:12px;
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:14px;
 }
 
 .stat{
 
     text-align:center;
 
-    padding:25px;
+    padding:28px 18px;
+
+    border-radius:18px;
 
     background:
-    rgba(255,255,255,0.05);
+    rgba(255,255,255,.045);
 
     border:
-    1px solid rgba(255,255,255,0.08);
-
-    border-radius:16px;
+    1px solid
+    rgba(255,255,255,.07);
 }
 
-.stat-number{
+.stat-value{
 
-    font-size:32px;
+    color:#63b0ff;
 
-    font-weight:900;
+    font-size:30px;
 
-    color:#61a9ff;
+    font-weight:950;
 
-    margin-bottom:4px;
+    margin-bottom:3px;
 }
 
 .stat-label{
 
-    color:#aebfd5;
+    color:#a5b8cc;
 
-    font-size:13px;
+    font-size:10px;
+
+    font-weight:700;
 }
 
 
 /* =====================================================
-   WHY
+   WHY PENDICO
 ===================================================== */
 
 .why-section{
 
-    max-width:1200px;
-
-    margin:auto;
-
-    padding:80px 25px;
+    background:#fff;
 }
 
-.features{
+.why-grid{
 
     display:grid;
 
     grid-template-columns:
     repeat(4,1fr);
 
-    gap:20px;
+    gap:16px;
 }
 
-.feature{
+.why-card{
 
     padding:27px;
 
-    border-radius:17px;
-
-    background:white;
-
     border:
-    1px solid #e6ebf2;
+    1px solid var(--border);
 
-    transition:0.3s;
+    border-radius:20px;
+
+    background:#fff;
+
+    transition:.25s;
 }
 
-.feature:hover{
+.why-card:hover{
 
     transform:translateY(-5px);
 
-    box-shadow:
-    0 12px 30px rgba(0,0,0,0.08);
+    box-shadow:var(--shadow);
 }
 
-.feature h3{
+.why-icon{
 
-    color:#123d70;
+    font-size:23px;
 
-    margin-bottom:9px;
-
-    font-size:18px;
+    margin-bottom:15px;
 }
 
-.feature p{
+.why-card h3{
 
-    color:#69788c;
+    color:#102944;
 
-    font-size:14px;
+    font-size:17px;
+
+    margin-bottom:7px;
+}
+
+.why-card p{
+
+    color:#718096;
+
+    font-size:12px;
 }
 
 
 /* =====================================================
-   CTA
+   FINAL CTA
 ===================================================== */
 
-.cta{
+.final-section{
 
-    margin:
-    20px auto 80px;
+    padding:
+    25px 0 90px;
 
-    max-width:1100px;
+    background:#fff;
+}
 
-    padding:55px 30px;
+.final-card{
 
     text-align:center;
 
-    border-radius:24px;
+    padding:
+    65px 25px;
 
-    color:white;
+    border-radius:28px;
+
+    color:#fff;
 
     background:
+    radial-gradient(
+        circle at 50% 0%,
+        rgba(70,177,255,.25),
+        transparent 35%
+    ),
     linear-gradient(
         135deg,
-        #0a3470,
-        #1769d1
+        #071a32,
+        #0d4a8e
     );
 
     box-shadow:
-    0 15px 40px rgba(18,72,140,0.2);
+    var(--shadow-lg);
 }
 
-.cta h2{
+.final-card h2{
 
-    font-size:32px;
+    font-size:
+    clamp(30px,5vw,48px);
 
-    margin-bottom:10px;
+    line-height:1.05;
+
+    margin-bottom:13px;
 }
 
-.cta p{
+.final-card p{
 
-    color:#d5e4f7;
+    color:#bcd0e5;
 
-    margin-bottom:25px;
+    max-width:600px;
+
+    margin:
+    0 auto 25px;
+
+    font-size:13px;
 }
 
-.cta-button{
+.final-buttons{
 
-    display:inline-block;
+    display:flex;
 
-    padding:13px 25px;
+    justify-content:center;
 
-    background:white;
+    gap:10px;
 
-    color:#0c4d9d;
+    flex-wrap:wrap;
+}
 
-    border-radius:10px;
+.final-primary,
+.final-secondary{
 
-    font-weight:800;
+    padding:
+    12px 17px;
+
+    border-radius:11px;
+
+    font-size:11px;
+
+    font-weight:900;
+}
+
+.final-primary{
+
+    color:#0a4f9d;
+
+    background:#fff;
+}
+
+.final-secondary{
+
+    color:#d5e5f5;
+
+    background:
+    rgba(255,255,255,.07);
+
+    border:
+    1px solid
+    rgba(255,255,255,.12);
 }
 
 
@@ -1248,247 +2091,437 @@ nav{
 
 footer{
 
-    background:#041021;
+    padding:
+    55px 20px 30px;
 
-    color:#91a3ba;
+    color:#8095ad;
 
-    padding:45px 25px;
+    background:#030d19;
 
-    text-align:center;
+    border-top:
+    1px solid
+    rgba(255,255,255,.05);
 }
 
-.footer-logo{
+.footer-inner{
 
-    color:white;
+    width:min(1100px,92%);
 
-    font-size:25px;
+    margin:auto;
 
-    font-weight:900;
+    display:grid;
+
+    grid-template-columns:
+    1.3fr 1fr 1fr;
+
+    gap:50px;
+
+    padding-bottom:35px;
+
+    border-bottom:
+    1px solid
+    rgba(255,255,255,.07);
+}
+
+.footer-brand{
+
+    color:#fff;
+
+    font-size:22px;
+
+    font-weight:950;
 
     letter-spacing:2px;
 
-    margin-bottom:7px;
+    margin-bottom:8px;
 }
 
-footer p{
+.footer-about{
 
-    font-size:13px;
+    max-width:350px;
 
-    margin-bottom:15px;
+    color:#788da5;
+
+    font-size:11px;
+}
+
+.footer-column h4{
+
+    color:#fff;
+
+    font-size:11px;
+
+    margin-bottom:14px;
 }
 
 .footer-links{
 
-    display:flex;
+    display:grid;
 
-    justify-content:center;
-
-    gap:20px;
-
-    flex-wrap:wrap;
+    gap:8px;
 }
 
 .footer-links a{
 
-    color:#9eb1c8;
+    color:#8296ad;
 
-    font-size:13px;
+    font-size:11px;
+
+    transition:.2s;
 }
 
 .footer-links a:hover{
+    color:#fff;
+}
 
-    color:white;
+.footer-bottom{
+
+    width:min(1100px,92%);
+
+    margin:auto;
+
+    padding-top:22px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    color:#637890;
+
+    font-size:10px;
 }
 
 
 /* =====================================================
-   MOBILE
+   MOBILE MENU BUTTON
 ===================================================== */
 
-@media(max-width:900px){
+.mobile-menu{
 
-    .resource-grid{
+    display:none;
 
+    width:42px;
+    height:42px;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:
+    1px solid
+    rgba(255,255,255,.1);
+
+    background:
+    rgba(255,255,255,.05);
+
+    color:#fff;
+
+    border-radius:11px;
+
+    font-size:19px;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+.research-card{
+    animation:
+    float 6s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1050px){
+
+    .nav-links a{
+        padding:8px 7px;
+        font-size:10px;
+    }
+
+    .hero-inner{
+
+        grid-template-columns:
+        1fr;
+
+        text-align:center;
+
+        gap:45px;
+    }
+
+    .hero-content{
+        margin:auto;
+    }
+
+    .hero-copy{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .search-wrapper{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-actions{
+        justify-content:center;
+    }
+
+    .hero-panel{
+        min-height:390px;
+    }
+
+    .research-card{
+        transform:none;
+    }
+
+    .explore-grid{
         grid-template-columns:
         repeat(2,1fr);
     }
 
-    .features{
-
+    .why-grid{
         grid-template-columns:
         repeat(2,1fr);
-    }
-
-    .stats{
-
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-
-    .trending-grid{
-
-        grid-template-columns:
-        1fr 1fr;
-    }
-
-    .trending-card.featured{
-
-        grid-column:
-        1 / -1;
     }
 }
 
 
-@media(max-width:700px){
+@media(max-width:850px){
 
-    nav{
+    .navbar{
+        height:auto;
+        min-height:66px;
+    }
 
-        flex-direction:column;
-
-        gap:9px;
-
-        padding:11px 12px;
+    .mobile-menu{
+        display:flex;
     }
 
     .nav-links{
 
-        justify-content:center;
+        display:none;
+
+        position:absolute;
+
+        left:10px;
+        right:10px;
+        top:64px;
+
+        padding:10px;
+
+        border-radius:16px;
+
+        background:
+        rgba(4,17,34,.98);
+
+        border:
+        1px solid
+        rgba(255,255,255,.1);
+
+        box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.3);
+
+        flex-direction:column;
+
+        align-items:stretch;
+    }
+
+    .nav-links.open{
+        display:flex;
     }
 
     .nav-links a{
-
-        padding:6px 7px;
-
-        font-size:11px;
-    }
-
-    .hero{
-
-        min-height:650px;
-
-        padding:65px 18px;
-    }
-
-    .hero-logo{
-
-        width:82px;
-
-        height:82px;
-    }
-
-    .hero h1{
-
-        font-size:48px;
-
-        letter-spacing:3px;
-    }
-
-    .hero-description{
-
-        font-size:14px;
-    }
-
-    .search-box{
-
-        flex-direction:column;
-
-        gap:7px;
-    }
-
-    .search-box button{
-
-        padding:13px;
-    }
-
-    .container{
-
-        padding:
-        60px 18px;
-    }
-
-    .section-heading h2{
-
-        font-size:29px;
-    }
-
-    .trending-section{
-
-        padding:
-        55px 18px 65px;
-    }
-
-    .trending-header{
-
-        align-items:flex-start;
-
-        flex-direction:column;
-
-        gap:10px;
-    }
-
-    .trending-header h2{
-
-        font-size:28px;
+        width:100%;
+        text-align:center;
+        padding:10px;
     }
 
     .trending-grid{
-
-        grid-template-columns:1fr;
+        grid-template-columns:
+        1fr 1fr;
     }
 
-    .trending-card.featured{
+    .trend-card.featured{
+        grid-column:
+        1 / -1;
+    }
 
+    .case-layout{
+        grid-template-columns:
+        1fr;
+    }
+
+    .news-grid{
+        grid-template-columns:
+        1fr;
+    }
+
+    .stats-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .footer-inner{
+        grid-template-columns:
+        1fr 1fr;
+    }
+}
+
+
+@media(max-width:600px){
+
+    .hero-inner{
+        width:90%;
+        padding:
+        65px 0 75px;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+
+    .hero-lead{
+        font-size:17px;
+    }
+
+    .hero-copy{
+        font-size:13px;
+    }
+
+    .search-box{
+        min-height:auto;
+
+        flex-wrap:wrap;
+
+        padding:6px;
+    }
+
+    .search-icon{
+        width:43px;
+    }
+
+    .search-box input{
+        height:52px;
+    }
+
+    .search-button{
+        width:100%;
+        min-height:48px;
+    }
+
+    .search-hint{
+        display:none;
+    }
+
+    .floating-card{
+        display:none;
+    }
+
+    .hero-panel{
+        min-height:340px;
+    }
+
+    .research-card{
+        width:100%;
+    }
+
+    .section{
+        padding:70px 0;
+    }
+
+    .section-header{
+        display:block;
+    }
+
+    .view-link{
+        display:inline-block;
+        margin-top:15px;
+    }
+
+    .trending-grid{
+        grid-template-columns:
+        1fr;
+    }
+
+    .trend-card.featured{
         grid-column:auto;
     }
 
-    .trending-card.featured h3{
-
-        font-size:23px;
+    .featured h3{
+        font-size:24px;
     }
 
-    .resource-grid{
-
-        grid-template-columns:1fr;
+    .explore-grid{
+        grid-template-columns:
+        1fr;
     }
 
-    .features{
-
-        grid-template-columns:1fr;
+    .case-intro,
+    .case-card{
+        padding:28px;
     }
 
-    .stats{
-
-        grid-template-columns:1fr 1fr;
-    }
-
-    .app-download{
-
-        margin:
-        10px 18px 55px;
-
-        padding:
-        40px 25px;
-
+    .app-card{
         flex-direction:column;
-
         text-align:center;
+        padding:32px 23px;
     }
 
-    .app-download-icon{
-
+    .app-logo{
         width:90px;
-
         height:90px;
-
         order:-1;
     }
 
-    .cta{
-
-        margin:
-        10px 18px 60px;
+    .stats-grid{
+        grid-template-columns:
+        1fr 1fr;
     }
 
+    .why-grid{
+        grid-template-columns:
+        1fr;
+    }
+
+    .final-card{
+        padding:
+        50px 20px;
+    }
+
+    .footer-inner{
+        grid-template-columns:
+        1fr;
+        gap:28px;
+    }
+
+    .footer-bottom{
+        display:block;
+    }
+
+    .footer-bottom div + div{
+        margin-top:8px;
+    }
 }
 
 </style>
@@ -1503,55 +2536,87 @@ footer p{
      NAVIGATION
 ===================================================== -->
 
-<nav>
+<nav class="navbar">
 
 <a href="index.html"
-class="nav-brand">
+class="brand"
+aria-label="Pendico Home">
 
 <img
 src="logo.png.jpeg"
-alt="Pendico">
+class="brand-logo"
+alt="Pendico logo">
 
-<span>PENDICO</span>
+<span class="brand-name">
+PENDI<span class="brand-dot">CO</span>
+</span>
 
 </a>
 
 
-<div class="nav-links">
+<button
+class="mobile-menu"
+id="mobileMenu"
+aria-label="Open navigation menu"
+aria-expanded="false">
 
-<a href="index.html">
+☰
+
+</button>
+
+
+<div
+class="nav-links"
+id="navLinks">
+
+<a href="index.html"
+class="active">
+
 Home
+
 </a>
 
 <a href="bareacts.html">
+
 Bare Acts
+
 </a>
 
 <a href="caselaws.html">
+
 Case Laws
+
 </a>
 
 <a href="articles.html">
+
 Articles
+
 </a>
 
 <a href="legalnews.html">
+
 Legal News
+
 </a>
 
 <a href="trending.html"
-class="trending-link">
+class="active">
 
-🔥 Trending Today
+🔥 Trending
 
 </a>
 
 <a href="about.html">
+
 About
+
 </a>
 
 <a href="contact.html">
+
 Contact
+
 </a>
 
 </div>
@@ -1565,65 +2630,67 @@ Contact
 
 <header class="hero">
 
+<div class="hero-inner">
+
+
 <div class="hero-content">
 
 
-<img
-src="logo.png.jpeg"
-class="hero-logo"
-alt="Pendico">
+<div class="eyebrow">
 
+<span class="eyebrow-dot"></span>
 
-<div class="hero-badges">
-
-<span class="hero-badge">
-⚖️ Indian Law
-</span>
-
-<span class="hero-badge">
-📰 Legal News
-</span>
-
-<span class="hero-badge">
-🔥 Trending India
-</span>
-
-<span class="hero-badge">
-🎓 Student Friendly
-</span>
+INDIAN LEGAL INFORMATION PLATFORM
 
 </div>
 
 
 <h1>
-PENDI<span>CO</span>
+
+Understand India.<br>
+
+Understand the <span class="accent">Law.</span>
+
 </h1>
 
 
-<p class="hero-subtitle">
+<p class="hero-lead">
 
-Indian Legal Information & Knowledge Platform
+Indian legal information, case law and important
+developments — brought together in one place.
+
+</p>
+
+
+<p class="hero-copy">
+
+Explore Bare Acts, landmark judgments, legal articles,
+legal news and the topics attracting attention across India.
+Designed to make legal information easier to discover,
+understand and navigate.
 
 </p>
 
 
-<p class="hero-description">
-
-Explore Indian Bare Acts, landmark judgments,
-legal articles, legal developments and the
-things India is talking about today.
-
-</p>
-
+<div class="search-wrapper">
 
 <div class="search-box">
+
+<div class="search-icon">
+
+⌕
+
+</div>
 
 <input
 type="text"
 id="searchInput"
-placeholder="Search Pendico — Acts, Cases, Articles...">
+autocomplete="off"
+aria-label="Search Pendico"
+placeholder="Search BNS, BNSS, case laws, articles...">
 
 <button
+class="search-button"
 onclick="searchContent()">
 
 Search
@@ -1632,32 +2699,211 @@ Search
 
 </div>
 
+<div class="search-hint">
 
-<div class="quick-links">
+⌨️ Search Pendico
 
-<a href="bareacts.html">
-BNS
+<span class="kbd">
+ENTER
+</span>
+
+</div>
+
+</div>
+
+
+<div class="hero-actions">
+
+<a href="bareacts.html"
+class="hero-action">
+
+📚 Explore Bare Acts
+
 </a>
 
-<a href="bnss.html">
-BNSS
+<a href="caselaws.html"
+class="hero-action">
+
+⚖️ Explore Case Laws
+
 </a>
 
-<a href="caselaws.html">
-Landmark Cases
+<a href="legalnews.html"
+class="hero-action">
+
+📰 Legal News
+
 </a>
 
-<a href="articles.html">
-Articles
-</a>
+<a href="trending.html"
+class="hero-action">
 
-<a href="legalnews.html">
-Legal News
-</a>
-
-<a href="trending.html">
 🔥 Trending Today
+
 </a>
+
+</div>
+
+
+</div>
+
+
+<!-- =====================================================
+     HERO VISUAL
+===================================================== -->
+
+<div class="hero-panel">
+
+<div class="glow"></div>
+
+
+<div class="floating-card one">
+
+⚖️ Legal Research
+
+</div>
+
+
+<div class="research-card">
+
+
+<div class="research-top">
+
+<span class="research-label">
+
+PENDICO DISCOVERY
+
+</span>
+
+<span class="live">
+
+<span></span>
+
+LIVE PLATFORM
+
+</span>
+
+</div>
+
+
+<div class="research-title">
+
+Your starting point<br>
+for Indian law.
+
+</div>
+
+
+<div class="research-desc">
+
+Find legal resources and important
+developments without navigating
+through a cluttered interface.
+
+</div>
+
+
+<div class="research-list">
+
+
+<a href="bareacts.html"
+class="research-item">
+
+<div class="research-item-icon">
+📚
+</div>
+
+<div>
+
+<strong>
+Bare Acts
+</strong>
+
+<small>
+Legislation & sections
+</small>
+
+</div>
+
+</a>
+
+
+<a href="caselaws.html"
+class="research-item">
+
+<div class="research-item-icon">
+⚖️
+</div>
+
+<div>
+
+<strong>
+Case Laws
+</strong>
+
+<small>
+Landmark judgments
+</small>
+
+</div>
+
+</a>
+
+
+<a href="articles.html"
+class="research-item">
+
+<div class="research-item-icon">
+📝
+</div>
+
+<div>
+
+<strong>
+Legal Articles
+</strong>
+
+<small>
+Clear legal explanations
+</small>
+
+</div>
+
+</a>
+
+
+<a href="legalnews.html"
+class="research-item">
+
+<div class="research-item-icon">
+📰
+</div>
+
+<div>
+
+<strong>
+Legal News
+</strong>
+
+<small>
+Current developments
+</small>
+
+</div>
+
+</a>
+
+
+</div>
+
+</div>
+
+
+<div class="floating-card two">
+
+🔥 Trending India
+
+</div>
 
 </div>
 
@@ -1667,39 +2913,99 @@ Legal News
 
 
 <!-- =====================================================
-     TRENDING TODAY
+     TRUST STRIP
 ===================================================== -->
 
-<section class="trending-section">
+<section class="trust-strip">
 
-<div class="trending-container">
+<div class="trust-inner">
 
+<div class="trust-item">
 
-<div class="trending-header">
+<span class="trust-icon">⚖️</span>
 
-<div>
-
-<div class="trending-title-area">
-
-<span class="trending-live"></span>
-
-<h2>
-Trending Today
-</h2>
+Indian Legal Resources
 
 </div>
 
-<p>
-Discover what is attracting attention across India today.
+<div class="trust-item">
+
+<span class="trust-icon">📚</span>
+
+Acts & Sections
+
+</div>
+
+<div class="trust-item">
+
+<span class="trust-icon">🏛️</span>
+
+Landmark Judgments
+
+</div>
+
+<div class="trust-item">
+
+<span class="trust-icon">📰</span>
+
+Legal Developments
+
+</div>
+
+<div class="trust-item">
+
+<span class="trust-icon">🚀</span>
+
+Fast & Free
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     TRENDING TODAY
+===================================================== -->
+
+<section class="section trending-section">
+
+<div class="container">
+
+
+<div class="section-header">
+
+<div>
+
+<div class="section-label">
+
+🔥 TRENDING TODAY
+
+</div>
+
+<h2 class="section-title">
+
+What is India<br>
+talking about?
+
+</h2>
+
+<p class="section-description">
+
+Discover important legal developments,
+national topics and stories attracting
+attention across India.
+
 </p>
 
 </div>
 
 
 <a href="trending.html"
-class="trending-view">
+class="view-link">
 
-View all → 
+View Trending Today →
 
 </a>
 
@@ -1709,30 +3015,37 @@ View all →
 <div class="trending-grid">
 
 
-<!-- FEATURED -->
+<article class="trend-card featured">
 
-<article class="trending-card featured">
+<div class="trend-rank">
 
-<div class="trending-card-number">
 01 · FEATURED
+
 </div>
 
-<span class="trending-category">
+<span class="trend-category">
+
 🇮🇳 INDIA
+
 </span>
 
 <h3>
-What is India talking about today?
+
+The topics shaping today's
+conversation.
+
 </h3>
 
 <p>
-Explore the latest major developments,
-public-interest stories, technology,
+
+Explore the latest developments,
+public-interest topics, technology,
 sports, entertainment and more.
+
 </p>
 
 <a href="trending.html"
-class="trending-read">
+class="trend-link">
 
 Explore Trending Today →
 
@@ -1741,60 +3054,72 @@ Explore Trending Today →
 </article>
 
 
-<!-- CARD -->
+<article class="trend-card">
 
-<article class="trending-card">
+<div class="trend-rank">
 
-<div class="trending-card-number">
 02
+
 </div>
 
-<span class="trending-category">
+<span class="trend-category">
+
 ⚖️ LAW
+
 </span>
 
 <h3>
+
 Important legal developments
+
 </h3>
 
 <p>
+
 Major judgments, legal developments
 and issues attracting attention.
+
 </p>
 
-<a href="trending.html"
-class="trending-read">
+<a href="legalnews.html"
+class="trend-link">
 
-Read more →
+Explore Legal News →
 
 </a>
 
 </article>
 
 
-<!-- CARD -->
+<article class="trend-card">
 
-<article class="trending-card">
+<div class="trend-rank">
 
-<div class="trending-card-number">
 03
+
 </div>
 
-<span class="trending-category">
+<span class="trend-category">
+
 🇮🇳 INDIA
+
 </span>
 
 <h3>
+
 Major developments across India
+
 </h3>
 
 <p>
-Important national developments
-and stories people are following.
+
+Follow important national developments
+and topics people are discussing.
+
 </p>
 
 <a href="trending.html"
-class="trending-read">
+class="trend-link">
 
 Explore →
 
@@ -1811,30 +3136,54 @@ Explore →
 
 
 <!-- =====================================================
-     EXPLORE
+     EXPLORE PENDICO
 ===================================================== -->
 
-<section class="container">
+<section class="section explore-section">
 
-<div class="section-heading">
+<div class="container">
 
-<h2>
-Explore Pendico
+
+<div class="section-header">
+
+<div>
+
+<div class="section-label">
+
+EXPLORE
+
+</div>
+
+<h2 class="section-title">
+
+Everything you need<br>
+to explore Indian law.
+
 </h2>
 
-<p>
-Legal knowledge, current developments and useful resources.
+<p class="section-description">
+
+Start with legislation, judgments,
+legal writing or current developments.
+
 </p>
 
 </div>
 
+</div>
 
-<div class="resource-grid">
+
+<div class="explore-grid">
 
 
-<div class="resource-card">
+<a href="bareacts.html"
+class="explore-card">
 
-<div class="card-icon">
+<span class="explore-number">
+01
+</span>
+
+<div class="explore-icon">
 📚
 </div>
 
@@ -1843,23 +3192,27 @@ Bare Acts
 </h3>
 
 <p>
-Browse important Indian legislation including
-BNS, BNSS, BSA and other laws.
+
+Browse Indian legislation including
+BNS, BNSS, BSA and other legal materials.
+
 </p>
 
-<a href="bareacts.html"
-class="card-button">
-
+<span class="explore-link">
 Explore Bare Acts →
+</span>
 
 </a>
 
-</div>
 
+<a href="caselaws.html"
+class="explore-card">
 
-<div class="resource-card">
+<span class="explore-number">
+02
+</span>
 
-<div class="card-icon">
+<div class="explore-icon">
 ⚖️
 </div>
 
@@ -1868,23 +3221,27 @@ Case Laws
 </h3>
 
 <p>
-Explore landmark Supreme Court and High Court
-judgments and important precedents.
+
+Discover landmark Supreme Court and
+High Court judgments and precedents.
+
 </p>
 
-<a href="caselaws.html"
-class="card-button">
-
+<span class="explore-link">
 Explore Case Laws →
+</span>
 
 </a>
 
-</div>
 
+<a href="articles.html"
+class="explore-card">
 
-<div class="resource-card">
+<span class="explore-number">
+03
+</span>
 
-<div class="card-icon">
+<div class="explore-icon">
 📝
 </div>
 
@@ -1893,23 +3250,27 @@ Legal Articles
 </h3>
 
 <p>
-Understand important legal concepts through
-clear and student-friendly articles.
+
+Read clear explanations of important
+legal concepts and developments.
+
 </p>
 
-<a href="articles.html"
-class="card-button">
-
+<span class="explore-link">
 Read Articles →
+</span>
 
 </a>
 
-</div>
 
+<a href="legalnews.html"
+class="explore-card">
 
-<div class="resource-card">
+<span class="explore-number">
+04
+</span>
 
-<div class="card-icon">
+<div class="explore-icon">
 📰
 </div>
 
@@ -1918,19 +3279,285 @@ Legal News
 </h3>
 
 <p>
+
 Follow important court decisions and
 developments in Indian law.
+
 </p>
 
-<a href="legalnews.html"
-class="card-button">
-
+<span class="explore-link">
 Read Legal News →
+</span>
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CASE LAW SPOTLIGHT
+===================================================== -->
+
+<section class="section case-section">
+
+<div class="container">
+
+
+<div class="case-layout">
+
+
+<div class="case-intro">
+
+<span class="case-badge">
+
+CASE LAW SPOTLIGHT
+
+</span>
+
+<h2>
+
+The judgments that
+shape Indian law.
+
+</h2>
+
+<p>
+
+Explore important constitutional,
+criminal, civil and public-law decisions
+through Pendico's growing case-law library.
+
+</p>
+
+<a href="caselaws.html"
+class="case-button">
+
+Explore Case Laws →
 
 </a>
 
 </div>
 
+
+<div class="case-card">
+
+<div class="case-meta">
+
+<span class="meta">
+SUPREME COURT
+</span>
+
+<span class="meta">
+LANDMARK CASE
+</span>
+
+<span class="meta">
+CONSTITUTIONAL LAW
+</span>
+
+</div>
+
+<h3>
+
+Discover landmark judgments
+and legal principles.
+
+</h3>
+
+<p>
+
+Search Pendico's case-law collection to
+explore important judgments, facts,
+legal issues, holdings and principles.
+
+</p>
+
+<a href="caselaws.html"
+class="case-card-link">
+
+Open Case Law Library →
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CURRENT DEVELOPMENTS
+===================================================== -->
+
+<section class="section news-section">
+
+<div class="container">
+
+
+<div class="section-header">
+
+<div>
+
+<div class="section-label">
+
+CURRENT DEVELOPMENTS
+
+</div>
+
+<h2 class="section-title">
+
+Stay informed.<br>
+Know what changed.
+
+</h2>
+
+<p class="section-description">
+
+Explore important developments through
+Pendico's legal news and trending sections.
+
+</p>
+
+</div>
+
+
+<a href="legalnews.html"
+class="view-link">
+
+View Legal News →
+
+</a>
+
+</div>
+
+
+<div class="news-grid">
+
+
+<article class="news-card">
+
+<div class="news-top">
+
+<span class="news-category">
+⚖️ LAW
+</span>
+
+<span class="news-time">
+LEGAL
+</span>
+
+</div>
+
+<h3>
+
+Important developments in
+Indian courts and law.
+
+</h3>
+
+<p>
+
+Explore current legal developments,
+judgments and issues through Pendico.
+
+</p>
+
+<a href="legalnews.html"
+class="news-link">
+
+Explore Legal News →
+
+</a>
+
+</article>
+
+
+<article class="news-card">
+
+<div class="news-top">
+
+<span class="news-category">
+🔥 TRENDING
+</span>
+
+<span class="news-time">
+INDIA
+</span>
+
+</div>
+
+<h3>
+
+Discover topics attracting
+attention across India.
+
+</h3>
+
+<p>
+
+See the latest topics and developments
+being followed across the country.
+
+</p>
+
+<a href="trending.html"
+class="news-link">
+
+See Trending Today →
+
+</a>
+
+</article>
+
+
+<article class="news-card">
+
+<div class="news-top">
+
+<span class="news-category">
+📝 ARTICLES
+</span>
+
+<span class="news-time">
+PENDICO
+</span>
+
+</div>
+
+<h3>
+
+Understand legal concepts
+more clearly.
+
+</h3>
+
+<p>
+
+Explore student-friendly articles and
+useful legal explanations.
+
+</p>
+
+<a href="articles.html"
+class="news-link">
+
+Read Articles →
+
+</a>
+
+</article>
+
+
+</div>
 
 </div>
 
@@ -1941,31 +3568,41 @@ Read Legal News →
      APP
 ===================================================== -->
 
-<section class="app-download">
+<section class="app-section">
+
+<div class="container">
+
+<div class="app-card">
 
 
-<div class="app-download-content">
+<div>
 
-<span class="app-download-badge">
+<div class="section-label"
+style="color:#72bfff;">
 
-📱 PENDICO MOBILE APP
+PENDICO MOBILE
 
-</span>
+</div>
 
 <h2>
-Take Pendico With You
+
+Take Pendico<br>
+with you.
+
 </h2>
 
 <p>
-Access Indian legal information directly from
-your Android device. Explore Bare Acts, Case Laws,
-Legal Articles and Legal News through the Pendico
+
+Access Indian legal information from your
+Android device. Explore Bare Acts, Case Laws,
+Articles and Legal News through the Pendico
 mobile experience.
+
 </p>
 
 <a
 href="downloads/Pendico%20Indian%20Legal%20Information%20Portal.apk"
-class="app-download-button"
+class="app-button"
 download>
 
 ⬇️ Download Pendico APK
@@ -1977,38 +3614,44 @@ download>
 
 <img
 src="logo.png.jpeg"
-class="app-download-icon"
-alt="Pendico Mobile App">
+class="app-logo"
+alt="Pendico mobile application">
+
+</div>
+
+</div>
 
 </section>
 
 
 <!-- =====================================================
-     STATISTICS
+     STATS
 ===================================================== -->
 
 <section class="stats-section">
 
+<div class="container">
 
-<div class="section-heading">
 
-<h2 style="color:white;">
+<div class="stats-header">
+
+<h2>
 Pendico at a Glance
 </h2>
 
-<p style="color:#9fb2cc;">
-A growing Indian information platform
+<p>
+A growing Indian legal information platform.
 </p>
 
 </div>
 
 
-<div class="stats">
+<div class="stats-grid">
 
 
 <div class="stat">
 
-<div class="stat-number">
+<div class="stat-value">
 1+
 </div>
 
@@ -2021,7 +3664,7 @@ Acts Available
 
 <div class="stat">
 
-<div class="stat-number">
+<div class="stat-value">
 50+
 </div>
 
@@ -2034,12 +3677,12 @@ Sections Added
 
 <div class="stat">
 
-<div class="stat-number">
-Growing
+<div class="stat-value">
+70+
 </div>
 
 <div class="stat-label">
-Case Law Library
+Curated Case Laws
 </div>
 
 </div>
@@ -2047,16 +3690,18 @@ Case Law Library
 
 <div class="stat">
 
-<div class="stat-number">
+<div class="stat-value">
 FREE
 </div>
 
 <div class="stat-label">
-Legal Information
+Access to Pendico
 </div>
 
 </div>
 
+
+</div>
 
 </div>
 
@@ -2067,80 +3712,124 @@ Legal Information
      WHY PENDICO
 ===================================================== -->
 
-<section class="why-section">
+<section class="section why-section">
+
+<div class="container">
 
 
-<div class="section-heading">
+<div class="section-header">
 
-<h2>
-Why Pendico?
+<div>
+
+<div class="section-label">
+
+WHY PENDICO
+
+</div>
+
+<h2 class="section-title">
+
+Built for people<br>
+who want clarity.
+
 </h2>
 
-<p>
-Built to make Indian information easier to discover.
+<p class="section-description">
+
+A cleaner way to discover Indian legal
+information and important developments.
+
 </p>
 
 </div>
 
+</div>
 
-<div class="features">
+
+<div class="why-grid">
 
 
-<div class="feature">
+<div class="why-card">
+
+<div class="why-icon">
+🔎
+</div>
 
 <h3>
-📚 Accessible Resources
+Easy to Discover
 </h3>
 
 <p>
-Important Indian legal materials organised
-in a simple and accessible format.
+
+Find legal resources through a simple,
+focused interface.
+
 </p>
 
 </div>
 
 
-<div class="feature">
+<div class="why-card">
+
+<div class="why-icon">
+⚖️
+</div>
 
 <h3>
-⚖️ Landmark Case Laws
+Legal Focus
 </h3>
 
 <p>
-Discover important constitutional and
-Supreme Court decisions.
+
+Built around Indian legislation,
+case law and legal developments.
+
 </p>
 
 </div>
 
 
-<div class="feature">
+<div class="why-card">
+
+<div class="why-icon">
+📱
+</div>
 
 <h3>
-🔥 Trending India
+Mobile Friendly
 </h3>
 
 <p>
-Discover important developments and
-topics attracting attention across India.
+
+Designed to work smoothly across
+phones, tablets and desktops.
+
 </p>
 
 </div>
 
 
-<div class="feature">
+<div class="why-card">
+
+<div class="why-icon">
+🚀
+</div>
 
 <h3>
-🚀 Fast & Free
+Fast & Free
 </h3>
 
 <p>
-A lightweight platform designed for
-fast access across devices.
+
+A lightweight platform focused on
+quick access and simple navigation.
+
 </p>
 
 </div>
 
+
+</div>
 
 </div>
 
@@ -2148,26 +3837,59 @@ fast access across devices.
 
 
 <!-- =====================================================
-     CTA
+     FINAL CTA
 ===================================================== -->
 
-<section class="cta">
+<section class="final-section">
+
+<div class="container">
+
+<div class="final-card">
 
 <h2>
-Explore India. Understand the Law.
+
+Explore India.<br>
+Understand the Law.
+
 </h2>
 
 <p>
-Legal knowledge and important developments,
-all in one place.
+
+Start exploring Indian legal information,
+landmark judgments, legal articles,
+legal news and Trending Today.
+
 </p>
 
-<a href="trending.html"
-class="cta-button">
 
-🔥 Explore Trending Today
+<div class="final-buttons">
+
+<a href="bareacts.html"
+class="final-primary">
+
+📚 Explore Bare Acts
 
 </a>
+
+<a href="caselaws.html"
+class="final-secondary">
+
+⚖️ Explore Case Laws
+
+</a>
+
+<a href="trending.html"
+class="final-secondary">
+
+🔥 Trending Today
+
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -2178,20 +3900,33 @@ class="cta-button">
 
 <footer>
 
-<div class="footer-logo">
+<div class="footer-inner">
+
+
+<div>
+
+<div class="footer-brand">
 PENDICO
 </div>
 
-<p>
-Indian Legal Information & Knowledge Platform
+<p class="footer-about">
+
+Indian Legal Information & Knowledge Platform.
+Explore legislation, judgments, legal articles,
+legal news and important developments.
+
 </p>
 
+</div>
+
+
+<div class="footer-column">
+
+<h4>
+EXPLORE
+</h4>
 
 <div class="footer-links">
-
-<a href="index.html">
-Home
-</a>
 
 <a href="bareacts.html">
 Bare Acts
@@ -2213,6 +3948,23 @@ Legal News
 Trending Today
 </a>
 
+</div>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>
+PENDICO
+</h4>
+
+<div class="footer-links">
+
+<a href="index.html">
+Home
+</a>
+
 <a href="about.html">
 About
 </a>
@@ -2221,22 +3973,95 @@ About
 Contact
 </a>
 
+<a href="https://pendico.pages.dev/">
+Official Website
+</a>
+
 </div>
 
-<br>
+</div>
 
-<p>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<div>
 © 2026 Pendico. All rights reserved.
-</p>
+</div>
+
+<div>
+Indian Legal Information & Knowledge Platform
+</div>
+
+</div>
 
 </footer>
 
 
 <!-- =====================================================
-     SEARCH
+     JAVASCRIPT
 ===================================================== -->
 
 <script>
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const mobileMenu =
+document.getElementById("mobileMenu");
+
+const navLinks =
+document.getElementById("navLinks");
+
+
+mobileMenu.addEventListener(
+"click",
+function(){
+
+    const open =
+    navLinks.classList.toggle("open");
+
+    mobileMenu.setAttribute(
+        "aria-expanded",
+        open
+    );
+
+    mobileMenu.textContent =
+    open ? "✕" : "☰";
+
+});
+
+
+/* Close menu after clicking */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+    link.addEventListener(
+    "click",
+    function(){
+
+        navLinks.classList.remove("open");
+
+        mobileMenu.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        mobileMenu.textContent="☰";
+
+    });
+
+});
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
 
 function searchContent(){
 
@@ -2249,6 +4074,10 @@ function searchContent(){
 
 
     if(!input){
+
+        document
+        .getElementById("searchInput")
+        .focus();
 
         return;
 
@@ -2263,19 +4092,49 @@ function searchContent(){
         "bnss":
         "bnss.html",
 
+        "bsa":
+        "bareacts.html",
+
+        "bharatiya nyaya sanhita":
+        "bareacts.html",
+
+        "bharatiya nagarik suraksha sanhita":
+        "bnss.html",
+
         "bare act":
         "bareacts.html",
 
         "bare acts":
         "bareacts.html",
 
+        "act":
+        "bareacts.html",
+
+        "acts":
+        "bareacts.html",
+
         "case":
+        "caselaws.html",
+
+        "cases":
         "caselaws.html",
 
         "case law":
         "caselaws.html",
 
+        "case laws":
+        "caselaws.html",
+
         "judgment":
+        "caselaws.html",
+
+        "judgments":
+        "caselaws.html",
+
+        "supreme court":
+        "caselaws.html",
+
+        "high court":
         "caselaws.html",
 
         "article":
@@ -2290,6 +4149,9 @@ function searchContent(){
         "news":
         "legalnews.html",
 
+        "legal":
+        "legalnews.html",
+
         "trending":
         "trending.html",
 
@@ -2299,7 +4161,11 @@ function searchContent(){
     };
 
 
-    for(const key in pages){
+    /* Exact/contained keyword routing */
+
+    for(
+        const key in pages
+    ){
 
         if(input.includes(key)){
 
@@ -2313,26 +4179,75 @@ function searchContent(){
     }
 
 
+    /* Friendly fallback */
+
     alert(
-        "Search Pendico resources using terms such as BNS, BNSS, case law, articles, legal news or trending."
+        "Try searching for BNS, BNSS, BSA, Bare Acts, Case Laws, Judgments, Articles, Legal News or Trending Today."
     );
 
 }
 
 
+/* =====================================================
+   ENTER KEY SEARCH
+===================================================== */
+
 document
 .getElementById("searchInput")
 .addEventListener(
-"keypress",
+"keydown",
 function(event){
 
     if(event.key === "Enter"){
+
+        event.preventDefault();
 
         searchContent();
 
     }
 
 });
+
+
+/* =====================================================
+   ESC CLOSE MENU
+===================================================== */
+
+document
+.addEventListener(
+"keydown",
+function(event){
+
+    if(event.key === "Escape"){
+
+        navLinks.classList.remove("open");
+
+        mobileMenu.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        mobileMenu.textContent="☰";
+
+    }
+
+});
+
+
+/* =====================================================
+   REDUCE MOTION FOR ACCESSIBILITY
+===================================================== */
+
+if(
+window.matchMedia(
+"(prefers-reduced-motion: reduce)"
+).matches
+){
+
+    document.documentElement.style
+    .scrollBehavior="auto";
+
+}
 
 </script>
 
