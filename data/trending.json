@@ -1,699 +1,482 @@
-{
-  "updated": "2026-08-19",
-  "trending": [
-    {
-      "id": 1,
-      "rank": 1,
-      "title": "India defeat Sri Lanka by 165 runs in Galle Test",
-      "category": "Sports",
-      "summary": "India defeated Sri Lanka by 165 runs in the Galle Test, taking a 1-0 lead in the series and strengthening its World Test Championship campaign.",
-      "location": "Galle, Sri Lanka",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Cricket",
-        "India",
-        "Sri Lanka",
-        "Test Cricket",
-        "WTC"
-      ],
-      "source": {
-        "name": "Times of India",
-        "url": ""
-      }
-    },
-    {
-      "id": 2,
-      "rank": 2,
-      "title": "Supreme Court asks Delhi High Court to decide coal scam appeals",
-      "category": "Law",
-      "summary": "The Supreme Court has asked the Delhi High Court to dispose of appeals connected with coal block allocation scam cases within four weeks.",
-      "location": "New Delhi",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Supreme Court",
-        "Coal Scam",
-        "Delhi High Court",
-        "Judiciary"
-      ],
-      "source": {
-        "name": "Business Standard",
-        "url": ""
-      }
-    },
-    {
-      "id": 3,
-      "rank": 3,
-      "title": "Supreme Court latest orders draw attention",
-      "category": "Law",
-      "summary": "Fresh Supreme Court orders and case updates uploaded on the Court's official platform are being closely followed by lawyers, litigants and law students.",
-      "location": "New Delhi",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Supreme Court",
-        "Orders",
-        "Law",
-        "India"
-      ],
-      "source": {
-        "name": "Supreme Court of India",
-        "url": ""
-      }
-    },
-    {
-      "id": 4,
-      "rank": 4,
-      "title": "Supreme Court to examine allegations surrounding July 20 clash",
-      "category": "Law",
-      "summary": "The Supreme Court is set to examine allegations and counter-allegations concerning police action during the July 20 clash.",
-      "location": "India",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Supreme Court",
-        "Police",
-        "Investigation",
-        "Public Law"
-      ],
-      "source": {
-        "name": "Times of India",
-        "url": ""
-      }
-    },
-    {
-      "id": 5,
-      "rank": 5,
-      "title": "Supreme Court's Samadhan Samaroh heads toward Special Lok Adalat",
-      "category": "Law",
-      "summary": "The Supreme Court's Samadhan Samaroh initiative is moving toward Special Lok Adalat proceedings scheduled for August 21 to 23.",
-      "location": "New Delhi",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Lok Adalat",
-        "Mediation",
-        "ADR",
-        "Supreme Court"
-      ],
-      "source": {
-        "name": "Supreme Court of India",
-        "url": ""
-      }
-    },
-    {
-      "id": 6,
-      "rank": 6,
-      "title": "NEET paper security measures placed before Supreme Court",
-      "category": "Law",
-      "summary": "The Centre told the Supreme Court that NEET question papers are secured through measures including GPS tracking and CCTV monitoring during transportation.",
-      "location": "New Delhi",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "NEET",
-        "Supreme Court",
-        "Education",
-        "Examination"
-      ],
-      "source": {
-        "name": "Business Standard",
-        "url": ""
-      }
-    },
-    {
-      "id": 7,
-      "rank": 7,
-      "title": "Tamil Nadu withdraws controversial student protest directive",
-      "category": "Politics",
-      "summary": "The Tamil Nadu government has withdrawn an earlier directive concerning students participating in certain political protests after the order triggered public and political criticism.",
-      "location": "Tamil Nadu",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Tamil Nadu",
-        "Students",
-        "Politics",
-        "Protests"
-      ],
-      "source": {
-        "name": "NDTV",
-        "url": ""
-      }
-    },
-    {
-      "id": 8,
-      "rank": 8,
-      "title": "Tamil Nadu hosts Southern Zonal Council meeting",
-      "category": "Politics",
-      "summary": "The Southern Zonal Council meeting in Tamil Nadu brings senior leaders and officials together to discuss inter-state coordination and regional issues.",
-      "location": "Kovalam, Tamil Nadu",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Tamil Nadu",
-        "Southern Zonal Council",
-        "Governance",
-        "States"
-      ],
-      "source": {
-        "name": "Indian Express",
-        "url": ""
-      }
-    },
-    {
-      "id": 9,
-      "rank": 9,
-      "title": "Tamil Nadu milk procurement price increased to ₹41 per litre",
-      "category": "India",
-      "summary": "Tamil Nadu has increased the milk procurement price paid to producers by ₹3 per litre, raising the rate from ₹38 to ₹41.",
-      "location": "Tamil Nadu",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Tamil Nadu",
-        "Milk",
-        "Farmers",
-        "Government"
-      ],
-      "source": {
-        "name": "Times of India",
-        "url": ""
-      }
-    },
-    {
-      "id": 10,
-      "rank": 10,
-      "title": "Tamil Nadu MLAs to receive government vehicles and additional allowance",
-      "category": "Politics",
-      "summary": "Tamil Nadu has announced measures involving official vehicles and allowances for MLAs aimed at improving accessibility and constituency-level public grievance work.",
-      "location": "Tamil Nadu",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Tamil Nadu",
-        "MLAs",
-        "Governance",
-        "Politics"
-      ],
-      "source": {
-        "name": "Indian Express",
-        "url": ""
-      }
-    },
-    {
-      "id": 11,
-      "rank": 11,
-      "title": "Chennai Metro-MRTS integration receives final railway approval",
-      "category": "India",
-      "summary": "The Railway Ministry and Railway Board have given final approval for integrating Chennai's MRTS system with Chennai Metro, with assets and operations planned for phased transfer.",
-      "location": "Chennai, Tamil Nadu",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Chennai",
-        "Metro",
-        "MRTS",
-        "Tamil Nadu",
-        "Transport"
-      ],
-      "source": {
-        "name": "Indian Express",
-        "url": ""
-      }
-    },
-    {
-      "id": 12,
-      "rank": 12,
-      "title": "India's semiconductor ecosystem attracts renewed attention",
-      "category": "Technology",
-      "summary": "India's semiconductor sector continues to attract investment and policy attention as the country expands chip manufacturing, design and electronics production.",
-      "location": "India",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Semiconductors",
-        "Chips",
-        "Technology",
-        "India"
-      ],
-      "source": {
-        "name": "Press Information Bureau",
-        "url": ""
-      }
-    },
-    {
-      "id": 13,
-      "rank": 13,
-      "title": "India's electronics manufacturing expansion gathers pace",
-      "category": "Technology",
-      "summary": "The Electronics Component Manufacturing Scheme continues to expand, with dozens of plants operational and additional facilities under advanced construction.",
-      "location": "India",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Electronics",
-        "Manufacturing",
-        "Technology",
-        "Make in India"
-      ],
-      "source": {
-        "name": "Press Information Bureau",
-        "url": ""
-      }
-    },
-    {
-      "id": 14,
-      "rank": 14,
-      "title": "India prepares for major semiconductor industry event",
-      "category": "Technology",
-      "summary": "India's semiconductor industry is preparing for a major national event scheduled to take place at Yashobhoomi in New Delhi in September.",
-      "location": "New Delhi",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "medium",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Semiconductors",
-        "India",
-        "Technology",
-        "Chip Industry"
-      ],
-      "source": {
-        "name": "Press Information Bureau",
-        "url": ""
-      }
-    },
-    {
-      "id": 15,
-      "rank": 15,
-      "title": "AI and semiconductor demand keeps global chip industry in focus",
-      "category": "Technology",
-      "summary": "Strong demand for artificial intelligence chips is putting pressure on advanced semiconductor manufacturing capacity globally.",
-      "location": "Global",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "AI",
-        "Semiconductors",
-        "Chips",
-        "Technology"
-      ],
-      "source": {
-        "name": "Reuters",
-        "url": ""
-      }
-    },
-    {
-      "id": 16,
-      "rank": 16,
-      "title": "Nifty falls for seventh consecutive trading session",
-      "category": "Business",
-      "summary": "Indian benchmark indices extended their decline, with the Nifty falling for a seventh consecutive session amid concerns over rising crude oil prices.",
-      "location": "Mumbai, India",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Nifty",
-        "Sensex",
-        "Markets",
-        "Crude Oil"
-      ],
-      "source": {
-        "name": "New Indian Express",
-        "url": ""
-      }
-    },
-    {
-      "id": 17,
-      "rank": 17,
-      "title": "India markets regulator reviews small-company IPO rules",
-      "category": "Business",
-      "summary": "India's markets regulator is reviewing rules concerning initial public offerings and delisting requirements for smaller companies.",
-      "location": "Mumbai, India",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "SEBI",
-        "IPO",
-        "Markets",
-        "Business"
-      ],
-      "source": {
-        "name": "Reuters",
-        "url": ""
-      }
-    },
-    {
-      "id": 18,
-      "rank": 18,
-      "title": "India startup ecosystem continues to attract investment attention",
-      "category": "Business",
-      "summary": "Indian startups remain in focus as investors track funding activity, fintech growth, technology companies and emerging consumer businesses.",
-      "location": "India",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "medium",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Startups",
-        "Funding",
-        "India",
-        "Entrepreneurship"
-      ],
-      "source": {
-        "name": "YourStory",
-        "url": ""
-      }
-    },
-    {
-      "id": 19,
-      "rank": 19,
-      "title": "Awarapan 2 crosses ₹100 crore milestone",
-      "category": "Entertainment",
-      "summary": "Awarapan 2 has crossed the ₹100 crore mark in India during its theatrical run and continues to generate strong box-office interest.",
-      "location": "India",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Awarapan 2",
-        "Bollywood",
-        "Box Office",
-        "Cinema"
-      ],
-      "source": {
-        "name": "Times of India",
-        "url": ""
-      }
-    },
-    {
-      "id": 20,
-      "rank": 20,
-      "title": "Batwara 1947 continues its theatrical run",
-      "category": "Entertainment",
-      "summary": "Sunny Deol's Batwara 1947 remains in the box-office spotlight as the period drama continues its theatrical run alongside competing releases.",
-      "location": "India",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "medium",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Batwara 1947",
-        "Sunny Deol",
-        "Bollywood",
-        "Box Office"
-      ],
-      "source": {
-        "name": "Indian Express",
-        "url": ""
-      }
-    },
-    {
-      "id": 21,
-      "rank": 21,
-      "title": "Awarapan 2 becomes Emraan Hashmi's biggest solo hit",
-      "category": "Entertainment",
-      "summary": "Awarapan 2 has emerged as a major solo box-office success for Emraan Hashmi, crossing ₹100 crore in India within six days.",
-      "location": "India",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Emraan Hashmi",
-        "Awarapan 2",
-        "Bollywood",
-        "Cinema"
-      ],
-      "source": {
-        "name": "Economic Times",
-        "url": ""
-      }
-    },
-    {
-      "id": 22,
-      "rank": 22,
-      "title": "India's badminton stars in focus at BWF World Championships",
-      "category": "Sports",
-      "summary": "Indian badminton players including Lakshya Sen, PV Sindhu and the Satwik-Chirag pair are drawing attention during the BWF World Championships in New Delhi.",
-      "location": "New Delhi",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Badminton",
-        "BWF",
-        "Lakshya Sen",
-        "PV Sindhu",
-        "Satwik Chirag"
-      ],
-      "source": {
-        "name": "Business Standard",
-        "url": ""
-      }
-    },
-    {
-      "id": 23,
-      "rank": 23,
-      "title": "India's Galle victory strengthens World Test Championship campaign",
-      "category": "Sports",
-      "summary": "India's win over Sri Lanka has strengthened its position and hopes in the ongoing World Test Championship campaign.",
-      "location": "Galle, Sri Lanka",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "WTC",
-        "Cricket",
-        "India",
-        "Sri Lanka"
-      ],
-      "source": {
-        "name": "Times of India",
-        "url": ""
-      }
-    },
-    {
-      "id": 24,
-      "rank": 24,
-      "title": "Manav Suthar attracts attention after Galle performance",
-      "category": "Sports",
-      "summary": "Indian spinner Manav Suthar has attracted attention following his contribution to India's Test victory over Sri Lanka in Galle.",
-      "location": "Galle, Sri Lanka",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "medium",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Manav Suthar",
-        "Cricket",
-        "India",
-        "Bowling"
-      ],
-      "source": {
-        "name": "Times of India",
-        "url": ""
-      }
-    },
-    {
-      "id": 25,
-      "rank": 25,
-      "title": "ISRO highlights AI and quantum technologies for future satellites",
-      "category": "Science",
-      "summary": "Experts discussing future Indian satellite systems have highlighted artificial intelligence, machine learning, quantum technologies and advanced inter-satellite links.",
-      "location": "India",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "ISRO",
-        "AI",
-        "Quantum",
-        "Satellites",
-        "Space"
-      ],
-      "source": {
-        "name": "The Quantum Insider",
-        "url": ""
-      }
-    },
-    {
-      "id": 26,
-      "rank": 26,
-      "title": "India expands space-launch infrastructure",
-      "category": "Science",
-      "summary": "India continues expanding its space infrastructure, including development of launch facilities at Kulasekarapattinam in Tamil Nadu and Sriharikota.",
-      "location": "Tamil Nadu / India",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "medium",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "ISRO",
-        "Space",
-        "Tamil Nadu",
-        "Kulasekarapattinam"
-      ],
-      "source": {
-        "name": "Press Information Bureau",
-        "url": ""
-      }
-    },
-    {
-      "id": 27,
-      "rank": 27,
-      "title": "ISRO recruitment applications remain open for several posts",
-      "category": "Science",
-      "summary": "ISRO continues to list current opportunities and recruitment openings, attracting attention from graduates and technical applicants.",
-      "location": "India",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "medium",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "ISRO",
-        "Recruitment",
-        "Jobs",
-        "Science"
-      ],
-      "source": {
-        "name": "ISRO",
-        "url": ""
-      }
-    },
-    {
-      "id": 28,
-      "rank": 28,
-      "title": "AICTE revises 2026-27 academic calendar",
-      "category": "India",
-      "summary": "AICTE has revised the academic calendar for technical and management institutions for 2026-27, including updated admission timelines.",
-      "location": "India",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "AICTE",
-        "Education",
-        "Students",
-        "Admissions"
-      ],
-      "source": {
-        "name": "Times of India",
-        "url": ""
-      }
-    },
-    {
-      "id": 29,
-      "rank": 29,
-      "title": "AIBE 22 registration opens for aspiring advocates",
-      "category": "Law",
-      "summary": "The Bar Council of India has begun the registration process for AIBE 22, putting the examination process in focus for law graduates and aspiring advocates.",
-      "location": "India",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "high",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "AIBE",
-        "BCI",
-        "Law Students",
-        "Advocates"
-      ],
-      "source": {
-        "name": "Business Standard",
-        "url": ""
-      }
-    },
-    {
-      "id": 30,
-      "rank": 30,
-      "title": "India's national education and research developments remain in focus",
-      "category": "India",
-      "summary": "Education policy, research, student opportunities and national academic initiatives continue to attract attention across India.",
-      "location": "India",
-      "date": "2026-08-19",
-      "time": "Today",
-      "importance": "medium",
-      "trending": true,
-      "image": "",
-      "tags": [
-        "Education",
-        "Students",
-        "Research",
-        "India"
-      ],
-      "source": {
-        "name": "Ministry of Education",
-        "url": ""
-      }
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "title": "India's Legal and Constitutional Landscape",
+    "category": "Law",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "5 min read",
+    "featured": true,
+    "trending": true,
+    "summary": "Explore important legal developments, constitutional questions and judicial decisions attracting attention across India.",
+    "content": "India's legal landscape continues to evolve through legislation, judicial decisions and constitutional developments. This Pendico feature provides an accessible overview of issues that may be relevant to students, researchers and members of the public.",
+    "tags": [
+      "Indian Law",
+      "Constitution",
+      "Courts",
+      "Legal Updates"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 2,
+    "title": "Important Supreme Court Developments",
+    "category": "Supreme Court",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "6 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "A roundup format for important Supreme Court judgments, hearings and legal developments.",
+    "content": "The Supreme Court of India regularly considers constitutional, civil, criminal and public-interest matters. This section is designed to present significant developments in a concise and accessible format.",
+    "tags": [
+      "Supreme Court",
+      "Judgment",
+      "India",
+      "Law"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 3,
+    "title": "High Court Developments Across India",
+    "category": "High Courts",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "5 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "Follow notable developments emerging from High Courts across different states.",
+    "content": "High Courts play an important role in India's constitutional and judicial system. This feature provides a place to highlight significant judgments and developments from High Courts.",
+    "tags": [
+      "High Court",
+      "Judgments",
+      "Legal News",
+      "India"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 4,
+    "title": "Bharatiya Nyaya Sanhita: Understanding India's New Criminal Law",
+    "category": "Criminal Law",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "8 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "Understand the structure and significance of the Bharatiya Nyaya Sanhita, 2023.",
+    "content": "The Bharatiya Nyaya Sanhita, 2023 forms an important part of India's new criminal-law framework. Pendico provides section-wise information designed to make the legislation easier to explore.",
+    "tags": [
+      "BNS",
+      "Criminal Law",
+      "Bare Act",
+      "Legal Education"
+    ],
+    "source": "Pendico",
+    "sourceUrl": "bns.html",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 5,
+    "title": "BNSS and the New Criminal Procedure Framework",
+    "category": "Criminal Procedure",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "7 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "A concise introduction to the Bharatiya Nagarik Suraksha Sanhita and India's criminal procedure framework.",
+    "content": "The Bharatiya Nagarik Suraksha Sanhita, 2023 introduces the statutory framework governing criminal procedure. Readers can use Pendico to explore its provisions and related legal concepts.",
+    "tags": [
+      "BNSS",
+      "Criminal Procedure",
+      "Law",
+      "India"
+    ],
+    "source": "Pendico",
+    "sourceUrl": "bnss.html",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 6,
+    "title": "Indian Constitutional Law: Issues to Watch",
+    "category": "Constitution",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "6 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "Key constitutional principles and questions that continue to shape Indian public law.",
+    "content": "Constitutional law remains central to India's legal system. Fundamental rights, separation of powers, federalism and judicial review continue to form important areas of legal study and public discussion.",
+    "tags": [
+      "Constitution",
+      "Fundamental Rights",
+      "Public Law",
+      "India"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 7,
+    "title": "Digital India and the Changing Technology Landscape",
+    "category": "Technology",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "5 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "Technology continues to transform how Indians work, communicate, learn and access services.",
+    "content": "India's technology ecosystem continues to expand across digital services, artificial intelligence, online platforms, financial technology and public digital infrastructure.",
+    "tags": [
+      "Technology",
+      "Digital India",
+      "AI",
+      "Innovation"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 8,
+    "title": "Artificial Intelligence and Indian Law",
+    "category": "AI & Law",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "7 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "How artificial intelligence is creating new questions for lawyers, courts, businesses and policymakers.",
+    "content": "Artificial intelligence is creating significant legal and regulatory questions involving privacy, intellectual property, liability, employment and digital governance.",
+    "tags": [
+      "Artificial Intelligence",
+      "Technology Law",
+      "Privacy",
+      "Legal Technology"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 9,
+    "title": "India's Economy and Business Environment",
+    "category": "Business",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "5 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "An overview format for important developments in India's economy, businesses and markets.",
+    "content": "India's economic environment is influenced by domestic policy, global markets, investment, technology and consumer activity. This section can be updated with verified developments.",
+    "tags": [
+      "Business",
+      "Economy",
+      "India",
+      "Markets"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 10,
+    "title": "Education and Opportunities for Indian Students",
+    "category": "Education",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "4 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "Important education-related developments, opportunities and issues relevant to students.",
+    "content": "Education remains one of India's most closely followed areas. Students regularly track examinations, admissions, scholarships, universities, professional courses and employment opportunities.",
+    "tags": [
+      "Education",
+      "Students",
+      "India",
+      "Career"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 11,
+    "title": "Public Policy and Governance in India",
+    "category": "Governance",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "6 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "Explore major public-policy themes and governance issues affecting India.",
+    "content": "Public administration and government policy have a direct impact on citizens, businesses and institutions. Pendico aims to explain important developments in a clear and accessible manner.",
+    "tags": [
+      "Governance",
+      "Public Policy",
+      "India",
+      "Administration"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 12,
+    "title": "Important National Developments",
+    "category": "India",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "5 min read",
+    "featured": true,
+    "trending": true,
+    "summary": "A central feed for major developments and stories attracting national attention.",
+    "content": "This section is intended for verified and appropriately sourced developments that have significant public interest across India.",
+    "tags": [
+      "India",
+      "National",
+      "Trending",
+      "Current Affairs"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 13,
+    "title": "Science and Innovation in India",
+    "category": "Science",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "5 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "Discover developments in science, research, space and innovation.",
+    "content": "Scientific research and innovation contribute significantly to India's technological and economic development. Verified developments can be added to this category.",
+    "tags": [
+      "Science",
+      "Innovation",
+      "Research",
+      "India"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 14,
+    "title": "Space and India's Scientific Ambitions",
+    "category": "Space",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "5 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "India's space programme continues to attract attention through missions, research and technological development.",
+    "content": "India's space sector has become an important part of the country's scientific and technological ambitions. This category can feature verified mission updates and research developments.",
+    "tags": [
+      "Space",
+      "ISRO",
+      "Science",
+      "Technology"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 15,
+    "title": "Sports and Major Indian Sporting Developments",
+    "category": "Sports",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "4 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "Follow major sporting developments, performances and competitions involving India.",
+    "content": "Sport remains one of India's most popular areas of public interest. This section is designed for verified updates involving Indian athletes, teams and major competitions.",
+    "tags": [
+      "Sports",
+      "India",
+      "Cricket",
+      "Athletes"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 16,
+    "title": "Entertainment and Indian Popular Culture",
+    "category": "Entertainment",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "4 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "Discover major developments in Indian cinema, television, music and popular culture.",
+    "content": "Entertainment continues to generate significant public interest across India's regional and national-language media ecosystems.",
+    "tags": [
+      "Entertainment",
+      "Cinema",
+      "Music",
+      "India"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 17,
+    "title": "Consumer Rights and Legal Awareness",
+    "category": "Consumer Law",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "6 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "Understand important consumer-law concepts and developments affecting everyday life.",
+    "content": "Consumer protection is an important area of Indian law. Consumers may encounter issues involving products, services, contracts, digital commerce and unfair practices.",
+    "tags": [
+      "Consumer Law",
+      "Legal Awareness",
+      "Rights",
+      "India"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 18,
+    "title": "Cyber Law and Digital Safety",
+    "category": "Cyber Law",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "6 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "Important concepts involving cybercrime, online safety, privacy and digital rights.",
+    "content": "As India's digital ecosystem expands, awareness of cybersecurity, privacy and cyber law becomes increasingly important for individuals and organisations.",
+    "tags": [
+      "Cyber Law",
+      "Cybersecurity",
+      "Privacy",
+      "Digital India"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 19,
+    "title": "Intellectual Property and India's Innovation Economy",
+    "category": "IP Law",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "6 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "Understand how copyright, trademarks, patents and other intellectual-property rights protect innovation.",
+    "content": "Intellectual property law plays an important role in protecting inventions, brands, creative works and other forms of innovation.",
+    "tags": [
+      "Intellectual Property",
+      "Copyright",
+      "Trademark",
+      "Patent"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  },
+  {
+    "id": 20,
+    "title": "Legal Education and the Future of Indian Lawyers",
+    "category": "Legal Education",
+    "region": "India",
+    "author": "Pendico Editorial",
+    "date": "2026-08-20",
+    "time": "Today",
+    "readTime": "6 min read",
+    "featured": false,
+    "trending": true,
+    "summary": "Explore changing opportunities, technology and skills shaping the future of legal education.",
+    "content": "Legal education is increasingly influenced by legal technology, digital research tools, interdisciplinary study and changing professional requirements.",
+    "tags": [
+      "Law Students",
+      "Legal Education",
+      "Legal Technology",
+      "Career"
+    ],
+    "source": "Pendico Editorial",
+    "sourceUrl": "",
+    "image": "",
+    "views": 0
+  }
+]
