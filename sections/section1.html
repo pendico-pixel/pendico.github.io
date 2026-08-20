@@ -1,101 +1,3082 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Section 1 - BNS</title>
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Pendico | BNS Section</title>
+
+<meta name="description"
+content="Read Bharatiya Nyaya Sanhita, 2023 section-wise legal information and explanations on Pendico.">
+
+<meta name="robots"
+content="index, follow">
+
+<link rel="icon"
+type="image/png"
+href="favicon.png">
 
 <style>
+
+/* =========================================================
+   PENDICO BNS SECTION — WORLD CLASS LEGAL RESEARCH UI
+========================================================= */
+
+:root{
+
+    --bg:#f5f7fb;
+    --surface:#ffffff;
+    --surface2:#f8faff;
+
+    --text:#142033;
+    --text2:#334155;
+    --muted:#64748b;
+
+    --primary:#1557b0;
+    --primary2:#2478e8;
+
+    --nav:#061a35;
+    --nav2:#0b3264;
+
+    --border:#e2e8f0;
+
+    --success:#16855b;
+
+    --danger:#dc3545;
+
+    --shadow:
+        0 12px 35px rgba(15,23,42,.08);
+
+    --radius:18px;
+}
+
+body.dark{
+
+    --bg:#0b111a;
+    --surface:#111923;
+    --surface2:#151f2c;
+
+    --text:#f1f5f9;
+    --text2:#d5deea;
+    --muted:#94a3b8;
+
+    --primary:#67a5ff;
+    --primary2:#3d8cff;
+
+    --nav:#050d18;
+    --nav2:#0b1f38;
+
+    --border:#263446;
+
+    --shadow:
+        0 15px 40px rgba(0,0,0,.35);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-font-family:Arial,sans-serif;
-margin:0;
-background:#f4f7fb;
+
+    margin:0;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    line-height:1.65;
+
+    transition:
+        background .25s,
+        color .25s;
 }
 
-header{
-background:#0b3d91;
-color:white;
-padding:20px;
-text-align:center;
+button,
+input{
+    font:inherit;
 }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:25px;
+button{
+    cursor:pointer;
 }
 
-.card{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,.1);
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
-h2{
-color:#0b3d91;
+
+/* =========================================================
+   TOP NAVIGATION
+========================================================= */
+
+.topbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--nav),
+            var(--nav2)
+        );
+
+    color:white;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+
+    box-shadow:
+        0 5px 25px rgba(0,0,0,.14);
+
+    backdrop-filter:
+        blur(18px);
 }
 
-.back{
-display:inline-block;
-margin-top:20px;
-padding:10px 18px;
-background:#0b3d91;
-color:white;
-text-decoration:none;
-border-radius:8px;
+.nav-inner{
+
+    max-width:1250px;
+
+    margin:auto;
+
+    min-height:70px;
+
+    padding:
+        10px 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
 }
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    min-width:0;
+}
+
+.brand-logo{
+
+    width:43px;
+
+    height:43px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+        rgba(255,255,255,.10);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    font-size:22px;
+}
+
+.brand-text{
+
+    min-width:0;
+}
+
+.brand-name{
+
+    font-size:18px;
+
+    font-weight:900;
+
+    letter-spacing:.6px;
+}
+
+.brand-sub{
+
+    font-size:11px;
+
+    color:#a9bdd7;
+
+    margin-top:1px;
+}
+
+.nav-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+}
+
+.nav-btn{
+
+    border:
+        1px solid
+        rgba(255,255,255,.14);
+
+    background:
+        rgba(255,255,255,.08);
+
+    color:white;
+
+    border-radius:10px;
+
+    padding:
+        9px 12px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    transition:.2s;
+}
+
+.nav-btn:hover{
+
+    background:
+        rgba(255,255,255,.16);
+
+    transform:translateY(-1px);
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.page{
+
+    max-width:1250px;
+
+    margin:auto;
+
+    padding:
+        25px 20px 70px;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.breadcrumb{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    margin:
+        4px 0 20px;
+}
+
+.breadcrumb a{
+
+    color:var(--primary);
+
+    font-weight:700;
+}
+
+.breadcrumb span{
+
+    opacity:.6;
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.content-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        285px;
+
+    gap:24px;
+
+    align-items:start;
+}
+
+
+/* =========================================================
+   MAIN DOCUMENT
+========================================================= */
+
+.document{
+
+    min-width:0;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.section-hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:
+        var(--radius);
+
+    padding:
+        32px;
+
+    color:white;
+
+    background:
+
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(72,154,255,.25),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #071a35,
+            #0d3d78,
+            #155fb7
+        );
+
+    box-shadow:
+        0 20px 50px
+        rgba(7,43,86,.20);
+
+    margin-bottom:18px;
+}
+
+.section-hero::after{
+
+    content:"§";
+
+    position:absolute;
+
+    right:25px;
+
+    bottom:-35px;
+
+    font-size:180px;
+
+    font-weight:900;
+
+    line-height:1;
+
+    color:
+        rgba(255,255,255,.045);
+
+    pointer-events:none;
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+}
+
+.eyebrow{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:
+        6px 11px;
+
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,.10);
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    color:#d9ebff;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+    margin-bottom:16px;
+}
+
+.section-number-large{
+
+    font-size:
+        clamp(40px,6vw,66px);
+
+    line-height:1;
+
+    font-weight:950;
+
+    letter-spacing:-2px;
+
+    margin-bottom:12px;
+}
+
+.section-title-large{
+
+    margin:0;
+
+    max-width:900px;
+
+    font-size:
+        clamp(23px,3vw,35px);
+
+    line-height:1.25;
+
+    font-weight:850;
+}
+
+.chapter-label{
+
+    margin-top:17px;
+
+    color:#c8dbf2;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    max-width:850px;
+}
+
+
+/* =========================================================
+   ACTION BAR
+========================================================= */
+
+.action-bar{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:18px;
+}
+
+.action-group{
+
+    display:flex;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+}
+
+.action-btn{
+
+    border:
+        1px solid
+        var(--border);
+
+    background:
+        var(--surface);
+
+    color:var(--text2);
+
+    padding:
+        9px 13px;
+
+    border-radius:10px;
+
+    font-size:12px;
+
+    font-weight:750;
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,.04);
+
+    transition:.2s;
+}
+
+.action-btn:hover{
+
+    transform:translateY(-1px);
+
+    border-color:
+        rgba(36,120,232,.45);
+
+    color:var(--primary);
+}
+
+.action-btn.primary{
+
+    background:
+        var(--primary2);
+
+    color:white;
+
+    border-color:
+        var(--primary2);
+}
+
+
+/* =========================================================
+   DOCUMENT CARD
+========================================================= */
+
+.document-card{
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow);
+
+    overflow:hidden;
+}
+
+.document-header{
+
+    padding:
+        22px 27px;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+    background:
+        var(--surface2);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+}
+
+.document-label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    font-weight:850;
+
+    font-size:14px;
+}
+
+.document-label-icon{
+
+    width:32px;
+
+    height:32px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:9px;
+
+    background:
+        rgba(36,120,232,.10);
+
+    color:var(--primary);
+
+    font-size:16px;
+}
+
+.document-body{
+
+    padding:
+        30px 32px;
+}
+
+
+/* =========================================================
+   SECTION TEXT
+========================================================= */
+
+.text-heading{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin:
+        0 0 18px;
+
+    font-size:18px;
+
+    color:var(--text);
+
+    font-weight:850;
+}
+
+.text-heading::before{
+
+    content:"";
+
+    width:4px;
+
+    height:22px;
+
+    border-radius:4px;
+
+    background:
+        linear-gradient(
+            #2478e8,
+            #55a4ff
+        );
+}
+
+.legal-text{
+
+    color:var(--text2);
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    white-space:pre-line;
+
+    overflow-wrap:anywhere;
+}
+
+
+/* =========================================================
+   EXPLANATION
+========================================================= */
+
+.explanation-card{
+
+    margin-top:22px;
+
+    padding:
+        23px 25px;
+
+    border-radius:15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(29,91,191,.07),
+            rgba(56,150,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(36,120,232,.18);
+}
+
+.explanation-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:17px;
+
+    font-weight:850;
+
+    margin-bottom:12px;
+
+    color:var(--text);
+}
+
+.explanation-icon{
+
+    width:36px;
+
+    height:36px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:10px;
+
+    background:
+        rgba(255,193,7,.14);
+
+    font-size:18px;
+}
+
+.explanation-text{
+
+    color:var(--text2);
+
+    line-height:1.8;
+
+    white-space:pre-line;
+}
+
+
+/* =========================================================
+   KEYWORDS
+========================================================= */
+
+.keywords{
+
+    margin-top:22px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:7px;
+}
+
+.keyword{
+
+    padding:
+        5px 9px;
+
+    border-radius:20px;
+
+    background:
+        var(--surface2);
+
+    border:
+        1px solid
+        var(--border);
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    font-weight:700;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar{
+
+    position:sticky;
+
+    top:92px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.side-card{
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        16px;
+
+    box-shadow:
+        0 7px 25px rgba(15,23,42,.06);
+
+    padding:19px;
+}
+
+.side-title{
+
+    font-size:13px;
+
+    font-weight:850;
+
+    margin-bottom:14px;
+
+    color:var(--text);
+}
+
+.progress-wrap{
+
+    margin-bottom:15px;
+}
+
+.progress-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    font-size:11px;
+
+    color:var(--muted);
+
+    margin-bottom:7px;
+}
+
+.progress{
+
+    height:7px;
+
+    border-radius:20px;
+
+    background:
+        var(--border);
+
+    overflow:hidden;
+}
+
+.progress-bar{
+
+    height:100%;
+
+    width:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1769d1,
+            #55a7ff
+        );
+
+    border-radius:20px;
+
+    transition:
+        width .4s ease;
+}
+
+.side-link{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    width:100%;
+
+    padding:
+        10px 11px;
+
+    margin-top:7px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:10px;
+
+    background:
+        var(--surface2);
+
+    color:var(--text2);
+
+    font-size:12px;
+
+    font-weight:750;
+
+    transition:.2s;
+}
+
+.side-link:hover{
+
+    color:var(--primary);
+
+    border-color:
+        rgba(36,120,232,.35);
+
+    transform:translateX(2px);
+}
+
+
+/* =========================================================
+   NAVIGATION CARD
+========================================================= */
+
+.section-navigation{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:12px;
+
+    margin-top:18px;
+}
+
+.nav-section{
+
+    border:
+        1px solid
+        var(--border);
+
+    background:
+        var(--surface);
+
+    border-radius:14px;
+
+    padding:
+        17px;
+
+    transition:.2s;
+}
+
+.nav-section:hover{
+
+    border-color:
+        rgba(36,120,232,.35);
+
+    transform:translateY(-2px);
+}
+
+.nav-section.next{
+
+    text-align:right;
+}
+
+.nav-small{
+
+    color:var(--muted);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    letter-spacing:.6px;
+
+    margin-bottom:5px;
+}
+
+.nav-title{
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    font-weight:800;
+
+    line-height:1.4;
+}
+
+
+/* =========================================================
+   SEARCH INSIDE SECTION
+========================================================= */
+
+.find-box{
+
+    display:none;
+
+    margin-bottom:18px;
+
+    padding:10px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:12px;
+
+    background:
+        var(--surface);
+}
+
+.find-box.active{
+
+    display:flex;
+
+    gap:8px;
+}
+
+.find-input{
+
+    flex:1;
+
+    min-width:0;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:9px;
+
+    padding:
+        10px 12px;
+
+    outline:none;
+
+    background:
+        var(--surface2);
+
+    color:var(--text);
+
+    font-size:13px;
+}
+
+.find-input:focus{
+
+    border-color:
+        var(--primary2);
+}
+
+.find-result{
+
+    font-size:11px;
+
+    color:var(--muted);
+
+    padding:
+        0 5px;
+
+    display:flex;
+
+    align-items:center;
+
+    white-space:nowrap;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.loading-screen{
+
+    min-height:55vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+}
+
+.loader{
+
+    width:44px;
+
+    height:44px;
+
+    border:
+        4px solid
+        var(--border);
+
+    border-top-color:
+        var(--primary2);
+
+    border-radius:50%;
+
+    animation:
+        spin .8s linear infinite;
+
+    margin:
+        0 auto 15px;
+}
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error-card{
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid
+        rgba(220,53,69,.25);
+
+    border-radius:18px;
+
+    padding:
+        45px 25px;
+
+    text-align:center;
+
+    box-shadow:
+        var(--shadow);
+}
+
+.error-icon{
+
+    font-size:42px;
+
+    margin-bottom:10px;
+}
+
+.error-card h2{
+
+    margin:
+        0 0 8px;
+}
+
+.error-card p{
+
+    color:var(--muted);
+
+    max-width:600px;
+
+    margin:
+        0 auto 20px;
+}
+
+.error-btn{
+
+    display:inline-block;
+
+    background:
+        var(--primary2);
+
+    color:white;
+
+    padding:
+        11px 18px;
+
+    border-radius:10px;
+
+    font-weight:800;
+
+    font-size:13px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
-margin-top:30px;
-background:#062b63;
-color:white;
-text-align:center;
-padding:15px;
+
+    background:
+        #041021;
+
+    color:#94a8c0;
+
+    text-align:center;
+
+    padding:
+        35px 20px;
 }
+
+.footer-brand{
+
+    color:white;
+
+    font-weight:950;
+
+    font-size:21px;
+
+    letter-spacing:1px;
+}
+
+footer p{
+
+    margin:
+        6px 0;
+
+    font-size:12px;
+}
+
+.footer-links{
+
+    margin-top:15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:16px;
+}
+
+.footer-links a{
+
+    color:#9fb2c9;
+
+    font-size:12px;
+
+    font-weight:600;
+}
+
+.footer-links a:hover{
+
+    color:white;
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print{
+
+    .topbar,
+    .action-bar,
+    .sidebar,
+    .section-navigation,
+    footer,
+    .breadcrumb{
+
+        display:none !important;
+    }
+
+    body{
+
+        background:white;
+
+        color:#111;
+    }
+
+    .page{
+
+        max-width:none;
+
+        padding:0;
+    }
+
+    .content-grid{
+
+        display:block;
+    }
+
+    .section-hero{
+
+        color:#111;
+
+        background:white;
+
+        border:
+            1px solid #ccc;
+
+        box-shadow:none;
+    }
+
+    .section-hero::after{
+
+        display:none;
+    }
+
+    .document-card{
+
+        box-shadow:none;
+
+        border:
+            1px solid #ccc;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:950px){
+
+    .content-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .sidebar{
+
+        position:static;
+
+        display:grid;
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:650px){
+
+    .nav-inner{
+
+        min-height:auto;
+
+        padding:
+            10px 13px;
+    }
+
+    .brand-sub{
+
+        display:none;
+    }
+
+    .brand-name{
+
+        font-size:15px;
+    }
+
+    .brand-logo{
+
+        width:38px;
+
+        height:38px;
+    }
+
+    .nav-actions{
+
+        gap:5px;
+    }
+
+    .nav-btn{
+
+        padding:
+            8px 9px;
+
+        font-size:11px;
+    }
+
+    .page{
+
+        padding:
+            16px 12px 50px;
+    }
+
+    .section-hero{
+
+        padding:
+            25px 21px;
+
+        border-radius:15px;
+    }
+
+    .section-number-large{
+
+        font-size:44px;
+    }
+
+    .section-title-large{
+
+        font-size:23px;
+    }
+
+    .document-header{
+
+        padding:
+            17px;
+    }
+
+    .document-body{
+
+        padding:
+            22px 18px;
+    }
+
+    .legal-text{
+
+        font-size:15px;
+
+        line-height:1.85;
+    }
+
+    .action-bar{
+
+        flex-direction:column;
+
+        align-items:stretch;
+    }
+
+    .action-group{
+
+        width:100%;
+    }
+
+    .action-btn{
+
+        flex:1;
+
+        text-align:center;
+    }
+
+    .sidebar{
+
+        grid-template-columns:1fr;
+    }
+
+    .section-navigation{
+
+        grid-template-columns:1fr;
+    }
+
+    .nav-section.next{
+
+        text-align:left;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+========================================================= */
+
+@media(max-width:390px){
+
+    .nav-actions .nav-btn{
+
+        font-size:0;
+
+        width:36px;
+
+        height:36px;
+
+        padding:0;
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+    }
+
+    .section-number-large{
+
+        font-size:39px;
+    }
+
+}
+
 </style>
 
 </head>
 
+
 <body>
 
-<header>
-<h1>📘 BNS - Section 1</h1>
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header class="topbar">
+
+<div class="nav-inner">
+
+<div class="brand">
+
+<div class="brand-logo">
+⚖️
+</div>
+
+<div class="brand-text">
+
+<div class="brand-name">
+PENDICO
+</div>
+
+<div class="brand-sub">
+Indian Legal Information Portal
+</div>
+
+</div>
+
+</div>
+
+
+<div class="nav-actions">
+
+<a
+href="bns.html"
+class="nav-btn">
+
+← BNS
+
+</a>
+
+<button
+class="nav-btn"
+onclick="toggleTheme()"
+id="themeButton"
+title="Toggle dark mode">
+
+🌙
+
+</button>
+
+</div>
+
+</div>
+
 </header>
 
-<div class="container">
 
-<div class="card">
+<!-- =========================================================
+     MAIN
+========================================================= -->
 
-<h2>Section 1</h2>
+<main class="page" id="page">
 
-<h3>Short title, commencement and application</h3>
+<div class="loading-screen">
 
-<p><strong>Original Text</strong></p>
+<div>
 
-<p>This is where the official text of Section 1 will appear.</p>
+<div class="loader"></div>
 
-<hr>
+<strong>
+Loading BNS section...
+</strong>
 
-<p><strong>Simple Explanation</strong></p>
-
-<p>Explain the meaning of this section in plain language.</p>
-
-<hr>
-
-<p><strong>Related Case Laws</strong></p>
-
-<p>Coming Soon</p>
-
-<a class="back" href="../acts/bns.html">⬅ Back to BNS</a>
+<p style="color:var(--muted);font-size:13px;">
+Preparing the legal text
+</p>
 
 </div>
 
 </div>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
-© 2026 Pendico
+
+<div class="footer-brand">
+PENDICO
+</div>
+
+<p>
+Indian Legal Information & Knowledge Platform
+</p>
+
+<p>
+For educational and informational purposes.
+</p>
+
+<div class="footer-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="bareacts.html">
+Bare Acts
+</a>
+
+<a href="bns.html">
+BNS
+</a>
+
+<a href="caselaws.html">
+Case Laws
+</a>
+
+<a href="articles.html">
+Articles
+</a>
+
+<a href="legalnews.html">
+Legal News
+</a>
+
+</div>
+
 </footer>
 
+
+<script>
+
+/* =========================================================
+   GLOBAL DATA
+========================================================= */
+
+let sections = [];
+
+let currentSection = null;
+
+let currentIndex = -1;
+
+
+/* =========================================================
+   THEME
+========================================================= */
+
+function applyTheme(){
+
+    const saved =
+        localStorage.getItem("pendico-theme");
+
+    if(saved === "dark"){
+
+        document.body.classList.add("dark");
+
+    }
+
+    updateThemeButton();
+
+}
+
+
+function toggleTheme(){
+
+    document.body.classList.toggle("dark");
+
+    const dark =
+        document.body.classList.contains("dark");
+
+    localStorage.setItem(
+        "pendico-theme",
+        dark ? "dark" : "light"
+    );
+
+    updateThemeButton();
+
+}
+
+
+function updateThemeButton(){
+
+    const button =
+        document.getElementById("themeButton");
+
+    if(!button) return;
+
+    button.textContent =
+        document.body.classList.contains("dark")
+        ? "☀️"
+        : "🌙";
+
+}
+
+
+/* =========================================================
+   GET SECTION FROM URL
+========================================================= */
+
+function getRequestedSection(){
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+    return params.get("section");
+
+}
+
+
+/* =========================================================
+   LOAD DATABASE
+========================================================= */
+
+async function loadBNS(){
+
+    try{
+
+        const response =
+            await fetch("data/bns.json", {
+                cache:"no-store"
+            });
+
+        if(!response.ok){
+
+            throw new Error(
+                "BNS JSON could not be loaded."
+            );
+
+        }
+
+        const data =
+            await response.json();
+
+
+        if(!Array.isArray(data)){
+
+            throw new Error(
+                "BNS JSON format is invalid."
+            );
+
+        }
+
+
+        sections = data;
+
+
+        const requested =
+            getRequestedSection();
+
+
+        if(!requested){
+
+            showError(
+                "No Section Selected",
+                "Please select a BNS section from the BNS library."
+            );
+
+            return;
+
+        }
+
+
+        const index =
+            sections.findIndex(
+                item =>
+                String(item.section).trim() ===
+                String(requested).trim()
+            );
+
+
+        if(index === -1){
+
+            showError(
+                "Section Not Found",
+                `Section ${escapeHTML(requested)} could not be found in the BNS database.`
+            );
+
+            return;
+
+        }
+
+
+        currentIndex = index;
+
+        currentSection =
+            sections[index];
+
+
+        renderSection();
+
+    }
+    catch(error){
+
+        console.error(error);
+
+        showError(
+            "Unable to Load BNS",
+            "The BNS database could not be loaded. Please check that data/bns.json exists and is accessible."
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   RENDER SECTION
+========================================================= */
+
+function renderSection(){
+
+    const item =
+        currentSection;
+
+    const sectionNumber =
+        escapeHTML(
+            item.section || ""
+        );
+
+    const title =
+        escapeHTML(
+            item.title ||
+            "Untitled Section"
+        );
+
+    const chapter =
+        escapeHTML(
+            item.chapterTitle ||
+            item.chapter ||
+            "Bharatiya Nyaya Sanhita, 2023"
+        );
+
+    const text =
+        escapeHTML(
+            item.text ||
+            "Section text is not available."
+        );
+
+    const explanation =
+        escapeHTML(
+            item.explanation ||
+            "An explanation has not been added for this section yet."
+        );
+
+
+    document.title =
+        `Section ${item.section} - ${item.title || "BNS"} | Pendico`;
+
+
+    updateSEO(
+        item.section,
+        item.title,
+        item.text
+    );
+
+
+    const total =
+        sections.length;
+
+    const position =
+        currentIndex + 1;
+
+    const progress =
+        total > 0
+        ? Math.round(
+            (position / total) * 100
+          )
+        : 0;
+
+
+    const previous =
+        currentIndex > 0
+        ? sections[currentIndex - 1]
+        : null;
+
+
+    const next =
+        currentIndex < total - 1
+        ? sections[currentIndex + 1]
+        : null;
+
+
+    const keywords =
+        Array.isArray(item.keywords)
+        ? item.keywords
+        : [];
+
+
+    document.getElementById("page").innerHTML = `
+
+        <div class="breadcrumb">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <span>›</span>
+
+            <a href="bareacts.html">
+                Bare Acts
+            </a>
+
+            <span>›</span>
+
+            <a href="bns.html">
+                BNS 2023
+            </a>
+
+            <span>›</span>
+
+            <span>
+                Section ${sectionNumber}
+            </span>
+
+        </div>
+
+
+        <div class="content-grid">
+
+
+            <!-- =================================================
+                 DOCUMENT
+            ================================================= -->
+
+            <div class="document">
+
+
+                <section class="section-hero">
+
+                    <div class="hero-content">
+
+                        <div class="eyebrow">
+                            ⚖️ BHARATIYA NYAYA SANHITA, 2023
+                        </div>
+
+                        <div class="section-number-large">
+                            § ${sectionNumber}
+                        </div>
+
+                        <h1 class="section-title-large">
+                            ${title}
+                        </h1>
+
+                        <div class="chapter-label">
+                            📚 ${chapter}
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ACTION BAR -->
+
+                <div class="action-bar">
+
+                    <div class="action-group">
+
+                        <button
+                            class="action-btn"
+                            onclick="copySection()">
+
+                            📋 Copy
+
+                        </button>
+
+
+                        <button
+                            class="action-btn"
+                            onclick="shareSection()">
+
+                            🔗 Share
+
+                        </button>
+
+
+                        <button
+                            class="action-btn"
+                            onclick="toggleFind()">
+
+                            🔎 Find
+
+                        </button>
+
+
+                        <button
+                            class="action-btn"
+                            onclick="window.print()">
+
+                            🖨️ Print
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="action-group">
+
+                        <a
+                            href="bns.html"
+                            class="action-btn primary">
+
+                            ← All BNS Sections
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FIND -->
+
+                <div
+                    class="find-box"
+                    id="findBox">
+
+                    <input
+                        type="search"
+                        class="find-input"
+                        id="findInput"
+                        placeholder="Find a word in this section..."
+                        autocomplete="off">
+
+                    <span
+                        class="find-result"
+                        id="findResult">
+
+                        0 matches
+
+                    </span>
+
+                </div>
+
+
+                <!-- DOCUMENT -->
+
+                <article class="document-card">
+
+                    <div class="document-header">
+
+                        <div class="document-label">
+
+                            <div class="document-label-icon">
+                                📜
+                            </div>
+
+                            <span>
+                                Section ${sectionNumber}
+                            </span>
+
+                        </div>
+
+                        <div
+                            style="
+                            color:var(--muted);
+                            font-size:11px;
+                            font-weight:700;
+                            ">
+
+                            BNS • 2023
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="document-body">
+
+
+                        <h2 class="text-heading">
+                            Provision
+                        </h2>
+
+
+                        <div
+                            class="legal-text"
+                            id="legalText">
+
+                            ${text}
+
+                        </div>
+
+
+                        <div class="explanation-card">
+
+                            <div class="explanation-header">
+
+                                <div class="explanation-icon">
+                                    💡
+                                </div>
+
+                                <span>
+                                    Explanation
+                                </span>
+
+                            </div>
+
+                            <div class="explanation-text">
+                                ${explanation}
+                            </div>
+
+                        </div>
+
+
+                        ${
+                            keywords.length
+                            ?
+                            `
+
+                            <div class="keywords">
+
+                                ${keywords
+                                .map(
+                                    keyword =>
+                                    `<span class="keyword">
+                                        #${escapeHTML(keyword)}
+                                    </span>`
+                                )
+                                .join("")}
+
+                            </div>
+
+                            `
+                            :
+                            ""
+                        }
+
+                    </div>
+
+                </article>
+
+
+                <!-- PREVIOUS / NEXT -->
+
+                <div class="section-navigation">
+
+
+                    ${
+                        previous
+                        ?
+
+                        `
+
+                        <a
+                            class="nav-section"
+                            href="section.html?section=${encodeURIComponent(previous.section)}">
+
+                            <div class="nav-small">
+                                ← Previous Section
+                            </div>
+
+                            <div class="nav-title">
+                                § ${escapeHTML(previous.section)}
+                                —
+                                ${escapeHTML(previous.title || "")}
+                            </div>
+
+                        </a>
+
+                        `
+
+                        :
+
+                        `
+
+                        <div
+                            class="nav-section"
+                            style="opacity:.45;">
+
+                            <div class="nav-small">
+                                Previous Section
+                            </div>
+
+                            <div class="nav-title">
+                                Beginning of BNS
+                            </div>
+
+                        </div>
+
+                        `
+                    }
+
+
+                    ${
+                        next
+                        ?
+
+                        `
+
+                        <a
+                            class="nav-section next"
+                            href="section.html?section=${encodeURIComponent(next.section)}">
+
+                            <div class="nav-small">
+                                Next Section →
+                            </div>
+
+                            <div class="nav-title">
+                                § ${escapeHTML(next.section)}
+                                —
+                                ${escapeHTML(next.title || "")}
+                            </div>
+
+                        </a>
+
+                        `
+
+                        :
+
+                        `
+
+                        <div
+                            class="nav-section next"
+                            style="opacity:.45;">
+
+                            <div class="nav-small">
+                                Next Section
+                            </div>
+
+                            <div class="nav-title">
+                                End of BNS
+                            </div>
+
+                        </div>
+
+                        `
+                    }
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SIDEBAR
+            ================================================= -->
+
+            <aside class="sidebar">
+
+
+                <div class="side-card">
+
+                    <div class="side-title">
+                        📊 BNS Section Progress
+                    </div>
+
+
+                    <div class="progress-wrap">
+
+                        <div class="progress-top">
+
+                            <span>
+                                Section ${position}
+                                of ${total}
+                            </span>
+
+                            <strong>
+                                ${progress}%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress">
+
+                            <div
+                                class="progress-bar"
+                                style="width:${progress}%">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="bns.html"
+                        class="side-link">
+
+                        📚 Browse all sections
+
+                    </a>
+
+
+                    <a
+                        href="bareacts.html"
+                        class="side-link">
+
+                        ⚖️ All Bare Acts
+
+                    </a>
+
+                </div>
+
+
+                <div class="side-card">
+
+                    <div class="side-title">
+                        🧭 Section Navigation
+                    </div>
+
+
+                    ${
+                        previous
+                        ?
+
+                        `
+
+                        <a
+                            href="section.html?section=${encodeURIComponent(previous.section)}"
+                            class="side-link">
+
+                            ← § ${escapeHTML(previous.section)}
+
+                        </a>
+
+                        `
+
+                        :
+
+                        ""
+
+                    }
+
+
+                    ${
+                        next
+                        ?
+
+                        `
+
+                        <a
+                            href="section.html?section=${encodeURIComponent(next.section)}"
+                            class="side-link">
+
+                            § ${escapeHTML(next.section)} →
+
+                        </a>
+
+                        `
+
+                        :
+
+                        ""
+
+                    }
+
+                </div>
+
+
+                <div class="side-card">
+
+                    <div class="side-title">
+                        🛠️ Tools
+                    </div>
+
+
+                    <button
+                        class="side-link"
+                        onclick="copySection()">
+
+                        📋 Copy Section
+
+                    </button>
+
+
+                    <button
+                        class="side-link"
+                        onclick="shareSection()">
+
+                        🔗 Share Section
+
+                    </button>
+
+
+                    <button
+                        class="side-link"
+                        onclick="window.print()">
+
+                        🖨️ Print Section
+
+                    </button>
+
+                </div>
+
+
+                <div class="side-card">
+
+                    <div class="side-title">
+                        ℹ️ Information
+                    </div>
+
+                    <div
+                        style="
+                        color:var(--muted);
+                        font-size:11px;
+                        line-height:1.7;
+                        ">
+
+                        This page displays information
+                        from the Pendico BNS database.
+
+                        <br><br>
+
+                        Always consult the official
+                        legislation and qualified legal
+                        professionals for authoritative
+                        legal advice.
+
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+        </div>
+
+    `;
+
+
+    setupFind();
+
+}
+
+
+/* =========================================================
+   SEARCH WITHIN SECTION
+========================================================= */
+
+function toggleFind(){
+
+    const box =
+        document.getElementById("findBox");
+
+    if(!box) return;
+
+    box.classList.toggle("active");
+
+    if(box.classList.contains("active")){
+
+        document
+            .getElementById("findInput")
+            .focus();
+
+    }
+
+}
+
+
+function setupFind(){
+
+    const input =
+        document.getElementById("findInput");
+
+    if(!input) return;
+
+
+    input.addEventListener(
+        "input",
+        function(){
+
+            const query =
+                this.value.trim().toLowerCase();
+
+            const text =
+                currentSection.text || "";
+
+            if(!query){
+
+                document
+                    .getElementById("findResult")
+                    .textContent =
+                    "0 matches";
+
+                return;
+
+            }
+
+
+            const matches =
+                text.toLowerCase()
+                    .split(query)
+                    .length - 1;
+
+
+            document
+                .getElementById("findResult")
+                .textContent =
+                `${matches} match${matches === 1 ? "" : "es"}`;
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   COPY SECTION
+========================================================= */
+
+async function copySection(){
+
+    if(!currentSection) return;
+
+
+    const number =
+        currentSection.section || "";
+
+    const title =
+        currentSection.title || "";
+
+    const chapter =
+        currentSection.chapterTitle ||
+        currentSection.chapter ||
+        "";
+
+    const text =
+        currentSection.text || "";
+
+    const explanation =
+        currentSection.explanation || "";
+
+
+    const content =
+
+`PENDICO
+Bharatiya Nyaya Sanhita, 2023
+
+Section ${number}
+${title}
+
+${chapter}
+
+PROVISION
+${text}
+
+EXPLANATION
+${explanation}
+
+Source:
+${window.location.href}`;
+
+
+    try{
+
+        await navigator.clipboard.writeText(
+            content
+        );
+
+        showToast(
+            "Section copied to clipboard ✓"
+        );
+
+    }
+    catch(error){
+
+        fallbackCopy(content);
+
+    }
+
+}
+
+
+/* =========================================================
+   FALLBACK COPY
+========================================================= */
+
+function fallbackCopy(text){
+
+    const textarea =
+        document.createElement("textarea");
+
+    textarea.value = text;
+
+    textarea.style.position =
+        "fixed";
+
+    textarea.style.opacity = "0";
+
+    document.body.appendChild(
+        textarea
+    );
+
+    textarea.select();
+
+    try{
+
+        document.execCommand("copy");
+
+        showToast(
+            "Section copied ✓"
+        );
+
+    }
+    catch(error){
+
+        showToast(
+            "Unable to copy section"
+        );
+
+    }
+
+    document.body.removeChild(
+        textarea
+    );
+
+}
+
+
+/* =========================================================
+   SHARE
+========================================================= */
+
+async function shareSection(){
+
+    if(!currentSection) return;
+
+
+    const title =
+        `BNS Section ${currentSection.section}`;
+
+    const text =
+        currentSection.title ||
+        "Bharatiya Nyaya Sanhita, 2023";
+
+
+    if(
+        navigator.share
+    ){
+
+        try{
+
+            await navigator.share({
+
+                title:title,
+
+                text:
+                    `${title} — ${text}`,
+
+                url:
+                    window.location.href
+
+            });
+
+        }
+        catch(error){
+
+            /*
+              User cancelled sharing.
+            */
+
+        }
+
+        return;
+
+    }
+
+
+    try{
+
+        await navigator.clipboard.writeText(
+            window.location.href
+        );
+
+        showToast(
+            "Section link copied ✓"
+        );
+
+    }
+    catch(error){
+
+        showToast(
+            "Copy this page URL to share"
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+function showToast(message){
+
+    const old =
+        document.getElementById(
+            "pendicoToast"
+        );
+
+    if(old){
+
+        old.remove();
+
+    }
+
+
+    const toast =
+        document.createElement("div");
+
+    toast.id =
+        "pendicoToast";
+
+
+    toast.textContent =
+        message;
+
+
+    Object.assign(
+        toast.style,
+        {
+
+            position:"fixed",
+
+            bottom:"25px",
+
+            left:"50%",
+
+            transform:
+                "translateX(-50%)",
+
+            zIndex:"9999",
+
+            background:
+                "#071a35",
+
+            color:"white",
+
+            padding:
+                "12px 18px",
+
+            borderRadius:
+                "12px",
+
+            fontSize:"13px",
+
+            fontWeight:"700",
+
+            boxShadow:
+                "0 10px 30px rgba(0,0,0,.25)",
+
+            maxWidth:"90%",
+
+            textAlign:"center"
+
+        }
+    );
+
+
+    document.body.appendChild(
+        toast
+    );
+
+
+    setTimeout(
+        () => {
+
+            toast.style.opacity =
+                "0";
+
+            toast.style.transition =
+                ".3s";
+
+            setTimeout(
+                () => toast.remove(),
+                300
+            );
+
+        },
+        2200
+    );
+
+}
+
+
+/* =========================================================
+   ERROR PAGE
+========================================================= */
+
+function showError(title,message){
+
+    document.getElementById("page").innerHTML = `
+
+        <div class="error-card">
+
+            <div class="error-icon">
+                ⚠️
+            </div>
+
+            <h2>
+                ${title}
+            </h2>
+
+            <p>
+                ${message}
+            </p>
+
+            <a
+                href="bns.html"
+                class="error-btn">
+
+                ← Return to BNS Library
+
+            </a>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================================================
+   SEO
+========================================================= */
+
+function updateSEO(
+    number,
+    title,
+    text
+){
+
+    const description =
+        `Section ${number} — ${title || "Bharatiya Nyaya Sanhita, 2023"}. Read the section and explanation on Pendico.`;
+
+    let meta =
+        document.querySelector(
+            'meta[name="description"]'
+        );
+
+
+    if(!meta){
+
+        meta =
+            document.createElement("meta");
+
+        meta.name =
+            "description";
+
+        document.head.appendChild(
+            meta
+        );
+
+    }
+
+
+    meta.content =
+        description;
+
+
+    setMetaProperty(
+        "og:title",
+        `Section ${number} - ${title || "BNS"} | Pendico`
+    );
+
+    setMetaProperty(
+        "og:description",
+        description
+    );
+
+    setMetaProperty(
+        "og:url",
+        window.location.href
+    );
+
+}
+
+
+/* =========================================================
+   META PROPERTY
+========================================================= */
+
+function setMetaProperty(
+    property,
+    content
+){
+
+    let meta =
+        document.querySelector(
+            `meta[property="${property}"]`
+        );
+
+
+    if(!meta){
+
+        meta =
+            document.createElement("meta");
+
+        meta.setAttribute(
+            "property",
+            property
+        );
+
+        document.head.appendChild(
+            meta
+        );
+
+    }
+
+
+    meta.content =
+        content;
+
+}
+
+
+/* =========================================================
+   HTML ESCAPE
+========================================================= */
+
+function escapeHTML(value){
+
+    return String(value)
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+/* =========================================================
+   KEYBOARD SHORTCUTS
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        /*
+          Don't trigger shortcuts
+          while typing.
+        */
+
+        const tag =
+            document.activeElement
+                ?.tagName;
+
+        if(
+            tag === "INPUT" ||
+            tag === "TEXTAREA"
+        ){
+
+            return;
+
+        }
+
+
+        if(
+            event.key === "/"
+        ){
+
+            event.preventDefault();
+
+            toggleFind();
+
+        }
+
+
+        if(
+            event.key === "ArrowLeft" &&
+            currentIndex > 0
+        ){
+
+            const previous =
+                sections[
+                    currentIndex - 1
+                ];
+
+            window.location.href =
+                `section.html?section=${encodeURIComponent(previous.section)}`;
+
+        }
+
+
+        if(
+            event.key === "ArrowRight" &&
+            currentIndex <
+            sections.length - 1
+        ){
+
+            const next =
+                sections[
+                    currentIndex + 1
+                ];
+
+            window.location.href =
+                `section.html?section=${encodeURIComponent(next.section)}`;
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   START APPLICATION
+========================================================= */
+
+applyTheme();
+
+loadBNS();
+
+</script>
+
 </body>
+
 </html>
