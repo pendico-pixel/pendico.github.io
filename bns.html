@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
 
-<!-- Google tag -->
+<!-- =========================================================
+     GOOGLE ANALYTICS 4
+========================================================= -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0BL89MBWGY"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -13,38 +16,111 @@ gtag('js', new Date());
 gtag('config', 'G-0BL89MBWGY');
 </script>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pendico | Bharatiya Nyaya Sanhita, 2023</title>
+<!-- =========================================================
+     SEO
+========================================================= -->
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Pendico | Bharatiya Nyaya Sanhita, 2023 — BNS Sections</title>
 
 <meta name="description"
-content="Bharatiya Nyaya Sanhita, 2023 — section-wise legal information and explanations on Pendico Legal Library.">
+      content="Explore all 358 sections of the Bharatiya Nyaya Sanhita, 2023 on Pendico. Search BNS sections, chapters, titles and legal provisions in a fast, mobile-friendly interface.">
+
+<meta name="keywords"
+      content="BNS, Bharatiya Nyaya Sanhita 2023, BNS sections, BNS 358 sections, Indian criminal law, Bharatiya Nyaya Sanhita sections, Pendico">
+
+<meta name="author"
+      content="Pendico">
+
+<meta name="robots"
+      content="index, follow">
+
+<link rel="canonical"
+      href="https://pendico.pages.dev/Bns.html">
+
+<link rel="icon"
+      type="image/png"
+      href="favicon.png">
+
+
+<!-- =========================================================
+     OPEN GRAPH
+========================================================= -->
+
+<meta property="og:title"
+      content="Bharatiya Nyaya Sanhita, 2023 | Pendico">
+
+<meta property="og:description"
+      content="Search and explore the 358 sections of the Bharatiya Nyaya Sanhita, 2023.">
+
+<meta property="og:type"
+      content="website">
+
+<meta property="og:url"
+      content="https://pendico.pages.dev/Bns.html">
+
+<meta property="og:image"
+      content="https://pendico.pages.dev/logo.png.jpeg">
+
+
+<!-- =========================================================
+     DESIGN
+========================================================= -->
 
 <style>
 
 :root{
-    --bg:#f5f7fb;
-    --card:#ffffff;
-    --text:#172033;
-    --muted:#667085;
-    --primary:#123c7a;
-    --primary2:#1d5bbf;
-    --border:#e4e7ec;
-    --shadow:0 8px 30px rgba(15,23,42,.08);
-    --header:#0b2f63;
+
+    --bg:#f4f7fb;
+    --surface:#ffffff;
+    --surface2:#f8fafc;
+
+    --text:#10233f;
+    --text2:#334155;
+    --muted:#64748b;
+
+    --primary:#145dcc;
+    --primary-dark:#0b3d91;
+    --accent:#2d8cff;
+
+    --border:#e2e8f0;
+
+    --header:#061a35;
+
+    --success:#16834b;
+    --danger:#dc3545;
+
+    --shadow:
+        0 10px 35px rgba(15,23,42,.07);
+
+    --radius:18px;
 }
 
 body.dark{
-    --bg:#0d1117;
-    --card:#151b23;
+
+    --bg:#080d16;
+    --surface:#101722;
+    --surface2:#151e2c;
+
     --text:#f1f5f9;
-    --muted:#9ca3af;
-    --primary:#6ea8ff;
-    --primary2:#3b82f6;
-    --border:#273244;
-    --shadow:0 8px 30px rgba(0,0,0,.35);
-    --header:#081b38;
+    --text2:#d6deea;
+    --muted:#94a3b8;
+
+    --primary:#63a4ff;
+    --primary-dark:#3b82f6;
+    --accent:#60a5fa;
+
+    --border:#243247;
+
+    --header:#040c19;
+
+    --shadow:
+        0 12px 40px rgba(0,0,0,.35);
 }
 
 *{
@@ -56,7 +132,9 @@ html{
 }
 
 body{
+
     margin:0;
+
     font-family:
         Inter,
         -apple-system,
@@ -64,400 +142,1394 @@ body{
         "Segoe UI",
         Arial,
         sans-serif;
+
     background:var(--bg);
+
     color:var(--text);
-    transition:.25s;
+
+    line-height:1.6;
+
+    transition:
+        background .25s,
+        color .25s;
 }
 
-/* HEADER */
+button,
+input,
+select{
+    font:inherit;
+}
 
-header{
-    background:linear-gradient(135deg,#082b5c,#1554a0);
-    color:white;
-    padding:18px 25px;
+button{
+    cursor:pointer;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header{
+
     position:sticky;
+
     top:0;
+
     z-index:1000;
-    box-shadow:0 3px 20px rgba(0,0,0,.15);
+
+    background:
+        rgba(6,26,53,.96);
+
+    backdrop-filter:
+        blur(18px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 4px 25px rgba(0,0,0,.12);
 }
 
 .header-inner{
-    max-width:1150px;
+
+    max-width:1250px;
+
     margin:auto;
+
+    min-height:68px;
+
+    padding:
+        10px 22px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
+
     gap:20px;
 }
 
 .brand{
+
     display:flex;
+
     align-items:center;
+
     gap:12px;
-}
 
-.brand-icon{
-    width:45px;
-    height:45px;
-    border-radius:12px;
-    background:rgba(255,255,255,.15);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:24px;
-}
-
-.brand h1{
-    margin:0;
-    font-size:21px;
-}
-
-.brand p{
-    margin:3px 0 0;
-    opacity:.75;
-    font-size:12px;
-}
-
-.header-actions{
-    display:flex;
-    gap:8px;
-}
-
-.header-btn{
-    border:1px solid rgba(255,255,255,.25);
-    background:rgba(255,255,255,.1);
     color:white;
-    border-radius:10px;
-    padding:9px 12px;
-    cursor:pointer;
-    font-size:14px;
+
+    min-width:0;
 }
 
-.header-btn:hover{
-    background:rgba(255,255,255,.2);
+.brand-logo{
+
+    width:42px;
+    height:42px;
+
+    border-radius:11px;
+
+    object-fit:cover;
+
+    flex-shrink:0;
 }
 
-/* MAIN */
+.brand-title{
 
-.container{
-    max-width:1150px;
-    margin:auto;
-    padding:30px 20px 60px;
-}
+    font-weight:900;
 
-/* HERO */
+    letter-spacing:.5px;
 
-.hero{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:30px;
-    box-shadow:var(--shadow);
-    margin-bottom:25px;
-}
-
-.badge{
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    background:rgba(29,91,191,.1);
-    color:var(--primary2);
-    padding:6px 11px;
-    border-radius:20px;
-    font-size:12px;
-    font-weight:700;
-    margin-bottom:12px;
-}
-
-.hero h2{
-    margin:0 0 10px;
-    font-size:30px;
-}
-
-.hero p{
-    color:var(--muted);
-    line-height:1.7;
-    margin-bottom:20px;
-}
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
-}
-
-.stat{
-    background:var(--bg);
-    border:1px solid var(--border);
-    border-radius:12px;
-    padding:15px;
-}
-
-.stat strong{
-    display:block;
-    font-size:22px;
-    color:var(--primary2);
-}
-
-.stat span{
-    font-size:12px;
-    color:var(--muted);
-}
-
-/* SEARCH */
-
-.search-area{
-    position:relative;
-    margin-bottom:25px;
-}
-
-.search-box{
-    width:100%;
-    padding:17px 50px 17px 18px;
-    border-radius:14px;
-    border:1px solid var(--border);
-    background:var(--card);
-    color:var(--text);
-    outline:none;
-    font-size:15px;
-    box-shadow:var(--shadow);
-}
-
-.search-box:focus{
-    border-color:var(--primary2);
-    box-shadow:0 0 0 3px rgba(29,91,191,.12);
-}
-
-.search-icon{
-    position:absolute;
-    right:18px;
-    top:15px;
-    font-size:20px;
-    color:var(--muted);
-}
-
-/* TOOLBAR */
-
-.toolbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:15px;
-    gap:10px;
-    flex-wrap:wrap;
-}
-
-.toolbar-title{
-    font-size:18px;
-    font-weight:700;
-}
-
-.result-count{
-    color:var(--muted);
-    font-size:13px;
-}
-
-/* SECTIONS */
-
-#sections{
-    display:grid;
-    gap:12px;
-}
-
-.section-card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:20px;
-    box-shadow:0 3px 15px rgba(0,0,0,.04);
-    transition:.2s;
-}
-
-.section-card:hover{
-    transform:translateY(-2px);
-    box-shadow:var(--shadow);
-    border-color:rgba(29,91,191,.35);
-}
-
-.section-top{
-    display:flex;
-    align-items:flex-start;
-    gap:15px;
-}
-
-.section-number{
-    min-width:55px;
-    height:45px;
-    border-radius:10px;
-    background:rgba(29,91,191,.1);
-    color:var(--primary2);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:800;
-    font-size:14px;
-}
-
-.section-info{
-    flex:1;
-}
-
-.chapter{
-    color:var(--muted);
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:.6px;
-    font-weight:700;
-}
-
-.section-title{
-    margin:4px 0 0;
     font-size:17px;
 }
 
-.section-text{
-    margin-top:15px;
-    color:var(--muted);
-    line-height:1.7;
+.brand-subtitle{
+
+    font-size:11px;
+
+    color:#9db1ca;
+
+    margin-top:1px;
+}
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+}
+
+.header-btn{
+
+    border:
+        1px solid rgba(255,255,255,.15);
+
+    background:
+        rgba(255,255,255,.08);
+
+    color:white;
+
+    border-radius:10px;
+
+    min-height:38px;
+
+    padding:
+        7px 12px;
+
+    transition:.2s;
+}
+
+.header-btn:hover{
+
+    background:
+        rgba(255,255,255,.16);
+
+    transform:translateY(-1px);
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main{
+
+    max-width:1250px;
+
+    margin:auto;
+
+    padding:
+        28px 20px 70px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    padding:
+        42px;
+
+    margin-bottom:22px;
+
+    color:white;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(74,151,255,.28),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(0,202,255,.16),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #061a35,
+            #0c3976,
+            #145dcc
+        );
+
+    box-shadow:
+        0 20px 55px rgba(8,45,95,.20);
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+    height:260px;
+
+    right:-110px;
+    top:-100px;
+
+    border-radius:50%;
+
+    border:
+        1px solid rgba(255,255,255,.12);
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+}
+
+.hero-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:
+        7px 12px;
+
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,.10);
+
+    border:
+        1px solid rgba(255,255,255,.14);
+
+    color:#d9ebff;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+    margin-bottom:14px;
+}
+
+.hero h1{
+
+    margin:0;
+
+    font-size:
+        clamp(30px,5vw,54px);
+
+    line-height:1.1;
+
+    letter-spacing:-1.3px;
+}
+
+.hero-description{
+
+    max-width:800px;
+
+    color:#c9dbef;
+
+    font-size:15px;
+
+    margin:
+        14px 0 25px;
+}
+
+
+/* =========================================================
+   HERO STATS
+========================================================= */
+
+.hero-stats{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0,1fr));
+
+    gap:10px;
+
+    max-width:700px;
+}
+
+.hero-stat{
+
+    padding:14px;
+
+    border-radius:13px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid rgba(255,255,255,.10);
+}
+
+.hero-stat strong{
+
+    display:block;
+
+    font-size:22px;
+
+    line-height:1.2;
+}
+
+.hero-stat span{
+
+    display:block;
+
+    color:#aec4dd;
+
+    font-size:11px;
+
+    margin-top:3px;
+}
+
+
+/* =========================================================
+   CONTROL PANEL
+========================================================= */
+
+.control-panel{
+
+    background:var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:18px;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:20px;
+}
+
+.search-row{
+
+    display:flex;
+
+    gap:10px;
+}
+
+.search-wrap{
+
+    position:relative;
+
+    flex:1;
+}
+
+.search-input{
+
+    width:100%;
+
+    min-height:50px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:13px;
+
+    background:var(--surface2);
+
+    color:var(--text);
+
+    outline:none;
+
+    padding:
+        12px 90px 12px 45px;
+
     font-size:14px;
 }
 
-.read-btn{
-    margin-top:15px;
-    border:none;
-    background:var(--primary2);
+.search-input:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(20,93,204,.12);
+}
+
+.search-icon{
+
+    position:absolute;
+
+    left:15px;
+
+    top:13px;
+
+    font-size:20px;
+
+    color:var(--muted);
+}
+
+.clear-search{
+
+    position:absolute;
+
+    right:10px;
+
+    top:8px;
+
+    width:34px;
+
+    height:34px;
+
+    border:0;
+
+    border-radius:9px;
+
+    background:transparent;
+
+    color:var(--muted);
+
+    display:none;
+}
+
+.clear-search:hover{
+
+    background:var(--bg);
+
+    color:var(--text);
+}
+
+.filter-row{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr auto auto;
+
+    gap:9px;
+
+    margin-top:10px;
+}
+
+.control-select{
+
+    min-height:42px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:10px;
+
+    background:var(--surface2);
+
+    color:var(--text);
+
+    padding:
+        8px 12px;
+
+    outline:none;
+
+    font-size:13px;
+}
+
+.control-select:focus{
+
+    border-color:var(--primary);
+}
+
+.control-btn{
+
+    min-height:42px;
+
+    border:
+        1px solid var(--border);
+
+    background:var(--surface2);
+
+    color:var(--text);
+
+    border-radius:10px;
+
+    padding:
+        8px 13px;
+
+    font-weight:700;
+
+    font-size:12px;
+
+    transition:.2s;
+}
+
+.control-btn:hover{
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+}
+
+.control-btn.primary{
+
+    background:var(--primary);
+
+    border-color:var(--primary);
+
     color:white;
-    padding:9px 14px;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:600;
 }
 
-.read-btn:hover{
-    opacity:.9;
+.control-btn.primary:hover{
+
+    background:var(--primary-dark);
+
+    color:white;
 }
 
-/* EMPTY */
 
-.empty{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:40px 20px;
-    text-align:center;
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.results-toolbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin:
+        5px 0 15px;
+}
+
+.results-title{
+
+    font-size:18px;
+
+    font-weight:850;
+}
+
+.results-meta{
+
     color:var(--muted);
+
+    font-size:12px;
 }
 
-/* LOADING */
+.view-buttons{
 
-.loading{
-    text-align:center;
-    padding:50px;
+    display:flex;
+
+    gap:5px;
+}
+
+.view-btn{
+
+    width:38px;
+
+    height:36px;
+
+    border:
+        1px solid var(--border);
+
+    background:var(--surface);
+
     color:var(--muted);
+
+    border-radius:9px;
 }
 
-/* FOOTER */
+.view-btn.active{
+
+    color:white;
+
+    background:var(--primary);
+
+    border-color:var(--primary);
+}
+
+
+/* =========================================================
+   SECTION LIST
+========================================================= */
+
+#sections{
+
+    display:grid;
+
+    gap:12px;
+}
+
+#sections.compact{
+
+    gap:7px;
+}
+
+.section-card{
+
+    position:relative;
+
+    background:var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:20px;
+
+    box-shadow:
+        0 4px 18px rgba(15,23,42,.035);
+
+    transition:
+        transform .2s,
+        box-shadow .2s,
+        border-color .2s;
+}
+
+.section-card:hover{
+
+    transform:translateY(-2px);
+
+    border-color:
+        rgba(20,93,204,.35);
+
+    box-shadow:var(--shadow);
+}
+
+.section-card.bookmarked{
+
+    border-color:
+        rgba(246,180,0,.55);
+}
+
+.section-main{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:flex-start;
+}
+
+.section-number{
+
+    min-width:58px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:
+        rgba(20,93,204,.10);
+
+    color:var(--primary);
+
+    font-weight:900;
+
+    font-size:13px;
+
+    flex-shrink:0;
+}
+
+.section-content{
+
+    flex:1;
+
+    min-width:0;
+}
+
+.section-chapter{
+
+    font-size:10px;
+
+    font-weight:850;
+
+    color:var(--muted);
+
+    text-transform:uppercase;
+
+    letter-spacing:.7px;
+
+    margin-bottom:3px;
+}
+
+.section-title{
+
+    margin:0;
+
+    color:var(--text);
+
+    font-size:17px;
+
+    line-height:1.4;
+}
+
+.section-preview{
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    line-height:1.65;
+
+    margin:
+        11px 0 0;
+
+    display:
+        -webkit-box;
+
+    -webkit-box-orient:vertical;
+
+    -webkit-line-clamp:3;
+
+    overflow:hidden;
+}
+
+.section-actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:7px;
+
+    margin-top:15px;
+
+    padding-top:14px;
+
+    border-top:
+        1px solid var(--border);
+}
+
+.action-btn{
+
+    border:
+        1px solid var(--border);
+
+    background:var(--surface2);
+
+    color:var(--text2);
+
+    border-radius:9px;
+
+    padding:
+        8px 11px;
+
+    font-size:11px;
+
+    font-weight:750;
+
+    transition:.2s;
+}
+
+.action-btn:hover{
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+}
+
+.action-btn.read{
+
+    background:var(--primary);
+
+    border-color:var(--primary);
+
+    color:white;
+}
+
+.action-btn.bookmarked{
+
+    background:
+        rgba(246,180,0,.12);
+
+    border-color:
+        rgba(246,180,0,.45);
+
+    color:#a66e00;
+}
+
+
+/* =========================================================
+   EMPTY / LOADING
+========================================================= */
+
+.state-box{
+
+    background:var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:50px 25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+}
+
+.state-icon{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+}
+
+.state-box h3{
+
+    margin:
+        0 0 5px;
+}
+
+.state-box p{
+
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:2000;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    background:
+        rgba(2,8,23,.72);
+
+    backdrop-filter:
+        blur(7px);
+}
+
+.modal.show{
+
+    display:flex;
+}
+
+.modal-box{
+
+    width:min(900px,100%);
+
+    max-height:
+        min(88vh,850px);
+
+    overflow:hidden;
+
+    background:var(--surface);
+
+    color:var(--text);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:22px;
+
+    box-shadow:
+        0 30px 90px rgba(0,0,0,.35);
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.modal-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    padding:
+        18px 20px;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+.modal-section-label{
+
+    color:var(--primary);
+
+    font-size:12px;
+
+    font-weight:900;
+
+    letter-spacing:.5px;
+}
+
+.modal-title{
+
+    margin:3px 0 0;
+
+    font-size:20px;
+
+    line-height:1.4;
+}
+
+.modal-close{
+
+    width:40px;
+
+    height:40px;
+
+    border:0;
+
+    border-radius:10px;
+
+    background:var(--surface2);
+
+    color:var(--text);
+
+    font-size:20px;
+}
+
+.modal-body{
+
+    overflow:auto;
+
+    padding:25px;
+}
+
+.modal-chapter{
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.7px;
+
+    font-weight:850;
+
+    margin-bottom:12px;
+}
+
+.modal-text{
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    color:var(--text2);
+
+    white-space:pre-wrap;
+}
+
+.modal-footer{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:7px;
+
+    padding:
+        14px 20px;
+
+    border-top:
+        1px solid var(--border);
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:25px;
+
+    z-index:3000;
+
+    transform:
+        translate(-50%,20px);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    background:#101827;
+
+    color:white;
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    border-radius:11px;
+
+    padding:
+        10px 15px;
+
+    font-size:12px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.25);
+
+    transition:.25s;
+}
+
+.toast.show{
+
+    opacity:1;
+
+    transform:
+        translate(-50%,0);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
+
     background:var(--header);
+
     color:white;
+
     text-align:center;
-    padding:25px 15px;
+
+    padding:
+        35px 20px;
+}
+
+.footer-logo{
+
+    font-weight:900;
+
+    font-size:21px;
+
+    letter-spacing:1px;
 }
 
 footer p{
-    margin:5px;
-    opacity:.75;
-    font-size:13px;
+
+    margin:
+        5px 0;
+
+    color:#91a5be;
+
+    font-size:12px;
 }
 
-.back{
-    display:inline-block;
-    margin-top:15px;
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-top:13px;
+}
+
+.footer-links a{
+
+    color:#b7c7da;
+
+    font-size:12px;
+}
+
+.footer-links a:hover{
+
     color:white;
-    text-decoration:none;
-    font-size:13px;
 }
 
-/* MOBILE */
 
-@media(max-width:700px){
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:800px){
 
     .header-inner{
-        align-items:flex-start;
+
+        padding:
+            9px 13px;
     }
 
-    .brand h1{
-        font-size:16px;
-    }
+    .brand-subtitle{
 
-    .brand p{
         display:none;
     }
 
     .header-btn{
-        padding:8px;
+
+        padding:
+            7px 9px;
+    }
+
+    .main{
+
+        padding:
+            16px 12px 55px;
     }
 
     .hero{
-        padding:22px;
+
+        padding:
+            28px 20px;
+
+        border-radius:20px;
     }
 
-    .hero h2{
-        font-size:24px;
+    .hero-stats{
+
+        grid-template-columns:
+            1fr;
     }
 
-    .stats{
-        grid-template-columns:1fr;
+    .filter-row{
+
+        grid-template-columns:
+            1fr 1fr;
     }
 
-    .section-card{
-        padding:15px;
+    .filter-row .control-btn{
+
+        width:100%;
     }
 
-    .section-top{
+    .section-main{
+
         gap:10px;
     }
 
     .section-number{
-        min-width:48px;
-        height:40px;
+
+        min-width:51px;
+
+        height:43px;
+    }
+
+    .section-title{
+
+        font-size:15px;
+    }
+
+    .results-toolbar{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+    }
+
+}
+
+@media(max-width:520px){
+
+    .brand-title{
+
+        font-size:14px;
+    }
+
+    .brand-logo{
+
+        width:37px;
+        height:37px;
+    }
+
+    .header-actions .acts-btn{
+
+        display:none;
+    }
+
+    .hero h1{
+
+        font-size:28px;
+    }
+
+    .hero-description{
+
+        font-size:13px;
+    }
+
+    .search-row{
+
+        display:block;
+    }
+
+    .filter-row{
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .section-card{
+
+        padding:15px;
+    }
+
+    .section-preview{
+
+        -webkit-line-clamp:4;
+    }
+
+    .modal{
+
+        padding:8px;
+    }
+
+    .modal-box{
+
+        border-radius:17px;
+
+        max-height:94vh;
+    }
+
+    .modal-body{
+
+        padding:18px;
+    }
+
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print{
+
+    .site-header,
+    .control-panel,
+    .results-toolbar,
+    footer,
+    .section-actions,
+    .modal{
+
+        display:none !important;
+    }
+
+    body{
+
+        background:white;
+
+        color:black;
+    }
+
+    .main{
+
+        max-width:none;
+
+        padding:0;
+    }
+
+    .hero{
+
+        color:black;
+
+        background:white;
+
+        box-shadow:none;
+
+        border:1px solid #ddd;
+    }
+
+    .section-card{
+
+        break-inside:avoid;
+
+        box-shadow:none;
+
+        color:black;
     }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<header>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
 
 <div class="header-inner">
 
-<div class="brand">
+<a href="index.html"
+   class="brand">
 
-<div class="brand-icon">
-⚖️
-</div>
+<img
+    src="logo.png.jpeg"
+    class="brand-logo"
+    alt="Pendico">
 
 <div>
-<h1>Pendico Legal Library</h1>
-<p>Indian Legal Information Portal</p>
+
+<div class="brand-title">
+Pendico Legal Library
+</div>
+
+<div class="brand-subtitle">
+Indian Legal Information Portal
 </div>
 
 </div>
+
+</a>
+
 
 <div class="header-actions">
 
-<button class="header-btn" onclick="toggleTheme()" id="themeBtn">
+<button
+    class="header-btn"
+    id="themeBtn"
+    onclick="toggleTheme()"
+    aria-label="Toggle dark mode">
+
 🌙
+
 </button>
 
+
 <a href="bareacts.html">
-<button class="header-btn">
+
+<button
+    class="header-btn acts-btn">
+
 ← Acts
+
 </button>
+
 </a>
 
 </div>
@@ -467,37 +1539,78 @@ footer p{
 </header>
 
 
-<main class="container">
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="main">
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <section class="hero">
 
-<div class="badge">
-📘 BARE ACT
+<div class="hero-content">
+
+<div class="hero-badge">
+⚖️ BARE ACT • CRIMINAL LAW
 </div>
 
-<h2>Bharatiya Nyaya Sanhita, 2023</h2>
+<h1>
+Bharatiya Nyaya Sanhita, 2023
+</h1>
 
-<p>
-The Bharatiya Nyaya Sanhita, 2023 (BNS) is the principal
-substantive criminal law statute of India, replacing the
-Indian Penal Code, 1860.
+<p class="hero-description">
+
+Explore the BNS section by section through Pendico's
+searchable legal information interface. Search by
+section number, title, chapter or keyword.
+
 </p>
 
-<div class="stats">
 
-<div class="stat">
-<strong id="totalSections">358</strong>
-<span>Total Sections</span>
+<div class="hero-stats">
+
+<div class="hero-stat">
+
+<strong id="totalSections">
+358
+</strong>
+
+<span>
+Sections in database
+</span>
+
 </div>
 
-<div class="stat">
-<strong id="totalChapters">—</strong>
-<span>Chapters</span>
+
+<div class="hero-stat">
+
+<strong id="totalChapters">
+—
+</strong>
+
+<span>
+Chapters detected
+</span>
+
 </div>
 
-<div class="stat">
-<strong>2023</strong>
-<span>Enactment</span>
+
+<div class="hero-stat">
+
+<strong>
+2023
+</strong>
+
+<span>
+Year of enactment
+</span>
+
+</div>
+
 </div>
 
 </div>
@@ -505,40 +1618,164 @@ Indian Penal Code, 1860.
 </section>
 
 
-<div class="search-area">
+<!-- =========================================================
+     SEARCH + FILTERS
+========================================================= -->
 
-<input
-type="search"
-id="searchBox"
-class="search-box"
-placeholder="Search section number, title, chapter or keyword..."
-autocomplete="off"
->
+<section class="control-panel">
+
+
+<div class="search-row">
+
+<div class="search-wrap">
 
 <span class="search-icon">
 🔎
 </span>
 
+<input
+    id="searchBox"
+    class="search-input"
+    type="search"
+    autocomplete="off"
+    placeholder="Search BNS — section, title, chapter, keyword or text...">
+
+<button
+    id="clearSearch"
+    class="clear-search"
+    onclick="clearSearch()"
+    aria-label="Clear search">
+
+✕
+
+</button>
+
+</div>
+
 </div>
 
 
-<div class="toolbar">
+<div class="filter-row">
 
-<div class="toolbar-title">
+
+<select
+    id="chapterFilter"
+    class="control-select">
+
+<option value="">
+All Chapters
+</option>
+
+</select>
+
+
+<select
+    id="sortSelect"
+    class="control-select">
+
+<option value="asc">
+Section 1 → 358
+</option>
+
+<option value="desc">
+Section 358 → 1
+</option>
+
+</select>
+
+
+<button
+    class="control-btn"
+    onclick="showBookmarks()">
+
+⭐ Bookmarks
+
+</button>
+
+
+<button
+    class="control-btn"
+    onclick="resetFilters()">
+
+↻ Reset
+
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     RESULTS TOOLBAR
+========================================================= -->
+
+<div class="results-toolbar">
+
+<div>
+
+<div class="results-title">
 BNS Sections
 </div>
 
-<div class="result-count" id="resultCount">
-Loading sections...
-</div>
+<div
+    class="results-meta"
+    id="resultCount">
+
+Loading BNS database...
 
 </div>
 
+</div>
+
+
+<div class="view-buttons">
+
+<button
+    class="view-btn active"
+    id="normalView"
+    onclick="setView('normal')"
+    aria-label="Normal view">
+
+☷
+
+</button>
+
+<button
+    class="view-btn"
+    id="compactView"
+    onclick="setView('compact')"
+    aria-label="Compact view">
+
+☰
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     SECTION LIST
+========================================================= -->
 
 <div id="sections">
 
-<div class="loading">
-⏳ Loading Bharatiya Nyaya Sanhita...
+<div class="state-box">
+
+<div class="state-icon">
+⏳
+</div>
+
+<h3>
+Loading Bharatiya Nyaya Sanhita...
+</h3>
+
+<p>
+Preparing the BNS legal database.
+</p>
+
 </div>
 
 </div>
@@ -546,73 +1783,348 @@ Loading sections...
 </main>
 
 
+<!-- =========================================================
+     SECTION READER MODAL
+========================================================= -->
+
+<div
+    class="modal"
+    id="sectionModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle">
+
+<div class="modal-box">
+
+
+<div class="modal-header">
+
+<div>
+
+<div
+    class="modal-section-label"
+    id="modalSectionNumber">
+
+SECTION
+
+</div>
+
+<h2
+    class="modal-title"
+    id="modalTitle">
+
+BNS Section
+
+</h2>
+
+</div>
+
+
+<button
+    class="modal-close"
+    onclick="closeModal()"
+    aria-label="Close">
+
+×
+
+</button>
+
+</div>
+
+
+<div class="modal-body">
+
+<div
+    class="modal-chapter"
+    id="modalChapter">
+
+</div>
+
+
+<div
+    class="modal-text"
+    id="modalText">
+
+</div>
+
+</div>
+
+
+<div class="modal-footer">
+
+
+<button
+    class="action-btn"
+    onclick="copyCurrentSection()">
+
+📋 Copy
+
+</button>
+
+
+<button
+    class="action-btn"
+    onclick="shareCurrentSection()">
+
+🔗 Share
+
+</button>
+
+
+<button
+    class="action-btn"
+    onclick="printCurrentSection()">
+
+🖨️ Print
+
+</button>
+
+
+<button
+    class="action-btn"
+    id="modalBookmarkBtn"
+    onclick="toggleCurrentBookmark()">
+
+⭐ Bookmark
+
+</button>
+
+
+<button
+    class="action-btn"
+    onclick="previousSection()">
+
+← Previous
+
+</button>
+
+
+<button
+    class="action-btn"
+    onclick="nextSection()">
+
+Next →
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div
+    class="toast"
+    id="toast">
+
+Done
+
+</div>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
 <footer>
 
-<strong>⚖️ Pendico</strong>
+<div class="footer-logo">
+⚖️ PENDICO
+</div>
 
 <p>
-Indian Legal Information Portal
+Bharatiya Nyaya Sanhita, 2023 — Legal Information Library
 </p>
 
 <p>
-© 2026 Pendico. For educational and informational purposes.
+For educational and informational purposes.
 </p>
 
-<a class="back" href="bareacts.html">
-← Back to Bare Acts
+
+<div class="footer-links">
+
+<a href="index.html">
+Home
 </a>
+
+<a href="bareacts.html">
+Bare Acts
+</a>
+
+<a href="caselaws.html">
+Case Laws
+</a>
+
+<a href="articles.html">
+Articles
+</a>
+
+<a href="legalnews.html">
+Legal News
+</a>
+
+<a href="trending.html">
+Trending Today
+</a>
+
+</div>
 
 </footer>
 
 
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
 <script>
+
+"use strict";
+
+
+/* =========================================================
+   GLOBAL DATA
+========================================================= */
 
 let allSections = [];
 
+let filteredSections = [];
 
-/* LOAD JSON */
+let currentSection = null;
+
+let currentIndex = -1;
+
+let bookmarkMode = false;
+
+
+/* =========================================================
+   DOM
+========================================================= */
+
+const sectionsContainer =
+    document.getElementById("sections");
+
+const searchBox =
+    document.getElementById("searchBox");
+
+const chapterFilter =
+    document.getElementById("chapterFilter");
+
+const sortSelect =
+    document.getElementById("sortSelect");
+
+const resultCount =
+    document.getElementById("resultCount");
+
+const clearSearchButton =
+    document.getElementById("clearSearch");
+
+const modal =
+    document.getElementById("sectionModal");
+
+
+/* =========================================================
+   LOAD JSON
+========================================================= */
 
 async function loadSections(){
 
     try{
 
-        const response = await fetch("data/bns.json");
+        const response =
+            await fetch("data/bns.json", {
+                cache:"no-cache"
+            });
 
         if(!response.ok){
-            throw new Error("Unable to load BNS database");
+
+            throw new Error(
+                "HTTP " + response.status
+            );
+
         }
 
-        allSections = await response.json();
 
-        document.getElementById("totalSections").textContent =
+        const data =
+            await response.json();
+
+
+        if(!Array.isArray(data)){
+
+            throw new Error(
+                "bns.json must contain an array"
+            );
+
+        }
+
+
+        allSections =
+            data.map((item,index)=>({
+
+                ...item,
+
+                _index:index,
+
+                _number:
+                    parseInt(item.section,10)
+                    || index + 1
+
+            }));
+
+
+        filteredSections =
+            [...allSections];
+
+
+        document
+            .getElementById("totalSections")
+            .textContent =
             allSections.length;
 
-        const chapters = new Set(
-            allSections.map(section => section.chapter)
-        );
 
-        document.getElementById("totalChapters").textContent =
-            chapters.size;
+        populateChapterFilter();
 
-        displaySections(allSections);
+        updateURLSection();
+
+        applyFilters();
 
     }
     catch(error){
 
-        console.error(error);
+        console.error(
+            "BNS loading error:",
+            error
+        );
 
-        document.getElementById("sections").innerHTML = `
-            <div class="empty">
-                <h3>⚠️ Unable to load BNS</h3>
+
+        sectionsContainer.innerHTML = `
+
+            <div class="state-box">
+
+                <div class="state-icon">
+                    ⚠️
+                </div>
+
+                <h3>
+                    Unable to load BNS database
+                </h3>
+
                 <p>
-                    Please check whether
+                    Please make sure
                     <strong>data/bns.json</strong>
-                    exists in the correct folder.
+                    exists and contains valid JSON.
                 </p>
+
             </div>
+
         `;
 
-        document.getElementById("resultCount").textContent =
+
+        resultCount.textContent =
             "Database unavailable";
 
     }
@@ -620,212 +2132,1342 @@ async function loadSections(){
 }
 
 
-/* DISPLAY */
+/* =========================================================
+   CHAPTER FILTER
+========================================================= */
 
-function displaySections(sections){
+function populateChapterFilter(){
 
-    const container =
-        document.getElementById("sections");
-
-    container.innerHTML = "";
-
-    if(sections.length === 0){
-
-        container.innerHTML = `
-            <div class="empty">
-                <h3>🔎 No sections found</h3>
-                <p>Try another search term.</p>
-            </div>
-        `;
-
-        document.getElementById("resultCount").textContent =
-            "0 results";
-
-        return;
-    }
+    const chapters =
+        new Map();
 
 
-    const fragment = document.createDocumentFragment();
+    allSections.forEach(section=>{
+
+        const key =
+            String(
+                section.chapterTitle
+                || section.chapter
+                || "Unclassified"
+            ).trim();
 
 
-    sections.forEach(section => {
+        if(!chapters.has(key)){
 
-        const card = document.createElement("article");
+            chapters.set(
+                key,
+                section.chapter
+            );
 
-        card.className = "section-card";
-
-
-        const number =
-            escapeHTML(section.section || "");
-
-        const title =
-            escapeHTML(section.title || "Untitled Section");
-
-        const chapter =
-            escapeHTML(section.chapterTitle || section.chapter || "");
-
-        const text =
-            escapeHTML(section.text || "");
-
-        card.innerHTML = `
-
-            <div class="section-top">
-
-                <div class="section-number">
-                    § ${number}
-                </div>
-
-                <div class="section-info">
-
-                    <div class="chapter">
-                        ${chapter}
-                    </div>
-
-                    <div class="section-title">
-                        ${title}
-                    </div>
-
-                </div>
-
-            </div>
-
-            ${
-                text
-                ?
-                `<div class="section-text">
-                    ${text}
-                </div>`
-                :
-                ""
-            }
-
-            <button
-                class="read-btn"
-                onclick="openSection('${encodeURIComponent(section.section)}')"
-            >
-                📖 Read Section
-            </button>
-
-        `;
-
-        fragment.appendChild(card);
+        }
 
     });
 
 
-    container.appendChild(fragment);
+    const sorted =
+        [...chapters.keys()].sort(
+            (a,b)=>
+                a.localeCompare(b)
+        );
 
 
-    document.getElementById("resultCount").textContent =
-        `${sections.length} section${sections.length === 1 ? "" : "s"}`;
+    chapterFilter.innerHTML =
+        `<option value="">All Chapters</option>`;
+
+
+    sorted.forEach(chapter=>{
+
+        const option =
+            document.createElement("option");
+
+        option.value =
+            chapter;
+
+        option.textContent =
+            chapter;
+
+        chapterFilter.appendChild(option);
+
+    });
+
+
+    document
+        .getElementById("totalChapters")
+        .textContent =
+        sorted.length;
 
 }
 
 
-/* SEARCH */
+/* =========================================================
+   SEARCH
+========================================================= */
 
-document.getElementById("searchBox")
-.addEventListener("input", function(){
+searchBox.addEventListener(
+    "input",
+    applyFilters
+);
+
+
+chapterFilter.addEventListener(
+    "change",
+    applyFilters
+);
+
+
+sortSelect.addEventListener(
+    "change",
+    applyFilters
+);
+
+
+function applyFilters(){
+
+    bookmarkMode = false;
 
     const query =
-        this.value.trim().toLowerCase();
+        searchBox.value
+            .trim()
+            .toLowerCase();
 
-    if(!query){
 
-        displaySections(allSections);
+    const chapter =
+        chapterFilter.value;
+
+
+    filteredSections =
+        allSections.filter(section=>{
+
+            const sectionChapter =
+                String(
+                    section.chapterTitle
+                    || section.chapter
+                    || ""
+                ).trim();
+
+
+            const searchable = [
+
+                section.section,
+
+                section.title,
+
+                section.chapter,
+
+                section.chapterTitle,
+
+                section.text,
+
+                section.explanation,
+
+                ...(Array.isArray(section.keywords)
+                    ? section.keywords
+                    : [])
+
+            ]
+
+            .filter(Boolean)
+
+            .join(" ")
+
+            .toLowerCase();
+
+
+            const matchesSearch =
+                !query
+                ||
+                searchable.includes(query);
+
+
+            const matchesChapter =
+                !chapter
+                ||
+                sectionChapter === chapter;
+
+
+            return (
+                matchesSearch
+                &&
+                matchesChapter
+            );
+
+        });
+
+
+    sortSections();
+
+    renderSections();
+
+    updateClearButton();
+
+}
+
+
+/* =========================================================
+   SORT
+========================================================= */
+
+function sortSections(){
+
+    filteredSections.sort(
+        (a,b)=>{
+
+            const direction =
+                sortSelect.value === "desc"
+                ? -1
+                : 1;
+
+            return (
+                (a._number - b._number)
+                * direction
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   RENDER
+========================================================= */
+
+function renderSections(){
+
+    sectionsContainer.innerHTML = "";
+
+
+    if(
+        filteredSections.length === 0
+    ){
+
+        sectionsContainer.innerHTML = `
+
+            <div class="state-box">
+
+                <div class="state-icon">
+                    🔎
+                </div>
+
+                <h3>
+                    No sections found
+                </h3>
+
+                <p>
+                    Try another search term or reset the filters.
+                </p>
+
+            </div>
+
+        `;
+
+
+        resultCount.textContent =
+            "0 sections";
 
         return;
 
     }
 
 
-    const results = allSections.filter(section => {
+    const fragment =
+        document.createDocumentFragment();
 
-        const searchable = [
 
-            section.section,
-            section.title,
-            section.chapter,
-            section.chapterTitle,
+    filteredSections.forEach(
+        (section,index)=>{
 
-            ...(section.keywords || []),
+            fragment.appendChild(
+                createSectionCard(
+                    section,
+                    index
+                )
+            );
 
-            section.text,
-            section.explanation
+        }
+    );
 
+
+    sectionsContainer.appendChild(
+        fragment
+    );
+
+
+    const total =
+        allSections.length;
+
+
+    resultCount.textContent =
+        `${filteredSections.length} of ${total} sections`;
+
+}
+
+
+/* =========================================================
+   SECTION CARD
+========================================================= */
+
+function createSectionCard(
+    section,
+    index
+){
+
+    const card =
+        document.createElement("article");
+
+
+    const number =
+        safeText(
+            section.section
+            || section._number
+        );
+
+
+    const title =
+        safeText(
+            section.title
+            || "Untitled Section"
+        );
+
+
+    const chapter =
+        safeText(
+            section.chapterTitle
+            || section.chapter
+            || ""
+        );
+
+
+    const preview =
+        safeText(
+            section.text
+            || section.explanation
+            || ""
+        );
+
+
+    const bookmarked =
+        isBookmarked(
+            section
+        );
+
+
+    card.className =
+        "section-card"
+        +
+        (
+            bookmarked
+            ? " bookmarked"
+            : ""
+        );
+
+
+    card.innerHTML = `
+
+        <div class="section-main">
+
+            <div class="section-number">
+
+                § ${escapeHTML(number)}
+
+            </div>
+
+
+            <div class="section-content">
+
+                <div class="section-chapter">
+
+                    ${escapeHTML(chapter)}
+
+                </div>
+
+                <h2 class="section-title">
+
+                    ${escapeHTML(title)}
+
+                </h2>
+
+                ${
+                    preview
+                    ?
+                    `
+                    <div class="section-preview">
+
+                        ${escapeHTML(preview)}
+
+                    </div>
+                    `
+                    :
+                    ""
+                }
+
+            </div>
+
+        </div>
+
+
+        <div class="section-actions">
+
+            <button
+                class="action-btn read"
+                data-action="read">
+
+                📖 Read Section
+
+            </button>
+
+
+            <button
+                class="action-btn
+                ${bookmarked ? "bookmarked" : ""}"
+                data-action="bookmark">
+
+                ${bookmarked
+                    ? "★ Saved"
+                    : "☆ Bookmark"}
+
+            </button>
+
+
+            <button
+                class="action-btn"
+                data-action="copy">
+
+                📋 Copy
+
+            </button>
+
+
+            <button
+                class="action-btn"
+                data-action="share">
+
+                🔗 Share
+
+            </button>
+
+        </div>
+
+    `;
+
+
+    card
+        .querySelector('[data-action="read"]')
+        .addEventListener(
+            "click",
+            ()=>openSection(section)
+        );
+
+
+    card
+        .querySelector('[data-action="bookmark"]')
+        .addEventListener(
+            "click",
+            ()=>{
+
+                toggleBookmark(section);
+
+                renderSections();
+
+            }
+        );
+
+
+    card
+        .querySelector('[data-action="copy"]')
+        .addEventListener(
+            "click",
+            ()=>copySection(section)
+        );
+
+
+    card
+        .querySelector('[data-action="share"]')
+        .addEventListener(
+            "click",
+            ()=>shareSection(section)
+        );
+
+
+    return card;
+
+}
+
+
+/* =========================================================
+   OPEN SECTION
+========================================================= */
+
+function openSection(section){
+
+    currentSection =
+        section;
+
+
+    currentIndex =
+        filteredSections.findIndex(
+            item =>
+                String(item.section)
+                ===
+                String(section.section)
+        );
+
+
+    document
+        .getElementById("modalSectionNumber")
+        .textContent =
+        "SECTION " +
+        String(
+            section.section
+            || ""
+        );
+
+
+    document
+        .getElementById("modalTitle")
+        .textContent =
+        section.title
+        || "BNS Section";
+
+
+    document
+        .getElementById("modalChapter")
+        .textContent =
+        section.chapterTitle
+        ||
+        section.chapter
+        ||
+        "";
+
+
+    const text =
+        section.text
+        ||
+        section.explanation
+        ||
+        "No text available for this section.";
+
+
+    document
+        .getElementById("modalText")
+        .textContent =
+        text;
+
+
+    updateModalBookmarkButton();
+
+
+    modal.classList.add("show");
+
+    document.body.style.overflow =
+        "hidden";
+
+
+    updateURL(
+        section.section
+    );
+
+}
+
+
+/* =========================================================
+   CLOSE MODAL
+========================================================= */
+
+function closeModal(){
+
+    modal.classList.remove("show");
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+/* =========================================================
+   MODAL BACKDROP
+========================================================= */
+
+modal.addEventListener(
+    "click",
+    function(event){
+
+        if(event.target === modal){
+
+            closeModal();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   ESC KEY
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            closeModal();
+
+        }
+
+
+        if(
+            modal.classList.contains("show")
+            &&
+            event.key === "ArrowRight"
+        ){
+
+            nextSection();
+
+        }
+
+
+        if(
+            modal.classList.contains("show")
+            &&
+            event.key === "ArrowLeft"
+        ){
+
+            previousSection();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   PREVIOUS
+========================================================= */
+
+function previousSection(){
+
+    if(currentIndex <= 0){
+
+        showToast(
+            "Already at the first section."
+        );
+
+        return;
+
+    }
+
+
+    openSection(
+        filteredSections[
+            currentIndex - 1
         ]
+    );
 
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-
-
-        return searchable.includes(query);
-
-    });
+}
 
 
-    displaySections(results);
+/* =========================================================
+   NEXT
+========================================================= */
 
-});
+function nextSection(){
+
+    if(
+        currentIndex === -1
+        ||
+        currentIndex >=
+        filteredSections.length - 1
+    ){
+
+        showToast(
+            "Already at the last section."
+        );
+
+        return;
+
+    }
 
 
-/* OPEN SECTION */
+    openSection(
+        filteredSections[
+            currentIndex + 1
+        ]
+    );
 
-function openSection(sectionNumber){
+}
+
+
+/* =========================================================
+   BOOKMARKS
+========================================================= */
+
+function getBookmarks(){
+
+    try{
+
+        return JSON.parse(
+            localStorage.getItem(
+                "pendico-bns-bookmarks"
+            )
+        ) || [];
+
+    }
+    catch{
+
+        return [];
+
+    }
+
+}
+
+
+function saveBookmarks(bookmarks){
+
+    localStorage.setItem(
+        "pendico-bns-bookmarks",
+        JSON.stringify(bookmarks)
+    );
+
+}
+
+
+function bookmarkKey(section){
+
+    return String(
+        section.section
+    );
+
+}
+
+
+function isBookmarked(section){
+
+    return getBookmarks()
+        .includes(
+            bookmarkKey(section)
+        );
+
+}
+
+
+function toggleBookmark(section){
+
+    const bookmarks =
+        getBookmarks();
+
+
+    const key =
+        bookmarkKey(section);
+
+
+    const index =
+        bookmarks.indexOf(key);
+
+
+    if(index === -1){
+
+        bookmarks.push(key);
+
+        showToast(
+            "⭐ Section bookmarked"
+        );
+
+    }
+    else{
+
+        bookmarks.splice(
+            index,
+            1
+        );
+
+        showToast(
+            "Bookmark removed"
+        );
+
+    }
+
+
+    saveBookmarks(bookmarks);
+
+    updateModalBookmarkButton();
+
+}
+
+
+function showBookmarks(){
+
+    const bookmarks =
+        getBookmarks();
+
+
+    bookmarkMode = true;
+
+
+    filteredSections =
+        allSections.filter(
+            section =>
+                bookmarks.includes(
+                    bookmarkKey(section)
+                )
+        );
+
+
+    sortSections();
+
+    renderSections();
+
+
+    if(bookmarks.length){
+
+        showToast(
+            `${bookmarks.length} bookmarked section${bookmarks.length === 1 ? "" : "s"}`
+        );
+
+    }
+    else{
+
+        showToast(
+            "No bookmarked sections yet."
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   MODAL BOOKMARK
+========================================================= */
+
+function updateModalBookmarkButton(){
+
+    const button =
+        document.getElementById(
+            "modalBookmarkBtn"
+        );
+
+
+    if(!currentSection){
+
+        return;
+
+    }
+
+
+    if(
+        isBookmarked(
+            currentSection
+        )
+    ){
+
+        button.textContent =
+            "★ Saved";
+
+        button.classList.add(
+            "bookmarked"
+        );
+
+    }
+    else{
+
+        button.textContent =
+            "☆ Bookmark";
+
+        button.classList.remove(
+            "bookmarked"
+        );
+
+    }
+
+}
+
+
+function toggleCurrentBookmark(){
+
+    if(!currentSection){
+
+        return;
+
+    }
+
+
+    toggleBookmark(
+        currentSection
+    );
+
+    updateModalBookmarkButton();
+
+}
+
+
+/* =========================================================
+   COPY
+========================================================= */
+
+function sectionText(section){
+
+    const number =
+        section.section
+        || "";
+
+    const title =
+        section.title
+        || "";
+
+    const chapter =
+        section.chapterTitle
+        ||
+        section.chapter
+        ||
+        "";
+
+    const text =
+        section.text
+        ||
+        section.explanation
+        ||
+        "";
+
+
+    return [
+
+        `BNS Section ${number}`,
+
+        title,
+
+        chapter,
+
+        text,
+
+        "",
+
+        "Source: Pendico Legal Library"
+
+    ]
+
+    .filter(Boolean)
+
+    .join("\n\n");
+
+}
+
+
+async function copySection(section){
+
+    const text =
+        sectionText(section);
+
+
+    try{
+
+        await navigator.clipboard.writeText(
+            text
+        );
+
+        showToast(
+            "📋 Section copied"
+        );
+
+    }
+    catch{
+
+        fallbackCopy(text);
+
+    }
+
+}
+
+
+async function copyCurrentSection(){
+
+    if(currentSection){
+
+        await copySection(
+            currentSection
+        );
+
+    }
+
+}
+
+
+function fallbackCopy(text){
+
+    const textarea =
+        document.createElement(
+            "textarea"
+        );
+
+
+    textarea.value =
+        text;
+
+
+    document.body.appendChild(
+        textarea
+    );
+
+
+    textarea.select();
+
+    document.execCommand(
+        "copy"
+    );
+
+
+    textarea.remove();
+
+
+    showToast(
+        "📋 Section copied"
+    );
+
+}
+
+
+/* =========================================================
+   SHARE
+========================================================= */
+
+async function shareSection(section){
+
+    const url =
+        buildSectionURL(
+            section.section
+        );
+
+
+    const shareData = {
+
+        title:
+            `BNS Section ${section.section}`,
+
+        text:
+            section.title
+            || "Bharatiya Nyaya Sanhita section",
+
+        url:url
+
+    };
+
+
+    try{
+
+        if(
+            navigator.share
+        ){
+
+            await navigator.share(
+                shareData
+            );
+
+        }
+        else{
+
+            await navigator.clipboard.writeText(
+                url
+            );
+
+            showToast(
+                "🔗 Section link copied"
+            );
+
+        }
+
+    }
+    catch(error){
+
+        if(
+            error
+            &&
+            error.name !==
+            "AbortError"
+        ){
+
+            showToast(
+                "Unable to share section."
+            );
+
+        }
+
+    }
+
+}
+
+
+async function shareCurrentSection(){
+
+    if(currentSection){
+
+        await shareSection(
+            currentSection
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+function printCurrentSection(){
+
+    if(!currentSection){
+
+        return;
+
+    }
+
+
+    const oldTitle =
+        document.title;
+
+
+    document.title =
+        `BNS Section ${currentSection.section} | Pendico`;
+
+
+    window.print();
+
+
+    setTimeout(
+        ()=>{
+            document.title =
+                oldTitle;
+        },
+        500
+    );
+
+}
+
+
+/* =========================================================
+   URL SECTION
+========================================================= */
+
+function buildSectionURL(number){
+
+    const url =
+        new URL(
+            window.location.href
+        );
+
+
+    url.searchParams.set(
+        "section",
+        number
+    );
+
+
+    return url.toString();
+
+}
+
+
+function updateURL(number){
+
+    const url =
+        new URL(
+            window.location.href
+        );
+
+
+    url.searchParams.set(
+        "section",
+        number
+    );
+
+
+    history.replaceState(
+        {},
+        "",
+        url
+    );
+
+}
+
+
+function updateURLSection(){
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    const number =
+        params.get("section");
+
+
+    if(!number){
+
+        return;
+
+    }
+
 
     const section =
         allSections.find(
             item =>
-            String(item.section) ===
-            decodeURIComponent(sectionNumber)
+                String(item.section)
+                ===
+                String(number)
         );
 
-    if(!section) return;
 
+    if(section){
 
-    /*
-       If you later create a dedicated
-       section page, change this URL.
-    */
+        openSection(section);
 
-    const params = new URLSearchParams();
-
-    params.set("section", section.section);
-
-    window.location.href =
-        "section.html?" + params.toString();
+    }
 
 }
 
 
-/* ESCAPE HTML */
+/* =========================================================
+   SEARCH CLEAR
+========================================================= */
 
-function escapeHTML(value){
+function updateClearButton(){
 
-    return String(value)
-        .replace(/&/g,"&amp;")
-        .replace(/</g,"&lt;")
-        .replace(/>/g,"&gt;")
-        .replace(/"/g,"&quot;")
-        .replace(/'/g,"&#039;");
+    clearSearchButton.style.display =
+        searchBox.value
+        ? "block"
+        : "none";
 
 }
 
 
-/* DARK MODE */
+function clearSearch(){
+
+    searchBox.value =
+        "";
+
+    chapterFilter.value =
+        "";
+
+    bookmarkMode =
+        false;
+
+    applyFilters();
+
+    searchBox.focus();
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+function resetFilters(){
+
+    searchBox.value =
+        "";
+
+    chapterFilter.value =
+        "";
+
+    sortSelect.value =
+        "asc";
+
+    bookmarkMode =
+        false;
+
+    applyFilters();
+
+    showToast(
+        "↻ Filters reset"
+    );
+
+}
+
+
+/* =========================================================
+   VIEW
+========================================================= */
+
+function setView(view){
+
+    const normalButton =
+        document.getElementById(
+            "normalView"
+        );
+
+    const compactButton =
+        document.getElementById(
+            "compactView"
+        );
+
+
+    if(view === "compact"){
+
+        sectionsContainer.classList.add(
+            "compact"
+        );
+
+        compactButton.classList.add(
+            "active"
+        );
+
+        normalButton.classList.remove(
+            "active"
+        );
+
+    }
+    else{
+
+        sectionsContainer.classList.remove(
+            "compact"
+        );
+
+        normalButton.classList.add(
+            "active"
+        );
+
+        compactButton.classList.remove(
+            "active"
+        );
+
+    }
+
+
+    localStorage.setItem(
+        "pendico-bns-view",
+        view
+    );
+
+}
+
+
+/* =========================================================
+   THEME
+========================================================= */
 
 function toggleTheme(){
 
-    document.body.classList.toggle("dark");
+    document.body.classList.toggle(
+        "dark"
+    );
+
 
     const dark =
-        document.body.classList.contains("dark");
+        document.body.classList.contains(
+            "dark"
+        );
+
 
     localStorage.setItem(
         "pendico-theme",
-        dark ? "dark" : "light"
+        dark
+        ? "dark"
+        : "light"
     );
+
 
     updateThemeButton();
 
@@ -835,36 +3477,170 @@ function toggleTheme(){
 function updateThemeButton(){
 
     const button =
-        document.getElementById("themeBtn");
+        document.getElementById(
+            "themeBtn"
+        );
+
 
     const dark =
-        document.body.classList.contains("dark");
+        document.body.classList.contains(
+            "dark"
+        );
+
 
     button.textContent =
-        dark ? "☀️" : "🌙";
+        dark
+        ? "☀️"
+        : "🌙";
 
 }
 
 
-/* LOAD SAVED THEME */
-
 (function(){
 
-    const saved =
-        localStorage.getItem("pendico-theme");
+    const theme =
+        localStorage.getItem(
+            "pendico-theme"
+        );
 
-    if(saved === "dark"){
 
-        document.body.classList.add("dark");
+    if(theme === "dark"){
+
+        document.body.classList.add(
+            "dark"
+        );
 
     }
+
+
+    const savedView =
+        localStorage.getItem(
+            "pendico-bns-view"
+        );
+
+
+    if(savedView){
+
+        setView(
+            savedView
+        );
+
+    }
+
 
     updateThemeButton();
 
 })();
 
 
-/* START */
+/* =========================================================
+   TOAST
+========================================================= */
+
+let toastTimer = null;
+
+
+function showToast(message){
+
+    const toast =
+        document.getElementById(
+            "toast"
+        );
+
+
+    toast.textContent =
+        message;
+
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    clearTimeout(
+        toastTimer
+    );
+
+
+    toastTimer =
+        setTimeout(
+            ()=>{
+                toast.classList.remove(
+                    "show"
+                );
+            },
+            2200
+        );
+
+}
+
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function escapeHTML(value){
+
+    return String(value)
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+function safeText(value){
+
+    if(
+        value === null
+        ||
+        value === undefined
+    ){
+
+        return "";
+
+    }
+
+
+    if(
+        Array.isArray(value)
+    ){
+
+        return value.join(", ");
+
+    }
+
+
+    return String(value);
+
+}
+
+
+/* =========================================================
+   START
+========================================================= */
 
 loadSections();
 
