@@ -2,38 +2,15 @@
 <html lang="en">
 <head>
 
-<!-- =========================================================
-     PENDICO — TRENDING TODAY
-     Premium India Trends & Current Affairs Dashboard
-========================================================= -->
-
-<!-- GOOGLE ANALYTICS 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0BL89MBWGY"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-0BL89MBWGY');
-</script>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>Pendico | Trending Today — India</title>
+<title>Trending Today | Pendico</title>
 
 <meta name="description"
-content="Pendico Trending Today — discover important stories, legal developments, India news, technology, business, sports, education and other topics attracting attention today.">
+content="Trending Today on Pendico — discover important news, legal developments, India updates, technology, business, sports and stories worth knowing.">
 
-<meta name="keywords"
-content="India trending today, Indian news, trending India, legal news, Supreme Court news, technology news, sports news, business news, Pendico">
-
-<meta name="author"
-content="Pendico">
-
-<meta name="robots"
-content="index, follow">
+<meta name="robots" content="index, follow">
 
 <link rel="canonical"
 href="https://pendico.pages.dev/trending.html">
@@ -43,13 +20,29 @@ type="image/png"
 href="favicon.png">
 
 
-<!-- OPEN GRAPH -->
+<!-- ================= GOOGLE ANALYTICS ================= -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0BL89MBWGY"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+    dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+gtag('config', 'G-0BL89MBWGY');
+</script>
+
+
+<!-- ================= OPEN GRAPH ================= -->
 
 <meta property="og:title"
-content="Pendico | Trending Today">
+content="Trending Today | Pendico">
 
 <meta property="og:description"
-content="Discover what is attracting attention across India today.">
+content="Discover the stories and developments attracting attention across India.">
 
 <meta property="og:type"
 content="website">
@@ -61,94 +54,56 @@ content="https://pendico.pages.dev/trending.html">
 content="https://pendico.pages.dev/logo.png.jpeg">
 
 
-<!-- TWITTER -->
-
-<meta name="twitter:card"
-content="summary_large_image">
-
-<meta name="twitter:title"
-content="Pendico | Trending Today">
-
-<meta name="twitter:description"
-content="Discover important stories and developments across India.">
-
-<meta name="twitter:image"
-content="https://pendico.pages.dev/logo.png.jpeg">
-
-
 <style>
 
 /* =========================================================
-   ROOT
+   PENDICO TRENDING TODAY
+   WORLD-CLASS SOCIAL NEWS FEED
 ========================================================= */
 
 :root{
 
-    --bg:#f4f7fb;
-
+    --bg:#f2f5f9;
     --surface:#ffffff;
+    --surface2:#f7f9fc;
 
-    --surface2:#f8faff;
-
-    --text:#142033;
-
-    --muted:#68778c;
-
-    --border:#e5eaf1;
+    --text:#101828;
+    --muted:#667085;
 
     --primary:#1769d1;
+    --primary-dark:#0b3d91;
 
-    --primary-dark:#0b3d82;
+    --border:#e4e8ef;
 
-    --blue:#248cff;
+    --danger:#ff3040;
+    --success:#12b76a;
 
-    --danger:#ff3d55;
+    --nav:#06172f;
 
     --shadow:
-    0 10px 35px rgba(18,45,80,.08);
+    0 10px 35px rgba(15,35,65,.08);
 
-    --shadow-hover:
-    0 20px 50px rgba(18,45,80,.14);
-
-    --dark:#061326;
-
-    --dark2:#0b2344;
-
+    --radius:22px;
 }
 
 
 body.dark{
 
-    --bg:#080d16;
+    --bg:#070d17;
+    --surface:#101824;
+    --surface2:#151f2d;
 
-    --surface:#101722;
+    --text:#f5f7fa;
+    --muted:#98a5b5;
 
-    --surface2:#151e2b;
+    --border:#253244;
 
-    --text:#f2f6fb;
-
-    --muted:#9baabd;
-
-    --border:#263243;
-
-    --primary:#58a6ff;
-
-    --primary-dark:#2c7de0;
-
-    --blue:#69b0ff;
+    --nav:#030a15;
 
     --shadow:
-    0 10px 35px rgba(0,0,0,.3);
-
-    --shadow-hover:
-    0 20px 50px rgba(0,0,0,.45);
-
+    0 15px 40px rgba(0,0,0,.35);
 }
 
-
-/* =========================================================
-   GLOBAL
-========================================================= */
 
 *{
     margin:0;
@@ -156,9 +111,11 @@ body.dark{
     box-sizing:border-box;
 }
 
+
 html{
     scroll-behavior:smooth;
 }
+
 
 body{
 
@@ -167,6 +124,7 @@ body{
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
+    Roboto,
     Arial,
     sans-serif;
 
@@ -174,22 +132,24 @@ body{
 
     color:var(--text);
 
-    line-height:1.6;
+    line-height:1.55;
 
     transition:
     background .25s,
     color .25s;
-
 }
+
 
 button,
 input{
-    font:inherit;
+    font-family:inherit;
 }
+
 
 button{
     cursor:pointer;
 }
+
 
 a{
     text-decoration:none;
@@ -198,19 +158,27 @@ a{
 
 
 /* =========================================================
-   NAVIGATION
+   TOP NAVIGATION
 ========================================================= */
 
-.navbar{
+.topbar{
 
     position:sticky;
 
     top:0;
 
-    z-index:2000;
+    z-index:1000;
+
+    height:68px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     background:
-    rgba(4,15,32,.94);
+    rgba(6,23,47,.94);
 
     backdrop-filter:
     blur(18px);
@@ -220,19 +188,17 @@ a{
 
     border-bottom:
     1px solid rgba(255,255,255,.08);
-
 }
 
-.nav-inner{
+
+.topbar-inner{
+
+    width:100%;
 
     max-width:1250px;
 
-    margin:auto;
-
-    min-height:68px;
-
     padding:
-    10px 22px;
+    0 20px;
 
     display:flex;
 
@@ -240,11 +206,11 @@ a{
 
     justify-content:space-between;
 
-    gap:20px;
-
+    gap:15px;
 }
 
-.brand{
+
+.logo{
 
     display:flex;
 
@@ -254,106 +220,49 @@ a{
 
     color:white;
 
-    flex-shrink:0;
+    font-weight:900;
 
+    letter-spacing:.8px;
+
+    font-size:20px;
 }
 
-.brand img{
 
-    width:40px;
+.logo img{
 
-    height:40px;
+    width:39px;
 
-    border-radius:11px;
+    height:39px;
 
     object-fit:cover;
 
+    border-radius:10px;
 }
 
-.brand-name{
 
-    font-size:20px;
-
-    font-weight:950;
-
-    letter-spacing:1.5px;
-
-}
-
-.brand-name span{
-
-    color:#5ba7ff;
-
-}
-
-.nav-links{
+.top-actions{
 
     display:flex;
 
     align-items:center;
 
-    gap:4px;
-
-}
-
-.nav-links a{
-
-    color:#d8e5f5;
-
-    font-size:13px;
-
-    font-weight:700;
-
-    padding:8px 11px;
-
-    border-radius:8px;
-
-    transition:.2s;
-
-}
-
-.nav-links a:hover{
-
-    background:#1769d1;
-
-    color:white;
-
-}
-
-.nav-links .active{
-
-    background:
-    linear-gradient(
-        135deg,
-        #1769d1,
-        #248cff
-    );
-
-    color:white;
-
-}
-
-.nav-actions{
-
-    display:flex;
-
     gap:7px;
-
 }
 
-.nav-btn{
 
-    width:38px;
+.top-btn{
 
-    height:38px;
+    width:40px;
 
-    border-radius:10px;
+    height:40px;
+
+    border-radius:12px;
 
     border:
-    1px solid rgba(255,255,255,.14);
+    1px solid rgba(255,255,255,.12);
 
     background:
-    rgba(255,255,255,.07);
+    rgba(255,255,255,.08);
 
     color:white;
 
@@ -363,244 +272,254 @@ a{
 
     justify-content:center;
 
-    transition:.2s;
+    font-size:17px;
 
+    transition:.2s;
 }
 
-.nav-btn:hover{
+
+.top-btn:hover{
 
     background:
     rgba(255,255,255,.16);
 
+    transform:translateY(-1px);
 }
 
 
 /* =========================================================
-   HERO
+   PAGE HEADER
 ========================================================= */
 
-.hero{
-
-    position:relative;
-
-    overflow:hidden;
-
-    background:
-
-    radial-gradient(
-        circle at 10% 20%,
-        rgba(44,132,255,.35),
-        transparent 28%
-    ),
-
-    radial-gradient(
-        circle at 90% 70%,
-        rgba(0,204,255,.18),
-        transparent 30%
-    ),
-
-    linear-gradient(
-        135deg,
-        #041022,
-        #0a2b55,
-        #06172f
-    );
-
-    color:white;
-
-}
-
-.hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:450px;
-
-    height:450px;
-
-    border-radius:50%;
-
-    border:
-    1px solid rgba(255,255,255,.05);
-
-    right:-180px;
-
-    top:-180px;
-
-}
-
-.hero::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:300px;
-
-    height:300px;
-
-    border-radius:50%;
-
-    border:
-    1px solid rgba(255,255,255,.05);
-
-    left:-150px;
-
-    bottom:-150px;
-
-}
-
-.hero-inner{
+.page-header{
 
     max-width:1250px;
 
     margin:auto;
 
     padding:
-    75px 22px 65px;
-
-    position:relative;
-
-    z-index:2;
-
+    30px 20px 15px;
 }
 
-.live-label{
 
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:9px;
-
-    padding:
-    7px 12px;
-
-    border-radius:30px;
-
-    background:
-    rgba(255,255,255,.08);
-
-    border:
-    1px solid rgba(255,255,255,.12);
-
-    color:#cce4ff;
-
-    font-size:12px;
-
-    font-weight:850;
-
-    letter-spacing:.5px;
-
-    margin-bottom:18px;
-
-}
-
-.live-dot{
-
-    width:8px;
-
-    height:8px;
-
-    border-radius:50%;
-
-    background:#ff4057;
-
-    box-shadow:
-    0 0 0 5px rgba(255,64,87,.12);
-
-}
-
-.hero h1{
-
-    font-size:
-    clamp(43px,7vw,78px);
-
-    line-height:1.02;
-
-    letter-spacing:-2px;
-
-    font-weight:950;
-
-    max-width:850px;
-
-    margin-bottom:18px;
-
-}
-
-.hero h1 span{
-
-    color:#5ca9ff;
-
-}
-
-.hero-description{
-
-    max-width:720px;
-
-    color:#b9cce2;
-
-    font-size:17px;
-
-    margin-bottom:28px;
-
-}
-
-.hero-meta{
+.live-row{
 
     display:flex;
 
     align-items:center;
 
-    flex-wrap:wrap;
+    gap:9px;
 
-    gap:10px;
-
+    margin-bottom:8px;
 }
 
-.hero-meta-item{
 
-    display:inline-flex;
+.live-dot{
 
-    align-items:center;
+    width:9px;
 
-    gap:7px;
+    height:9px;
 
-    padding:
-    8px 12px;
+    background:#ff3040;
 
-    border-radius:10px;
+    border-radius:50%;
 
-    background:
-    rgba(255,255,255,.07);
+    box-shadow:
+    0 0 0 5px rgba(255,48,64,.10);
 
-    border:
-    1px solid rgba(255,255,255,.09);
+    animation:
+    pulse 1.8s infinite;
+}
 
-    color:#c6d7ea;
 
-    font-size:12px;
+@keyframes pulse{
 
-    font-weight:700;
+    0%,100%{
+        box-shadow:
+        0 0 0 4px rgba(255,48,64,.10);
+    }
 
+    50%{
+        box-shadow:
+        0 0 0 8px rgba(255,48,64,.02);
+    }
+}
+
+
+.live-label{
+
+    color:#ff3040;
+
+    font-weight:900;
+
+    font-size:11px;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+
+.page-header h1{
+
+    font-size:
+    clamp(32px,6vw,52px);
+
+    line-height:1.05;
+
+    letter-spacing:-1.8px;
+
+    margin-bottom:8px;
+}
+
+
+.page-header h1 span{
+
+    color:var(--primary);
+}
+
+
+.page-header p{
+
+    color:var(--muted);
+
+    max-width:680px;
+
+    font-size:15px;
 }
 
 
 /* =========================================================
-   MAIN
+   CATEGORY BAR
 ========================================================= */
 
-.main{
+.category-wrap{
+
+    position:sticky;
+
+    top:68px;
+
+    z-index:900;
+
+    background:
+    rgba(242,245,249,.92);
+
+    backdrop-filter:
+    blur(14px);
+
+    border-bottom:
+    1px solid var(--border);
+}
+
+
+body.dark .category-wrap{
+
+    background:
+    rgba(7,13,23,.92);
+}
+
+
+.categories{
 
     max-width:1250px;
 
     margin:auto;
 
     padding:
-    45px 22px 80px;
+    11px 20px;
 
+    display:flex;
+
+    gap:8px;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+}
+
+
+.categories::-webkit-scrollbar{
+    display:none;
+}
+
+
+.category{
+
+    flex-shrink:0;
+
+    border:
+    1px solid var(--border);
+
+    background:var(--surface);
+
+    color:var(--muted);
+
+    padding:
+    8px 14px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    transition:.2s;
+}
+
+
+.category:hover{
+
+    border-color:
+    var(--primary);
+
+    color:
+    var(--primary);
+}
+
+
+.category.active{
+
+    background:
+    var(--primary);
+
+    color:white;
+
+    border-color:
+    var(--primary);
+
+    box-shadow:
+    0 5px 15px rgba(23,105,209,.22);
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.layout{
+
+    max-width:1250px;
+
+    margin:auto;
+
+    padding:
+    22px 20px 70px;
+
+    display:grid;
+
+    grid-template-columns:
+    minmax(0,760px)
+    300px;
+
+    gap:25px;
+
+    align-items:start;
+}
+
+
+.feed{
+
+    min-width:0;
 }
 
 
@@ -608,54 +527,40 @@ a{
    SEARCH
 ========================================================= */
 
-.search-panel{
-
-    position:relative;
-
-    margin-bottom:30px;
-
-}
-
-.search-wrap{
+.search{
 
     display:flex;
 
     align-items:center;
 
-    gap:10px;
+    gap:9px;
 
     background:var(--surface);
 
     border:
     1px solid var(--border);
 
-    border-radius:17px;
+    border-radius:15px;
 
-    padding:7px;
+    padding:
+    5px 7px 5px 15px;
 
-    box-shadow:var(--shadow);
+    margin-bottom:18px;
 
+    box-shadow:
+    0 5px 20px rgba(15,35,65,.04);
 }
 
-.search-icon{
 
-    width:45px;
-
-    height:45px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
+.search span{
 
     color:var(--muted);
 
-    font-size:19px;
-
+    font-size:17px;
 }
 
-#searchInput{
+
+.search input{
 
     flex:1;
 
@@ -669,13 +574,418 @@ a{
 
     color:var(--text);
 
-    padding:12px 5px;
+    padding:11px 4px;
 
-    font-size:15px;
-
+    font-size:14px;
 }
 
-.search-clear{
+
+.search button{
+
+    border:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:10px;
+
+    padding:
+    10px 15px;
+
+    font-weight:800;
+
+    font-size:12px;
+}
+
+
+/* =========================================================
+   FEED HEADER
+========================================================= */
+
+.feed-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:12px;
+
+    gap:10px;
+}
+
+
+.feed-title{
+
+    font-size:16px;
+
+    font-weight:900;
+}
+
+
+.feed-count{
+
+    font-size:12px;
+
+    color:var(--muted);
+}
+
+
+/* =========================================================
+   NEWS CARD
+========================================================= */
+
+.news-card{
+
+    background:var(--surface);
+
+    border:
+    1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    margin-bottom:16px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:
+    transform .25s,
+    box-shadow .25s,
+    border-color .25s;
+
+    animation:
+    cardIn .45s ease both;
+}
+
+
+@keyframes cardIn{
+
+    from{
+        opacity:0;
+        transform:translateY(12px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+.news-card:hover{
+
+    transform:translateY(-2px);
+
+    border-color:
+    rgba(23,105,209,.25);
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.news-image{
+
+    position:relative;
+
+    width:100%;
+
+    height:300px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0b3d91,
+        #1769d1
+    );
+
+    overflow:hidden;
+}
+
+
+.news-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:
+    transform .5s;
+}
+
+
+.news-card:hover
+.news-image img{
+
+    transform:scale(1.025);
+}
+
+
+.image-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+    background:
+    radial-gradient(
+        circle at 20% 20%,
+        rgba(255,255,255,.18),
+        transparent 30%
+    ),
+    linear-gradient(
+        135deg,
+        #061a38,
+        #145bb3
+    );
+}
+
+
+.placeholder-icon{
+
+    font-size:42px;
+
+    margin-bottom:8px;
+}
+
+
+.placeholder-text{
+
+    font-size:13px;
+
+    opacity:.75;
+
+    font-weight:700;
+}
+
+
+.trending-number{
+
+    position:absolute;
+
+    top:14px;
+
+    left:14px;
+
+    width:36px;
+
+    height:36px;
+
+    border-radius:11px;
+
+    background:
+    rgba(5,20,42,.78);
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:12px;
+
+    font-weight:900;
+
+    backdrop-filter:blur(10px);
+}
+
+
+.category-badge{
+
+    position:absolute;
+
+    bottom:14px;
+
+    left:14px;
+
+    background:
+    rgba(255,255,255,.93);
+
+    color:
+    #123c7a;
+
+    padding:
+    6px 10px;
+
+    border-radius:8px;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.news-content{
+
+    padding:
+    20px 21px 15px;
+}
+
+
+.news-meta{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+    color:var(--muted);
+
+    font-size:11px;
+
+    margin-bottom:9px;
+}
+
+
+.news-meta strong{
+
+    color:var(--primary);
+
+    font-weight:900;
+}
+
+
+.news-title{
+
+    font-size:
+    clamp(20px,3vw,27px);
+
+    line-height:1.2;
+
+    letter-spacing:-.5px;
+
+    margin-bottom:10px;
+
+    font-weight:900;
+}
+
+
+.news-summary{
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    margin-bottom:14px;
+}
+
+
+/* =========================================================
+   LEARN BOX
+========================================================= */
+
+.learn-box{
+
+    border-left:
+    3px solid var(--primary);
+
+    background:
+    var(--surface2);
+
+    border-radius:
+    0 12px 12px 0;
+
+    padding:
+    13px 14px;
+
+    margin-bottom:15px;
+}
+
+
+.learn-title{
+
+    font-size:11px;
+
+    font-weight:900;
+
+    color:var(--primary);
+
+    text-transform:uppercase;
+
+    letter-spacing:.7px;
+
+    margin-bottom:5px;
+}
+
+
+.learn-text{
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    line-height:1.6;
+}
+
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.card-footer{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    padding-top:12px;
+
+    border-top:
+    1px solid var(--border);
+}
+
+
+.card-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+}
+
+
+.action-btn{
 
     border:none;
 
@@ -683,1102 +993,366 @@ a{
 
     color:var(--muted);
 
-    padding:10px 14px;
+    padding:
+    8px 9px;
 
-    display:none;
+    border-radius:9px;
 
+    font-size:13px;
+
+    transition:.2s;
 }
 
-.search-clear.show{
 
-    display:block;
+.action-btn:hover{
 
+    background:
+    var(--surface2);
+
+    color:var(--primary);
 }
 
-.search-hint{
 
-    margin-top:8px;
+.action-btn.liked{
 
-    color:var(--muted);
+    color:
+    var(--danger);
+}
+
+
+.action-btn.saved{
+
+    color:
+    var(--primary);
+}
+
+
+.read-link{
+
+    color:var(--primary);
+
+    font-weight:900;
 
     font-size:12px;
 
-    padding-left:5px;
+    padding:8px 11px;
 
+    border-radius:9px;
+
+    background:
+    rgba(23,105,209,.08);
+}
+
+
+.read-link:hover{
+
+    background:
+    rgba(23,105,209,.14);
 }
 
 
 /* =========================================================
-   CATEGORY FILTERS
+   SIDEBAR
 ========================================================= */
 
-.category-bar{
+.sidebar{
 
-    display:flex;
+    position:sticky;
 
-    gap:8px;
-
-    overflow-x:auto;
-
-    padding:
-    3px 1px 12px;
-
-    scrollbar-width:none;
-
-    margin-bottom:35px;
-
+    top:145px;
 }
 
-.category-bar::-webkit-scrollbar{
-    display:none;
-}
 
-.category{
+.side-card{
 
-    flex-shrink:0;
+    background:var(--surface);
 
     border:
     1px solid var(--border);
 
-    background:var(--surface);
+    border-radius:18px;
 
-    color:var(--muted);
+    padding:18px;
 
-    border-radius:30px;
+    margin-bottom:15px;
+
+    box-shadow:
+    0 7px 25px rgba(15,35,65,.05);
+}
+
+
+.side-title{
+
+    font-size:14px;
+
+    font-weight:900;
+
+    margin-bottom:14px;
+}
+
+
+/* =========================================================
+   TRENDING RANKING
+========================================================= */
+
+.rank-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:11px;
 
     padding:
-    8px 14px;
+    11px 0;
+
+    border-bottom:
+    1px solid var(--border);
+}
+
+
+.rank-item:last-child{
+    border-bottom:none;
+}
+
+
+.rank-number{
+
+    min-width:25px;
+
+    font-size:17px;
+
+    font-weight:950;
+
+    color:var(--primary);
+}
+
+
+.rank-title{
 
     font-size:12px;
 
     font-weight:800;
 
-    transition:.2s;
-
+    line-height:1.45;
 }
 
-.category:hover{
 
-    border-color:var(--primary);
+.rank-meta{
 
-    color:var(--primary);
+    color:var(--muted);
 
-}
+    font-size:10px;
 
-.category.active{
-
-    background:
-    linear-gradient(
-        135deg,
-        #1769d1,
-        #248cff
-    );
-
-    border-color:transparent;
-
-    color:white;
-
-    box-shadow:
-    0 7px 20px rgba(23,105,209,.22);
-
+    margin-top:3px;
 }
 
 
 /* =========================================================
-   SECTION HEADER
+   QUICK LINKS
 ========================================================= */
 
-.section-head{
+.quick-grid{
 
-    display:flex;
+    display:grid;
 
-    justify-content:space-between;
+    grid-template-columns:
+    1fr 1fr;
 
-    align-items:flex-end;
-
-    gap:20px;
-
-    margin-bottom:18px;
-
+    gap:8px;
 }
 
-.section-title{
 
-    display:flex;
+.quick-link{
 
-    align-items:center;
-
-    gap:11px;
-
-}
-
-.section-title h2{
-
-    font-size:27px;
-
-    line-height:1.2;
-
-}
-
-.section-title-icon{
-
-    width:39px;
-
-    height:39px;
+    padding:11px;
 
     border-radius:11px;
 
     background:
-    rgba(23,105,209,.1);
+    var(--surface2);
 
-    display:flex;
+    border:
+    1px solid var(--border);
 
-    align-items:center;
+    font-size:11px;
 
-    justify-content:center;
+    font-weight:800;
 
-    font-size:18px;
-
-}
-
-.section-head p{
+    text-align:center;
 
     color:var(--muted);
 
-    font-size:12px;
+    transition:.2s;
+}
 
+
+.quick-link:hover{
+
+    color:var(--primary);
+
+    border-color:
+    var(--primary);
 }
 
 
 /* =========================================================
-   FEATURED STORY
+   INFO CARD
 ========================================================= */
 
-.featured-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    1.55fr .8fr;
-
-    gap:18px;
-
-    margin-bottom:42px;
-
-}
-
-.featured-story{
-
-    min-height:390px;
-
-    position:relative;
-
-    overflow:hidden;
-
-    border-radius:22px;
-
-    padding:30px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:flex-end;
+.info-card{
 
     background:
-
-    radial-gradient(
-        circle at 90% 10%,
-        rgba(78,157,255,.35),
-        transparent 30%
-    ),
-
     linear-gradient(
-        135deg,
-        #06172f,
-        #0c3f7b
+        145deg,
+        #061a38,
+        #1769d1
     );
 
     color:white;
 
-    box-shadow:
-    0 20px 55px rgba(6,35,75,.2);
+    border-radius:18px;
 
-    transition:.3s;
+    padding:21px;
 
+    overflow:hidden;
+
+    position:relative;
 }
 
-.featured-story:hover{
 
-    transform:translateY(-4px);
+.info-card::after{
 
-    box-shadow:
-    0 25px 65px rgba(6,35,75,.28);
-
-}
-
-.featured-story::before{
-
-    content:"01";
+    content:"";
 
     position:absolute;
 
-    right:25px;
+    width:150px;
 
-    top:5px;
+    height:150px;
 
-    font-size:150px;
+    border-radius:50%;
 
-    font-weight:950;
+    right:-70px;
 
-    color:rgba(255,255,255,.045);
+    bottom:-70px;
 
-    line-height:1;
-
+    background:
+    rgba(255,255,255,.08);
 }
 
-.featured-content{
+
+.info-card h3{
+
+    font-size:17px;
+
+    margin-bottom:7px;
 
     position:relative;
 
     z-index:2;
-
 }
 
-.story-labels{
 
-    display:flex;
+.info-card p{
 
-    flex-wrap:wrap;
-
-    gap:7px;
-
-    margin-bottom:14px;
-
-}
-
-.story-label{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:5px;
-
-    padding:
-    6px 9px;
-
-    border-radius:20px;
-
-    background:
-    rgba(255,255,255,.1);
-
-    border:
-    1px solid rgba(255,255,255,.12);
-
-    color:#d8eaff;
-
-    font-size:10px;
-
-    font-weight:850;
-
-    text-transform:uppercase;
-
-    letter-spacing:.4px;
-
-}
-
-.story-label.hot{
-
-    background:
-    rgba(255,61,85,.15);
-
-    color:#ffd0d6;
-
-}
-
-.featured-story h3{
-
-    font-size:
-    clamp(25px,3vw,38px);
-
-    line-height:1.18;
-
-    margin-bottom:12px;
-
-    max-width:800px;
-
-}
-
-.featured-story p{
-
-    color:#c5d7eb;
-
-    max-width:720px;
-
-    font-size:14px;
-
-    margin-bottom:19px;
-
-}
-
-.story-footer{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:15px;
-
-}
-
-.story-time{
-
-    color:#a9c0d9;
-
-    font-size:11px;
-
-}
-
-.read-story{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:7px;
-
-    color:white;
-
-    background:
-    rgba(255,255,255,.1);
-
-    border:
-    1px solid rgba(255,255,255,.15);
-
-    padding:
-    9px 13px;
-
-    border-radius:9px;
+    color:#c9daf0;
 
     font-size:12px;
-
-    font-weight:800;
-
-}
-
-
-/* =========================================================
-   SIDE FEATURE
-========================================================= */
-
-.side-feature{
-
-    display:grid;
-
-    gap:18px;
-
-}
-
-.mini-feature{
-
-    background:var(--surface);
-
-    border:
-    1px solid var(--border);
-
-    border-radius:18px;
-
-    padding:22px;
-
-    box-shadow:var(--shadow);
-
-    transition:.25s;
-
-}
-
-.mini-feature:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:var(--shadow-hover);
-
-}
-
-.mini-number{
-
-    color:var(--primary);
-
-    font-size:11px;
-
-    font-weight:950;
-
-    letter-spacing:1px;
-
-    margin-bottom:10px;
-
-}
-
-.mini-feature h3{
-
-    font-size:18px;
-
-    line-height:1.35;
-
-    margin-bottom:8px;
-
-}
-
-.mini-feature p{
-
-    color:var(--muted);
-
-    font-size:12px;
-
-    margin-bottom:13px;
-
-}
-
-.mini-link{
-
-    color:var(--primary);
-
-    font-size:12px;
-
-    font-weight:850;
-
-}
-
-
-/* =========================================================
-   STORY GRID
-========================================================= */
-
-.story-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:17px;
-
-}
-
-.story-card{
-
-    background:var(--surface);
-
-    border:
-    1px solid var(--border);
-
-    border-radius:17px;
-
-    padding:21px;
-
-    box-shadow:
-    0 6px 22px rgba(18,45,80,.05);
-
-    transition:.25s;
-
-    display:flex;
-
-    flex-direction:column;
-
-}
-
-.story-card:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:var(--shadow-hover);
-
-    border-color:
-    rgba(23,105,209,.3);
-
-}
-
-.story-card-top{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:10px;
-
-    margin-bottom:13px;
-
-}
-
-.rank{
-
-    color:var(--primary);
-
-    font-size:12px;
-
-    font-weight:950;
-
-}
-
-.card-category{
-
-    padding:
-    5px 8px;
-
-    border-radius:20px;
-
-    background:
-    rgba(23,105,209,.09);
-
-    color:var(--primary);
-
-    font-size:10px;
-
-    font-weight:850;
-
-}
-
-.story-card h3{
-
-    font-size:18px;
-
-    line-height:1.35;
-
-    margin-bottom:10px;
-
-}
-
-.story-card p{
-
-    color:var(--muted);
-
-    font-size:13px;
 
     line-height:1.65;
 
-    margin-bottom:17px;
+    position:relative;
 
-}
-
-.card-bottom{
-
-    margin-top:auto;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:10px;
-
-}
-
-.card-time{
-
-    color:var(--muted);
-
-    font-size:11px;
-
-}
-
-.card-read{
-
-    color:var(--primary);
-
-    font-size:12px;
-
-    font-weight:850;
-
+    z-index:2;
 }
 
 
 /* =========================================================
-   CATEGORY BLOCKS
-========================================================= */
-
-.category-section{
-
-    margin-top:50px;
-
-}
-
-.category-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(2,1fr);
-
-    gap:17px;
-
-}
-
-.category-block{
-
-    background:var(--surface);
-
-    border:
-    1px solid var(--border);
-
-    border-radius:18px;
-
-    padding:22px;
-
-    box-shadow:
-    0 6px 22px rgba(18,45,80,.05);
-
-}
-
-.category-block-head{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    margin-bottom:17px;
-
-}
-
-.category-block-title{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:9px;
-
-}
-
-.category-block-title span{
-
-    font-size:20px;
-
-}
-
-.category-block-title h3{
-
-    font-size:18px;
-
-}
-
-.category-more{
-
-    color:var(--primary);
-
-    font-size:11px;
-
-    font-weight:850;
-
-}
-
-.category-item{
-
-    display:grid;
-
-    grid-template-columns:
-    30px 1fr;
-
-    gap:10px;
-
-    padding:
-    12px 0;
-
-    border-top:
-    1px solid var(--border);
-
-}
-
-.category-item-number{
-
-    color:var(--muted);
-
-    font-size:11px;
-
-    font-weight:900;
-
-}
-
-.category-item h4{
-
-    font-size:14px;
-
-    line-height:1.4;
-
-    margin-bottom:4px;
-
-}
-
-.category-item p{
-
-    color:var(--muted);
-
-    font-size:11px;
-
-}
-
-
-/* =========================================================
-   TRENDING KEYWORDS
-========================================================= */
-
-.keyword-section{
-
-    margin-top:50px;
-
-    padding:27px;
-
-    border-radius:20px;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #07172e,
-        #0c3d77
-    );
-
-    color:white;
-
-}
-
-.keyword-head{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:15px;
-
-    margin-bottom:18px;
-
-}
-
-.keyword-head h2{
-
-    font-size:22px;
-
-}
-
-.keyword-head p{
-
-    color:#adc2db;
-
-    font-size:12px;
-
-}
-
-.keywords{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:9px;
-
-}
-
-.keyword{
-
-    padding:
-    8px 12px;
-
-    border-radius:25px;
-
-    background:
-    rgba(255,255,255,.08);
-
-    border:
-    1px solid rgba(255,255,255,.1);
-
-    color:#d6e7fa;
-
-    font-size:12px;
-
-    font-weight:750;
-
-}
-
-
-/* =========================================================
-   EMPTY / LOADING
+   LOADING
 ========================================================= */
 
 .loading{
 
-    padding:60px 20px;
-
-    text-align:center;
-
     background:var(--surface);
 
     border:
     1px solid var(--border);
 
-    border-radius:18px;
+    border-radius:20px;
+
+    padding:55px 20px;
+
+    text-align:center;
 
     color:var(--muted);
-
 }
 
-.spinner{
 
-    width:38px;
+.loader{
 
-    height:38px;
+    width:35px;
+
+    height:35px;
+
+    margin:
+    0 auto 12px;
 
     border:
     3px solid var(--border);
 
-    border-top-color:var(--primary);
+    border-top-color:
+    var(--primary);
 
     border-radius:50%;
 
     animation:
     spin .8s linear infinite;
-
-    margin:
-    0 auto 15px;
-
 }
+
 
 @keyframes spin{
 
     to{
         transform:rotate(360deg);
     }
-
 }
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
 
 .empty{
 
-    padding:55px 20px;
+    background:var(--surface);
+
+    border:
+    1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:45px 20px;
 
     text-align:center;
 
-    background:var(--surface);
-
-    border:
-    1px solid var(--border);
-
-    border-radius:18px;
-
+    color:var(--muted);
 }
+
 
 .empty-icon{
 
-    font-size:40px;
+    font-size:42px;
 
     margin-bottom:10px;
-
-}
-
-.empty h3{
-
-    margin-bottom:5px;
-
-}
-
-.empty p{
-
-    color:var(--muted);
-
-    font-size:13px;
-
 }
 
 
 /* =========================================================
-   MODAL
+   TO TOP
 ========================================================= */
 
-.modal{
-
-    position:fixed;
-
-    inset:0;
-
-    z-index:5000;
-
-    background:
-    rgba(2,8,20,.72);
-
-    backdrop-filter:
-    blur(8px);
-
-    display:none;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:20px;
-
-}
-
-.modal.show{
-
-    display:flex;
-
-}
-
-.modal-box{
-
-    width:
-    min(800px,100%);
-
-    max-height:
-    min(750px,90vh);
-
-    overflow:auto;
-
-    background:var(--surface);
-
-    color:var(--text);
-
-    border-radius:22px;
-
-    border:
-    1px solid var(--border);
-
-    box-shadow:
-    0 30px 100px rgba(0,0,0,.3);
-
-    padding:30px;
-
-    position:relative;
-
-}
-
-.modal-close{
-
-    position:absolute;
-
-    right:18px;
-
-    top:18px;
-
-    width:38px;
-
-    height:38px;
-
-    border-radius:10px;
-
-    border:
-    1px solid var(--border);
-
-    background:var(--surface2);
-
-    color:var(--text);
-
-    font-size:20px;
-
-}
-
-.modal-category{
-
-    color:var(--primary);
-
-    font-size:11px;
-
-    font-weight:900;
-
-    text-transform:uppercase;
-
-    margin-bottom:10px;
-
-}
-
-.modal-box h2{
-
-    font-size:
-    clamp(25px,4vw,36px);
-
-    line-height:1.2;
-
-    padding-right:45px;
-
-    margin-bottom:12px;
-
-}
-
-.modal-meta{
-
-    color:var(--muted);
-
-    font-size:12px;
-
-    margin-bottom:22px;
-
-}
-
-.modal-summary{
-
-    color:var(--text);
-
-    line-height:1.8;
-
-    font-size:15px;
-
-}
-
-.modal-source{
-
-    margin-top:25px;
-
-    padding-top:18px;
-
-    border-top:
-    1px solid var(--border);
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:15px;
-
-    flex-wrap:wrap;
-
-}
-
-.source-link{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:7px;
-
-    background:var(--primary);
-
-    color:white;
-
-    padding:10px 15px;
-
-    border-radius:9px;
-
-    font-size:12px;
-
-    font-weight:850;
-
-}
-
-
-/* =========================================================
-   BACK TO TOP
-========================================================= */
-
-.back-top{
+.to-top{
 
     position:fixed;
 
@@ -1786,37 +1360,43 @@ a{
 
     bottom:20px;
 
-    z-index:1500;
+    width:46px;
 
-    width:45px;
-
-    height:45px;
+    height:46px;
 
     border:none;
 
-    border-radius:13px;
+    border-radius:50%;
 
-    background:var(--primary);
+    background:
+    var(--primary);
 
     color:white;
+
+    font-size:18px;
 
     box-shadow:
     0 10px 25px rgba(23,105,209,.3);
 
-    display:none;
+    opacity:0;
 
-    align-items:center;
+    pointer-events:none;
 
-    justify-content:center;
+    transform:translateY(10px);
 
-    font-size:18px;
+    transition:.25s;
 
+    z-index:1000;
 }
 
-.back-top.show{
 
-    display:flex;
+.to-top.show{
 
+    opacity:1;
+
+    pointer-events:auto;
+
+    transform:translateY(0);
 }
 
 
@@ -1826,44 +1406,39 @@ a{
 
 footer{
 
-    background:#041021;
+    background:
+    #041021;
 
-    color:#91a3ba;
-
-    padding:
-    48px 22px;
+    color:#9cafc6;
 
     text-align:center;
 
+    padding:
+    40px 20px;
 }
 
-.footer-brand{
+
+.footer-logo{
 
     color:white;
 
-    font-size:25px;
+    font-size:22px;
 
     font-weight:950;
 
-    letter-spacing:2px;
+    letter-spacing:1px;
 
-    margin-bottom:6px;
-
+    margin-bottom:5px;
 }
 
-.footer-brand span{
-
-    color:#5ba7ff;
-
-}
 
 footer p{
 
     font-size:12px;
 
-    margin:5px 0;
-
+    margin:4px 0;
 }
+
 
 .footer-links{
 
@@ -1873,24 +1448,23 @@ footer p{
 
     flex-wrap:wrap;
 
-    gap:18px;
+    gap:17px;
 
-    margin-top:18px;
-
+    margin-top:15px;
 }
+
 
 .footer-links a{
 
-    color:#a6b7ca;
-
     font-size:12px;
 
+    color:#9cafc6;
 }
+
 
 .footer-links a:hover{
 
     color:white;
-
 }
 
 
@@ -1898,160 +1472,167 @@ footer p{
    MOBILE
 ========================================================= */
 
-@media(max-width:1000px){
+@media(max-width:900px){
 
-    .nav-links a:nth-child(n+5){
-
-        display:none;
-
-    }
-
-    .featured-grid{
+    .layout{
 
         grid-template-columns:1fr;
-
     }
 
+
+    .sidebar{
+
+        position:static;
+    }
+
+
+    .news-image{
+
+        height:280px;
+    }
 }
 
 
-@media(max-width:750px){
+@media(max-width:600px){
 
-    .nav-inner{
+    .topbar{
+
+        height:60px;
+    }
+
+
+    .topbar-inner{
+
+        padding:
+        0 13px;
+    }
+
+
+    .logo{
+
+        font-size:17px;
+    }
+
+
+    .logo img{
+
+        width:35px;
+
+        height:35px;
+    }
+
+
+    .top-btn{
+
+        width:36px;
+
+        height:36px;
+    }
+
+
+    .category-wrap{
+
+        top:60px;
+    }
+
+
+    .categories{
 
         padding:
         9px 13px;
-
     }
 
-    .nav-links{
 
-        display:none;
-
-    }
-
-    .brand-name{
-
-        font-size:18px;
-
-    }
-
-    .hero-inner{
+    .page-header{
 
         padding:
-        55px 18px 48px;
-
+        24px 14px 12px;
     }
 
-    .hero h1{
 
-        letter-spacing:-1px;
+    .page-header h1{
 
+        font-size:34px;
     }
 
-    .hero-description{
 
-        font-size:14px;
-
-    }
-
-    .main{
+    .layout{
 
         padding:
-        30px 15px 60px;
-
+        14px 12px 55px;
     }
 
-    .story-grid{
 
-        grid-template-columns:1fr;
+    .news-card{
 
+        border-radius:18px;
+
+        margin-bottom:14px;
     }
 
-    .category-grid{
 
-        grid-template-columns:1fr;
+    .news-image{
 
+        height:240px;
     }
 
-    .featured-story{
 
-        min-height:370px;
+    .news-content{
 
-        padding:23px;
-
+        padding:
+        17px 16px 13px;
     }
 
-    .section-head{
+
+    .news-title{
+
+        font-size:21px;
+    }
+
+
+    .news-summary{
+
+        font-size:13px;
+    }
+
+
+    .learn-box{
+
+        padding:11px 12px;
+    }
+
+
+    .card-footer{
 
         align-items:flex-start;
-
-        flex-direction:column;
-
     }
 
-    .keyword-section{
 
-        padding:22px;
+    .action-btn{
 
+        padding:
+        7px 6px;
+
+        font-size:12px;
     }
 
-}
 
-
-@media(max-width:450px){
-
-    .hero h1{
-
-        font-size:42px;
-
-    }
-
-    .hero-meta-item{
+    .read-link{
 
         font-size:11px;
 
+        padding:
+        7px 8px;
     }
 
-    .featured-story h3{
 
-        font-size:25px;
+    .search{
 
+        margin-bottom:14px;
     }
-
-    .story-card{
-
-        padding:18px;
-
-    }
-
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media(prefers-reduced-motion:reduce){
-
-    *,
-    *::before,
-    *::after{
-
-        animation-duration:.01ms !important;
-
-        animation-iteration-count:1 !important;
-
-        scroll-behavior:auto !important;
-
-        transition:none !important;
-
-    }
-
 }
 
 </style>
-
 </head>
 
 
@@ -2059,69 +1640,40 @@ footer p{
 
 
 <!-- =========================================================
-     NAVIGATION
+     TOP BAR
 ========================================================= -->
 
-<nav class="navbar">
+<header class="topbar">
 
-<div class="nav-inner">
+<div class="topbar-inner">
 
 
-<a href="index.html" class="brand">
+<a href="index.html"
+class="logo">
 
 <img
 src="logo.png.jpeg"
-alt="Pendico logo">
+alt="Pendico">
 
-<div class="brand-name">
-PENDI<span>CO</span>
-</div>
+<span>PENDICO</span>
 
 </a>
 
 
-<div class="nav-links">
+<div class="top-actions">
 
-<a href="index.html">
-Home
-</a>
+<a href="index.html"
+class="top-btn"
+aria-label="Home">
 
-<a href="bareacts.html">
-Bare Acts
-</a>
-
-<a href="caselaws.html">
-Case Laws
-</a>
-
-<a href="articles.html">
-Articles
-</a>
-
-<a href="legalnews.html">
-Legal News
-</a>
-
-<a
-href="trending.html"
-class="active">
-
-🔥 Trending
+⌂
 
 </a>
 
-<a href="about.html">
-About
-</a>
-
-</div>
-
-
-<div class="nav-actions">
 
 <button
-class="nav-btn"
-id="themeButton"
+class="top-btn"
+id="themeBtn"
 onclick="toggleTheme()"
 aria-label="Toggle dark mode">
 
@@ -2129,80 +1681,7 @@ aria-label="Toggle dark mode">
 
 </button>
 
-
-<a
-href="index.html"
-class="nav-btn"
-aria-label="Home">
-
-⌂
-
-</a>
-
 </div>
-
-
-</div>
-
-</nav>
-
-
-<!-- =========================================================
-     HERO
-========================================================= -->
-
-<header class="hero">
-
-<div class="hero-inner">
-
-
-<div class="live-label">
-
-<span class="live-dot"></span>
-
-LIVE • TRENDING TODAY
-
-</div>
-
-
-<h1>
-
-What is India
-<span>talking about?</span>
-
-</h1>
-
-
-<p class="hero-description">
-
-Discover important stories, legal developments,
-national events, technology, business, sports,
-education and other topics attracting attention
-across India.
-
-</p>
-
-
-<div class="hero-meta">
-
-<div class="hero-meta-item">
-📅 <span id="todayDate">Today</span>
-</div>
-
-<div class="hero-meta-item">
-📰 <span id="storyTotal">Loading stories...</span>
-</div>
-
-<div class="hero-meta-item">
-🇮🇳 India
-</div>
-
-<div class="hero-meta-item">
-⚡ Updated regularly
-</div>
-
-</div>
-
 
 </div>
 
@@ -2210,397 +1689,308 @@ across India.
 
 
 <!-- =========================================================
-     MAIN
+     PAGE INTRO
 ========================================================= -->
 
-<main class="main">
+<section class="page-header">
 
+<div class="live-row">
 
-<!-- SEARCH -->
+<span class="live-dot"></span>
 
-<section class="search-panel">
-
-<div class="search-wrap">
-
-<div class="search-icon">
-🔎
-</div>
-
-<input
-type="search"
-id="searchInput"
-placeholder="Search today's stories, topics, categories..."
-autocomplete="off">
-
-<button
-class="search-clear"
-id="clearSearch"
-onclick="clearSearch()"
-aria-label="Clear search">
-
-✕
-
-</button>
+<span class="live-label">
+Live Feed
+</span>
 
 </div>
 
-<div class="search-hint">
 
-Search by headline, category, keyword or topic.
+<h1>
+Trending <span>Today</span>
+</h1>
 
-</div>
+
+<p>
+Scroll through important stories, legal developments
+and major developments attracting attention across India.
+Learn the context behind the headlines — not just the headline.
+</p>
 
 </section>
 
 
-<!-- CATEGORY FILTER -->
+<!-- =========================================================
+     CATEGORY NAVIGATION
+========================================================= -->
 
-<div class="category-bar"
-id="categoryBar">
+<div class="category-wrap">
+
+<nav class="categories"
+id="categories">
 
 <button
 class="category active"
 data-category="all">
 
-🔥 All
+🔥 For You
 
 </button>
 
-<button
-class="category"
-data-category="law">
-
-⚖️ Law
-
-</button>
 
 <button
 class="category"
-data-category="india">
+data-category="India">
 
 🇮🇳 India
 
 </button>
 
+
 <button
 class="category"
-data-category="business">
+data-category="Law">
 
-💼 Business
+⚖️ Law
 
 </button>
 
+
 <button
 class="category"
-data-category="technology">
+data-category="Politics">
 
-🤖 Technology
+🏛️ Politics
 
 </button>
 
+
 <button
 class="category"
-data-category="sports">
+data-category="Technology">
+
+💻 Technology
+
+</button>
+
+
+<button
+class="category"
+data-category="Business">
+
+📈 Business
+
+</button>
+
+
+<button
+class="category"
+data-category="Sports">
 
 🏆 Sports
 
 </button>
 
-<button
-class="category"
-data-category="education">
-
-🎓 Education
-
-</button>
 
 <button
 class="category"
-data-category="entertainment">
+data-category="Entertainment">
 
 🎬 Entertainment
 
 </button>
 
+
 <button
 class="category"
-data-category="world">
+data-category="World">
 
 🌍 World
 
 </button>
 
+</nav>
+
 </div>
 
 
 <!-- =========================================================
-     FEATURED
+     MAIN
 ========================================================= -->
 
-<section id="featuredSection">
+<main class="layout">
 
 
-<div class="section-head">
+<!-- =======================================================
+     FEED
+======================================================= -->
 
-<div>
+<section class="feed">
 
-<div class="section-title">
 
-<div class="section-title-icon">
-🔥
-</div>
+<div class="search">
 
-<h2>
-Top Story
-</h2>
+<span>🔎</span>
 
-</div>
+<input
+type="search"
+id="searchInput"
+placeholder="Search today's stories..."
+autocomplete="off">
 
-</div>
-
-<p>
-Most important story today
-</p>
-
-</div>
-
-
-<div id="featuredContainer">
-
-<div class="loading">
-
-<div class="spinner"></div>
-
-Loading today's top story...
-
-</div>
-
-</div>
-
-
-</section>
-
-
-<!-- =========================================================
-     TOP STORIES
-========================================================= -->
-
-<section style="margin-top:45px;">
-
-
-<div class="section-head">
-
-<div>
-
-<div class="section-title">
-
-<div class="section-title-icon">
-📈
-</div>
-
-<h2>
-Trending Now
-</h2>
-
-</div>
-
-</div>
-
-<p id="resultLabel">
-Latest stories
-</p>
-
-</div>
-
-
-<div id="storyGrid">
-
-<div class="loading">
-
-<div class="spinner"></div>
-
-Loading trending stories...
-
-</div>
-
-</div>
-
-
-</section>
-
-
-<!-- =========================================================
-     CATEGORY NEWS
-========================================================= -->
-
-<section class="category-section">
-
-
-<div class="section-head">
-
-<div>
-
-<div class="section-title">
-
-<div class="section-title-icon">
-🧭
-</div>
-
-<h2>
-Explore by Category
-</h2>
-
-</div>
-
-</div>
-
-<p>
-Follow the topics that matter to you
-</p>
-
-</div>
-
-
-<div
-class="category-grid"
-id="categoryGrid">
-
-</div>
-
-
-</section>
-
-
-<!-- =========================================================
-     KEYWORDS
-========================================================= -->
-
-<section class="keyword-section">
-
-
-<div class="keyword-head">
-
-<div>
-
-<h2>
-🔥 Trending Topics
-</h2>
-
-<p>
-Topics appearing frequently across today's stories
-</p>
-
-</div>
-
-</div>
-
-
-<div
-class="keywords"
-id="keywordContainer">
-
-<span class="keyword">
-#India
-</span>
-
-<span class="keyword">
-#Trending
-</span>
-
-</div>
-
-
-</section>
-
-
-</main>
-
-
-<!-- =========================================================
-     MODAL
-========================================================= -->
-
-<div
-class="modal"
-id="storyModal"
-role="dialog"
-aria-modal="true"
-aria-hidden="true">
-
-
-<div class="modal-box">
-
-
-<button
-class="modal-close"
-onclick="closeModal()"
-aria-label="Close">
-
-×
-
+<button onclick="performSearch()">
+Search
 </button>
 
+</div>
+
+
+<div class="feed-header">
+
+<div class="feed-title">
+Today's Feed
+</div>
 
 <div
-class="modal-category"
-id="modalCategory">
+class="feed-count"
+id="feedCount">
 
-NEWS
+Loading...
+
+</div>
 
 </div>
 
 
-<h2 id="modalTitle">
-Story title
-</h2>
+<div id="newsFeed">
+
+<div class="loading">
+
+<div class="loader"></div>
+
+Loading today's stories...
+
+</div>
+
+</div>
+
+</section>
 
 
-<div
-class="modal-meta"
-id="modalMeta">
+<!-- =======================================================
+     SIDEBAR
+======================================================= -->
 
-Pendico • Today
+<aside class="sidebar">
+
+
+<div class="side-card">
+
+<div class="side-title">
+🔥 What's Trending
+</div>
+
+<div id="ranking">
+
+<div class="rank-item">
+
+<div class="rank-number">
+1
+</div>
+
+<div>
+
+<div class="rank-title">
+Loading trending stories...
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 
-<div
-class="modal-summary"
-id="modalSummary">
+<div class="side-card">
 
-Story summary.
-
+<div class="side-title">
+⚡ Explore Pendico
 </div>
 
 
-<div class="modal-source">
+<div class="quick-grid">
 
-<span
-id="modalSource"
-style="color:var(--muted);font-size:12px;">
+<a href="bareacts.html"
+class="quick-link">
 
-Source information
+📚 Bare Acts
 
-</span>
+</a>
 
 
-<a
-id="modalLink"
-href="#"
-target="_blank"
-rel="noopener noreferrer"
-class="source-link">
+<a href="caselaws.html"
+class="quick-link">
 
-Read original source →
+⚖️ Case Laws
+
+</a>
+
+
+<a href="articles.html"
+class="quick-link">
+
+📝 Articles
+
+</a>
+
+
+<a href="legalnews.html"
+class="quick-link">
+
+📰 Legal News
+
+</a>
+
+
+<a href="bnss.html"
+class="quick-link">
+
+📘 BNSS
+
+</a>
+
+
+<a href="bns.html"
+class="quick-link">
+
+⚖️ BNS
 
 </a>
 
 </div>
 
+</div>
+
+
+<div class="info-card">
+
+<h3>
+💡 Learn Beyond The Headline
+</h3>
+
+<p>
+Pendico is designed to help you understand
+important developments through concise,
+accessible explanations.
+</p>
 
 </div>
 
-</div>
+
+</aside>
+
+</main>
 
 
 <!-- =========================================================
@@ -2608,8 +1998,8 @@ Read original source →
 ========================================================= -->
 
 <button
-class="back-top"
-id="backTop"
+class="to-top"
+id="toTop"
 onclick="window.scrollTo({top:0,behavior:'smooth'})"
 aria-label="Back to top">
 
@@ -2624,21 +2014,16 @@ aria-label="Back to top">
 
 <footer>
 
-
-<div class="footer-brand">
-
-PENDI<span>CO</span>
-
+<div class="footer-logo">
+PENDICO
 </div>
-
 
 <p>
 Indian Legal Information & Knowledge Platform
 </p>
 
-
 <p>
-Trending Today • India • Law • Current Affairs
+© 2026 Pendico. For educational and informational purposes.
 </p>
 
 
@@ -2664,10 +2049,6 @@ Articles
 Legal News
 </a>
 
-<a href="trending.html">
-Trending Today
-</a>
-
 <a href="about.html">
 About
 </a>
@@ -2678,75 +2059,42 @@ Contact
 
 </div>
 
-
-<br>
-
-
-<p>
-© 2026 Pendico. For informational purposes.
-</p>
-
-
 </footer>
 
 
 <script>
 
 /* =========================================================
-   PENDICO TRENDING ENGINE
+   GLOBAL DATA
 ========================================================= */
 
-let allStories = [];
+let allNews = [];
 
-let activeCategory = "all";
+let currentCategory = "all";
 
 let currentSearch = "";
 
 
 /* =========================================================
-   DATE
+   LOAD NEWS
 ========================================================= */
 
-function updateDate(){
+async function loadNews(){
 
-    const date =
-        new Date();
-
-    const options = {
-        weekday:"long",
-        day:"numeric",
-        month:"long",
-        year:"numeric"
-    };
-
-    document.getElementById("todayDate")
-        .textContent =
-        date.toLocaleDateString(
-            "en-IN",
-            options
-        );
-
-}
-
-
-/* =========================================================
-   LOAD JSON
-========================================================= */
-
-async function loadTrending(){
+    const feed =
+        document.getElementById("newsFeed");
 
     try{
 
         const response =
-            await fetch("data/trending.json",{
+            await fetch("data/legalnews.json", {
                 cache:"no-store"
             });
-
 
         if(!response.ok){
 
             throw new Error(
-                "Trending JSON not found"
+                "Could not load legalnews.json"
             );
 
         }
@@ -2757,68 +2105,73 @@ async function loadTrending(){
 
 
         /*
-         Supported formats:
+           Supports either:
 
-         [
-            {...},
-            {...}
-         ]
+           [
+             {...},
+             {...}
+           ]
 
-         OR
+           OR:
 
-         {
-            "stories":[...]
-         }
+           {
+             "news":[...]
+           }
         */
-
 
         if(Array.isArray(data)){
 
-            allStories = data;
+            allNews = data;
 
         }
+        else if(Array.isArray(data.news)){
 
-        else if(
-            data &&
-            Array.isArray(data.stories)
-        ){
-
-            allStories =
-                data.stories;
+            allNews = data.news;
 
         }
-
         else{
 
             throw new Error(
-                "Invalid trending.json format"
+                "Invalid JSON format"
             );
 
         }
 
 
-        allStories =
-            allStories.map(
-                normalizeStory
-            );
+        updateFeed();
 
-
-        document.getElementById(
-            "storyTotal"
-        ).textContent =
-            allStories.length +
-            " stories";
-
-
-        render();
+        buildRanking();
 
     }
-
     catch(error){
 
         console.error(error);
 
-        showError();
+        feed.innerHTML = `
+
+            <div class="empty">
+
+                <div class="empty-icon">
+                    ⚠️
+                </div>
+
+                <h3>
+                    News could not be loaded
+                </h3>
+
+                <p>
+                    Please check that
+                    <strong>data/legalnews.json</strong>
+                    exists and contains valid JSON.
+                </p>
+
+            </div>
+
+        `;
+
+        document.getElementById("feedCount")
+            .textContent =
+            "Database unavailable";
 
     }
 
@@ -2826,71 +2179,66 @@ async function loadTrending(){
 
 
 /* =========================================================
-   NORMALIZE STORY
+   NORMALIZE NEWS
 ========================================================= */
 
-function normalizeStory(story,index){
+function normalize(item){
 
     return {
 
-        id:
-            story.id ??
-            index + 1,
-
         title:
-            story.title ||
-            "Untitled Story",
+            item.title ||
+            item.headline ||
+            "Untitled story",
 
         summary:
-            story.summary ||
-            story.description ||
-            story.excerpt ||
-            "More information about this story.",
+            item.summary ||
+            item.description ||
+            item.excerpt ||
+            "",
 
         category:
-            String(
-                story.category ||
-                "India"
-            ).toLowerCase(),
-
-        author:
-            story.author ||
-            "Pendico",
+            item.category ||
+            "India",
 
         date:
-            story.date ||
-            "Today",
+            item.date ||
+            item.published ||
+            "",
 
-        time:
-            story.time ||
-            story.readTime ||
+        author:
+            item.author ||
+            "Pendico",
+
+        readTime:
+            item.readTime ||
+            "3 min read",
+
+        image:
+            item.image ||
+            item.imageUrl ||
+            item.thumbnail ||
+            "",
+
+        url:
+            item.url ||
+            item.link ||
+            item.sourceUrl ||
             "",
 
         source:
-            story.source ||
-            "Pendico",
+            item.source ||
+            item.publisher ||
+            "",
 
-        url:
-            story.url ||
-            story.link ||
-            "#",
+        explanation:
+            item.explanation ||
+            item.whyItMatters ||
+            item.context ||
+            "",
 
         featured:
-            Boolean(
-                story.featured
-            ),
-
-        trending:
-            story.trending !== false,
-
-        keywords:
-            Array.isArray(
-                story.keywords
-            )
-            ?
-            story.keywords
-            :
-            []
+            Boolean(item.featured)
 
     };
 
@@ -2901,662 +2249,96 @@ function normalizeStory(story,index){
    FILTER
 ========================================================= */
 
-function getFilteredStories(){
+function getFilteredNews(){
 
-    return allStories.filter(
-        story => {
-
-            const categoryMatch =
-                activeCategory === "all" ||
-                story.category
-                    .toLowerCase()
-                    .includes(
-                        activeCategory
-                    );
+    let results =
+        allNews.map(normalize);
 
 
-            const searchText = [
+    if(currentCategory !== "all"){
 
-                story.title,
+        results =
+            results.filter(item =>
+                String(item.category)
+                .toLowerCase()
+                ===
+                currentCategory.toLowerCase()
+            );
 
-                story.summary,
-
-                story.category,
-
-                story.author,
-
-                story.source,
-
-                ...story.keywords
-
-            ]
-            .join(" ")
-            .toLowerCase();
+    }
 
 
-            const searchMatch =
-                !currentSearch ||
-                searchText.includes(
+    if(currentSearch){
+
+        results =
+            results.filter(item => {
+
+                const searchable = [
+
+                    item.title,
+                    item.summary,
+                    item.category,
+                    item.explanation,
+                    item.source
+
+                ]
+                .filter(Boolean)
+                .join(" ")
+                .toLowerCase();
+
+
+                return searchable.includes(
                     currentSearch
                 );
 
+            });
 
-            return (
-                categoryMatch &&
-                searchMatch
-            );
+    }
 
-        }
-    );
+
+    return results;
 
 }
 
 
 /* =========================================================
-   RENDER EVERYTHING
+   DISPLAY FEED
 ========================================================= */
 
-function render(){
+function updateFeed(){
 
-    const stories =
-        getFilteredStories();
-
-
-    renderFeatured(stories);
-
-    renderStories(stories);
-
-    renderCategories(stories);
-
-    renderKeywords(stories);
+    const feed =
+        document.getElementById("newsFeed");
 
 
-    document.getElementById(
-        "resultLabel"
-    ).textContent =
-        stories.length +
-        " " +
-        (
-            stories.length === 1
-            ?
-            "story"
-            :
-            "stories"
-        );
-
-}
+    const results =
+        getFilteredNews();
 
 
-/* =========================================================
-   FEATURED
-========================================================= */
-
-function renderFeatured(stories){
-
-    const container =
-        document.getElementById(
-            "featuredContainer"
-        );
+    document.getElementById("feedCount")
+        .textContent =
+        `${results.length} stor${results.length === 1 ? "y" : "ies"}`;
 
 
-    if(!stories.length){
+    if(!results.length){
 
-        container.innerHTML =
-            emptyHTML(
-                "🔎",
-                "No stories found",
-                "Try another search or category."
-            );
+        feed.innerHTML = `
 
-        return;
+            <div class="empty">
 
-    }
-
-
-    let featured =
-        stories.find(
-            story =>
-            story.featured
-        );
-
-
-    if(!featured){
-
-        featured =
-            stories[0];
-
-    }
-
-
-    const index =
-        stories.indexOf(
-            featured
-        );
-
-
-    const others =
-        stories
-        .filter(
-            story =>
-            story.id !== featured.id
-        )
-        .slice(0,2);
-
-
-    let sideHTML = "";
-
-
-    others.forEach(
-        (story,i) => {
-
-            sideHTML += `
-
-            <article class="mini-feature">
-
-                <div class="mini-number">
-                    0${i + 2} · TRENDING
+                <div class="empty-icon">
+                    🔎
                 </div>
 
                 <h3>
-                    ${escapeHTML(
-                        story.title
-                    )}
+                    No stories found
                 </h3>
 
                 <p>
-                    ${escapeHTML(
-                        shorten(
-                            story.summary,
-                            120
-                        )
-                    )}
+                    Try another category or search term.
                 </p>
 
-                <a
-                    href="javascript:void(0)"
-                    class="mini-link"
-                    onclick="openStory(${story.id})">
-
-                    Read story →
-
-                </a>
-
-            </article>
-
-            `;
-
-        }
-    );
-
-
-    container.innerHTML = `
-
-        <div class="featured-grid">
-
-            <article
-                class="featured-story"
-                onclick="openStory(${featured.id})"
-                style="cursor:pointer;">
-
-                <div class="featured-content">
-
-                    <div class="story-labels">
-
-                        <span class="story-label hot">
-                            🔥 TOP STORY
-                        </span>
-
-                        <span class="story-label">
-                            ${escapeHTML(
-                                formatCategory(
-                                    featured.category
-                                )
-                            )}
-                        </span>
-
-                    </div>
-
-
-                    <h3>
-                        ${escapeHTML(
-                            featured.title
-                        )}
-                    </h3>
-
-
-                    <p>
-                        ${escapeHTML(
-                            featured.summary
-                        )}
-                    </p>
-
-
-                    <div class="story-footer">
-
-                        <span class="story-time">
-                            ${escapeHTML(
-                                formatMeta(
-                                    featured
-                                )
-                            )}
-                        </span>
-
-
-                        <span class="read-story">
-                            Read story →
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <div class="side-feature">
-
-                ${sideHTML}
-
             </div>
-
-        </div>
-
-    `;
-
-}
-
-
-/* =========================================================
-   STORY GRID
-========================================================= */
-
-function renderStories(stories){
-
-    const container =
-        document.getElementById(
-            "storyGrid"
-        );
-
-
-    if(!stories.length){
-
-        container.innerHTML =
-            emptyHTML(
-                "📭",
-                "Nothing matched your search",
-                "Try a different keyword or category."
-            );
-
-        return;
-
-    }
-
-
-    const featured =
-        stories.find(
-            story =>
-            story.featured
-        );
-
-
-    const display =
-        featured
-        ?
-        stories.filter(
-            story =>
-            story.id !== featured.id
-        )
-        :
-        stories;
-
-
-    if(!display.length){
-
-        container.innerHTML =
-            emptyHTML(
-                "🔥",
-                "Top story selected",
-                "More stories will appear here."
-            );
-
-        return;
-
-    }
-
-
-    let html = "";
-
-    display.forEach(
-        (story,index) => {
-
-            html += `
-
-            <article class="story-card">
-
-                <div class="story-card-top">
-
-                    <span class="rank">
-                        #${String(
-                            index + 2
-                        ).padStart(2,"0")}
-                    </span>
-
-                    <span class="card-category">
-                        ${escapeHTML(
-                            formatCategory(
-                                story.category
-                            )
-                        )}
-                    </span>
-
-                </div>
-
-
-                <h3>
-                    ${escapeHTML(
-                        story.title
-                    )}
-                </h3>
-
-
-                <p>
-                    ${escapeHTML(
-                        shorten(
-                            story.summary,
-                            190
-                        )
-                    )}
-                </p>
-
-
-                <div class="card-bottom">
-
-                    <span class="card-time">
-                        ${escapeHTML(
-                            formatMeta(
-                                story
-                            )
-                        )}
-                    </span>
-
-
-                    <a
-                        href="javascript:void(0)"
-                        class="card-read"
-                        onclick="openStory(${story.id})">
-
-                        Read →
-
-                    </a>
-
-                </div>
-
-            </article>
-
-            `;
-
-        }
-    );
-
-
-    container.className =
-        "story-grid";
-
-    container.innerHTML =
-        html;
-
-}
-
-
-/* =========================================================
-   CATEGORY BLOCKS
-========================================================= */
-
-function renderCategories(stories){
-
-    const container =
-        document.getElementById(
-            "categoryGrid"
-        );
-
-
-    const categories = [
-
-        {
-            key:"law",
-            icon:"⚖️",
-            title:"Legal Trending"
-        },
-
-        {
-            key:"india",
-            icon:"🇮🇳",
-            title:"India"
-        },
-
-        {
-            key:"business",
-            icon:"💼",
-            title:"Business"
-        },
-
-        {
-            key:"technology",
-            icon:"🤖",
-            title:"Technology"
-        },
-
-        {
-            key:"sports",
-            icon:"🏆",
-            title:"Sports"
-        },
-
-        {
-            key:"education",
-            icon:"🎓",
-            title:"Education"
-        }
-
-    ];
-
-
-    let html = "";
-
-
-    categories.forEach(
-        category => {
-
-            const items =
-                stories
-                .filter(
-                    story =>
-                    story.category
-                    .includes(
-                        category.key
-                    )
-                )
-                .slice(0,3);
-
-
-            if(!items.length){
-
-                return;
-
-            }
-
-
-            let itemsHTML = "";
-
-
-            items.forEach(
-                (story,index) => {
-
-                    itemsHTML += `
-
-                    <div
-                        class="category-item"
-                        onclick="openStory(${story.id})"
-                        style="cursor:pointer;">
-
-                        <div
-                            class="category-item-number">
-
-                            0${index + 1}
-
-                        </div>
-
-                        <div>
-
-                            <h4>
-                                ${escapeHTML(
-                                    story.title
-                                )}
-                            </h4>
-
-                            <p>
-                                ${escapeHTML(
-                                    formatMeta(
-                                        story
-                                    )
-                                )}
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    `;
-
-                }
-            );
-
-
-            html += `
-
-            <div class="category-block">
-
-                <div class="category-block-head">
-
-                    <div class="category-block-title">
-
-                        <span>
-                            ${category.icon}
-                        </span>
-
-                        <h3>
-                            ${category.title}
-                        </h3>
-
-                    </div>
-
-                </div>
-
-
-                ${itemsHTML}
-
-            </div>
-
-            `;
-
-        }
-    );
-
-
-    if(!html){
-
-        html =
-            emptyHTML(
-                "🧭",
-                "Categories will appear here",
-                "Add categorized stories to trending.json."
-            );
-
-    }
-
-
-    container.innerHTML =
-        html;
-
-}
-
-
-/* =========================================================
-   KEYWORDS
-========================================================= */
-
-function renderKeywords(stories){
-
-    const container =
-        document.getElementById(
-            "keywordContainer"
-        );
-
-
-    const counts = {};
-
-
-    stories.forEach(
-        story => {
-
-            story.keywords
-            .forEach(
-                keyword => {
-
-                    const clean =
-                        String(
-                            keyword
-                        )
-                        .trim();
-
-                    if(!clean){
-                        return;
-                    }
-
-                    const key =
-                        clean.toLowerCase();
-
-                    counts[key] =
-                        (
-                            counts[key] ||
-                            0
-                        ) + 1;
-
-                }
-            );
-
-        }
-    );
-
-
-    const keywords =
-        Object.entries(counts)
-        .sort(
-            (a,b) =>
-            b[1] - a[1]
-        )
-        .slice(0,18);
-
-
-    if(!keywords.length){
-
-        container.innerHTML = `
-
-            <span class="keyword">
-                #India
-            </span>
-
-            <span class="keyword">
-                #Trending
-            </span>
-
-            <span class="keyword">
-                #Law
-            </span>
-
-            <span class="keyword">
-                #CurrentAffairs
-            </span>
 
         `;
 
@@ -3565,264 +2347,548 @@ function renderKeywords(stories){
     }
 
 
-    container.innerHTML =
-        keywords
-        .map(
-            item => `
-
-            <span class="keyword">
-                #${escapeHTML(
-                    item[0]
-                )}
-            </span>
-
-            `
-        )
-        .join("");
+    feed.innerHTML =
+        results.map(
+            (item,index) =>
+            createNewsCard(item,index)
+        ).join("");
 
 }
 
 
 /* =========================================================
-   OPEN STORY
+   CREATE NEWS CARD
 ========================================================= */
 
-function openStory(id){
+function createNewsCard(item,index){
 
-    const story =
-        allStories.find(
-            item =>
-            String(item.id) ===
-            String(id)
-        );
+    const safeTitle =
+        escapeHTML(item.title);
 
+    const safeSummary =
+        escapeHTML(item.summary);
 
-    if(!story){
-        return;
-    }
+    const safeCategory =
+        escapeHTML(item.category);
 
+    const safeDate =
+        escapeHTML(item.date);
 
-    document.getElementById(
-        "modalCategory"
-    ).textContent =
-        formatCategory(
-            story.category
-        );
+    const safeAuthor =
+        escapeHTML(item.author);
 
+    const safeReadTime =
+        escapeHTML(item.readTime);
 
-    document.getElementById(
-        "modalTitle"
-    ).textContent =
-        story.title;
+    const safeSource =
+        escapeHTML(item.source);
+
+    const safeExplanation =
+        escapeHTML(item.explanation);
 
 
-    document.getElementById(
-        "modalMeta"
-    ).textContent =
-        formatMeta(story);
+    let imageHTML = "";
 
 
-    document.getElementById(
-        "modalSummary"
-    ).textContent =
-        story.summary;
+    if(item.image){
 
+        imageHTML = `
 
-    document.getElementById(
-        "modalSource"
-    ).textContent =
-        "Source: " +
-        story.source;
+            <img
+            src="${escapeAttribute(item.image)}"
+            alt="${safeTitle}"
+            loading="lazy"
+            onerror="this.parentElement.innerHTML =
+            '<div class=&quot;image-placeholder&quot;><div class=&quot;placeholder-icon&quot;>📰</div><div class=&quot;placeholder-text&quot;>Pendico News</div></div>'">
 
-
-    const link =
-        document.getElementById(
-            "modalLink"
-        );
-
-
-    if(
-        story.url &&
-        story.url !== "#"
-    ){
-
-        link.href =
-            story.url;
-
-        link.style.display =
-            "inline-flex";
+        `;
 
     }
-
     else{
 
-        link.style.display =
-            "none";
+        imageHTML = `
+
+            <div class="image-placeholder">
+
+                <div class="placeholder-icon">
+                    📰
+                </div>
+
+                <div class="placeholder-text">
+                    Pendico News
+                </div>
+
+            </div>
+
+        `;
 
     }
 
 
-    const modal =
-        document.getElementById(
-            "storyModal"
-        );
+    const explanationHTML =
+        item.explanation
+        ?
+        `
+
+        <div class="learn-box">
+
+            <div class="learn-title">
+                💡 Why it matters
+            </div>
+
+            <div class="learn-text">
+                ${safeExplanation}
+            </div>
+
+        </div>
+
+        `
+        :
+        "";
 
 
-    modal.classList.add("show");
+    const sourceHTML =
+        item.source
+        ?
+        `<strong>${safeSource}</strong>`
+        :
+        "";
 
-    modal.setAttribute(
-        "aria-hidden",
-        "false"
-    );
+
+    const readHTML =
+        item.url
+        ?
+        `
+
+        <a
+        class="read-link"
+        href="${escapeAttribute(item.url)}"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        Read source →
+
+        </a>
+
+        `
+        :
+        "";
 
 
-    document.body.style.overflow =
-        "hidden";
+    return `
+
+    <article
+    class="news-card"
+    data-index="${index}">
+
+
+        <div class="news-image">
+
+            ${imageHTML}
+
+
+            <div class="trending-number">
+
+                #${String(index + 1)
+                    .padStart(2,"0")}
+
+            </div>
+
+
+            <div class="category-badge">
+
+                ${safeCategory}
+
+            </div>
+
+        </div>
+
+
+        <div class="news-content">
+
+
+            <div class="news-meta">
+
+                ${sourceHTML}
+
+                ${sourceHTML ? "•" : ""}
+
+                <span>
+                    ${safeDate}
+                </span>
+
+                <span>
+                    •
+                </span>
+
+                <span>
+                    ${safeReadTime}
+                </span>
+
+                <span>
+                    •
+                </span>
+
+                <span>
+                    ${safeAuthor}
+                </span>
+
+            </div>
+
+
+            <h2 class="news-title">
+
+                ${safeTitle}
+
+            </h2>
+
+
+            <p class="news-summary">
+
+                ${safeSummary}
+
+            </p>
+
+
+            ${explanationHTML}
+
+
+            <div class="card-footer">
+
+
+                <div class="card-actions">
+
+
+                    <button
+                    class="action-btn"
+                    onclick="toggleLike(this)"
+                    aria-label="Like">
+
+                    ♡ Like
+
+                    </button>
+
+
+                    <button
+                    class="action-btn"
+                    onclick="shareStory(this)"
+                    aria-label="Share">
+
+                    ↗ Share
+
+                    </button>
+
+
+                    <button
+                    class="action-btn"
+                    onclick="saveStory(this)"
+                    aria-label="Save">
+
+                    🔖 Save
+
+                    </button>
+
+
+                </div>
+
+
+                ${readHTML}
+
+
+            </div>
+
+        </div>
+
+    </article>
+
+    `;
 
 }
 
 
 /* =========================================================
-   CLOSE MODAL
+   CATEGORY BUTTONS
 ========================================================= */
 
-function closeModal(){
+document
+.getElementById("categories")
+.addEventListener(
+"click",
+function(event){
 
-    const modal =
-        document.getElementById(
-            "storyModal"
-        );
+    const button =
+        event.target.closest(".category");
 
 
-    modal.classList.remove(
-        "show"
+    if(!button) return;
+
+
+    document
+    .querySelectorAll(".category")
+    .forEach(btn =>
+        btn.classList.remove("active")
     );
 
 
-    modal.setAttribute(
-        "aria-hidden",
-        "true"
-    );
+    button.classList.add("active");
 
 
-    document.body.style.overflow =
-        "";
+    currentCategory =
+        button.dataset.category;
 
-}
+
+    updateFeed();
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+});
 
 
 /* =========================================================
    SEARCH
 ========================================================= */
 
-document.getElementById(
-    "searchInput"
-)
-.addEventListener(
-    "input",
-    function(){
+function performSearch(){
 
-        currentSearch =
-            this.value
-            .trim()
-            .toLowerCase();
-
-
+    currentSearch =
         document
-        .getElementById(
-            "clearSearch"
-        )
-        .classList.toggle(
-            "show",
-            Boolean(currentSearch)
-        );
+        .getElementById("searchInput")
+        .value
+        .trim()
+        .toLowerCase();
 
 
-        render();
+    updateFeed();
+
+}
+
+
+document
+.getElementById("searchInput")
+.addEventListener(
+"keydown",
+function(event){
+
+    if(event.key === "Enter"){
+
+        performSearch();
 
     }
-);
+
+});
+
+
+document
+.getElementById("searchInput")
+.addEventListener(
+"input",
+function(){
+
+    currentSearch =
+        this.value
+        .trim()
+        .toLowerCase();
+
+
+    updateFeed();
+
+});
 
 
 /* =========================================================
-   CLEAR SEARCH
+   LIKE
 ========================================================= */
 
-function clearSearch(){
+function toggleLike(button){
 
-    const input =
-        document.getElementById(
-            "searchInput"
-        );
+    button.classList.toggle("liked");
 
 
-    input.value = "";
+    if(button.classList.contains("liked")){
 
-    currentSearch = "";
+        button.textContent =
+            "♥ Liked";
 
+    }
+    else{
 
-    document
-    .getElementById(
-        "clearSearch"
-    )
-    .classList.remove(
-        "show"
-    );
+        button.textContent =
+            "♡ Like";
 
-
-    render();
-
-    input.focus();
+    }
 
 }
 
 
 /* =========================================================
-   CATEGORY FILTER
+   SAVE
 ========================================================= */
 
-document
-.getElementById("categoryBar")
-.addEventListener(
-    "click",
-    function(event){
+function saveStory(button){
 
-        const button =
-            event.target.closest(
-                ".category"
-            );
+    button.classList.toggle("saved");
 
 
-        if(!button){
-            return;
-        }
+    if(button.classList.contains("saved")){
 
-
-        document
-        .querySelectorAll(
-            ".category"
-        )
-        .forEach(
-            item =>
-            item.classList.remove(
-                "active"
-            )
-        );
-
-
-        button.classList.add(
-            "active"
-        );
-
-
-        activeCategory =
-            button.dataset.category;
-
-
-        render();
+        button.textContent =
+            "🔖 Saved";
 
     }
-);
+    else{
+
+        button.textContent =
+            "🔖 Save";
+
+    }
+
+}
+
+
+/* =========================================================
+   SHARE
+========================================================= */
+
+async function shareStory(button){
+
+    const card =
+        button.closest(".news-card");
+
+
+    const title =
+        card.querySelector(".news-title")
+        ?.innerText
+        ||
+        "Pendico Trending Today";
+
+
+    const url =
+        window.location.href;
+
+
+    if(navigator.share){
+
+        try{
+
+            await navigator.share({
+
+                title:
+                    title,
+
+                text:
+                    "Read this story on Pendico.",
+
+                url:
+                    url
+
+            });
+
+        }
+        catch(error){
+
+            console.log(
+                "Share cancelled"
+            );
+
+        }
+
+    }
+    else{
+
+        try{
+
+            await navigator.clipboard
+                .writeText(url);
+
+
+            button.textContent =
+                "✓ Copied";
+
+
+            setTimeout(
+                () =>
+                button.textContent =
+                "↗ Share",
+                1500
+            );
+
+        }
+        catch(error){
+
+            alert(
+                "Copy this page URL to share."
+            );
+
+        }
+
+    }
+
+}
+
+
+/* =========================================================
+   TRENDING RANKING
+========================================================= */
+
+function buildRanking(){
+
+    const ranking =
+        document.getElementById("ranking");
+
+
+    const items =
+        allNews
+        .map(normalize)
+        .slice(0,5);
+
+
+    if(!items.length){
+
+        ranking.innerHTML =
+            "<p style='color:var(--muted);font-size:12px;'>No stories available.</p>";
+
+        return;
+
+    }
+
+
+    ranking.innerHTML =
+        items.map(
+            (item,index) => `
+
+            <div class="rank-item">
+
+                <div class="rank-number">
+
+                    ${index + 1}
+
+                </div>
+
+                <div>
+
+                    <div class="rank-title">
+
+                        ${escapeHTML(item.title)}
+
+                    </div>
+
+                    <div class="rank-meta">
+
+                        ${escapeHTML(item.category)}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            `
+        ).join("");
+
+}
 
 
 /* =========================================================
@@ -3845,10 +2911,8 @@ function toggleTheme(){
     localStorage.setItem(
         "pendico-theme",
         dark
-        ?
-        "dark"
-        :
-        "light"
+        ? "dark"
+        : "light"
     );
 
 
@@ -3861,7 +2925,7 @@ function updateThemeButton(){
 
     const button =
         document.getElementById(
-            "themeButton"
+            "themeBtn"
         );
 
 
@@ -3873,17 +2937,11 @@ function updateThemeButton(){
 
     button.textContent =
         dark
-        ?
-        "☀️"
-        :
-        "🌙";
+        ? "☀️"
+        : "🌙";
 
 }
 
-
-/* =========================================================
-   LOAD THEME
-========================================================= */
 
 (function(){
 
@@ -3908,104 +2966,33 @@ function updateThemeButton(){
 
 
 /* =========================================================
-   MODAL CLICK OUTSIDE
-========================================================= */
-
-document
-.getElementById("storyModal")
-.addEventListener(
-    "click",
-    function(event){
-
-        if(
-            event.target === this
-        ){
-
-            closeModal();
-
-        }
-
-    }
-);
-
-
-/* =========================================================
-   ESCAPE KEY
-========================================================= */
-
-document.addEventListener(
-    "keydown",
-    function(event){
-
-        if(
-            event.key === "Escape"
-        ){
-
-            closeModal();
-
-        }
-
-    }
-);
-
-
-/* =========================================================
-   BACK TO TOP
-========================================================= */
-
-window.addEventListener(
-    "scroll",
-    function(){
-
-        const button =
-            document.getElementById(
-                "backTop"
-            );
-
-
-        if(window.scrollY > 500){
-
-            button.classList.add(
-                "show"
-            );
-
-        }
-
-        else{
-
-            button.classList.remove(
-                "show"
-            );
-
-        }
-
-    }
-);
-
-
-/* =========================================================
-   HELPERS
+   ESCAPE HTML
 ========================================================= */
 
 function escapeHTML(value){
 
     return String(value)
+
         .replace(
             /&/g,
             "&amp;"
         )
+
         .replace(
             /</g,
             "&lt;"
         )
+
         .replace(
             />/g,
             "&gt;"
         )
+
         .replace(
             /"/g,
             "&quot;"
         )
+
         .replace(
             /'/g,
             "&#039;"
@@ -4014,164 +3001,66 @@ function escapeHTML(value){
 }
 
 
-function shorten(text,length){
+function escapeAttribute(value){
 
-    const value =
-        String(text || "");
+    return String(value)
 
-
-    if(value.length <= length){
-
-        return value;
-
-    }
-
-
-    return value
-        .slice(0,length)
-        .trim() +
-        "...";
-
-}
-
-
-function formatCategory(category){
-
-    if(!category){
-
-        return "INDIA";
-
-    }
-
-
-    return String(category)
         .replace(
-            /[-_]/g,
-            " "
+            /&/g,
+            "&amp;"
         )
+
         .replace(
-            /\b\w/g,
-            char =>
-            char.toUpperCase()
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
         );
-
-}
-
-
-function formatMeta(story){
-
-    const parts = [];
-
-
-    if(story.source){
-
-        parts.push(
-            story.source
-        );
-
-    }
-
-
-    if(story.date){
-
-        parts.push(
-            story.date
-        );
-
-    }
-
-
-    if(story.time){
-
-        parts.push(
-            story.time
-        );
-
-    }
-
-
-    return parts.join(
-        " • "
-    );
-
-}
-
-
-function emptyHTML(
-    icon,
-    title,
-    text
-){
-
-    return `
-
-        <div class="empty">
-
-            <div class="empty-icon">
-                ${icon}
-            </div>
-
-            <h3>
-                ${escapeHTML(title)}
-            </h3>
-
-            <p>
-                ${escapeHTML(text)}
-            </p>
-
-        </div>
-
-    `;
 
 }
 
 
 /* =========================================================
-   ERROR
+   BACK TO TOP
 ========================================================= */
 
-function showError(){
-
-    document.getElementById(
-        "featuredContainer"
-    ).innerHTML =
-        emptyHTML(
-            "⚠️",
-            "Unable to load today's trends",
-            "Make sure data/trending.json exists and contains valid JSON."
-        );
+const toTop =
+    document.getElementById("toTop");
 
 
-    document.getElementById(
-        "storyGrid"
-    ).innerHTML =
-        "";
+window.addEventListener(
+"scroll",
+function(){
 
+    if(window.scrollY > 500){
 
-    document.getElementById(
-        "categoryGrid"
-    ).innerHTML =
-        "";
+        toTop.classList.add("show");
 
+    }
+    else{
 
-    document.getElementById(
-        "storyTotal"
-    ).textContent =
-        "Database unavailable";
+        toTop.classList.remove("show");
 
-}
+    }
+
+});
 
 
 /* =========================================================
    START
 ========================================================= */
 
-updateDate();
-
-loadTrending();
+loadNews();
 
 </script>
-
 
 </body>
 </html>
